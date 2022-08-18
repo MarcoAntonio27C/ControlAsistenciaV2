@@ -82,14 +82,9 @@ namespace API.Controllers
             return NoContent();
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmpleado(Guid id, Empleado Empleado)
+        [HttpPut]
+        public async Task<IActionResult> PutEmpleado(Empleado Empleado)
         {
-            if (id != Empleado.Id)
-            {
-                return BadRequest();
-            }
-
             _context.Entry(Empleado).State = EntityState.Modified;
 
             try
@@ -98,7 +93,7 @@ namespace API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmpleadoExists(id))
+                if (!EmpleadoExists(Empleado.Id))
                 {
                     return NotFound();
                 }

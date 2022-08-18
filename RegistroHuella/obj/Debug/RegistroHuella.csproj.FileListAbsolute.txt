@@ -38,4 +38,8 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.exe
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.pdb
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.Inicio.resources
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.CapturarHuella.resources
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\DPFPDevNET.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\DPFPEngNET.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\DPFPShrNET.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\DPFPVerNET.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.RegistrarHuella.resources

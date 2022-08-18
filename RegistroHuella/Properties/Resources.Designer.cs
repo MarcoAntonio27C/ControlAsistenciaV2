@@ -73,6 +73,16 @@ namespace RegistroHuella.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap huellaCorrecta {
+            get {
+                object obj = ResourceManager.GetObject("huellaCorrecta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inmueble {
             get {
                 object obj = ResourceManager.GetObject("Inmueble", resourceCulture);

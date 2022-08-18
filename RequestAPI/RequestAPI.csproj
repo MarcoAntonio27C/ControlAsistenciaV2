@@ -67,5 +67,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlAsistencia_\ControlAsistencia_.csproj">
+      <Project>{B131A8F0-239C-4405-9F21-4C45DB71A040}</Project>
+      <Name>ControlAsistencia_</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

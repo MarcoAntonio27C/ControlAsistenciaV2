@@ -75,6 +75,16 @@
     <Compile Include="CapturarHuella.Designer.cs">
       <DependentUpon>CapturarHuella.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrarHuella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarHuella.Designer.cs">
+      <DependentUpon>RegistrarHuella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaptureForm.cs" />
+    <Compile Include="CaptureForm.Designer.cs">
+      <DependentUpon>CaptureForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,8 +93,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CapturarHuella.resx">
-      <DependentUpon>CapturarHuella.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrarHuella.resx">
+      <DependentUpon>RegistrarHuella.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -128,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\baseline_fingerprint_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huellaCorrecta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

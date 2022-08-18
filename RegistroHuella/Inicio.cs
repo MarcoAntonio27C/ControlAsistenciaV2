@@ -59,7 +59,7 @@ namespace RegistroHuella
             {
                 ComboboxValue comboboxValue = (ComboboxValue)ComboBoxInmueble.SelectedItem;
                 //MessageBox.Show(comboboxValue.Id.ToString());
-                CapturarHuella capturarHuella = new CapturarHuella();
+                RegistrarHuella capturarHuella = new RegistrarHuella();
                 capturarHuella.SetMunicipio(comboboxValue.Name);
 
                 capturarHuella.Show();
