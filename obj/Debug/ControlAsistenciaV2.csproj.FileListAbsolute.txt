@@ -1,0 +1,12 @@
+F:\Visual Studio 2019\ControlAsistenciaV2\obj\Debug\ControlAsistenciaV2.Properties.Resources.resources
+F:\Visual Studio 2019\ControlAsistenciaV2\obj\Debug\ControlAsistenciaV2.csproj.GenerateResource.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\obj\Debug\ControlAsistenciaV2.csproj.CoreCompileInputs.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\bin\Debug\ControlAsistenciaV2.exe.config
+F:\Visual Studio 2019\ControlAsistenciaV2\bin\Debug\ControlAsistenciaV2.exe
+F:\Visual Studio 2019\ControlAsistenciaV2\bin\Debug\ControlAsistenciaV2.pdb
+F:\Visual Studio 2019\ControlAsistenciaV2\bin\Debug\ControlAsistencia_.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\bin\Debug\ControlAsistencia_.pdb
+F:\Visual Studio 2019\ControlAsistenciaV2\obj\Debug\ControlAsistenciaV2.csproj.AssemblyReference.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\obj\Debug\ControlAsistenciaV2.csproj.CopyComplete
+F:\Visual Studio 2019\ControlAsistenciaV2\obj\Debug\ControlAsistenciaV2.exe
+F:\Visual Studio 2019\ControlAsistenciaV2\obj\Debug\ControlAsistenciaV2.pdb

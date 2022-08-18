@@ -1,0 +1,20 @@
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.deps.json
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.pdb
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.GeneratedMSBuildEditorConfig.editorconfig
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.AssemblyInfoInputs.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.AssemblyInfo.cs
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.CoreCompileInputs.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.pdb
+F:\Visual Studio 2019\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.AssemblyReference.cache
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.deps.json
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.dll
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.pdb
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.AssemblyReference.cache
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.AssemblyInfoInputs.cache
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.AssemblyInfo.cs
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.CoreCompileInputs.cache
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.dll
+C:\Users\Ast\source\repos\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.pdb

@@ -1,0 +1,30 @@
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.deps.json
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ref\DBContext.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.pdb
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.pdb
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.AssemblyReference.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.GeneratedMSBuildEditorConfig.editorconfig
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfoInputs.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfo.cs
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CoreCompileInputs.cache
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CopyComplete
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\ref\DBContext.dll
+F:\Visual Studio 2019\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.pdb
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.deps.json
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.dll
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ref\DBContext.dll
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.pdb
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.dll
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.pdb
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.AssemblyReference.cache
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfoInputs.cache
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfo.cs
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CoreCompileInputs.cache
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CopyComplete
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.dll
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\ref\DBContext.dll
+C:\Users\Ast\source\repos\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.pdb
