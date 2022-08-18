@@ -14,11 +14,11 @@ using System.Windows.Forms;
 
 namespace RegistroHuella
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
         RequestInmueble requestInmueble;
 
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
             requestInmueble = new RequestInmueble();
@@ -33,7 +33,7 @@ namespace RegistroHuella
 
                 foreach(var inmueble in Inmuebles)
                 {
-                    ComboBoxInmueble.Items.Add(inmueble.Nombre);
+                    ComboBoxInmueble.Items.Add(new ComboboxValue(inmueble.Id,inmueble.Nombre));
                 }
             }
         }
@@ -55,8 +55,21 @@ namespace RegistroHuella
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(ComboBoxInmueble.SelectedIndex.ToString());
-            MessageBox.Show(ComboBoxInmueble.SelectedIndex.ToString());
+            if (ComboBoxInmueble.SelectedIndex != -1)
+            {
+                ComboboxValue comboboxValue = (ComboboxValue)ComboBoxInmueble.SelectedItem;
+                //MessageBox.Show(comboboxValue.Id.ToString());
+                CapturarHuella capturarHuella = new CapturarHuella();
+                capturarHuella.SetMunicipio(comboboxValue.Name);
+
+                capturarHuella.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("No ha seleccionado ningún inmueble");
+            }
+          
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

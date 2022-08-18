@@ -8,3 +8,12 @@ C:\Users\Ast\source\repos\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.cs
 C:\Users\Ast\source\repos\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.csproj.CoreCompileInputs.cache
 C:\Users\Ast\source\repos\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.exe
 C:\Users\Ast\source\repos\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\bin\Debug\Asistencia.exe.config
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\bin\Debug\Asistencia.exe
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\bin\Debug\Asistencia.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.Form1.resources
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.Properties.Resources.resources
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.csproj.GenerateResource.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.csproj.CoreCompileInputs.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.exe
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Asistencia\obj\Debug\Asistencia.pdb

@@ -63,6 +63,16 @@ namespace RegistroHuella.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_fingerprint_black_48dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_fingerprint_black_48dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inmueble {
             get {
                 object obj = ResourceManager.GetObject("Inmueble", resourceCulture);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ast\\source\\repos\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {}
+    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ast\\source\\repos\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
+    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ast\\source\\repos\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+        "projectUniqueName": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
         "projectName": "ControlAsistencia_",
-        "projectPath": "C:\\Users\\Ast\\source\\repos\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+        "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
         "packagesPath": "C:\\Users\\Ast\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ast\\source\\repos\\ControlAsistenciaV2\\ControlAsistencia_\\obj\\",
+        "outputPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

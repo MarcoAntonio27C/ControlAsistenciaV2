@@ -35,6 +35,20 @@ namespace API.Controllers
             return Empleado;
         }
 
+        // GET: api/Empleado/5
+        [HttpGet("CURP/{CURP}")]
+        public async Task<ActionResult<Empleado>> GetEmpleadoCURP(string CURP)
+        {
+            var Empleado = await _context.Empleado.Where(x => x.CURP.Equals(CURP)).FirstAsync();
+
+            if (Empleado == null)
+            {
+                return NotFound();
+            }
+
+            return Empleado;
+        }
+
         // GET: api/Empleados
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleados()

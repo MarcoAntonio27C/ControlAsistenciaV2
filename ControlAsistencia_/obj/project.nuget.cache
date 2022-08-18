@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M8kyYygDl0IM41f2VUq1c5s5M3BufQMF6VcsE0RosAbNr3oViU93efnWGgfyoPGG5l771I8oddG9z/IO6x2KYw==",
+  "dgSpecHash": "ax9/RfI64++u4uNTOt5djJZIM/z7bfJQo+tPNCiPorgdbs6aUAo5KpTdq2FHdB49VOlyOR6MxPuEGIfz0+CM5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ast\\source\\repos\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+  "projectFilePath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ast\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Ast\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

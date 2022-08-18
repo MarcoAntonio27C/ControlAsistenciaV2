@@ -10,6 +10,7 @@ namespace ControlAsistencia_.Models
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
+        public string CURP { get; set; }
         public string NumeroExpediente { get; set; }
         public string Adscripcion { get; set; }
         public string FechaIngreso { get; set; }

@@ -1,7 +1,7 @@
 ﻿
 namespace RegistroHuella
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
