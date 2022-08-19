@@ -12,6 +12,21 @@ namespace RequestAPI
     {
         string API = "https://localhost:44396/api/";
 
+
+        public IRestResponse EmpleadosPorInmueble()
+        {
+            try
+            {
+                var client = new RestClient(API + "Empleado");
+                var request = new RestRequest("", Method.GET);
+                var response = client.Execute(request);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         public IRestResponse GetEmpleadoCurp(string CURP)
         {
             try

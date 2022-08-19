@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RequestAPI
 {
-    class RequestAsistencia
+    public class RequestAsistencia
     {
     }
 }
