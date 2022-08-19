@@ -53,7 +53,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleados()
         {
-            return await _context.Empleado.ToListAsync();
+            return await _context.Empleado.Where(x => x.Huella != null).ToListAsync();
         }
 
         // POST: api/Empleado

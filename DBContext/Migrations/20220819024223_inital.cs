@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DBContext.Migrations
 {
-    public partial class Initial : Migration
+    public partial class inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,6 +29,7 @@ namespace DBContext.Migrations
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ApellidoPaterno = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ApellidoMaterno = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CURP = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NumeroExpediente = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Adscripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaIngreso = table.Column<string>(type: "nvarchar(max)", nullable: true),

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ax9/RfI64++u4uNTOt5djJZIM/z7bfJQo+tPNCiPorgdbs6aUAo5KpTdq2FHdB49VOlyOR6MxPuEGIfz0+CM5A==",
+  "dgSpecHash": "0/J3piBZTr+MBjvJOAO+JXcNGUUtXN7UVGbteua+ajH532bcb5Qtyx+KhQgWTv5gjF1mlOeZ8NyVY1+qOuCorw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+  "projectFilePath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ast\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Ast\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Marco Antonio C\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marco Antonio C\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

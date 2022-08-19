@@ -43,3 +43,18 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debu
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\ref\DBContext.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.pdb
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.deps.json
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ref\DBContext.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.pdb
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.pdb
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.AssemblyReference.cache
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfoInputs.cache
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfo.cs
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CoreCompileInputs.cache
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CopyComplete
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\ref\DBContext.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.pdb

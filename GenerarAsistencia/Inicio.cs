@@ -60,9 +60,9 @@ namespace GenerarAsistencia
                 ComboboxValue comboboxValue = (ComboboxValue)ComboBoxInmueble.SelectedItem;
 
                Asistencia asistencia = new Asistencia();
-            //   capturarHuella.SetMunicipio(comboboxValue.Name);
+               asistencia.SetInmueble(comboboxValue);
+               asistencia.Show();
 
-                asistencia.Show();
 
             }
             else

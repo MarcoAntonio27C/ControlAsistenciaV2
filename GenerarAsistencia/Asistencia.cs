@@ -20,12 +20,15 @@ namespace GenerarAsistencia
         private DPFP.Verification.Verification verificator;
         RequestEmpleado requestEmpleado;
         RequestAsistencia requestAsistencia;
+        public string IdInmueble = "";
+        public string NombreInmueble = "";
 
         public Asistencia()
         {
             InitializeComponent();
             requestEmpleado = new RequestEmpleado();
             requestAsistencia = new RequestAsistencia();
+
         }
 
         public void Verify(DPFP.Template template)
@@ -74,9 +77,9 @@ namespace GenerarAsistencia
                         var empleados = JsonConvert.DeserializeObject<List<Empleado>>(res.Content);
 
                         bool found = false;
-                        foreach (var empl in empleados)
+                        foreach (var empleado in empleados)
                         {
-                            byte[] huella = Convert.FromBase64String(Convert.ToBase64String(empl.Huella));
+                            byte[] huella = Convert.FromBase64String(Convert.ToBase64String(empleado.Huella));
                             stream = new MemoryStream(huella);
                             template = new DPFP.Template(stream);
                             verificator.Verify(features, template, ref result);
@@ -84,12 +87,46 @@ namespace GenerarAsistencia
 
                             if (result.Verified)
                             {
-                                MessageBox.Show("Usuario Encontrado");
+                                ControlAsistencia_.Models.Asistencia asistencia = new ControlAsistencia_.Models.Asistencia();
+                                asistencia.Id = Guid.NewGuid();
+                                asistencia.IdEmpleado = empleado.Id;
+                                asistencia.Tipo = tipoEntrada();
+                                asistencia.FechaHora = DateTime.Now;
                                 found = true;
-                                break;
+
+                                if (!tipoEntrada().Equals(""))
+                                {
+                                    var peticion = requestAsistencia.AddAsistencia(asistencia);
+
+                                    if (!peticion.Equals(null))
+                                    {
+                                        if (peticion.IsSuccessful)
+                                        {
+
+                                            MessageBox.Show(empleado.Nombre + " " + empleado.ApellidoPaterno + " " + empleado.ApellidoMaterno + " se Registro su Asistencia Correctamente");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al intentar guardar su asistencia, intentelo nuevamente");
+                                            break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error al intentar conectarse con el servicio de Biometricos");
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Seleccione el Tipo de Asistencia");
+                                    break;
+                                }
                             }
 
                         }
+
 
                         if (found == false)
                         {
@@ -111,10 +148,20 @@ namespace GenerarAsistencia
         }
 
 
-        private int tipoEntrada()
+        private String tipoEntrada()
         {
-            return 0;
+            if (Entrada.Checked){return "Entrada";}
+            if (SalidaComida.Checked){return "SalidaComida";}
+            if (RegresoComida.Checked){return "RegresoComida";}
+            if (Salida.Checked){return "Salida";}
+            return "";
         }
 
+        public void SetInmueble(ComboboxValue comboBoxValue)
+        {
+            IdInmueble = comboBoxValue.Id.ToString();
+            NombreInmueble = comboBoxValue.Name;
+            inmueble2.Text = NombreInmueble;
+        }
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBContext.Migrations
 {
     [DbContext(typeof(ControlAsistenciaDBContext))]
-    [Migration("20220818164317_AddCurp-Persona")]
-    partial class AddCurpPersona
+    [Migration("20220819024223_inital")]
+    partial class inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
