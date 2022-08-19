@@ -36,19 +36,21 @@ namespace GenerarAsistencia
             // 
             this.inmueble2.AutoSize = true;
             this.inmueble2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.inmueble2.Location = new System.Drawing.Point(2, 772);
+            this.inmueble2.Location = new System.Drawing.Point(2, 627);
+            this.inmueble2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inmueble2.Name = "inmueble2";
-            this.inmueble2.Size = new System.Drawing.Size(46, 17);
+            this.inmueble2.Size = new System.Drawing.Size(35, 13);
             this.inmueble2.TabIndex = 42;
             this.inmueble2.Text = "label4";
             // 
             // Asistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1632, 853);
+            this.ClientSize = new System.Drawing.Size(1224, 693);
             this.Controls.Add(this.inmueble2);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "Asistencia";
             this.Controls.SetChildIndex(this.Entrada, 0);
             this.Controls.SetChildIndex(this.SalidaComida, 0);

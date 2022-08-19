@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using RequestAPI;
 using System;
-
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,28 +57,16 @@ namespace RegistroHuella
             if (ComboBoxInmueble.SelectedIndex != -1)
             {
                 ComboboxValue comboboxValue = (ComboboxValue)ComboBoxInmueble.SelectedItem;
-                //MessageBox.Show(comboboxValue.Id.ToString());
                 RegistrarHuella capturarHuella = new RegistrarHuella();
-                capturarHuella.SetMunicipio(comboboxValue.Name);
-
+                capturarHuella.SetMunicipio(comboboxValue.Id.ToString(),comboboxValue.Name);
                 capturarHuella.Show();
-
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("No ha seleccionado ningún inmueble");
             }
           
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ComboBoxInmueble_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

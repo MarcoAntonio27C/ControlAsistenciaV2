@@ -83,7 +83,6 @@ namespace RegistroHuella
 
 		private void CaptureForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			MessageBox.Show("sdsadasdsa");
 			Stop();
 		}
 	#endregion

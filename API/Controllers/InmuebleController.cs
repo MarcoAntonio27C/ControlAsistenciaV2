@@ -39,7 +39,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Inmueble>>> GetInmuebles()
         {
-            return await _context.Inmueble.ToListAsync();
+            return await _context.Inmueble.OrderBy(x => x.Nombre).ToListAsync();
         }
 
         // POST: api/Inmueble

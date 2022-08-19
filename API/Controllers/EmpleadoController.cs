@@ -56,6 +56,12 @@ namespace API.Controllers
             return await _context.Empleado.Where(x => x.Huella != null).ToListAsync();
         }
 
+        [HttpGet("EmpleadosPorInmueble/{idInmueble}")]
+        public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleadosInmueble(string idInmueble)
+        {
+            return await _context.Empleado.Where(x => (!x.Huella.Equals(null)) && (x.IdInmueble.Equals(Guid.Parse(idInmueble)))).ToListAsync();
+        }
+
         // POST: api/Empleado
         [HttpPost]
         public async Task<ActionResult<Empleado>> AddEmpleado(Empleado Empleado)

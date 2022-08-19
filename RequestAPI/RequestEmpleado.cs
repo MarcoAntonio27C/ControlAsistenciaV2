@@ -13,11 +13,11 @@ namespace RequestAPI
         string API = "https://localhost:44396/api/";
 
 
-        public IRestResponse EmpleadosPorInmueble()
+        public IRestResponse EmpleadosPorInmueble(string idInmueble)
         {
             try
             {
-                var client = new RestClient(API + "Empleado");
+                var client = new RestClient(API + "Empleado/EmpleadosPorInmueble/"+idInmueble);
                 var request = new RestRequest("", Method.GET);
                 var response = client.Execute(request);
                 return response;
@@ -56,6 +56,7 @@ namespace RequestAPI
                     apellidoPaterno = $"{empleado.ApellidoPaterno}",
                     apellidoMaterno = $"{empleado.ApellidoPaterno}",
                     curp = $"{empleado.CURP}",
+                    cargo = $"{empleado.Cargo}",
                     numeroExpediente = $"{empleado.NumeroExpediente}",
                     adscripcion = $"{empleado.Adscripcion}",
                     fechaIngreso = $"{empleado.FechaIngreso}",

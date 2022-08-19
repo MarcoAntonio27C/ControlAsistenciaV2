@@ -38,20 +38,6 @@ namespace GenerarAsistencia
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-   
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,27 +45,16 @@ namespace GenerarAsistencia
             {
                 ComboboxValue comboboxValue = (ComboboxValue)ComboBoxInmueble.SelectedItem;
 
-               Asistencia asistencia = new Asistencia();
-               asistencia.SetInmueble(comboboxValue);
-               asistencia.Show();
-
-
+                Asistencia asistencia = new Asistencia();
+                asistencia.SetInmueble(comboboxValue);
+                asistencia.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("No ha seleccionado ningún inmueble");
             }
           
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ComboBoxInmueble_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -28,18 +28,17 @@ namespace RegistroHuella
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaptureForm));
             this.PromptLabel = new System.Windows.Forms.Label();
             this.StatusLabel = new System.Windows.Forms.Label();
-            this.Picture = new System.Windows.Forms.PictureBox();
             this.Prompt = new System.Windows.Forms.TextBox();
             this.StatusText = new System.Windows.Forms.TextBox();
             this.StatusLine = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
+            this.Picture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             this.SuspendLayout();
             // 
             // PromptLabel
@@ -59,16 +58,6 @@ namespace RegistroHuella
             this.StatusLabel.Size = new System.Drawing.Size(40, 13);
             this.StatusLabel.TabIndex = 3;
             this.StatusLabel.Text = "Status:";
-            // 
-            // Picture
-            // 
-            this.Picture.BackColor = System.Drawing.SystemColors.Window;
-            this.Picture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Picture.Location = new System.Drawing.Point(12, 144);
-            this.Picture.Name = "Picture";
-            this.Picture.Size = new System.Drawing.Size(248, 251);
-            this.Picture.TabIndex = 0;
-            this.Picture.TabStop = false;
             // 
             // Prompt
             // 
@@ -118,7 +107,23 @@ namespace RegistroHuella
             // 
             // pictureBox1
             // 
-
+            this.pictureBox1.Image = global::RegistroHuella.Properties.Resources.LogoFiscalia;
+            this.pictureBox1.Location = new System.Drawing.Point(253, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Picture
+            // 
+            this.Picture.BackColor = System.Drawing.SystemColors.Window;
+            this.Picture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Picture.Location = new System.Drawing.Point(12, 144);
+            this.Picture.Name = "Picture";
+            this.Picture.Size = new System.Drawing.Size(248, 251);
+            this.Picture.TabIndex = 0;
+            this.Picture.TabStop = false;
             // 
             // CaptureForm
             // 
@@ -127,7 +132,7 @@ namespace RegistroHuella
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.CloseButton;
-            this.ClientSize = new System.Drawing.Size(704, 471);
+            this.ClientSize = new System.Drawing.Size(674, 471);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CloseButton);
@@ -142,8 +147,8 @@ namespace RegistroHuella
             this.Text = "Captura de Huella";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CaptureForm_FormClosed);
             this.Load += new System.EventHandler(this.CaptureForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

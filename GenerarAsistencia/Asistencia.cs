@@ -69,7 +69,7 @@ namespace GenerarAsistencia
 
                 try
                 {
-                    var res = requestEmpleado.EmpleadosPorInmueble();
+                    var res = requestEmpleado.EmpleadosPorInmueble(IdInmueble);
 
                     if (!res.Equals(null) && res.IsSuccessful.Equals(true))
                     {
@@ -104,6 +104,7 @@ namespace GenerarAsistencia
                                         {
 
                                             MessageBox.Show(empleado.Nombre + " " + empleado.ApellidoPaterno + " " + empleado.ApellidoMaterno + " se Registro su Asistencia Correctamente");
+                                            
                                             break;
                                         }
                                         else

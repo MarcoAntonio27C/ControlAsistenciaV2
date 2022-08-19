@@ -58,7 +58,6 @@ namespace GenerarAsistencia
             this.label2.Size = new System.Drawing.Size(256, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Seleccione el Inmueble";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -70,7 +69,6 @@ namespace GenerarAsistencia
             this.label1.Size = new System.Drawing.Size(303, 38);
             this.label1.TabIndex = 5;
             this.label1.Text = "Registro de Huella";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -81,7 +79,6 @@ namespace GenerarAsistencia
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ComboBoxInmueble
             // 
@@ -90,7 +87,6 @@ namespace GenerarAsistencia
             this.ComboBoxInmueble.Name = "ComboBoxInmueble";
             this.ComboBoxInmueble.Size = new System.Drawing.Size(308, 21);
             this.ComboBoxInmueble.TabIndex = 10;
-            this.ComboBoxInmueble.SelectedIndexChanged += new System.EventHandler(this.ComboBoxInmueble_SelectedIndexChanged);
             // 
             // Inicio
             // 
@@ -102,7 +98,9 @@ namespace GenerarAsistencia
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

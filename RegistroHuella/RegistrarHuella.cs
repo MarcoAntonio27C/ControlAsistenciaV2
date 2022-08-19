@@ -17,53 +17,71 @@ namespace RegistroHuella
     {
         private DPFP.Template Template;
         RequestEmpleado requestEmpleado;
-        Empleado empleado;
+        Empleado tmpEmpleado;
+        string IdInmueble = "";
+        string Inmueble = "";
+
         public RegistrarHuella()
         {
             InitializeComponent();
-            empleado = new Empleado();
+            tmpEmpleado = new Empleado();
             requestEmpleado = new RequestEmpleado();
             NombreCompleto.Enabled = false;
             FechaIngreso.Enabled = false;
             Cargo.Enabled = false;
             Registrar.Enabled = false;
-
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        public void SetMunicipio(string municipio)
+        public void SetMunicipio(string idInmueble, string inmueble)
         {
-            NombreMunicipio.Text = municipio;
-            NombreMunicipio.Visible = false;
+            IdInmueble = idInmueble;
+            Inmueble = inmueble;
+            label_inmueble.Text = inmueble;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool found = false;
             if (!Curp.Text.Equals(""))
             {
-                var request = requestEmpleado.GetEmpleadoCurp(Curp.Text);
+                var request = requestEmpleado.EmpleadosPorInmueble(IdInmueble);
                 if (!request.Equals(null) && (!request.IsSuccessful.Equals(false)))
                 {
-                    
-                     empleado = JsonConvert.DeserializeObject<Empleado>(request.Content);
-                    if (!empleado.Equals(null))
+                    var empleados = JsonConvert.DeserializeObject<List<Empleado>>(request.Content);
+                    if (empleados.Count > 0)
                     {
-                        NombreCompleto.Text = empleado.Nombre + " " + empleado.ApellidoPaterno + " " + empleado.ApellidoMaterno;
-                        FechaIngreso.Text = empleado.FechaIngreso;
-                        capturarHuell.Enabled = true;
+                        foreach(var empleado in empleados)
+                        {
+                            if (empleado.CURP.Equals(Curp.Text))
+                            {
+                                tmpEmpleado = empleado;
+                                NombreCompleto.Text = empleado.Nombre + " " + empleado.ApellidoPaterno + " " + empleado.ApellidoMaterno;
+                                FechaIngreso.Text = empleado.FechaIngreso;
+                                Cargo.Text = empleado.Cargo;
+                                capturarHuell.Enabled = true;
+                                found = true;
+                                break;
+                            }
+                        }
 
+                        if(found == false)
+                        {
+                            MessageBox.Show("No se encontraron registros");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay empleados registrados en este inmueble");
                     }
                 }
                 else
                 {
                     NombreCompleto.Text = "";
                     FechaIngreso.Text = "";
+                    Cargo.Text = "";
                     Registrar.Enabled = false;
-                    MessageBox.Show("No se encontraron registros con ese Curp");
+                    MessageBox.Show("Hubo algún problema con la conexión a la base de datos");
                 }
             }
             else
@@ -77,7 +95,7 @@ namespace RegistroHuella
             byte[] streamHuella = Template.Bytes;
             string huella = Convert.ToBase64String(streamHuella);
 
-            var res = requestEmpleado.UpdateEmpleado(empleado, huella);
+            var res = requestEmpleado.UpdateEmpleado(tmpEmpleado, huella);
 
             if (!res.Equals(null))
             {
@@ -97,7 +115,6 @@ namespace RegistroHuella
                     MessageBox.Show("Hubo un problema al guardar la información");
                 }
             }
-
         }
 
         private void capturarHuell_Click(object sender, EventArgs e)
@@ -123,9 +140,12 @@ namespace RegistroHuella
                     MessageBox.Show("Algo ocurrio durante el registro de la huella, vuelva a repetir el proceso por favor");
                 }
             }
-                ));
+            ));
         }
 
-
+        private void RegistrarHuella_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

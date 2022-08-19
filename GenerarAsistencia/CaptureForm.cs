@@ -84,8 +84,8 @@ namespace GenerarAsistencia
 
 		private void CaptureForm_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			MessageBox.Show("Te amo iztel");
-			Stop();
+			Application.Exit();
+			//Stop();
 		}
 	#endregion
 

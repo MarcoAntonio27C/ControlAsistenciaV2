@@ -90,7 +90,6 @@ namespace RegistroHuella
             this.ComboBoxInmueble.Name = "ComboBoxInmueble";
             this.ComboBoxInmueble.Size = new System.Drawing.Size(308, 21);
             this.ComboBoxInmueble.TabIndex = 10;
-            this.ComboBoxInmueble.SelectedIndexChanged += new System.EventHandler(this.ComboBoxInmueble_SelectedIndexChanged);
             // 
             // Form1
             // 
