@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/index.css" />
+<div>
+    <div class="row my-auto">
+        <div class="col-4"></div>
+        <div class="col-4 ">
+            <div class="text-center">
+                <img src="~/img/LogoFiscalia.png" alt="Alternate Text" />
+            </div>
+            <form class="border-light border rounded mt-3 pt-5 pb-5 px-3 bg-white" action="/" method="post">
+                <h5 class="text-center text-secondary mb-5">Reporte Asistencias</h5>
+                <div class="form-group">
+                    <label class="text-secondary">Ingrese su CURP</label>
+                    <input class="form-control" type="text" name="curp" value="" />
+                </div>
+                <div class="text-center">
+                    <button class="">Consultar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
