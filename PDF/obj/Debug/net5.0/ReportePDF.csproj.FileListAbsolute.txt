@@ -14,3 +14,4 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\ob
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ref\ReportePDF.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.pdb
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.AssemblyReference.cache

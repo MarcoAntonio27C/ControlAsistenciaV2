@@ -303,6 +303,7 @@ namespace ReporteAsistencia.Controllers
         {
             DateTime date = DateTime.Parse(mes);
             var empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
+            var inmueble = await _context.Inmueble.FindAsync(empleado.IdInmueble);
             var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
            
            
@@ -311,7 +312,7 @@ namespace ReporteAsistencia.Controllers
 
             CrearReporte reporte = new CrearReporte();
             string filepath = System.IO.Path.GetTempFileName().Replace(".tmp", ".pdf");
-            return reporte.Crear(empleado,entradas, salidas, filepath);
+            return reporte.Crear(empleado,inmueble,entradas, salidas, filepath);
         }
 
     }

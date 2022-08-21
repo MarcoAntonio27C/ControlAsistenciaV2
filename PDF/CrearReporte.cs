@@ -15,7 +15,7 @@ namespace ReportePDF
 {
     public class CrearReporte
     {
-         public FileStreamResult Crear(Empleado empleado, List<DateTime> entradas, List<DateTime> salidas, string path)
+         public FileStreamResult Crear(Empleado empleado,Inmueble inmueble ,List<DateTime> entradas, List<DateTime> salidas, string path)
         {
             Document doc = new Document(PageSize.LETTER);
             MemoryStream workStream = new MemoryStream();
@@ -99,7 +99,7 @@ namespace ReportePDF
             cellHorario.BorderWidth = 0;
             tablaDatos.AddCell(cellHorario);
             //*****************************************************************************
-            PdfPCell cellCentroTrabajo = new PdfPCell(new Phrase("Centro de Trabajo:", _span));
+            PdfPCell cellCentroTrabajo = new PdfPCell(new Phrase("Centro de Trabajo: "+ConvertirCadenada(inmueble.Nombre), _span));
             cellCentroTrabajo.Colspan = 7;
             cellCentroTrabajo.BorderWidth = 0;
             cellCentroTrabajo.BorderWidthBottom = 1;
@@ -112,7 +112,7 @@ namespace ReportePDF
             cellContratacion.BorderWidthBottom = 1;
             tablaDatos.AddCell(cellContratacion);
             //*****************************************************************************
-            PdfPCell cellInmueble = new PdfPCell(new Phrase("Inmueble:", _span));
+            PdfPCell cellInmueble = new PdfPCell(new Phrase("Inmueble: "+ConvertirCadenada(inmueble.Direccion), _span));
             cellInmueble.Colspan = 7;
             cellInmueble.BorderWidth = 0;
             cellInmueble.BorderWidthBottom = 1;
@@ -321,7 +321,7 @@ namespace ReportePDF
 
             PdfPTable tablafirma = new PdfPTable(10);
             tablafirma.WidthPercentage = 100;
-            PdfPCell cellempleado = new PdfPCell(new Phrase("   " + NombreEmpleado + "   ", _dato));
+            PdfPCell cellempleado = new PdfPCell(new Phrase("   " + NombreEmpleado.ToUpper() + "   ", _dato));
             cellempleado.Padding = 5;
             cellempleado.Colspan = 4;
             cellempleado.HorizontalAlignment = Element.ALIGN_CENTER;
@@ -366,6 +366,24 @@ namespace ReportePDF
             workStream.Position = 0;
             return new FileStreamResult(workStream, "application/pdf");
 
+        }
+
+        public string ConvertirCadenada(string cadena)
+        {
+            List<string> palabras = new List<string>();
+            string salida = "";
+
+            palabras = cadena.ToLower().Split(' ').ToList();
+
+            foreach(var palabra in palabras)
+            {
+                char[] letras = palabra.ToCharArray();
+                letras[0] = char.ToUpper(letras[0]);
+
+                salida = salida + " " + new string(letras);
+            }
+
+            return salida;
         }
     }
 }
