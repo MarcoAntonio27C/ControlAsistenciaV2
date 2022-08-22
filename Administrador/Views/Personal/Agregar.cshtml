@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Personal";
+}
+
+<link rel="stylesheet" href="~/css/personal.css" />
+<div>
+    <h5 id="titulo" class="text-center py-2 rounded mt-4">Agregar Nuevo Empleado</h5>
+
+    <div class="mt-3 border rounded px-3 py-3">
+        <form action="/" method="post">
+            <div class="row">
+                <div class="col">
+                    <label>Nombre(s)</label>
+                    <input class="form-control" type="text" name="nombre" value="" />
+                </div>
+                <div class="col">
+                    <label>Apellido Paterno</label>
+                    <input class="form-control" type="text" name="apellidoPaterno" value="" />
+                </div>
+                <div class="col">
+                    <label>Apellido Materno</label>
+                    <input class="form-control" type="text" name="apellidoMaterno" value="" />
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <label>CURP</label>
+                    <input class="form-control" type="text" name="curp" value="" />
+                </div>
+                <div class="col">
+                    <label>Cargo</label>
+                    <input class="form-control" type="text" name="cargo" value="" />
+                </div>
+                <div class="col">
+                    <label>Numero Expediente</label>
+                    <input class="form-control" type="text" name="numeroExpediente" value="" />
+                </div>
+                <div class="col">
+                    <label>Adscripción</label>
+                    <input class="form-control" type="text" name="adscripcion" value="" />
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-10">
+                    <label>Inmueble donde labora:</label>
+                    <select class="form-control">
+                        <option value="value">Edificio Central</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label>Fecha Ingreso</label>
+                    <input class="form-control" type="text" name="fechaIngreso" value="" placeholder="dd/mm/aaaa" />
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-info py-2 px-4">Registrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="~/js/Personal.js" asp-append-version="true"></script>

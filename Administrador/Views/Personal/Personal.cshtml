@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Personal";
+}
+
+<link rel="stylesheet" href="~/css/personal.css" />
+<div>
+    <h5 id="titulo" class="text-center py-2 rounded mt-4">Empleados</h5>
+    <div>
+        <div class="row my-3">
+            <div class="col-4">
+                <input class="form-control" type="text" name="name" value="" placeholder="Nombre" />
+            </div>
+            <div class="col-3">
+                <input class="form-control" type="text" name="name" value="" placeholder="Apellido Paterno" />
+            </div>
+            <div class="col-3">
+                <input class="form-control" type="text" name="name" value="" placeholder="Apellido Materno" />
+            </div>
+            <div class="col-2">
+                <button class="btn btn-info d-inline">Buscar</button>
+                <a asp-controller="Personal" asp-action="Agregar" class="btn btn-info d-inline">Agregar</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <table class="table text-secondary">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Inmueble</th>
+                    <th scope="col">Adscripción</th>
+                    <th scope="col">N°Expediente</th>
+                    <th scope="col">Detalles</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<script src="~/js/Personal.js" asp-append-version="true"></script>
