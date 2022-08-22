@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qbzII715QFmqeXe0iCb5TR9T6WHE46FcgbIPkFwfjTn6sfv+UlQbgmQRQkVis/ISC7QOTiHUSoFGuvvwDtGMHQ==",
+  "dgSpecHash": "CIemW4OXybmO2JAMZpDIjSdH/95oskXTZgreSpSFwdSsr2jIRXzl/hC1GnMlu9Rzgg2NirUyruopUogJd53h0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
+  "projectFilePath": "C:\\Users\\Marco Antonio C\\source\\repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marco Antonio C\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Marco Antonio C\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

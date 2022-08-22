@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GPW82Z94PDeDV+au8ZyA5Hi1e64dq5pPqq9dvSg0YErl2kRNuiWy3U2voCzh0hdHlzlSrYBARYxIbgddVY71BA==",
+  "dgSpecHash": "6InzQ4rh6W60zGpNJRI4IUf7bODrW8t1mmIjzom1J6n6Iba9ugomevEgWSMfEFp+6rEWrKOR+8fJofOJql519g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ReporteAsistencia\\ReporteAsistencia.csproj",
+  "projectFilePath": "C:\\Users\\Marco Antonio C\\source\\repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ReporteAsistencia\\ReporteAsistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marco Antonio C\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\Marco Antonio C\\.nuget\\packages\\itextsharp\\5.5.13.3\\itextsharp.5.5.13.3.nupkg.sha512",

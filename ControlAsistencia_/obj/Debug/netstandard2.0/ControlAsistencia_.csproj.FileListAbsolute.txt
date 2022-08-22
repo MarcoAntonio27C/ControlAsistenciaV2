@@ -36,3 +36,4 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Contro
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.CoreCompileInputs.cache
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.pdb
+C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.AssemblyReference.cache

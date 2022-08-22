@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2vPsbiRJFCk7MhPMBFWxWnHbvrF0hiJW/qkUhKj01dzYQj9wlnIzs11zYZ9ULtDqb5/b6EGlVJ8EMWxJOcmsWg==",
+  "dgSpecHash": "mjAoeLi2F3YLTrIpTPxZRUASoHUmlltKUdrsEXMfkXqe4/6KedqQJ4wHeVd6kEahpK2IYXrKcrg1fp40Zvn4nA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Marco Antonio C\\source\\repos\\MarcoAntonio27C\\ControlAsistenciaV2\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marco Antonio C\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Marco Antonio C\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
