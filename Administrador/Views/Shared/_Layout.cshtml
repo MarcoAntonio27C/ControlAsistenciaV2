@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Administrador</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class=" bg-danger navbar-light ">
+            <div class="align-self-center d-inline">
+                <a class="navbar-brand bg-info" href="#">
+                    <img src="~/img/Logotipo_institucional_500.png" height="30" class="d-inline-block align-top" alt="">
+                    Administrador
+                </a>
+            </div>
+
+            <div class="d-inline justify-content-center bg-primary"   >
+                sdsdsa
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" style="background-color: #515359;">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center text-white">
+                    <a title="Fiscalia General del Estado" target="_blank" alt="Para mayor información por favor visita nuestra página:" href="https://fiscalia.puebla.gob.mx">
+                        <img src="~/img/Logo500_White.png"  class="mt-4 w-50" />
+                    </a>
+                </div>
+                <div class="col text-center text-white">
+                    <br />
+                    <h5>Ubicación</h5>
+                    <hr />
+                    <p>
+                        <small>
+                            Boulevard Héroes del 5 de Mayo 31 Oriente,
+                            <br /> Ladrillera de Benítez, 72530 Puebla, Pue. MX
+                            <br />
+                        </small>
+                    </p>
+                </div>
+                <div class="col text-center text-white">
+                    <br />
+                    <h5>Contacto</h5>
+                    <hr />
+                    <p>
+                        <small>222 211 7800 | 222 211 7900</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
