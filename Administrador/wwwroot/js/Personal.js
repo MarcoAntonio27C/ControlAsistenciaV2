@@ -22,4 +22,23 @@
             }
         },
     });
+
+    $.ajax({
+        type: 'GET',
+        url: "GetInmuebles",
+        success: function (response) {
+            $.each(response, function (i, inmueble) {
+                $("#inmueble").append($('<option>', {
+                    value: inmueble.id,
+                    text: inmueble.nombre
+                }));
+            });
+             console.log(response);
+        },
+    });
+
+    $("#inmueble").click(function () {
+        console.log($("#inmueble").val());
+    });
+
 });
