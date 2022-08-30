@@ -13,10 +13,10 @@ namespace Administrador.Controllers
 {
     public class PersonalController : Controller
     {
-        private readonly ILogger<PersonalController> _logger;
+
         private readonly ControlAsistenciaDBContext _context;
 
-        public PersonalController( ControlAsistenciaDBContext context)
+        public PersonalController(ControlAsistenciaDBContext context)
         {
             _context = context;
         }
@@ -74,6 +74,19 @@ namespace Administrador.Controllers
 
 
 
+
+
+        async Task<bool> isExisteAsync(string numeroExpediente)
+        {
+            var x = await _context.Empleado.Where(e => e.NumeroExpediente.Equals(numeroExpediente)).ToListAsync();
+
+            if (x.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         [HttpGet]
         [Produces("application/json")]
         public async Task<ActionResult> Empleados()
@@ -92,26 +105,6 @@ namespace Administrador.Controllers
             return Ok(empleados);
         }
 
-        async Task<bool> isExisteAsync(string numeroExpediente)
-        {
-            var x = await _context.Empleado.Where(e => e.NumeroExpediente.Equals(numeroExpediente)).ToListAsync();
-
-            if (x.Count > 0)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        [HttpGet("{idMunicipio?}")]
-        [Produces("application/json")]
-   
-        public async Task<ActionResult<IEnumerable<Inmueble>>> GetMunicipiosAsync(Guid idMunicipio)
-        {
-            var inmuebles = await _context.Inmueble.Where(x => x.IdMunicipio.Equals(idMunicipio)).OrderBy(n => n.Nombre).ToListAsync();
-            return inmuebles;
-        }
-
         [HttpGet]
         [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<Municipio>>> GetMunicipios()
@@ -119,5 +112,6 @@ namespace Administrador.Controllers
             var municipios = await _context.Municipio.OrderBy(x => x.Nombre).ToListAsync();
             return municipios;
         }
+
     }
 }

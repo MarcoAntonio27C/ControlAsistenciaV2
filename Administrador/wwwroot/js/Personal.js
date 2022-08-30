@@ -39,7 +39,7 @@
 
     $.ajax({
         type: 'GET',
-        url: "GetInmueblesMunicipio/829D477C-F775-4C88-9953-85D22BA08598",
+        url: "GetInmuebles",
         success: function (response) {
             $.each(response, function (i, inmueble) {
                 $("#inmueble").append($('<option>', {

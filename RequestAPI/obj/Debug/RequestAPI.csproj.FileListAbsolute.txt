@@ -24,3 +24,17 @@ C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\Reques
 C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.CopyComplete
 C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.dll
 C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\RequestAPI.dll.config
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\RequestAPI.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\RequestAPI.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\ControlAsistencia_.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\RestSharp.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\ControlAsistencia_.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\bin\Debug\RestSharp.xml
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.AssemblyReference.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.CoreCompileInputs.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.CopyComplete
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.pdb

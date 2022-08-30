@@ -15,3 +15,20 @@ C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\ob
 C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.dll
 C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ref\ReportePDF.dll
 C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ReportePDF.deps.json
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ReportePDF.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ref\ReportePDF.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ReportePDF.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ControlAsistencia_.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ControlAsistencia_.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.AssemblyReference.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.Properties.Resources.resources
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.GenerateResource.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.AssemblyInfoInputs.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.AssemblyInfo.cs
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.CoreCompileInputs.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.CopyComplete
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ref\ReportePDF.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.pdb
