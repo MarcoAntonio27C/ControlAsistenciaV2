@@ -36,10 +36,10 @@ namespace API.Controllers
         }
 
         // GET: api/Empleado/5
-        [HttpGet("CURP/{CURP}")]
-        public async Task<ActionResult<Empleado>> GetEmpleadoCURP(string CURP)
+        [HttpGet("NumeroExpediente/{numeroExpediente}")]
+        public async Task<ActionResult<Empleado>> GetEmpleadoNumeroExpediente(string numeroExpediente)
         {
-            var Empleado = await _context.Empleado.Where(x => x.CURP.Equals(CURP)).FirstAsync();
+            var Empleado = await _context.Empleado.Where(x => x.NumeroExpediente.Equals(numeroExpediente)).FirstAsync();
 
             if (Empleado == null)
             {

@@ -22,7 +22,7 @@ namespace ReportePDF
             // PdfWriter writer = PdfWriter.GetInstance(doc,new FileStream(path, FileMode.Create));
             PdfWriter writer = PdfWriter.GetInstance(doc, workStream);
             writer.CloseStream = false;
-            string NombreEmpleado = empleado.Nombre+ " "+ empleado.ApellidoPaterno+ " "+ empleado.ApellidoMaterno;
+            string NombreEmpleado = empleado.NombreCompleto;
             doc.AddTitle("");
             doc.AddCreator("");
 
@@ -86,7 +86,7 @@ namespace ReportePDF
             cellUR.BorderWidthBottom = 1;
             cellUR.Padding = 6;
             tablaDatos.AddCell(cellUR);
-            PdfPCell cellCategoria = new PdfPCell(new Phrase("Cargo: " + empleado.Cargo, _span));
+            PdfPCell cellCategoria = new PdfPCell(new Phrase("Cargo: ", _span));
             cellCategoria.Colspan = 6;
             cellCategoria.Padding = 5;
             cellCategoria.BorderWidthBottom = 1;

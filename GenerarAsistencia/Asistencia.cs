@@ -103,7 +103,7 @@ namespace GenerarAsistencia
                                         if (peticion.IsSuccessful)
                                         {
 
-                                            MessageBox.Show(empleado.Nombre + " " + empleado.ApellidoPaterno + " " + empleado.ApellidoMaterno + " se Registro su Asistencia Correctamente");
+                                            MessageBox.Show(empleado.NombreCompleto  + " se Registro su Asistencia Correctamente");
                                             Picture.Image = global::GenerarAsistencia.Properties.Resources.fondoBlanco;
                                             break;
                                         }

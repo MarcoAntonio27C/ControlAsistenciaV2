@@ -42,31 +42,12 @@ namespace API.Controllers
             return await _context.Inmueble.OrderBy(x => x.Nombre).ToListAsync();
         }
 
-        // POST: api/Inmueble
-        [HttpPost]
-        public async Task<ActionResult<Inmueble>> AddInmueble(Inmueble inmueble)
+        [HttpGet("Municipio/{id}")]
+        public async Task<ActionResult<IEnumerable<Inmueble>>> GetInmueblesMunicipio(Guid id)
         {
-            _context.Inmueble.Add(inmueble);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetEmpleado", new { id = inmueble.Id }, inmueble);
+            return await _context.Inmueble.Where(x => x.IdMunicipio.Equals(id)).OrderBy(n => n.Nombre).ToListAsync();
         }
 
-        // DELETE: api/Inmueble
-        [HttpPost("{id}")]
-        public async Task<IActionResult> DeleteEmpleado(Guid id)
-        {
-            var inmueble = await _context.Inmueble.FindAsync(id);
-            if (inmueble == null)
-            {
-                return NotFound();
-            }
-
-            _context.Inmueble.Remove(inmueble);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutInmueble(Guid id, Inmueble inmueble)

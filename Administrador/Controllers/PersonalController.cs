@@ -16,9 +16,8 @@ namespace Administrador.Controllers
         private readonly ILogger<PersonalController> _logger;
         private readonly ControlAsistenciaDBContext _context;
 
-        public PersonalController(ILogger<PersonalController> logger, ControlAsistenciaDBContext context)
+        public PersonalController( ControlAsistenciaDBContext context)
         {
-            _logger = logger;
             _context = context;
         }
         public IActionResult Index()
@@ -41,15 +40,16 @@ namespace Administrador.Controllers
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
             Empleado empleado = new Empleado();
-            empleado.Nombre = form["nombre"];
-            empleado.ApellidoPaterno = form["apellidoPaterno"];
-            empleado.ApellidoMaterno = form["apellidoMaterno"];
-            empleado.CURP = form["curp"];
-            empleado.Cargo = form["cargo"];
+            empleado.NombreCompleto = form["nombre"];
             empleado.NumeroExpediente = form["numeroExpediente"];
-            empleado.Adscripcion = form["adscripcion"];
             empleado.FechaIngreso = form["fechaIngreso"];
+            empleado.UR = form["ur"];
+            empleado.Horario = form["horario"];
             empleado.IdInmueble = Guid.Parse(form["inmueble"]);
+            empleado.IdCargo = Guid.Parse(form["cargo"]);
+            empleado.IdCargoHomologado = Guid.Parse(form["cargoHomologado"]);
+            empleado.IdCentroTrabajo = Guid.Parse(form["centroTrabajo"]);
+            empleado.IdUnidadAdministrativa = Guid.Parse(form["unidadAdministrativa"]);
             _context.Empleado.Add(empleado);
 
             var exist = await isExisteAsync(form["curp"]);
@@ -83,11 +83,8 @@ namespace Administrador.Controllers
                 x => new
                 {
                     x.empleado.Id,
-                    x.empleado.Nombre,
-                    x.empleado.ApellidoPaterno,
-                    x.empleado.ApellidoMaterno,
+                    x.empleado.NombreCompleto,
                     NombreInmueble = x.inmueble.Nombre,
-                    x.empleado.Adscripcion,
                     x.empleado.NumeroExpediente
                 }
                 ).ToListAsync();
@@ -95,9 +92,9 @@ namespace Administrador.Controllers
             return Ok(empleados);
         }
 
-        async Task<bool> isExisteAsync(string curp)
+        async Task<bool> isExisteAsync(string numeroExpediente)
         {
-            var x = await _context.Empleado.Where(e => e.CURP.Equals(curp)).ToListAsync();
+            var x = await _context.Empleado.Where(e => e.NumeroExpediente.Equals(numeroExpediente)).ToListAsync();
 
             if (x.Count > 0)
             {
@@ -106,12 +103,21 @@ namespace Administrador.Controllers
             return false;
         }
 
+        [HttpGet("{idMunicipio?}")]
+        [Produces("application/json")]
+   
+        public async Task<ActionResult<IEnumerable<Inmueble>>> GetMunicipiosAsync(Guid idMunicipio)
+        {
+            var inmuebles = await _context.Inmueble.Where(x => x.IdMunicipio.Equals(idMunicipio)).OrderBy(n => n.Nombre).ToListAsync();
+            return inmuebles;
+        }
+
         [HttpGet]
         [Produces("application/json")]
-        public async Task<ActionResult<IEnumerable<Inmueble>>> GetInmuebles()
+        public async Task<ActionResult<IEnumerable<Municipio>>> GetMunicipios()
         {
-            var inmuebles = await _context.Inmueble.OrderBy(x => x.Nombre).ToListAsync();
-            return inmuebles;
+            var municipios = await _context.Municipio.OrderBy(x => x.Nombre).ToListAsync();
+            return municipios;
         }
     }
 }

@@ -25,7 +25,21 @@
 
     $.ajax({
         type: 'GET',
-        url: "GetInmuebles",
+        url: "GetMunicipios",
+        success: function (response) {
+            $.each(response, function (i, municipio) {
+                $("#municipio").append($('<option>', {
+                    value: municipio.id,
+                    text: municipio.nombre
+                }));
+            });
+            console.log(response);
+        },
+    });
+
+    $.ajax({
+        type: 'GET',
+        url: "GetInmueblesMunicipio/829D477C-F775-4C88-9953-85D22BA08598",
         success: function (response) {
             $.each(response, function (i, inmueble) {
                 $("#inmueble").append($('<option>', {
@@ -37,8 +51,5 @@
         },
     });
 
-    $("#inmueble").click(function () {
-        console.log($("#inmueble").val());
-    });
 
 });

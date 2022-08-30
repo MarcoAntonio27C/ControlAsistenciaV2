@@ -53,12 +53,12 @@ namespace RegistroHuella
                     {
                         foreach(var empleado in empleados)
                         {
-                            if (empleado.CURP.Equals(Curp.Text))
+                            if (empleado.NumeroExpediente.Equals(Curp.Text))
                             {
                                 tmpEmpleado = empleado;
-                                NombreCompleto.Text = empleado.Nombre + " " + empleado.ApellidoPaterno + " " + empleado.ApellidoMaterno;
+                                NombreCompleto.Text = empleado.NombreCompleto;
                                 FechaIngreso.Text = empleado.FechaIngreso;
-                                Cargo.Text = empleado.Cargo;
+                                Cargo.Text = empleado.IdCargo.ToString();
                                 capturarHuell.Enabled = true;
                                 found = true;
                                 break;

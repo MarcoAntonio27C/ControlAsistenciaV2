@@ -52,16 +52,17 @@ namespace RequestAPI
                 request.AddJsonBody(new
                 {
                     id= $"{empleado.Id}",
-                    nombre = $"{empleado.Nombre}",
-                    apellidoPaterno = $"{empleado.ApellidoPaterno}",
-                    apellidoMaterno = $"{empleado.ApellidoPaterno}",
-                    curp = $"{empleado.CURP}",
-                    cargo = $"{empleado.Cargo}",
+                    nombreCompleto = $"{empleado.NombreCompleto}",
                     numeroExpediente = $"{empleado.NumeroExpediente}",
-                    adscripcion = $"{empleado.Adscripcion}",
                     fechaIngreso = $"{empleado.FechaIngreso}",
+                    ur = $"{empleado.UR}",
+                    horario = $"{empleado.Horario}",
                     huella = $"{huella}",
-                    idInmueble = $"{empleado.IdInmueble}"
+                    idInmueble = $"{empleado.IdInmueble}",
+                    idCargo = $"{empleado.IdCargo}",
+                    idCargoHomologado = $"{empleado.IdCargoHomologado}",
+                    idCentroTrabajo = $"{empleado.IdCentroTrabajo}",
+                    idUnidadAdministrativa = $"{empleado.IdUnidadAdministrativa}"
                 });
                 var response = client.Execute(request);
                 return response;
