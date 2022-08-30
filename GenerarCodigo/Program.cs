@@ -31,7 +31,7 @@ namespace GenerarCodigo
             foreach(var x in municipios)
             {
                 var id = Guid.NewGuid();
-                Console.WriteLine(i+" "+inicio+id+medio+x+final);
+                Console.WriteLine(inicio+id+medio+x+final);
                 i++;
             }
 

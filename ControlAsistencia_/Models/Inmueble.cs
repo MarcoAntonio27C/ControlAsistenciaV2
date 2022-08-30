@@ -8,7 +8,7 @@ namespace ControlAsistencia_.Models
     {
         public Guid Id { get; set; }
         public string Nombre { get; set; }
-        public string Municipio { get; set; }
         public string Direccion { get; set; }
+        public Guid IdMunicipio { get; set; }
     }
 }
