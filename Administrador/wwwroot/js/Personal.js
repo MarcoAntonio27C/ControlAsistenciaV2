@@ -33,18 +33,96 @@
                     text: municipio.nombre
                 }));
             });
-            console.log(response);
+           // console.log(response);
+        },
+    });
+
+
+    $("#municipio").change(function () {
+        $("#inmueble").empty();
+        $.ajax({
+            type: 'GET',
+            url: "GetInmueblesMunicipio",
+            data: {
+                id: $("#municipio").val()
+            },
+            success: function (response) {
+                $.each(response, function (i, inmueble) {
+                    $("#inmueble").append($('<option>', {
+                        value: inmueble.id,
+                        text: inmueble.nombre
+                    }));
+                });
+               // console.log(response);
+            },
+        });
+    });
+
+    $.ajax({
+        type: 'GET',
+        url: "GetUnidadAdministrativa",
+        success: function (response) {
+            $.each(response, function (i, unidad) {
+                $("#unidadAdministrativa").append($('<option>', {
+                    value: unidad.id,
+                    text: unidad.nombre
+                }));
+            });
+            // console.log(response);
         },
     });
 
     $.ajax({
         type: 'GET',
-        url: "GetInmuebles",
+        url: "GetCentroTrabajo",
         success: function (response) {
-            $.each(response, function (i, inmueble) {
-                $("#inmueble").append($('<option>', {
-                    value: inmueble.id,
-                    text: inmueble.nombre
+            $.each(response, function (i, centro) {
+                $("#centroTrabajo").append($('<option>', {
+                    value: centro.id,
+                    text: centro.nombre
+                }));
+            });
+            // console.log(response);
+        },
+    });
+
+
+    $.ajax({
+        type: 'GET',
+        url: "GetCargo",
+        success: function (response) {
+            $.each(response, function (i, cargo) {
+                $("#cargo").append($('<option>', {
+                    value: cargo.id,
+                    text: cargo.nombre
+                }));
+            });
+            // console.log(response);
+        },
+    });
+
+    $.ajax({
+        type: 'GET',
+        url: "GetCargoHomologado",
+        success: function (response) {
+            $.each(response, function (i, cargoHomologado) {
+                $("#cargoHomologado").append($('<option>', {
+                    value: cargoHomologado.id,
+                    text: cargoHomologado.nombre
+                }));
+            });
+            // console.log(response);
+        },
+    });
+
+    $.ajax({
+        type: 'GET',
+        url: "GetContratacion",
+        success: function (response) {
+            $.each(response, function (i, contratacion) {
+                $("#contratacion").append($('<option>', {
+                    value: contratacion.id,
+                    text: contratacion.nombre
                 }));
             });
              console.log(response);
@@ -52,4 +130,18 @@
     });
 
 
+
+    $("#registrar").click(function () {
+        console.log($("#nombreCompleto").val());
+        console.log($("#numeroExpediente").val());
+        console.log($("#ur").val());
+        console.log($("#fechaIngreso").val());
+        console.log($("#municipio").val());
+        console.log($("#inmueble").val());
+        console.log($("#unidadAdministrativa").val());
+        console.log($("#centroTrabajo").val());
+        console.log($("#cargo").val());
+        console.log($("#cargoHomologado").val());
+        console.log($("#horario").val());
+    });
 });

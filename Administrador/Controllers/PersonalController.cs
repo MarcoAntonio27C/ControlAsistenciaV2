@@ -40,24 +40,27 @@ namespace Administrador.Controllers
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
             Empleado empleado = new Empleado();
-            empleado.NombreCompleto = form["nombre"];
+            empleado.NombreCompleto = form["nombreCompleto"];
             empleado.NumeroExpediente = form["numeroExpediente"];
             empleado.FechaIngreso = form["fechaIngreso"];
             empleado.UR = form["ur"];
             empleado.Horario = form["horario"];
+            empleado.Activo = true;
+            empleado.IdMunicipio = Guid.Parse(form["municipio"]);
             empleado.IdInmueble = Guid.Parse(form["inmueble"]);
             empleado.IdCargo = Guid.Parse(form["cargo"]);
             empleado.IdCargoHomologado = Guid.Parse(form["cargoHomologado"]);
             empleado.IdCentroTrabajo = Guid.Parse(form["centroTrabajo"]);
             empleado.IdUnidadAdministrativa = Guid.Parse(form["unidadAdministrativa"]);
+            empleado.IdContratacion = Guid.Parse(form["contratacion"]);
             _context.Empleado.Add(empleado);
 
-            var exist = await isExisteAsync(form["curp"]);
+            var exist = await isExisteAsync(form["numeroExpediente"]);
 
             if (exist)
             {
                 ViewData["error"] = true;
-                ViewData["mensaje"] = "Ya existe un registro con el mismo CURP, verifique la información";
+                ViewData["mensaje"] = "Ya existe un registro con el mismo numero de Expediente, verifique la información";
                 return View("Agregar");
             }
 
@@ -111,6 +114,54 @@ namespace Administrador.Controllers
         {
             var municipios = await _context.Municipio.OrderBy(x => x.Nombre).ToListAsync();
             return municipios;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<ActionResult<IEnumerable<Inmueble>>> GetInmueblesMunicipio(Guid id)
+        {
+            var inmuebles = await _context.Inmueble.Where(x => x.IdMunicipio.Equals(id)).OrderBy(n => n.Nombre).ToListAsync();
+            return inmuebles;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<ActionResult<IEnumerable<UnidadAdministrativa>>> GetUnidadAdministrativa()
+        {
+            var unidadAdministrativas = await _context.UnidadAdministrativa.OrderBy(n => n.Nombre).ToListAsync();
+            return unidadAdministrativas;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<ActionResult<IEnumerable<CentroTrabajo>>> GetCentroTrabajo()
+        {
+            var centroTrabajo = await _context.CentroTrabajo.OrderBy(n => n.Nombre).ToListAsync();
+            return centroTrabajo;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<ActionResult<IEnumerable<Cargo>>> GetCargo()
+        {
+            var cargo = await _context.Cargo.OrderBy(n => n.Nombre).ToListAsync();
+            return cargo;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<ActionResult<IEnumerable<CargoHomologado>>> GetCargoHomologado()
+        {
+            var cargoHomologado = await _context.CargoHomologado.OrderBy(n => n.Nombre).ToListAsync();
+            return cargoHomologado;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<ActionResult<IEnumerable<Contratacion>>> GetContratacion()
+        {
+            var contratacion = await _context.Contratacion.OrderBy(n => n.Nombre).ToListAsync();
+            return contratacion;
         }
 
     }

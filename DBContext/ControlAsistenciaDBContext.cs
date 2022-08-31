@@ -20,6 +20,7 @@ namespace DBContext
         public DbSet<CargoHomologado> CargoHomologado { get; set; }
         public DbSet<UnidadAdministrativa> UnidadAdministrativa { get; set; }
         public DbSet<CentroTrabajo> CentroTrabajo { get; set; }
+        public DbSet<Contratacion> Contratacion { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -59,6 +60,11 @@ namespace DBContext
             });
 
             modelBuilder.Entity<CentroTrabajo>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<Contratacion>(entity =>
             {
                 entity.HasKey(e => e.Id);
             });
@@ -326,7 +332,7 @@ namespace DBContext
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("f7fab008-4e2f-4e8a-a20e-8a27d903a2f3"), Nombre = "AGENTE MINISTERIAL" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("25a62b05-6421-4d95-a435-28e497533511"), Nombre = "ANALISTA" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("a2d68287-1bc4-4178-ab5b-de07a224de26"), Nombre = "ANALISTA DE INFORMACION" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("9d07f08e-a049-44d8-958e-c5e65a55dd0f"), Nombre = "ANALSTA" });
+            //modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("9d07f08e-a049-44d8-958e-c5e65a55dd0f"), Nombre = "ANALSTA" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("f91c3b41-4d7f-48d5-bd20-c50c0867e5e1"), Nombre = "ASESOR ESPECIAL" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("f4f25387-f174-44b9-ae54-0b030d76b0d6"), Nombre = "ASESOR TECNICO" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("8bdac60a-ff6e-4b70-a0f4-8895af55193e"), Nombre = "ASESOR TECNICO, RESPONSABLE DEL AREA NORMATIVA DE LA DIRECCION CONSULTIVA Y DE NORMATIVIDAD DE LA COORDINACION GENERAL DE ASUNTOS JURIDICOS" });
@@ -485,7 +491,6 @@ namespace DBContext
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("4d470068-0992-49da-bd6d-889ea7d81d16"), Nombre = "OFICIAL °I°" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("0ff23130-66e4-4b73-be4b-7b48972f6b57"), Nombre = "OFICIAL °M°" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("1fd19c0d-6e4b-420f-8c3f-e26bb42b0b58"), Nombre = "OFICIAL °R°" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("8d9d9ad2-8b3f-4171-8f5e-aeba4b76a155"), Nombre = "OFICIAL A" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("d60baaba-9899-4373-9dd2-8b57c27dc920"), Nombre = "OFICIAL DEL MINISTERIO PUBLICO" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("052188e8-a6a7-419f-add5-87c37956cac2"), Nombre = "OFICIAL MAYOR" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("1f1806ae-43da-487f-a288-3d1d63768d9a"), Nombre = "PERITA" });
@@ -845,6 +850,13 @@ namespace DBContext
             modelBuilder.Entity<CentroTrabajo>().HasData(new CentroTrabajo { Id = new Guid("e1f5947a-8da5-43ef-8b15-adfdc67212a1"), Nombre = "UNIDAD METROPOLITANA DE INVESTIGACION Y LITIGACION DE DELITOS ELECTORALES" });
             modelBuilder.Entity<CentroTrabajo>().HasData(new CentroTrabajo { Id = new Guid("45ebf211-e534-4a50-949b-6e6ad17a0faf"), Nombre = "UNIDAD RESOLUTORA" });
             modelBuilder.Entity<CentroTrabajo>().HasData(new CentroTrabajo { Id = new Guid("392b96c9-3e6e-49b2-88ef-a28095701d4c"), Nombre = "VISITADURIA GENERAL" });
+
+            //Tipo Contrato
+
+            modelBuilder.Entity<Contratacion>().HasData(new CentroTrabajo { Id = new Guid("4b7d03f3-ef7d-4e42-ad73-f520c6d65edd"), Nombre = "ASIMILADOS" });
+            modelBuilder.Entity<Contratacion>().HasData(new CentroTrabajo { Id = new Guid("499c6384-159a-49b1-bb24-36f13ae9fb10"), Nombre = "BASE" });
+            modelBuilder.Entity<Contratacion>().HasData(new CentroTrabajo { Id = new Guid("0fb4c79b-8dfd-468a-9e42-98fd742383ff"), Nombre = "CONFIANZA" });
+            modelBuilder.Entity<Contratacion>().HasData(new CentroTrabajo { Id = new Guid("17805612-54b0-43ef-9860-6964ba543617"), Nombre = "HONORARIOS" });
 
         }
     }

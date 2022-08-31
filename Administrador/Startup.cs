@@ -28,6 +28,7 @@ namespace Administrador
             services.AddDbContext<ControlAsistenciaDBContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("Dev_Biometricos")));
             services.AddControllersWithViews();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +57,11 @@ namespace Administrador
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
+
         }
+
+
     }
 }

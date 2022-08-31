@@ -2602,11 +2602,50 @@ namespace DBContext.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ControlAsistencia_.Models.Contratacion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contratacion");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("4b7d03f3-ef7d-4e42-ad73-f520c6d65edd"),
+                            Nombre = "ASIMILADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("499c6384-159a-49b1-bb24-36f13ae9fb10"),
+                            Nombre = "BASE"
+                        },
+                        new
+                        {
+                            Id = new Guid("0fb4c79b-8dfd-468a-9e42-98fd742383ff"),
+                            Nombre = "CONFIANZA"
+                        },
+                        new
+                        {
+                            Id = new Guid("17805612-54b0-43ef-9860-6964ba543617"),
+                            Nombre = "HONORARIOS"
+                        });
+                });
+
             modelBuilder.Entity("ControlAsistencia_.Models.Empleado", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("bit");
 
                     b.Property<string>("FechaIngreso")
                         .HasColumnType("nvarchar(max)");
@@ -2626,7 +2665,13 @@ namespace DBContext.Migrations
                     b.Property<Guid>("IdCentroTrabajo")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("IdContratacion")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("IdInmueble")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdMunicipio")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdUnidadAdministrativa")
