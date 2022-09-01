@@ -17,23 +17,24 @@ namespace GenerarAsistencia
     public partial class Inicio : Form
     {
         RequestInmueble requestInmueble;
+        RequestMunicipio requestMunicipio;
 
         public Inicio()
         {
             InitializeComponent();
             requestInmueble = new RequestInmueble();
+            requestMunicipio = new RequestMunicipio();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var request = requestInmueble.Inmuebles();
-            if(!request.Equals(null) && (!request.IsSuccessful.Equals(false)))
+            var request = requestMunicipio.Municipios();
+            if (!request.Equals(null) && (!request.IsSuccessful.Equals(false)))
             {
-                var Inmuebles = JsonConvert.DeserializeObject<List<Inmueble>>(request.Content);
-
-                foreach(var inmueble in Inmuebles)
+                var Municipios = JsonConvert.DeserializeObject<List<Municipio>>(request.Content);
+                foreach (var municipio in Municipios)
                 {
-                    ComboBoxInmueble.Items.Add(new ComboboxValue(inmueble.Id,inmueble.Nombre));
+                    ComboBoxMunicipio.Items.Add(new ComboboxValue(municipio.Id, municipio.Nombre));
                 }
             }
         }
@@ -60,6 +61,27 @@ namespace GenerarAsistencia
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ComboBoxMunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ComboBoxMunicipio.SelectedIndex != -1)
+            {
+                ComboBoxInmueble.Items.Clear();
+                ComboBoxInmueble.Text = "";
+                ComboboxValue comboboxValue = (ComboboxValue)ComboBoxMunicipio.SelectedItem;
+                var request = requestInmueble.InmueblesMunicipio(comboboxValue.Id.ToString());
+
+                if (!request.Equals(null) && (!request.IsSuccessful.Equals(false)))
+                {
+                    var Inmuebles = JsonConvert.DeserializeObject<List<Inmueble>>(request.Content);
+
+                    foreach (var inmueble in Inmuebles)
+                    {
+                        ComboBoxInmueble.Items.Add(new ComboboxValue(inmueble.Id, inmueble.Nombre));
+                    }
+                }
+            }
         }
     }
 }

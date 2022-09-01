@@ -36,15 +36,42 @@ namespace ReporteAsistencia.Controllers
         public async Task<IActionResult> BuscarNumeroExpediente(string numeroExpediente)
         {
             var empleado = await _context.Empleado.Where(x => x.NumeroExpediente.Equals(numeroExpediente)).ToListAsync();
-
+        
             if (empleado.Count > 0)
             {
-
-                ViewData["empleado"] = empleado.ElementAt(0);
+                ViewData["empleado"] = await DatosGeneralesAsync(empleado.ElementAt(0));
                 return View("Asistencias");
             }
             ViewData["error"] = true;
             return View("Index");
+        }
+
+        public async Task<DatosEmpleado> DatosGeneralesAsync(Empleado empleado)
+        {
+            DatosEmpleado datos = new DatosEmpleado();
+
+            var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
+            var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
+            var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
+            var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
+            var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
+            var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
+            
+            datos.Id = empleado.Id;
+            datos.NombreCompleto = empleado.NombreCompleto;
+            datos.NumeroExpediente = empleado.NumeroExpediente;
+            datos.FechaIngreso = empleado.FechaIngreso;
+            datos.UR = empleado.UR;
+            datos.Horario = empleado.Horario;
+            datos.Activo = empleado.Activo;
+            datos.Inmueble = inmueble.Nombre;
+            datos.Direccion = inmueble.Direccion;
+            datos.Cargo = cargo.Nombre;
+            datos.CentroTrabajo = centroTrabajo.Nombre;
+            datos.CargoHomologado = cargoHomologado.Nombre;
+            datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
+            datos.Contratacion = contratacion.Nombre;
+            return datos;
         }
 
         public IActionResult Privacy()
@@ -302,8 +329,9 @@ namespace ReporteAsistencia.Controllers
         public async Task<FileResult> DescargarPDFAsync(string idEmpleado, string mes)
         {
             DateTime date = DateTime.Parse(mes);
+
             var empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
-            var inmueble = await _context.Inmueble.FindAsync(empleado.IdInmueble);
+            var Datos_Generales = await DatosGeneralesAsync(empleado);
             var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
            
            
@@ -312,7 +340,7 @@ namespace ReporteAsistencia.Controllers
 
             CrearReporte reporte = new CrearReporte();
             string filepath = System.IO.Path.GetTempFileName().Replace(".tmp", ".pdf");
-            return reporte.Crear(empleado,inmueble,entradas, salidas, filepath);
+            return reporte.Crear(Datos_Generales,entradas, salidas, filepath);
         }
 
     }

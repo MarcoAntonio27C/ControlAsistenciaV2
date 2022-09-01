@@ -1,6 +1,6 @@
 ﻿@using ControlAsistencia_.Models;
 @{ 
-    Empleado empleado = (Empleado)ViewData["empleado"];
+    DatosEmpleado empleado = (DatosEmpleado)ViewData["empleado"];
     //var FechaActual = DateTime.Now.ToString("yyyy-MM-01");
     var FechaActual = DateTime.Now.ToString("yyyy-MM-01");
    
@@ -10,31 +10,60 @@
     <h3 class="text-center text-secondary" >Asistencias</h3>
     <div class="mt-5 px-4 py-4 border rounded">
         <div class="row">
-            <div class="col">
+            <div class="col-6">
                 <label>Nombre Completo</label>
                 <input class="form-control" type="text" readonly name="name" value="@empleado.NombreCompleto" />
             </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col">
+            <div class="col-3">
                 <label>Numero de Expediente</label>
                 <input class="form-control" type="text" readonly name="name" value="@empleado.NumeroExpediente" />
             </div>
+            <div class="col-3">
+                <label>Contratación</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.Contratacion" />
+            </div>
+        </div>
+        <div class="row mt-2">
+
             <div class="col">
                 <label>Fecha Ingreso</label>
                 <input class="form-control" type="text" readonly name="name" value="@empleado.FechaIngreso" />
+            </div>
+            <div class="col-6">
+                <label>Centro Trabajo</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.CentroTrabajo" />
+            </div>
+
+            <div class="col">
+                <label>Cargo</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.Cargo" />
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-2">
+                <label>UR</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.UR" />
+            </div>
+            <div class="col-4">
+                <label>Horario</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.Horario" />
+            </div>
+            <div class="col-6">
+                <label>Unidad Administrativa</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.UnidadAdministrativa" />
             </div>
         </div>
 
         <hr />
 
         <div>
-            <form  method="post">
+            <form method="post">
                 <div class="row">
                     <div class="col text-center">
                         <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
                         <label>Seleccionar Mes:</label>
-                        <input class="form-control" type="date" min="2020-01-01" name="mes" id="mes" value="@FechaActual" />
+                        <input class="form-control" type="date" min="2022-01-01" name="mes" id="mes" value="@FechaActual" />
                     </div>
                     <div class="col text-center">
                         <label class="text-white">.</label>

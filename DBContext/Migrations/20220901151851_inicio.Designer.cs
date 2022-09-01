@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBContext.Migrations
 {
     [DbContext(typeof(ControlAsistenciaDBContext))]
-    [Migration("20220831171557_addActivo-Empleado")]
-    partial class addActivoEmpleado
+    [Migration("20220901151851_inicio")]
+    partial class inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -134,11 +134,6 @@ namespace DBContext.Migrations
                         {
                             Id = new Guid("a2d68287-1bc4-4178-ab5b-de07a224de26"),
                             Nombre = "ANALISTA DE INFORMACION"
-                        },
-                        new
-                        {
-                            Id = new Guid("9d07f08e-a049-44d8-958e-c5e65a55dd0f"),
-                            Nombre = "ANALSTA"
                         },
                         new
                         {
@@ -908,32 +903,27 @@ namespace DBContext.Migrations
                         new
                         {
                             Id = new Guid("a395f422-70e7-48c9-b13c-16de0d55bf2e"),
-                            Nombre = "OFICIAL °A°"
+                            Nombre = "OFICIAL A"
                         },
                         new
                         {
                             Id = new Guid("380902ed-7f02-4aa1-b3f7-4da126758cce"),
-                            Nombre = "OFICIAL °E°"
+                            Nombre = "OFICIAL E"
                         },
                         new
                         {
                             Id = new Guid("4d470068-0992-49da-bd6d-889ea7d81d16"),
-                            Nombre = "OFICIAL °I°"
+                            Nombre = "OFICIAL I"
                         },
                         new
                         {
                             Id = new Guid("0ff23130-66e4-4b73-be4b-7b48972f6b57"),
-                            Nombre = "OFICIAL °M°"
+                            Nombre = "OFICIAL M"
                         },
                         new
                         {
                             Id = new Guid("1fd19c0d-6e4b-420f-8c3f-e26bb42b0b58"),
-                            Nombre = "OFICIAL °R°"
-                        },
-                        new
-                        {
-                            Id = new Guid("8d9d9ad2-8b3f-4171-8f5e-aeba4b76a155"),
-                            Nombre = "OFICIAL A"
+                            Nombre = "OFICIAL R"
                         },
                         new
                         {
@@ -2604,6 +2594,42 @@ namespace DBContext.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ControlAsistencia_.Models.Contratacion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contratacion");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("4b7d03f3-ef7d-4e42-ad73-f520c6d65edd"),
+                            Nombre = "ASIMILADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("499c6384-159a-49b1-bb24-36f13ae9fb10"),
+                            Nombre = "BASE"
+                        },
+                        new
+                        {
+                            Id = new Guid("0fb4c79b-8dfd-468a-9e42-98fd742383ff"),
+                            Nombre = "CONFIANZA"
+                        },
+                        new
+                        {
+                            Id = new Guid("17805612-54b0-43ef-9860-6964ba543617"),
+                            Nombre = "HONORARIOS"
+                        });
+                });
+
             modelBuilder.Entity("ControlAsistencia_.Models.Empleado", b =>
                 {
                     b.Property<Guid>("Id")
@@ -2629,6 +2655,9 @@ namespace DBContext.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdCentroTrabajo")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdContratacion")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdInmueble")

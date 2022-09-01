@@ -135,11 +135,6 @@ namespace DBContext.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9d07f08e-a049-44d8-958e-c5e65a55dd0f"),
-                            Nombre = "ANALSTA"
-                        },
-                        new
-                        {
                             Id = new Guid("f91c3b41-4d7f-48d5-bd20-c50c0867e5e1"),
                             Nombre = "ASESOR ESPECIAL"
                         },
@@ -906,32 +901,27 @@ namespace DBContext.Migrations
                         new
                         {
                             Id = new Guid("a395f422-70e7-48c9-b13c-16de0d55bf2e"),
-                            Nombre = "OFICIAL °A°"
+                            Nombre = "OFICIAL A"
                         },
                         new
                         {
                             Id = new Guid("380902ed-7f02-4aa1-b3f7-4da126758cce"),
-                            Nombre = "OFICIAL °E°"
+                            Nombre = "OFICIAL E"
                         },
                         new
                         {
                             Id = new Guid("4d470068-0992-49da-bd6d-889ea7d81d16"),
-                            Nombre = "OFICIAL °I°"
+                            Nombre = "OFICIAL I"
                         },
                         new
                         {
                             Id = new Guid("0ff23130-66e4-4b73-be4b-7b48972f6b57"),
-                            Nombre = "OFICIAL °M°"
+                            Nombre = "OFICIAL M"
                         },
                         new
                         {
                             Id = new Guid("1fd19c0d-6e4b-420f-8c3f-e26bb42b0b58"),
-                            Nombre = "OFICIAL °R°"
-                        },
-                        new
-                        {
-                            Id = new Guid("8d9d9ad2-8b3f-4171-8f5e-aeba4b76a155"),
-                            Nombre = "OFICIAL A"
+                            Nombre = "OFICIAL R"
                         },
                         new
                         {

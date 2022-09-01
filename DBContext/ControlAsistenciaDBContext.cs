@@ -173,7 +173,7 @@ namespace DBContext
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("0dbd6fd2-8c56-4562-8e21-dd018b174ee1"), Nombre = "COMPLEJO METROPOLITANO SEGURIDAD PÚBLICA  (C5) ", IdMunicipio = new Guid("9005ddce-0399-4cab-8496-456b816bcfeb"), Direccion = "PERIFERICO ECOLÓGICO KILÓMETRO 3.5 ANTIGUO CAMINO A SAN FRANCISCO OCOTLÁN,CUAUTLANCINGO PUEBLA" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("66451a35-3553-401e-a2c3-d02d5d80a805"), Nombre = "UNIDAD DE INVESTIGACION CUAUTLANCINGO", IdMunicipio = new Guid("9005ddce-0399-4cab-8496-456b816bcfeb"), Direccion = "CALLE CAMINO NACIONAL ESQUINA CON AQUILES SERDAN SIN NUMERO, COLONIA BELLO HORIZONTE, CUAUTLANCINGO  COMPLEJO DE SEGURIDAD" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("02794a34-a930-4f9b-bfed-0294a49b7288"), Nombre = "CENTRO INTEGRAL DE SERVICIOS CUAUTLANCINGO", IdMunicipio = new Guid("9005ddce-0399-4cab-8496-456b816bcfeb"), Direccion = "CALLE AQUILES SERDAN ESQUINA CON 20 DE NOVIEMBRE SIN NUMERO, COLONIA BELLO HORIZONTE, CUAUTLANCINGO" });
-            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("a997fc37-85dd-4508-9a5e-76f1a64d8ccc"), Nombre = " UNIDAD DE INVESTIGACIÓN VW", IdMunicipio = new Guid("9005ddce-0399-4cab-8496-456b816bcfeb"), Direccion = "AV. SAN LORENZO ALMECATLA SIN NUMERO PLAZA MOVAR SANCTORUM" });
+            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("a997fc37-85dd-4508-9a5e-76f1a64d8ccc"), Nombre = "UNIDAD DE INVESTIGACIÓN VW", IdMunicipio = new Guid("9005ddce-0399-4cab-8496-456b816bcfeb"), Direccion = "AV. SAN LORENZO ALMECATLA SIN NUMERO PLAZA MOVAR SANCTORUM" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("8c0c4bc9-bbad-44d6-8fde-76be64c12cb8"), Nombre = "DEPOSITO DE VEHICULOS CUAUTLANCINGO (CAPULIN)", IdMunicipio = new Guid("9005ddce-0399-4cab-8496-456b816bcfeb"), Direccion = "CARRETERA A TLAXCALA KM 10 CUAUTLANCINGO, PUEBLA" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("c79300f4-0dfc-46da-ba2b-63c882bc80cb"), Nombre = "UNIDAD DE INVESTIGACION CUETZALÁN DEL PROGRESO ", IdMunicipio = new Guid("54870e6a-687e-4ed5-8882-e6cc3d2f3a3c"), Direccion = "CALLE MIGUEL ALVARADO ESQUINA CON ABASOLO S/N COLONIA CENTRO C.P. 75040 CUETZALAN PUEBLA" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("d2aba852-a956-4625-8b91-46594f19e8ae"), Nombre = "UNIDAD DE INVESTIGACION ESPERANZA", IdMunicipio = new Guid("51d0e71c-1ce2-4874-8eeb-57080ca1bd7b"), Direccion = "CALLE 12 NORTE SEGUNDA SECCION 22, ESPERANZA, PUE." });
@@ -231,7 +231,7 @@ namespace DBContext
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("42ae640d-789f-4262-bc0f-9fdc6ef3c504"), Nombre = "JUSTICIA CIUDADANA", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "13 SUR 1910 BARRIO DE SANTIAGO PUEBLA PUE" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("4accb2ff-b226-47ac-bfad-9055220fc68b"), Nombre = "UNIDAD DE INVESTIGACIÓN VILLA FRONTERA", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "CALLE FRANCISCO I. MADERO NO. 07 COL. CENTRO, SAN PABLO XOCHIMEHUACAN" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("542c1a9a-46db-451a-a395-e7ef22925811"), Nombre = "DEPOSITO DE VEHICULOS SANCTORUM (FINSA)", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "RIO ATOYAC # 19 SANCTORUM" });
-            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("79302577-eff3-4087-93db-599dc70f3c13"), Nombre = " UNIDAD DE INVESTIGACIÓN LA MARGARITA", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "CAMINO AL BATAN NO. 12 COL. VILLA SATELITE LA CALERA PUEBLA" });
+            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("79302577-eff3-4087-93db-599dc70f3c13"), Nombre = "UNIDAD DE INVESTIGACIÓN LA MARGARITA", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "CAMINO AL BATAN NO. 12 COL. VILLA SATELITE LA CALERA PUEBLA" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("a70575f3-3ffb-4d12-af9c-8dc3b641fcbd"), Nombre = "ALMACEN GENERAL", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "CALLE ORQUIDEAS NO. 6141 COLONIA BUGAMBILIAS CP 72580" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("b06290e8-8fcc-430e-abec-1399c33c520c"), Nombre = "UNIDAD DE INVESTIGACION CHAPULCO", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "PROLONGACION DE LA 14 SUR NUMERO 11517 COL. SAN JOSE CHAPULCO" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("2105684c-46b6-41c5-bd73-024885f82f3e"), Nombre = "SEMEFO 11 SUR ", IdMunicipio = new Guid("d708e960-e465-4b40-9f31-1c97c21d5b8a"), Direccion = "PROLONGACION 11 SUR 11906, COL. GUADALUPE HIDQLGO" });
@@ -332,7 +332,6 @@ namespace DBContext
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("f7fab008-4e2f-4e8a-a20e-8a27d903a2f3"), Nombre = "AGENTE MINISTERIAL" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("25a62b05-6421-4d95-a435-28e497533511"), Nombre = "ANALISTA" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("a2d68287-1bc4-4178-ab5b-de07a224de26"), Nombre = "ANALISTA DE INFORMACION" });
-            //modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("9d07f08e-a049-44d8-958e-c5e65a55dd0f"), Nombre = "ANALSTA" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("f91c3b41-4d7f-48d5-bd20-c50c0867e5e1"), Nombre = "ASESOR ESPECIAL" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("f4f25387-f174-44b9-ae54-0b030d76b0d6"), Nombre = "ASESOR TECNICO" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("8bdac60a-ff6e-4b70-a0f4-8895af55193e"), Nombre = "ASESOR TECNICO, RESPONSABLE DEL AREA NORMATIVA DE LA DIRECCION CONSULTIVA Y DE NORMATIVIDAD DE LA COORDINACION GENERAL DE ASUNTOS JURIDICOS" });
@@ -486,11 +485,11 @@ namespace DBContext
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("ca6afe02-552c-43d1-b6ca-1b2bc70079ed"), Nombre = "JEFE DEL DEPARTAMENTO DE DISEÑO E IMAGEN INSTITUCIONAL" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("b525b311-4f98-40ce-bd58-b3dbcc07870f"), Nombre = "JEFE DEL DEPARTAMENTO DE SERVICIOS GENERALES METROPOLITANA" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("e60a3b7b-a373-4d8a-9b2c-9af59d76b058"), Nombre = "JEFE DEL DEPARTAMENTO JURIDICO DE MANUALES ADMINISTRATIVOS" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("a395f422-70e7-48c9-b13c-16de0d55bf2e"), Nombre = "OFICIAL °A°" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("380902ed-7f02-4aa1-b3f7-4da126758cce"), Nombre = "OFICIAL °E°" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("4d470068-0992-49da-bd6d-889ea7d81d16"), Nombre = "OFICIAL °I°" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("0ff23130-66e4-4b73-be4b-7b48972f6b57"), Nombre = "OFICIAL °M°" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("1fd19c0d-6e4b-420f-8c3f-e26bb42b0b58"), Nombre = "OFICIAL °R°" });
+            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("a395f422-70e7-48c9-b13c-16de0d55bf2e"), Nombre = "OFICIAL A" });
+            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("380902ed-7f02-4aa1-b3f7-4da126758cce"), Nombre = "OFICIAL E" });
+            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("4d470068-0992-49da-bd6d-889ea7d81d16"), Nombre = "OFICIAL I" });
+            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("0ff23130-66e4-4b73-be4b-7b48972f6b57"), Nombre = "OFICIAL M" });
+            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("1fd19c0d-6e4b-420f-8c3f-e26bb42b0b58"), Nombre = "OFICIAL R" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("d60baaba-9899-4373-9dd2-8b57c27dc920"), Nombre = "OFICIAL DEL MINISTERIO PUBLICO" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("052188e8-a6a7-419f-add5-87c37956cac2"), Nombre = "OFICIAL MAYOR" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("1f1806ae-43da-487f-a288-3d1d63768d9a"), Nombre = "PERITA" });
@@ -559,7 +558,7 @@ namespace DBContext
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("d388f315-0de9-40af-9f45-913df7598958"), Nombre = "TITULAR DEL INSTITUTO DE CIENCIAS FORENSES" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("ed744b86-b5a7-4571-b526-002bcb325c40"), Nombre = "TITULAR DEL INSTITUTO DE FORMACION PROFESIONAL" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("0d82b2c1-ac48-463c-bb28-e84e2476af9d"), Nombre = "TITULAR DEL ORGANO INTERNO DE CONTROL" });
-            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("c18ec14d-45ec-426a-8a45-0e364b290909"), Nombre = "TTITULAR DE LA UNIDAD DE INVESTIGACION ESPECIALIZADA EN ROBO A CASA HABITACION Y ROBO A COMERCIO" });
+            modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("c18ec14d-45ec-426a-8a45-0e364b290909"), Nombre = "TITULAR DE LA UNIDAD DE INVESTIGACION ESPECIALIZADA EN ROBO A CASA HABITACION Y ROBO A COMERCIO" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("4aecf7ca-1011-4961-b71d-cbffdbb07d97"), Nombre = "VISITADOR GENERAL" });
             modelBuilder.Entity<Cargo>().HasData(new Cargo { Id = new Guid("027113b2-4d5b-408a-aaa3-7827f22cf95a"), Nombre = "VISITADORA" });
 

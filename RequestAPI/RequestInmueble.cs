@@ -27,5 +27,20 @@ namespace RequestAPI
             }
         }
 
+        public IRestResponse InmueblesMunicipio(string idMunicipio)
+        {
+            try
+            {
+                var client = new RestClient(API + "Inmueble/Municipio/"+idMunicipio);
+                var request = new RestRequest("", Method.GET);
+                var response = client.Execute(request);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
     }
 }

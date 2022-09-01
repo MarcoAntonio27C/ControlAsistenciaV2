@@ -28,7 +28,6 @@ namespace RegistroHuella
             requestEmpleado = new RequestEmpleado();
             NombreCompleto.Enabled = false;
             FechaIngreso.Enabled = false;
-            Cargo.Enabled = false;
             Registrar.Enabled = false;
         }
 
@@ -43,7 +42,7 @@ namespace RegistroHuella
         private void button1_Click(object sender, EventArgs e)
         {
             bool found = false;
-            if (!Curp.Text.Equals(""))
+            if (!NumeroExpediente.Text.Equals(""))
             {
                 var request = requestEmpleado.EmpleadosPorInmueble(IdInmueble);
                 if (!request.Equals(null) && (!request.IsSuccessful.Equals(false)))
@@ -53,12 +52,11 @@ namespace RegistroHuella
                     {
                         foreach(var empleado in empleados)
                         {
-                            if (empleado.NumeroExpediente.Equals(Curp.Text))
+                            if (empleado.NumeroExpediente.Equals(NumeroExpediente.Text))
                             {
                                 tmpEmpleado = empleado;
                                 NombreCompleto.Text = empleado.NombreCompleto;
                                 FechaIngreso.Text = empleado.FechaIngreso;
-                                Cargo.Text = empleado.IdCargo.ToString();
                                 capturarHuell.Enabled = true;
                                 found = true;
                                 break;
@@ -79,14 +77,13 @@ namespace RegistroHuella
                 {
                     NombreCompleto.Text = "";
                     FechaIngreso.Text = "";
-                    Cargo.Text = "";
                     Registrar.Enabled = false;
                     MessageBox.Show("Hubo algún problema con la conexión a la base de datos");
                 }
             }
             else
             {
-                MessageBox.Show("Ingrese el CURP del empleado");
+                MessageBox.Show("Ingrese el Numero de Expediente del empleado");
             }
         }
 
@@ -102,10 +99,9 @@ namespace RegistroHuella
                 if (res.IsSuccessful)
                 {
                     MessageBox.Show("Huella Guardada Correctamente");
-                    Curp.Text = "";
+                    NumeroExpediente.Text = "";
                     NombreCompleto.Text = "";
                     capturarHuell.Image = global::RegistroHuella.Properties.Resources.baseline_fingerprint_black_48dp;
-                    Cargo.Text = "";
                     FechaIngreso.Text = "";
                     capturarHuell.Enabled = false;
                     Registrar.Enabled = false;
@@ -146,6 +142,11 @@ namespace RegistroHuella
         private void RegistrarHuella_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Curp_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
 
-    
     $(".alert").hide();
     $("#ReportePDF").attr("disabled", true);
     var idEmpleado = $("#idEmpleado").val();
@@ -13,7 +12,7 @@ $(document).ready(function () {
         dataType: "json",
         data: { idEmpleado: idEmpleado, mes: mes },
         success: function (response) {
-            //  console.log(response);
+              console.log(response);
             if (response != undefined) {
                 if (response.length > 0) {
                     $("#ReportePDF").attr("disabled", false);

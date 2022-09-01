@@ -15,14 +15,14 @@ namespace ReportePDF
 {
     public class CrearReporte
     {
-         public FileStreamResult Crear(Empleado empleado,Inmueble inmueble ,List<DateTime> entradas, List<DateTime> salidas, string path)
+         public FileStreamResult Crear(DatosEmpleado datos ,List<DateTime> entradas, List<DateTime> salidas, string path)
         {
             Document doc = new Document(PageSize.LETTER);
             MemoryStream workStream = new MemoryStream();
             // PdfWriter writer = PdfWriter.GetInstance(doc,new FileStream(path, FileMode.Create));
             PdfWriter writer = PdfWriter.GetInstance(doc, workStream);
             writer.CloseStream = false;
-            string NombreEmpleado = empleado.NombreCompleto;
+            string NombreEmpleado = datos.NombreCompleto;
             doc.AddTitle("");
             doc.AddCreator("");
 
@@ -61,7 +61,7 @@ namespace ReportePDF
             PdfPTable tablaDatos = new PdfPTable(10);
             tablaDatos.WidthPercentage = 100;
 
-            PdfPCell cellExpediente = new PdfPCell(new Phrase("Expediente: " + empleado.NumeroExpediente, _span));
+            PdfPCell cellExpediente = new PdfPCell(new Phrase("Expediente: " + datos.NumeroExpediente, _span));
             cellExpediente.Colspan = 3;
             cellExpediente.Padding = 5;
             cellExpediente.BorderWidth = 0;
@@ -80,50 +80,50 @@ namespace ReportePDF
             cellMes.BorderWidth = 0;
             tablaDatos.AddCell(cellMes);
             //*****************************************************************************
-            PdfPCell cellUR = new PdfPCell(new Phrase("UR:", _span));
+            PdfPCell cellUR = new PdfPCell(new Phrase("UR: "+datos.UR, _span));
             cellUR.Colspan = 1;
             cellUR.BorderWidth = 0;
             cellUR.BorderWidthBottom = 1;
             cellUR.Padding = 6;
             tablaDatos.AddCell(cellUR);
-            PdfPCell cellCategoria = new PdfPCell(new Phrase("Cargo: ", _span));
+            PdfPCell cellCategoria = new PdfPCell(new Phrase("Cargo: "+datos.Cargo, _span));
             cellCategoria.Colspan = 6;
             cellCategoria.Padding = 5;
             cellCategoria.BorderWidthBottom = 1;
             cellCategoria.BorderWidth = 0;
             tablaDatos.AddCell(cellCategoria);
-            PdfPCell cellHorario = new PdfPCell(new Phrase("Horario:", _span));
+            PdfPCell cellHorario = new PdfPCell(new Phrase("Horario: "+datos.Horario, _span));
             cellHorario.Colspan = 3;
             cellHorario.Padding = 5;
             cellHorario.BorderWidthBottom = 1;
             cellHorario.BorderWidth = 0;
             tablaDatos.AddCell(cellHorario);
             //*****************************************************************************
-            PdfPCell cellCentroTrabajo = new PdfPCell(new Phrase("Centro de Trabajo: "+ConvertirCadenada(inmueble.Nombre), _span));
+            PdfPCell cellCentroTrabajo = new PdfPCell(new Phrase("Centro de Trabajo: "+ConvertirCadenada(datos.CentroTrabajo), _span));
             cellCentroTrabajo.Colspan = 7;
             cellCentroTrabajo.BorderWidth = 0;
             cellCentroTrabajo.BorderWidthBottom = 1;
             cellCentroTrabajo.Padding = 5;
             tablaDatos.AddCell(cellCentroTrabajo);
-            PdfPCell cellContratacion = new PdfPCell(new Phrase("Contratación:", _span));
+            PdfPCell cellContratacion = new PdfPCell(new Phrase("Contratación: "+datos.Contratacion, _span));
             cellContratacion.Colspan = 3;
             cellContratacion.Padding = 5;
             cellContratacion.BorderWidth = 0;
             cellContratacion.BorderWidthBottom = 1;
             tablaDatos.AddCell(cellContratacion);
             //*****************************************************************************
-            PdfPCell cellInmueble = new PdfPCell(new Phrase("Inmueble: "+ConvertirCadenada(inmueble.Direccion), _span));
-            cellInmueble.Colspan = 7;
+            PdfPCell cellInmueble = new PdfPCell(new Phrase("Inmueble: "+ConvertirCadenada(datos.Direccion), _span));
+            cellInmueble.Colspan = 10;
             cellInmueble.BorderWidth = 0;
             cellInmueble.BorderWidthBottom = 1;
             cellInmueble.Padding = 5;
             tablaDatos.AddCell(cellInmueble);
-            PdfPCell cellTelefono = new PdfPCell(new Phrase("Teléfono:", _span));
-            cellTelefono.Colspan = 3;
-            cellTelefono.Padding = 5;
-            cellTelefono.BorderWidth = 0;
-            cellTelefono.BorderWidthBottom = 1;
-            tablaDatos.AddCell(cellTelefono);
+            //PdfPCell cellTelefono = new PdfPCell(new Phrase("Teléfono:", _span));
+            //cellTelefono.Colspan = 3;
+            //cellTelefono.Padding = 5;
+            //cellTelefono.BorderWidth = 0;
+            //cellTelefono.BorderWidthBottom = 1;
+            //tablaDatos.AddCell(cellTelefono);
 
 
             titulo.Alignment = Element.ALIGN_CENTER;

@@ -12,18 +12,18 @@
             <div class="text-center">
                 <img src="~/img/LogoFiscalia.png" alt="Alternate Text" />
             </div>
-            <form asp-controller="Home" asp-action="BuscarCurp" method="post" class="border-light border rounded mt-3 pt-5 pb-5 px-3 bg-white">
+            <form asp-controller="Home" asp-action="BuscarNumeroExpediente" method="post" class="border-light border rounded mt-3 pt-5 pb-5 px-3 bg-white">
                 <h5 class="text-center text-secondary mb-5">Reporte Asistencias</h5>
                 <div class="form-group">
-                    <label class="text-secondary">Ingrese su CURP</label>
-                    <input class="form-control" id="curp" type="text" name="curp" value="" required />
+                    <label class="text-secondary">Ingrese su Numero de Expediente</label>
+                    <input class="form-control" id="numeroExpediente" type="text" name="numeroExpediente" value="" required />
                 </div>
 
                 @{
                     if (error.Equals(true))
                     {
                         <div class="alert alert-warning alert-dismissible fade show" style="font-size:12px" role="alert">
-                            <strong>Lo sentimos!</strong> No hay algun registro con este CURP.
+                            <strong>Lo sentimos!</strong> No hay algun registro con este Numero de Expediente.
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

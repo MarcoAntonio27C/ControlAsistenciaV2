@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="RequestAsistencia.cs" />
     <Compile Include="RequestEmpleado.cs" />
+    <Compile Include="RequestMunicipio.cs" />
     <Compile Include="RequestInmueble.cs" />
   </ItemGroup>
   <ItemGroup>

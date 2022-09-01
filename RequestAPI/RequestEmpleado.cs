@@ -58,11 +58,13 @@ namespace RequestAPI
                     ur = $"{empleado.UR}",
                     horario = $"{empleado.Horario}",
                     huella = $"{huella}",
+                    idMunicipio = $"{empleado.IdMunicipio}",
                     idInmueble = $"{empleado.IdInmueble}",
                     idCargo = $"{empleado.IdCargo}",
                     idCargoHomologado = $"{empleado.IdCargoHomologado}",
                     idCentroTrabajo = $"{empleado.IdCentroTrabajo}",
-                    idUnidadAdministrativa = $"{empleado.IdUnidadAdministrativa}"
+                    idUnidadAdministrativa = $"{empleado.IdUnidadAdministrativa}",
+                    idContratacion = $"{empleado.IdContratacion}"
                 });
                 var response = client.Execute(request);
                 return response;
