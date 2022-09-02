@@ -37,6 +37,15 @@ namespace GenerarCodigo
 
         }
 
+
+        public void GenerarGuid(int numero)
+        {
+            for(int i = 0; i < numero; i++)
+            {
+                Console.WriteLine(Guid.NewGuid().ToString());
+            }
+        }
+
         void GenerarCargos(string listMunicipios)
         {
             List<string> Tmp_municipios1 = new List<string>();
@@ -75,7 +84,9 @@ namespace GenerarCodigo
             Program generar = new Program();
 
             //generar.GenerarMunicipios(listaMunicipio);
-            generar.GenerarCargos(centroTrabajo);
+            // generar.GenerarCargos(centroTrabajo);
+
+            generar.GenerarGuid(132);
         }
     }
 }
