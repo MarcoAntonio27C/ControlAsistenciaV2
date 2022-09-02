@@ -126,6 +126,7 @@ namespace DBContext
             modelBuilder.Entity<Municipio>().HasData(new Municipio { Id = new Guid("d94a72c8-8670-4344-ab47-a78c2fefadef"), Nombre = "TEPEXI DE RODRIGUEZ" });
             modelBuilder.Entity<Municipio>().HasData(new Municipio { Id = new Guid("088e4526-c5b8-442b-aa82-96d5c4bb294b"), Nombre = "TEPEYAHUALCO" });
             modelBuilder.Entity<Municipio>().HasData(new Municipio { Id = new Guid("609ebfc5-4b53-46b3-95d5-00d1952f7509"), Nombre = "TETELA DE OCAMPO" });
+            modelBuilder.Entity<Municipio>().HasData(new Municipio { Id = new Guid("d0ed6943-d6a4-4e67-adbd-eb7adb64e9a7"), Nombre = "TEPEXCO" });
             modelBuilder.Entity<Municipio>().HasData(new Municipio { Id = new Guid("815dd755-5c1b-440f-90eb-52c6640f873c"), Nombre = "TEZIUTLAN" });
             modelBuilder.Entity<Municipio>().HasData(new Municipio { Id = new Guid("e455c8ee-fe22-4913-a6c0-2b206e2cc8e8"), Nombre = "TLACOTEPEC DE BENITO JUAREZ" });
             modelBuilder.Entity<Municipio>().HasData(new Municipio { Id = new Guid("3a74ce88-ba94-4988-bb2b-434a9c208d28"), Nombre = "TLALTENANGO" });

@@ -4,7 +4,7 @@
 
     $.ajax({
         type: 'GET',
-        url: "Empleados",
+        url: "/Personal/Empleados",
         dataType: "json",
         //data: { idEmpleado: idEmpleado, mes: mes },
         success: function (response) {
@@ -14,18 +14,22 @@
                 if (response.length > 0) {
                     var index = 0;
                     for (var i = 0; i < response.length; i++) {
-                        var enlace = "DetallesEmpleado/?idEmpleado=" + response[i]["id"];
+                        //var enlace = "Detalles/?idEmpleado=" + response[i]["id"];
                         index = i + 1;
-                        $(".table>tbody").append("<tr><td>" + index + "</td><td>" + response[i]["nombre"] + " " + response[i]["apellidoPaterno"] + " " + response[i]["apellidoMaterno"] + "</td><td>" + response[i]["nombreInmueble"] + "</td><td>" + response[i]["adscripcion"] + "</td><td>" + response[i]["numeroExpediente"] +"</td><td>" + "<a  href='" + enlace + "'>Detalles</a>" + "</td></tr>");
+                        $(".table>tbody").append("<tr><td>" + index + "</td><td>" + response[i]["nombreCompleto"] + "</td><td>" + response[i]["nombreInmueble"] + "</td><td>" + response[i]["numeroExpediente"] + "</td><td>" + "<button data-toggle='modal' data-target='#staticBackdrop' type='button' id=" + response[i]["id"] + " class='btn btn-info detalles'><span class='material-icons' >visibility</span></button>" + "</td></tr>");
                     }
                 }
             }
         },
     });
 
+    $(".detalles").click(function () {
+        alert("button");
+    });
+
     $.ajax({
         type: 'GET',
-        url: "GetMunicipios",
+        url: "/Personal/GetMunicipios",
         success: function (response) {
             $.each(response, function (i, municipio) {
                 $("#municipio").append($('<option>', {
@@ -42,7 +46,7 @@
         $("#inmueble").empty();
         $.ajax({
             type: 'GET',
-            url: "GetInmueblesMunicipio",
+            url: "/Personal/GetInmueblesMunicipio",
             data: {
                 id: $("#municipio").val()
             },
@@ -60,7 +64,7 @@
 
     $.ajax({
         type: 'GET',
-        url: "GetUnidadAdministrativa",
+        url: "/Personal/GetUnidadAdministrativa",
         success: function (response) {
             $.each(response, function (i, unidad) {
                 $("#unidadAdministrativa").append($('<option>', {
@@ -74,7 +78,7 @@
 
     $.ajax({
         type: 'GET',
-        url: "GetCentroTrabajo",
+        url: "/Personal/GetCentroTrabajo",
         success: function (response) {
             $.each(response, function (i, centro) {
                 $("#centroTrabajo").append($('<option>', {
@@ -89,7 +93,7 @@
 
     $.ajax({
         type: 'GET',
-        url: "GetCargo",
+        url: "/Personal/GetCargo",
         success: function (response) {
             $.each(response, function (i, cargo) {
                 $("#cargo").append($('<option>', {
@@ -103,7 +107,7 @@
 
     $.ajax({
         type: 'GET',
-        url: "GetCargoHomologado",
+        url: "/Personal/GetCargoHomologado",
         success: function (response) {
             $.each(response, function (i, cargoHomologado) {
                 $("#cargoHomologado").append($('<option>', {
@@ -117,7 +121,7 @@
 
     $.ajax({
         type: 'GET',
-        url: "GetContratacion",
+        url: "/Personal/GetContratacion",
         success: function (response) {
             $.each(response, function (i, contratacion) {
                 $("#contratacion").append($('<option>', {

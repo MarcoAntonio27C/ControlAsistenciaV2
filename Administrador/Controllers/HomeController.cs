@@ -32,10 +32,7 @@ namespace Administrador.Controllers
         }
 
         [HttpGet]
-        public IActionResult DetallesEmpleado(string idEmpleado)
-        {
-            return Content(" a"+idEmpleado);
-        }
+
 
         public IActionResult Privacy()
         {

@@ -37,6 +37,12 @@ namespace Administrador.Controllers
             return View();
         }
 
+        public async Task<IActionResult> DetallesAsync(string idEmpleado)
+        {
+            var empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
+            ViewData["empleado"] = empleado;
+            return View();
+        }
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
             Empleado empleado = new Empleado();

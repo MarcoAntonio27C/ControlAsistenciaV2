@@ -11,3 +11,4 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.exe
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.pdb
 C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.AssemblyReference.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.AssemblyReference.cache

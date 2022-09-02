@@ -3,33 +3,31 @@
 }
 
 <link rel="stylesheet" href="~/css/personal.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div>
-    <h5 id="titulo" class="text-center py-2 rounded mt-4">Empleados</h5>
+    <h5 id="titulo" class="text-center py-3 rounded mt-4">Empleados</h5>
     <div>
-        <div class="row my-3">
-            <div class="col-4">
-                <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
+        <div class="row py-4">
+            <div class="col-9">
+                <input class="form-control" type="text" name="nombreCompleto" value="" placeholder="Apellido Paterno / Apellido Materno / Nombre(s)" />
             </div>
-            <div class="col-3">
-                <input class="form-control" type="text" name="apellidoPaterno" value="" placeholder="Apellido Paterno" />
+            <div class="col-1">
+                <a asp-controller="Personal" asp-action="Buscar" class="btn btn-info">Buscar</a>
             </div>
-            <div class="col-3">
-                <input class="form-control" type="text" name="apellidoMaterno" value="" placeholder="Apellido Materno" />
-            </div>
-            <div class="col-2">
-                <button class="btn btn-info d-inline">Buscar</button>
-                <a asp-controller="Personal" asp-action="Agregar" class="btn btn-info d-inline">Agregar</a>
+            <div class="col-1">
+                <a asp-controller="Personal" asp-action="Agregar" class="btn btn-info ">Agregar</a>
             </div>
         </div>
+        <hr />
     </div>
+
     <div>
-        <table class="table text-secondary">
+        <table class="table text-secondary text-center">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nombre Completo</th>
                     <th scope="col">Inmueble</th>
-                    <th scope="col">Adscripción</th>
                     <th scope="col">N°Expediente</th>
                     <th scope="col">Detalles</th>
                 </tr>
@@ -41,5 +39,80 @@
 </div>
 
 
+
+<!-- Modal -->
+<div class="modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Empleado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <label>Nombre Completo</label>
+                            <input readonly class="form-control" type="text" id="nombreCompleto" name="nombreCompleto" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Numero de Expediente</label>
+                            <input readonly class="form-control" type="text" id="numeroExpediente" name="numeroExpediente" value="" />
+                        </div>
+                        <div class="col">
+                            <label>UR</label>
+                            <input readonly class="form-control" type="text" id="ur" name="ur" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Municipio</label>
+                            <input readonly class="form-control" type="text" id="municipio" name="municipio" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Inmueble</label>
+                            <input readonly class="form-control" type="text" id="inmueble" name="inmueble" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Centro de Trabajo</label>
+                            <input readonly class="form-control" type="text" id="centroTrabajo" name="centroTrabajo" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Centro de Trabajo</label>
+                            <input readonly class="form-control" type="text" id="centroTrabajo" name="centroTrabajo" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Cargo</label>
+                            <input readonly class="form-control" type="text" id="cargo" name="cargo" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Horario</label>
+                            <input readonly class="form-control" type="text" id="horario" name="horario" value="" />
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-info">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="~/js/Personal.js" asp-append-version="true"></script>
