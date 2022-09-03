@@ -124,6 +124,38 @@ namespace Administrador.Controllers
 
         [HttpGet]
         [Produces("application/json")]
+        public async Task<DatosEmpleado> DatosGenerales(string idEmpleado)
+        {
+            Empleado empleado = new Empleado();
+            empleado = await _context.Empleado.Where(x => x.Id.Equals(Guid.Parse(idEmpleado))).FirstAsync();
+            DatosEmpleado datos = new DatosEmpleado();
+
+            var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
+            var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
+            var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
+            var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
+            var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
+            var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
+
+            datos.Id = empleado.Id;
+            datos.NombreCompleto = empleado.NombreCompleto;
+            datos.NumeroExpediente = empleado.NumeroExpediente;
+            datos.FechaIngreso = empleado.FechaIngreso;
+            datos.UR = empleado.UR;
+            datos.Horario = empleado.Horario;
+            datos.Activo = empleado.Activo;
+            datos.Inmueble = inmueble.Nombre;
+            datos.Direccion = inmueble.Direccion;
+            datos.Cargo = cargo.Nombre;
+            datos.CentroTrabajo = centroTrabajo.Nombre;
+            datos.CargoHomologado = cargoHomologado.Nombre;
+            datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
+            datos.Contratacion = contratacion.Nombre;
+            return datos;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<Inmueble>>> GetInmueblesMunicipio(Guid id)
         {
             var inmuebles = await _context.Inmueble.Where(x => x.IdMunicipio.Equals(id)).OrderBy(n => n.Nombre).ToListAsync();
