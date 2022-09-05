@@ -1,0 +1,115 @@
+﻿@using ControlAsistencia_.Models;
+@{
+    Empleado empleado = (Empleado)ViewData["empleado"];
+    DatosEmpleado datosEmpleado = (DatosEmpleado)ViewData["datosEmpleado"];
+    var mensaje = ViewData["mensaje"];
+    var error = ViewData["error"];
+}
+
+<link rel="stylesheet" href="~/css/personal.css" />
+<div>
+    <h5 id="titulo" class="text-center py-2 rounded mt-4">Actualizar Información Empleado</h5>
+
+    @if (error.Equals(true))
+    {
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @mensaje
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    }
+
+    @if (!mensaje.Equals("") && error.Equals(false))
+    {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @mensaje
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    }
+
+    <div class="mt-3 border rounded px-3 py-3">
+        <form asp-controller="Personal" asp-action="ActualizarDatos" method="post">
+            <input type="hidden" name="id" value="@empleado.Id" />
+            <div class="row">
+                <div class="col-7">
+                    <label>Nombre Completo</label>
+                    <input class="form-control" id="nombreCompleto" type="text" name="nombreCompleto" value="@empleado.NombreCompleto" placeholder="Paterno / Materno / Nombre(s)" />
+                </div>
+                <div class="col-2">
+                    <label>Numero Expediente</label>
+                    <input class="form-control" type="text" id="numeroExpediente" name="numeroExpediente" value="@empleado.NumeroExpediente" placeholder="" />
+                </div>
+                <div class="col-1">
+                    <label>UR</label>
+                    <input class="form-control" type="text" id="ur" name="ur" value="@empleado.UR" />
+                </div>
+                <div class="col-2">
+                    <label>Fecha Ingreso</label>
+                    <input class="form-control" type="text" id="fechaIngreso" name="fechaIngreso" value="@empleado.FechaIngreso" placeholder="dd/mm/aaaa" />
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-4">
+                    <label>Municipio:</label>
+                    <select class="form-control" id="municipio" name="municipio">
+                        <option value="@empleado.IdMunicipio">@datosEmpleado.Municipio</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label>Inmueble donde labora:</label>
+                    <select class="form-control" id="inmueble" name="inmueble">
+                        <option value="@empleado.IdInmueble">@datosEmpleado.Inmueble</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label>Contratación:</label>
+                    <select class="form-control" id="contratacion" name="contratacion">
+                        <option value="@empleado.IdInmueble">@datosEmpleado.Contratacion</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-6">
+                    <label>Unidad Administrativa:</label>
+                    <select class="form-control" id="unidadAdministrativa" name="unidadAdministrativa">
+                        <option value="@empleado.IdUnidadAdministrativa">@datosEmpleado.UnidadAdministrativa</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label>Centro de Trabajo:</label>
+                    <select class="form-control" id="centroTrabajo" name="centroTrabajo">
+                        <option value="@empleado.IdCentroTrabajo">@datosEmpleado.CentroTrabajo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-4">
+                    <label>Cargo:</label>
+                    <select class="form-control" id="cargo" name="cargo">
+                        <option value="@empleado.IdCargo">@datosEmpleado.Cargo</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>Cargo Homologado:</label>
+                    <select class="form-control" id="cargoHomologado" name="cargoHomologado">
+                        <option value="@empleado.IdCargoHomologado">@datosEmpleado.CargoHomologado</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>Horario</label>
+                    <input class="form-control" type="text" id="horario" name="horario" value="@empleado.Horario" placeholder="" />
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button id="registrar" type="submit" class="btn btn-info py-2 px-4">Actualizar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="~/js/Personal.js" asp-append-version="true"></script>

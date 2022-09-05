@@ -1,5 +1,8 @@
-﻿@{
+﻿@using ControlAsistencia_.Models;
+@{
     ViewData["Title"] = "Personal";
+    List<Empleado> empleados = (List<Empleado>)ViewData["empleados"];
+    var i = 1;
 }
 
 <link rel="stylesheet" href="~/css/personal.css" />
@@ -9,7 +12,7 @@
     <div>
         <div class="row py-4">
             <div class="col-9">
-                <input class="form-control" type="text" name="nombreCompleto" value="" placeholder="Apellido Paterno / Apellido Materno / Nombre(s)" />
+                <input class="form-control" type="text" name="nombreCompleto" value="" placeholder="Nombre" />
             </div>
             <div class="col-1">
                 <a asp-controller="Personal" asp-action="Buscar" class="btn btn-info">Buscar</a>
@@ -27,14 +30,25 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nombre Completo</th>
-                    <th scope="col">Inmueble</th>
                     <th scope="col">N°Expediente</th>
                     <th scope="col">Detalles</th>
+                    <th scope="col">Actualizar</th>
+                    <th scope="col">Asistencias</th>
                 </tr>
             </thead>
             <tbody>
-            </tbody>
-        </table>
+                @{
+                    foreach (var empleado in empleados)
+                    {
+                        <tr>
+                            <td>i</td>
+                            <td>@empleado.NombreCompleto</td>
+                        </tr>
+                    i = i + 1;
+                }
+                }
+                </tbody>
+            </table>
     </div>
 </div>
 

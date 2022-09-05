@@ -2,55 +2,55 @@
 
     console.log("Listo");
 
-    $.ajax({
-        type: 'GET',
-        url: "/Personal/Empleados",
-        dataType: "json",
-        //data: { idEmpleado: idEmpleado, mes: mes },
-        success: function (response) {
-            console.log(response);
+    //$.ajax({
+    //    type: 'GET',
+    //    url: "/Personal/Empleados",
+    //    dataType: "json",
+    //    //data: { idEmpleado: idEmpleado, mes: mes },
+    //    success: function (response) {
+    //        console.log(response);
 
-            if (response != undefined) {
-                if (response.length > 0) {
-                    var index = 0;
-                    for (var i = 0; i < response.length; i++) {
-                        //var enlace = "Detalles/?idEmpleado=" + response[i]["id"];
-                        index = i + 1;
-                        $(".table>tbody").append("<tr><td>" + index + "</td><td>" + response[i]["nombreCompleto"] + "</td><td>" + response[i]["nombreInmueble"] + "</td><td>" + response[i]["numeroExpediente"] + "</td><td>" + "<button data-toggle='modal' data-target='#staticBackdrop'  type='button' id='" +response[i]["id"]+"' class='btn btn-info detalles'><span class='material-icons'>visibility</span></button>" + "</td></tr>");
-                    }
-                }
-            }
-        },
-    });
+    //        if (response != undefined) {
+    //            if (response.length > 0) {
+    //                var index = 0;
+    //                for (var i = 0; i < response.length; i++) {
+    //                    //var enlace = "Detalles/?idEmpleado=" + response[i]["id"];
+    //                    index = i + 1;
+    //                    $(".table>tbody").append("<tr><td>" + index + "</td><td>" + response[i]["nombreCompleto"] + "</td><td>" + response[i]["nombreInmueble"] + "</td><td>" + response[i]["numeroExpediente"] + "</td><td>" + "<button data-toggle='modal' data-target='#staticBackdrop'  type='button' id='" +response[i]["id"]+"' class='btn btn-info detalles'><span class='material-icons'>visibility</span></button>" + "</td></tr>");
+    //                }
+    //            }
+    //        }
+    //    },
+    //});
 
     //data-toggle='modal' data-target='#staticBackdrop'
 
-    $('body').on('click', '.detalles', function () {
-        console.log($(this).attr("id"));
-        var idEmpleado = $(this).attr("id")+"";
-        $.ajax({
-            type: 'GET',
-            url: "/Personal/DatosGenerales",
-            dataType: "json",
-            data: { idEmpleado: idEmpleado },
-            success: function (response) {
-                console.log(response);
-                if (response != undefined) {
-                    var enlace = "Actualizar/?idEmpleado=" + response["id"];
-                    $("#nombreCompleto").val(response['nombreCompleto']);
-                    $("#numeroExpediente").val(response['numeroExpediente']);
-                    $("#ur").val(response['ur']);
-                    $("#municipio").val(response['municipio']);
-                    $("#inmueble").val(response['inmueble']);
-                    $("#centroTrabajo").val(response['centroTrabajo']);
-                    $("#unidadAdministrativa").val(response['unidadAdministrativa']);
-                    $("#cargo").val(response['cargo']);
-                    $("#horario").val(response['horario']);
-                    $(".modal-footer").append("<a class='btn btn-info text-white' href='" + enlace + "'>Actualizar</a>");
-                }
-            },
-        });
-    });
+    //$('body').on('click', '.detalles', function () {
+    //    console.log($(this).attr("id"));
+    //    var idEmpleado = $(this).attr("id")+"";
+    //    $.ajax({
+    //        type: 'GET',
+    //        url: "/Personal/DatosGenerales",
+    //        dataType: "json",
+    //        data: { idEmpleado: idEmpleado },
+    //        success: function (response) {
+    //            console.log(response);
+    //            if (response != undefined) {
+    //                var enlace = "Actualizar/?idEmpleado=" + response["id"];
+    //                $("#nombreCompleto").val(response['nombreCompleto']);
+    //                $("#numeroExpediente").val(response['numeroExpediente']);
+    //                $("#ur").val(response['ur']);
+    //                $("#municipio").val(response['municipio']);
+    //                $("#inmueble").val(response['inmueble']);
+    //                $("#centroTrabajo").val(response['centroTrabajo']);
+    //                $("#unidadAdministrativa").val(response['unidadAdministrativa']);
+    //                $("#cargo").val(response['cargo']);
+    //                $("#horario").val(response['horario']);
+    //                $(".modal-footer").append("<a class='btn btn-info text-white' href='" + enlace + "'>Actualizar</a>");
+    //            }
+    //        },
+    //    });
+    //});
 
     $.ajax({
         type: 'GET',

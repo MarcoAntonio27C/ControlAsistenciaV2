@@ -25,8 +25,10 @@ namespace Administrador.Controllers
             return View();
         }
 
-        public IActionResult Personal()
+        public async Task<IActionResult> PersonalAsync()
         {
+            var empleados = await _context.Empleado.ToListAsync();
+            ViewData["empleados"] = empleados;
             return View();
         }
 
@@ -37,9 +39,17 @@ namespace Administrador.Controllers
             return View();
         }
 
-        public  IActionResult Actualizar(string idEmpleado)
+        public async Task<IActionResult> ActualizarAsync(string idEmpleado)
         {
-            return Content(idEmpleado);
+            Empleado empleado = new Empleado();
+            DatosEmpleado datosEmpleado = new DatosEmpleado();
+            datosEmpleado = await DatosGenerales(idEmpleado);
+            empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
+            ViewData["empleado"] = empleado; 
+            ViewData["datosEmpleado"] = datosEmpleado;
+            ViewData["mensaje"] = "";
+            ViewData["error"] = false;
+            return View();
         }
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
@@ -77,6 +87,38 @@ namespace Administrador.Controllers
             ViewData["error"] = false;
             ViewData["mensaje"] = "La información se guardo correctamente";
             return View("Agregar");
+        }
+
+        public async Task<IActionResult> ActualizarDatosAsync(IFormCollection form)
+        {
+            Empleado empleado = new Empleado();
+            empleado.Id = Guid.Parse(form["id"]);
+            empleado.NombreCompleto = form["nombreCompleto"];
+            empleado.NumeroExpediente = form["numeroExpediente"];
+            empleado.FechaIngreso = form["fechaIngreso"];
+            empleado.UR = form["ur"];
+            empleado.Horario = form["horario"];
+            empleado.Activo = true;
+            empleado.IdMunicipio = Guid.Parse(form["municipio"]);
+            empleado.IdInmueble = Guid.Parse(form["inmueble"]);
+            empleado.IdCargo = Guid.Parse(form["cargo"]);
+            empleado.IdCargoHomologado = Guid.Parse(form["cargoHomologado"]);
+            empleado.IdCentroTrabajo = Guid.Parse(form["centroTrabajo"]);
+            empleado.IdUnidadAdministrativa = Guid.Parse(form["unidadAdministrativa"]);
+            empleado.IdContratacion = Guid.Parse(form["contratacion"]);
+            _context.Empleado.Add(empleado);
+
+            _context.Entry(empleado).State = EntityState.Modified;
+
+            if (await _context.SaveChangesAsync() == 0)
+            {
+                ViewData["error"] = true;
+                ViewData["mensaje"] = "No se guardo correctamente la información, intentelo de nuevo";
+                return View("Actualizar");
+            }
+            ViewData["error"] = false;
+            ViewData["mensaje"] = "Cambios guardados correctamente";
+            return View("Actualizar");
         }
 
 
@@ -128,6 +170,7 @@ namespace Administrador.Controllers
             empleado = await _context.Empleado.Where(x => x.Id.Equals(Guid.Parse(idEmpleado))).FirstAsync();
             DatosEmpleado datos = new DatosEmpleado();
 
+            var municipio = await _context.Municipio.Where(x => x.Id.Equals(empleado.IdMunicipio)).FirstAsync();
             var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
             var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
             var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
@@ -142,6 +185,7 @@ namespace Administrador.Controllers
             datos.UR = empleado.UR;
             datos.Horario = empleado.Horario;
             datos.Activo = empleado.Activo;
+            datos.Municipio = municipio.Nombre;
             datos.Inmueble = inmueble.Nombre;
             datos.Direccion = inmueble.Direccion;
             datos.Cargo = cargo.Nombre;
