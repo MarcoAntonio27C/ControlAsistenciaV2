@@ -36,6 +36,7 @@
             success: function (response) {
                 console.log(response);
                 if (response != undefined) {
+                    var enlace = "Actualizar/?idEmpleado=" + response["id"];
                     $("#nombreCompleto").val(response['nombreCompleto']);
                     $("#numeroExpediente").val(response['numeroExpediente']);
                     $("#ur").val(response['ur']);
@@ -45,6 +46,7 @@
                     $("#unidadAdministrativa").val(response['unidadAdministrativa']);
                     $("#cargo").val(response['cargo']);
                     $("#horario").val(response['horario']);
+                    $(".modal-footer").append("<a class='btn btn-info text-white' href='" + enlace + "'>Actualizar</a>");
                 }
             },
         });

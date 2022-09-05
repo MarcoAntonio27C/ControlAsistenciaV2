@@ -22,7 +22,7 @@
     </div>
 
     <div>
-        <table class="table text-secondary text-center">
+        <table class="table text-secondary text-center bg-light">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -44,8 +44,8 @@
 <div class="modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Empleado</h5>
+            <div class="modal-header text-center">
+                <h5 class=" text-center" id="staticBackdropLabel">Empleado</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -66,6 +66,12 @@
                         <div class="col">
                             <label>UR</label>
                             <input readonly class="form-control" type="text" id="ur" name="ur" value="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Horario</label>
+                            <input readonly class="form-control" type="text" id="horario" name="horario" value="" />
                         </div>
                     </div>
                     <div class="row">
@@ -98,18 +104,11 @@
                             <input readonly class="form-control" type="text" id="cargo" name="cargo" value="" />
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <label>Horario</label>
-                            <input readonly class="form-control" type="text" id="horario" name="horario" value="" />
-                        </div>
-                    </div>
 
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-info">Actualizar</button>
             </div>
         </div>
     </div>

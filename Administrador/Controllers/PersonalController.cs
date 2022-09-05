@@ -37,11 +37,9 @@ namespace Administrador.Controllers
             return View();
         }
 
-        public async Task<IActionResult> DetallesAsync(string idEmpleado)
+        public  IActionResult Actualizar(string idEmpleado)
         {
-            var empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
-            ViewData["empleado"] = empleado;
-            return View();
+            return Content(idEmpleado);
         }
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
