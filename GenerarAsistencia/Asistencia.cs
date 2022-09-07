@@ -22,6 +22,7 @@ namespace GenerarAsistencia
         RequestAsistencia requestAsistencia;
         public string IdInmueble = "";
         public string NombreInmueble = "";
+        AsistenciaCorrecta correcta = new AsistenciaCorrecta();
 
         public Asistencia()
         {
@@ -102,9 +103,16 @@ namespace GenerarAsistencia
                                     {
                                         if (peticion.IsSuccessful)
                                         {
-
-                                            MessageBox.Show(empleado.NombreCompleto  + " se Registro su Asistencia Correctamente");
+                                            AsistenciaCorrecta correcta = new AsistenciaCorrecta();
+                                            correcta.SetLabel(empleado.NombreCompleto +"\nSe registro tu asistencia correctamente a las  \n"+ DateTime.Now.ToString("T"));
+                                            correcta.Show();
+                                           
+                                            //MessageBox.Show(empleado.NombreCompleto  + " se Registro su Asistencia Correctamente");
                                             Picture.Image = global::GenerarAsistencia.Properties.Resources.fondoBlanco;
+                                            //Entrada.Checked = false;
+                                            //Salida.Checked = false;
+                                            //SalidaComida.Checked = false;
+                                            //RegresoComida.Checked = false;
                                             break;
                                         }
                                         else
