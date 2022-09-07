@@ -198,3 +198,4 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\ref\Administrador.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Administrador.pdb
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Administrador.genruntimeconfig.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Asistencias\Empleado.cshtml.g.cs

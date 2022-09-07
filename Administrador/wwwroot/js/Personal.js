@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
 
-    console.log("Listo");
 
     //$.ajax({
     //    type: 'GET',
@@ -23,34 +22,55 @@
     //    },
     //});
 
-    //data-toggle='modal' data-target='#staticBackdrop'
 
-    //$('body').on('click', '.detalles', function () {
-    //    console.log($(this).attr("id"));
-    //    var idEmpleado = $(this).attr("id")+"";
-    //    $.ajax({
-    //        type: 'GET',
-    //        url: "/Personal/DatosGenerales",
-    //        dataType: "json",
-    //        data: { idEmpleado: idEmpleado },
-    //        success: function (response) {
-    //            console.log(response);
-    //            if (response != undefined) {
-    //                var enlace = "Actualizar/?idEmpleado=" + response["id"];
-    //                $("#nombreCompleto").val(response['nombreCompleto']);
-    //                $("#numeroExpediente").val(response['numeroExpediente']);
-    //                $("#ur").val(response['ur']);
-    //                $("#municipio").val(response['municipio']);
-    //                $("#inmueble").val(response['inmueble']);
-    //                $("#centroTrabajo").val(response['centroTrabajo']);
-    //                $("#unidadAdministrativa").val(response['unidadAdministrativa']);
-    //                $("#cargo").val(response['cargo']);
-    //                $("#horario").val(response['horario']);
-    //                $(".modal-footer").append("<a class='btn btn-info text-white' href='" + enlace + "'>Actualizar</a>");
-    //            }
-    //        },
-    //    });
-    //});
+    $('body').on('click', '.detalles', function () {
+        console.log($(this).attr("id"));
+        var idEmpleado = $(this).attr("id")+"";
+        $.ajax({
+            type: 'GET',
+            url: "/Personal/DatosGenerales",
+            dataType: "json",
+            data: { idEmpleado: idEmpleado },
+            success: function (response) {
+                console.log(response);
+                if (response != undefined) {
+                    var enlace = "Actualizar/?idEmpleado=" + response["id"];
+                    $("#nombreCompleto").val(response['nombreCompleto']);
+                    $("#numeroExpediente").val(response['numeroExpediente']);
+                    $("#ur").val(response['ur']);
+                    $("#municipio").val(response['municipio']);
+                    $("#inmueble").val(response['inmueble']);
+                    $("#centroTrabajo").val(response['centroTrabajo']);
+                    $("#unidadAdministrativa").val(response['unidadAdministrativa']);
+                    $("#cargo").val(response['cargo']);
+                    $("#horario").val(response['horario']);
+                }
+            },
+        });
+    });
+
+
+    $('body').on('click', '#actualizar', function () {
+
+        var valdata = $("#formularioUpdate").serialize();
+        
+        console.log(valdata);
+        $.ajax({
+            type: 'GET',
+            url: "/Personal/ActualizarDatos",
+            dataType: "json",
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            data: valdata ,
+            success: function (response) {
+                console.log(response);
+                if (response == "Ok") {
+                    $(".modal-ok").modal("show");
+                } else if (response == "Error") {
+                    $(".modal-error").modal("show");
+                }
+            },
+        });
+    });
 
     $.ajax({
         type: 'GET',
@@ -156,21 +176,5 @@
             });
              console.log(response);
         },
-    });
-
-
-
-    $("#registrar").click(function () {
-        console.log($("#nombreCompleto").val());
-        console.log($("#numeroExpediente").val());
-        console.log($("#ur").val());
-        console.log($("#fechaIngreso").val());
-        console.log($("#municipio").val());
-        console.log($("#inmueble").val());
-        console.log($("#unidadAdministrativa").val());
-        console.log($("#centroTrabajo").val());
-        console.log($("#cargo").val());
-        console.log($("#cargoHomologado").val());
-        console.log($("#horario").val());
     });
 });

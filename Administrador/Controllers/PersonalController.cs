@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Administrador.Controllers
@@ -89,36 +90,33 @@ namespace Administrador.Controllers
             return View("Agregar");
         }
 
-        public async Task<IActionResult> ActualizarDatosAsync(IFormCollection form)
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<IActionResult> ActualizarDatosAsync(DatosEmpleado valdata)
         {
-            Empleado empleado = new Empleado();
-            empleado.Id = Guid.Parse(form["id"]);
-            empleado.NombreCompleto = form["nombreCompleto"];
-            empleado.NumeroExpediente = form["numeroExpediente"];
-            empleado.FechaIngreso = form["fechaIngreso"];
-            empleado.UR = form["ur"];
-            empleado.Horario = form["horario"];
-            empleado.Activo = true;
-            empleado.IdMunicipio = Guid.Parse(form["municipio"]);
-            empleado.IdInmueble = Guid.Parse(form["inmueble"]);
-            empleado.IdCargo = Guid.Parse(form["cargo"]);
-            empleado.IdCargoHomologado = Guid.Parse(form["cargoHomologado"]);
-            empleado.IdCentroTrabajo = Guid.Parse(form["centroTrabajo"]);
-            empleado.IdUnidadAdministrativa = Guid.Parse(form["unidadAdministrativa"]);
-            empleado.IdContratacion = Guid.Parse(form["contratacion"]);
-            _context.Empleado.Add(empleado);
+            var id = valdata.Id.ToString();
+            var empleado = await _context.Empleado.FindAsync(Guid.Parse(id));
+   
 
+            empleado.NombreCompleto = valdata.NombreCompleto;
+            empleado.NumeroExpediente = valdata.NumeroExpediente;
+            empleado.FechaIngreso = valdata.FechaIngreso;
+            empleado.UR = valdata.UR;
+            empleado.Horario = valdata.Horario;
+            empleado.IdMunicipio = Guid.Parse(valdata.Municipio);
+            empleado.IdInmueble = Guid.Parse(valdata.Inmueble);
+            empleado.IdCargo = Guid.Parse(valdata.Cargo);
+            empleado.IdCargoHomologado = Guid.Parse(valdata.CargoHomologado);
+            empleado.IdCentroTrabajo = Guid.Parse(valdata.CentroTrabajo);
+            empleado.IdUnidadAdministrativa = Guid.Parse(valdata.UnidadAdministrativa);
+            empleado.IdContratacion = Guid.Parse(valdata.Contratacion);
             _context.Entry(empleado).State = EntityState.Modified;
 
-            if (await _context.SaveChangesAsync() == 0)
+            if (await _context.SaveChangesAsync() != 0)
             {
-                ViewData["error"] = true;
-                ViewData["mensaje"] = "No se guardo correctamente la información, intentelo de nuevo";
-                return View("Actualizar");
+                return Ok("Ok");
             }
-            ViewData["error"] = false;
-            ViewData["mensaje"] = "Cambios guardados correctamente";
-            return View("Actualizar");
+            return Ok("Error");
         }
 
 

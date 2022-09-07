@@ -1,0 +1,56 @@
+﻿@using ControlAsistencia_.Models;
+@{
+    ViewData["Title"] = "Personal";
+    Empleado empleado = (Empleado)ViewData["empleado"];
+    var FechaActual = DateTime.Now.ToString("yyyy-MM-01");
+}
+
+<link rel="stylesheet" href="~/css/personal.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div>
+    <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias de @empleado.NombreCompleto</h5>
+
+    <div class="mt-5 px-4 py-4 border bg-light rounded">
+        <div>
+            <form method="post">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
+                        <label>Seleccionar Mes:</label>
+                        <input class="form-control" type="date" min="2022-01-01" name="mes" id="mes" value="@FechaActual" />
+                    </div>
+                    <div class="col-3 text-center">
+                        <label class="text-white">.</label>
+                        <button id="Buscar" type="button" class="form-control btn btn-info">Consultar Asistencias</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <hr />
+        <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+            No hay registros de asistencias.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="my-5">
+            <table id="tabla" class="table table-hover w-90 m-auto">
+                <thead class="text-secondary text-center">
+                    <tr>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Entrada</th>
+                        <th scope="col">Salida Comida</th>
+                        <th scope="col">Entrada Comida</th>
+                        <th scope="col">Salida</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/asistencias.js" asp-append-version="true"></script>
