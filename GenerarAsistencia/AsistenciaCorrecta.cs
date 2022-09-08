@@ -15,27 +15,23 @@ namespace GenerarAsistencia
         public AsistenciaCorrecta()
         {
             InitializeComponent();
-            this.timer1.Interval = 3000;
+            this.timer1.Interval = 2400;
             this.timer1.Start();
             this.timer1.Tick += (o, e) =>
             {
-                this.Close();
+
+                this.Hide();
             };
         }
 
         public void SetLabel(string nombre)
         {
-            labelNombre.Text = nombre;
+            this.labelNombre.Text = nombre;
 
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void AsistenciaCorrecta_Load(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }

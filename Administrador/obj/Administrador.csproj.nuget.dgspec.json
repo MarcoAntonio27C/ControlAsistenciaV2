@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj": {}
+    "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj": {
+    "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj",
+        "projectUniqueName": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj",
         "projectName": "Administrador",
-        "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj",
-        "packagesPath": "C:\\Users\\Ast\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\obj\\",
+        "projectPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\Administrador.csproj",
+        "packagesPath": "C:\\Users\\Marco Antonio C\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\Administrador\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marco Antonio C\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -34,11 +32,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
-                "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj"
+              "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
+                "projectPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj"
               },
-              "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
-                "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj"
+              "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
+                "projectPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj"
               }
             }
           }
@@ -80,24 +78,22 @@
         }
       }
     },
-    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
+    "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+        "projectUniqueName": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
         "projectName": "ControlAsistencia_",
-        "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
-        "packagesPath": "C:\\Users\\Ast\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\obj\\",
+        "projectPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+        "packagesPath": "C:\\Users\\Marco Antonio C\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marco Antonio C\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -143,24 +139,22 @@
         }
       }
     },
-    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
+    "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
+        "projectUniqueName": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
         "projectName": "DBContext",
-        "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
-        "packagesPath": "C:\\Users\\Ast\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\obj\\",
+        "projectPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
+        "packagesPath": "C:\\Users\\Marco Antonio C\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marco Antonio C\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -173,8 +167,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
-                "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj"
+              "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
+                "projectPath": "C:\\Users\\Marco Antonio C\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj"
               }
             }
           }

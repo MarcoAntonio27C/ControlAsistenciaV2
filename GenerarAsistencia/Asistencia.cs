@@ -22,8 +22,7 @@ namespace GenerarAsistencia
         RequestAsistencia requestAsistencia;
         public string IdInmueble = "";
         public string NombreInmueble = "";
-        AsistenciaCorrecta correcta = new AsistenciaCorrecta();
-
+        
         public Asistencia()
         {
             InitializeComponent();
@@ -55,7 +54,7 @@ namespace GenerarAsistencia
         protected override void Process(DPFP.Sample Sample)
         {
             base.Process(Sample);
-
+            AsistenciaCorrecta correcta = new AsistenciaCorrecta();
             //Procese la muestra y cree un conjunto de características para fines de inscripción
             DPFP.FeatureSet features = ExtractFeatures(Sample, DPFP.Processing.DataPurpose.Verification);
 
@@ -104,12 +103,13 @@ namespace GenerarAsistencia
                                     {
                                         if (!peticion.IsSuccessful.Equals(false))
                                         {
-                                            AsistenciaCorrecta correcta = new AsistenciaCorrecta();
+                                            
                                             correcta.SetLabel(empleado.NombreCompleto + "\nSe registro tu asistencia correctamente a las  \n" + DateTime.Now.ToString("T"));
-                                            correcta.ShowDialog();
+                                            correcta.TopMost = true;
+                                            correcta.Show();
 
                                             //MessageBox.Show(empleado.NombreCompleto  + " se Registro su Asistencia Correctamente");
-                                            Picture.Image = global::GenerarAsistencia.Properties.Resources.fondoBlanco;
+                                            //Picture.Image = global::GenerarAsistencia.Properties.Resources.fondoBlanco;
                                             break;
                                         }
                                         else
