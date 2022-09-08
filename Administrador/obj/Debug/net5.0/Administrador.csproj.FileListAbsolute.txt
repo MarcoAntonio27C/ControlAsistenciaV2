@@ -179,6 +179,7 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Administrador.TagHelpers.input.cache
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Administrador.TagHelpers.output.cache
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Administrador.RazorCoreGenerate.cache
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Asistencias\Empleado.cshtml.g.cs
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Home\Asistencias.cshtml.g.cs
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -198,4 +199,3 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\ref\Administrador.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Administrador.pdb
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Administrador.genruntimeconfig.cache
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Asistencias\Empleado.cshtml.g.cs

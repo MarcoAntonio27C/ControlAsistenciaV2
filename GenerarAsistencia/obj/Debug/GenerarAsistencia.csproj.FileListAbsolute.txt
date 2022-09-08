@@ -42,6 +42,7 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\RestSharp.xml
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.AssemblyReference.cache
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.Asistencia.resources
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.AsistenciaCorrecta.resources
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.CaptureForm.resources
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.Inicio.resources
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.Properties.Resources.resources
@@ -50,4 +51,3 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.CopyComplete
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.exe
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.pdb
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.AsistenciaCorrecta.resources

@@ -29,6 +29,7 @@ namespace RegistroHuella
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarHuella));
             this.NumeroExpediente = new System.Windows.Forms.TextBox();
             this.Buscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -184,9 +185,10 @@ namespace RegistroHuella
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Buscar);
             this.Controls.Add(this.NumeroExpediente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrarHuella";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CapturarHuella";
+            this.Text = "Fiscalia General del Estado de Puebla";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistrarHuella_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.capturarHuell)).EndInit();
             this.panel2.ResumeLayout(false);

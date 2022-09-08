@@ -70,3 +70,4 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.csproj.CopyComplete
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.exe
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.CapturarHuella.resources
