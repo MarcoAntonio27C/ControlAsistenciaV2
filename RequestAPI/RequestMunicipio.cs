@@ -10,7 +10,9 @@ namespace RequestAPI
 {
     public class RequestMunicipio
     {
-        string API =  "https://localhost:44396/api/";
+
+        //string API =  "https://localhost:44396/api/";
+        string API = "http://10.24.1.29/PeopleSearch/Api/";
 
         public IRestResponse Municipios()
         {

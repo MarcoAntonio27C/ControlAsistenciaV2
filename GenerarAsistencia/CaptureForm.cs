@@ -176,34 +176,12 @@ namespace GenerarAsistencia
 
 		private DPFP.Capture.Capture Capturer;
 
-        private void StatusText_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
 			reloj.Text = DateTime.Now.ToLongTimeString();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Picture_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

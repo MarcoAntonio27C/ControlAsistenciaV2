@@ -30,6 +30,7 @@ namespace GenerarAsistencia
             requestEmpleado = new RequestEmpleado();
             requestAsistencia = new RequestAsistencia();
 
+
         }
 
         public void Verify(DPFP.Template template)
@@ -101,18 +102,14 @@ namespace GenerarAsistencia
 
                                     if (!peticion.Equals(null))
                                     {
-                                        if (peticion.IsSuccessful)
+                                        if (!peticion.IsSuccessful.Equals(false))
                                         {
                                             AsistenciaCorrecta correcta = new AsistenciaCorrecta();
-                                            correcta.SetLabel(empleado.NombreCompleto +"\nSe registro tu asistencia correctamente a las  \n"+ DateTime.Now.ToString("T"));
-                                            correcta.Show();
-                                           
+                                            correcta.SetLabel(empleado.NombreCompleto + "\nSe registro tu asistencia correctamente a las  \n" + DateTime.Now.ToString("T"));
+                                            correcta.ShowDialog();
+
                                             //MessageBox.Show(empleado.NombreCompleto  + " se Registro su Asistencia Correctamente");
                                             Picture.Image = global::GenerarAsistencia.Properties.Resources.fondoBlanco;
-                                            //Entrada.Checked = false;
-                                            //Salida.Checked = false;
-                                            //SalidaComida.Checked = false;
-                                            //RegresoComida.Checked = false;
                                             break;
                                         }
                                         else
@@ -134,6 +131,7 @@ namespace GenerarAsistencia
                                 }
                             }
 
+                            
                         }
 
 
@@ -142,7 +140,6 @@ namespace GenerarAsistencia
                             MessageBox.Show("Usuario no encontrado, intentelo de nuevo por favor");
 
                         }
-
                     }
                     else
                     {
@@ -166,11 +163,63 @@ namespace GenerarAsistencia
             return "";
         }
 
+
+
         public void SetInmueble(ComboboxValue comboBoxValue)
         {
             IdInmueble = comboBoxValue.Id.ToString();
             NombreInmueble = comboBoxValue.Name;
             inmueble2.Text = NombreInmueble;
+        }
+
+        private void Entrada_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Entrada.Checked)
+            {
+                Entrada.ForeColor = System.Drawing.Color.Goldenrod;
+                SalidaComida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                RegresoComida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                Salida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            }
+
+        }
+
+        private void Asistencia_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SalidaComida_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SalidaComida.Checked)
+            {
+                Entrada.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                SalidaComida.ForeColor = System.Drawing.Color.Goldenrod;
+                RegresoComida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                Salida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            }
+        }
+
+        private void RegresoComida_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RegresoComida.Checked)
+            {
+                Entrada.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                SalidaComida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                RegresoComida.ForeColor = System.Drawing.Color.Goldenrod;
+                Salida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            }
+        }
+
+        private void Salida_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Salida.Checked)
+            {
+                Entrada.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                SalidaComida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                RegresoComida.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                Salida.ForeColor = System.Drawing.Color.Goldenrod;
+            }
         }
     }
 }

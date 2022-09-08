@@ -31,10 +31,10 @@ C:\Users\Marco Antonio C\source\repos\MarcoAntonio27C\ControlAsistenciaV2\Contro
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.deps.json
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.pdb
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.AssemblyReference.cache
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.AssemblyInfoInputs.cache
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.AssemblyInfo.cs
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.CoreCompileInputs.cache
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.AssemblyReference.cache

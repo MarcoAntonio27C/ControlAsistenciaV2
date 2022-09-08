@@ -29,8 +29,26 @@ namespace GenerarAsistencia
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Asistencia));
             this.inmueble2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Entrada
+            // 
+            this.Entrada.CheckedChanged += new System.EventHandler(this.Entrada_CheckedChanged);
+            // 
+            // SalidaComida
+            // 
+            this.SalidaComida.CheckedChanged += new System.EventHandler(this.SalidaComida_CheckedChanged);
+            // 
+            // RegresoComida
+            // 
+            this.RegresoComida.CheckedChanged += new System.EventHandler(this.RegresoComida_CheckedChanged);
+            // 
+            // Salida
+            // 
+            this.Salida.CheckedChanged += new System.EventHandler(this.Salida_CheckedChanged);
             // 
             // inmueble2
             // 
@@ -49,14 +67,17 @@ namespace GenerarAsistencia
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 693);
             this.Controls.Add(this.inmueble2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Asistencia";
+            this.Load += new System.EventHandler(this.Asistencia_Load);
+            this.Controls.SetChildIndex(this.Picture, 0);
             this.Controls.SetChildIndex(this.Entrada, 0);
             this.Controls.SetChildIndex(this.SalidaComida, 0);
             this.Controls.SetChildIndex(this.RegresoComida, 0);
             this.Controls.SetChildIndex(this.Salida, 0);
             this.Controls.SetChildIndex(this.inmueble2, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
