@@ -72,3 +72,7 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Regist
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.csproj.CopyComplete
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.exe
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.exe.manifest
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.application
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.exe.manifest
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.application

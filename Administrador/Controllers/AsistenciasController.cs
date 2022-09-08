@@ -22,7 +22,7 @@ namespace Administrador.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> EmpleadoAsync(string idEmpleado)
+        public async Task<IActionResult> Empleado(string idEmpleado)
         {
             Empleado empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
             ViewData["empleado"] = empleado;
@@ -138,7 +138,6 @@ namespace Administrador.Controllers
             }
             return Salidas;
         }
-
         public List<AsistenciaOrdenada> OrdenarAsistencias(List<Asistencia> asistencias)
         {
             List<AsistenciaOrdenada> Order = new List<AsistenciaOrdenada>();

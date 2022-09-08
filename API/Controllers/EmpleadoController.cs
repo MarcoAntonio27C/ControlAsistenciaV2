@@ -88,7 +88,7 @@ namespace API.Controllers
             return NoContent();
         }
 
-        [HttpPut]
+        [HttpPost("Actualizar")]
         public async Task<IActionResult> PutEmpleado(Empleado Empleado)
         {
             _context.Entry(Empleado).State = EntityState.Modified;

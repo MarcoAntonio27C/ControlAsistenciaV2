@@ -10,8 +10,8 @@ namespace RequestAPI
 {
     public class RequestEmpleado
     {
-        string API = "https://localhost:44396/api/";
-        //string API = "http://10.24.1.29/PeopleSearch/Api/";
+        //string API = "https://localhost:44396/api/";
+        string API = "http://10.24.1.29/PeopleSearch/Api/";
 
 
         public IRestResponse EmpleadosPorInmueble(string idInmueble)
@@ -47,8 +47,8 @@ namespace RequestAPI
         {
             try
             {
-                var client = new RestClient(API + "Empleado");
-                var request = new RestRequest("", Method.PUT);
+                var client = new RestClient(API + "Empleado/Actualizar");
+                var request = new RestRequest("", Method.POST);
                 request.RequestFormat = DataFormat.Json;
                 request.AddJsonBody(new
                 {

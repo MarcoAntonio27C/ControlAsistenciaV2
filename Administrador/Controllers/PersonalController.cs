@@ -52,6 +52,15 @@ namespace Administrador.Controllers
             ViewData["error"] = false;
             return View();
         }
+
+        public async Task<IActionResult> Buscar(string nombre)
+        {
+            var empleados = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre)).ToListAsync();
+            ViewData["empleados"] = empleados;
+            return View("Personal");
+        }
+
+
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
             Empleado empleado = new Empleado();
@@ -118,10 +127,6 @@ namespace Administrador.Controllers
             }
             return Ok("Error");
         }
-
-
-
-
 
         async Task<bool> isExisteAsync(string numeroExpediente)
         {

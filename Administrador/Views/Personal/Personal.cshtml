@@ -11,11 +11,17 @@
     <h5 id="titulo" class="text-center py-3 rounded mt-4">Empleados</h5>
     <div>
         <div class="row py-4">
-            <div class="col-9">
-                <input class="form-control" type="text" name="nombreCompleto" value="" placeholder="Nombre" />
-            </div>
-            <div class="col-1">
-                <a asp-controller="Personal" asp-action="Buscar" class="btn btn-info">Buscar</a>
+            <div class="col-10">
+                <form asp-controller="Personal" asp-action="Buscar" method="post">
+                    <div class="row">
+                        <div class="col-10">
+                            <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-info my-auto">Buscar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="col-1">
                 <a asp-controller="Personal" asp-action="Agregar" class="btn btn-info ">Agregar</a>
