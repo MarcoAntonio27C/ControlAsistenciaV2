@@ -56,6 +56,10 @@
             "AspNetCore.RouteAnalyzer": {
               "target": "Package",
               "version": "[0.5.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
