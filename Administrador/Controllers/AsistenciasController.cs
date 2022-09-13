@@ -84,7 +84,10 @@ namespace Administrador.Controllers
             }
 
 
+
+
             ViewData["empleado"] = empleado;
+            ViewData["fecha"] = fecha;
             ViewData["tabla"] = tabla;
             return View();
         }

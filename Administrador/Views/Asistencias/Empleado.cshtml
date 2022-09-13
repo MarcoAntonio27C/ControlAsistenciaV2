@@ -3,7 +3,8 @@
     ViewData["Title"] = "Personal";
     Empleado empleado = (Empleado)ViewData["empleado"];
     List<TablaAsistencias> tabla = (List<TablaAsistencias>)ViewData["tabla"];
-    var FechaActual = DateTime.Now.ToString("yyyy-MM-01");
+    DateTime FechaActual = DateTime.Parse(ViewData["fecha"].ToString());
+
 }
 
 <link rel="stylesheet" href="~/css/personal.css" />
@@ -18,11 +19,11 @@
                     <div class="col-4">
                         <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
                         <label>Seleccionar Mes:</label>
-                        <input class="form-control" type="date" min="2022-01-01" name="mes" id="mes" value="@FechaActual" />
+                        <input class="form-control"  type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required  />
                     </div>
                     <div class="col-3 text-center">
                         <label class="text-white">.</label>
-                        <button id="Buscar" type="button" class="form-control btn btn-info">Consultar Asistencias</button>
+                        <button id="Buscar" type="submit" asp-controller="Asistencias" asp-action="Empleado" class="form-control btn btn-info">Consultar Asistencias</button>
                     </div>
                 </div>
             </form>
