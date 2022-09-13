@@ -12,6 +12,8 @@ namespace DBContext
     {
         public ControlAsistenciaDBContext(DbContextOptions options) : base(options) { }
 
+        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Roles> Roles { get; set; }
         public DbSet<Asistencia> Asistencia { get; set; }
         public DbSet<Empleado> Empleado { get; set; }
         public DbSet<Municipio> Municipio { get; set; }
@@ -24,6 +26,16 @@ namespace DBContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<Roles>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+            });
+
             modelBuilder.Entity<Asistencia>(entity =>
             {
                 entity.HasKey(e => e.Id);
@@ -69,6 +81,17 @@ namespace DBContext
                 entity.HasKey(e => e.Id);
             });
 
+            // Roles
+            modelBuilder.Entity<Roles>().HasData(new Roles { Id = new Guid("77a225a3-1266-4b1f-b11c-504969afa856"), Nombre = "Root", Activo=true });
+            modelBuilder.Entity<Roles>().HasData(new Roles { Id = new Guid("9a39bcce-b092-4f90-9de7-9e0fb2137034"), Nombre = "Administrador", Activo=true });
+            modelBuilder.Entity<Roles>().HasData(new Roles { Id = new Guid("a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7"), Nombre = "AllView", Activo=true });
+            modelBuilder.Entity<Roles>().HasData(new Roles { Id = new Guid("592d923a-9d0b-424c-8bc3-0c42ff72495e"), Nombre = "UnidadAdministrativa", Activo=true });
+            
+            // Usuarios
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("1139861b-5044-4257-b89a-db1b5d4402bf"), Nombre = "root", Password="root",IdUnidadAdministrativa= "", Activo=true, IdRol= "77a225a3-1266-4b1f-b11c-504969afa856" });
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("061bc395-9e04-40d9-824c-0c740f63af15"), Nombre = "oficialiaMayor", Password= "oficialiaMayor", IdUnidadAdministrativa= "", Activo=true, IdRol= "9a39bcce-b092-4f90-9de7-9e0fb2137034" });
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("67bb4459-8401-4b49-8ac8-67d3219fbfc8"), Nombre = "cgesi", Password="cgesi",IdUnidadAdministrativa= "0e3aa015-4581-4c88-a8c9-679dd80b0d13", Activo=true, IdRol= "592d923a-9d0b-424c-8bc3-0c42ff72495e" });
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("0524769e-c144-4772-a050-811e7d2b68ce"), Nombre = "visitaduria", Password="visitaduria",IdUnidadAdministrativa= "", Activo=true, IdRol= "a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7" });
 
             //Catalogo Municipios
 
@@ -201,8 +224,8 @@ namespace DBContext
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("efd124dd-6502-4f6e-81a6-4d71392854ab"), Nombre = "SEMEFO CHIGNAHUAPAN", IdMunicipio = new Guid("9f2ad70c-f85a-42a4-a1d1-db23a6339930"), Direccion = "BOULEVARD EMILIANO ZAPATA SIN NUMERO, INTERIOR DEL PANTEON MUNICIPAL, CHIGNAHUAPAN,PUEBLA" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("c86f4562-6b68-44aa-b970-243e14b0a194"), Nombre = "SEMEFO LIBRES", IdMunicipio = new Guid("eff52198-0e70-4e53-b4dc-5fda6382aadf"), Direccion = "CALLE 4 ORIENTE SIN NUMERO BARRIO DE GUADALUPE" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("7ba2052e-3cb6-4ace-aa80-6c427d64dc9f"), Nombre = "SEMEFO TEPEACA", IdMunicipio = new Guid("d4ac176e-55a9-45e4-9053-10b44f883bd6"), Direccion = "INTERIOR DEL PANTEON MUNICIPAL, CALLE 17 ORIENTE Y AVENIDA COLON SIN NUMERO, BARRIO EL  SANTUARIO" });
-            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("741fb5a0-3175-4db6-b46c-daae21d2a3e7"), Nombre = "SEMEFO TEPEXI DE RODRIGUEZ",IdMunicipio = new Guid("c76f5daa-fddd-4abb-a861-df871d4cf4b0"), Direccion = "PANTEON MUNICIPAL CALLE DEFENSORES DEL 6 DE JUNIO SIN NUMERO, TEPEXI DE  RODRIGUEZ"});
-            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("9de39295-08e0-4c93-b229-37499a6d6ea0"), Nombre = "SEMEFO TLATLAUQUITEPEC", IdMunicipio = new Guid("f1434a0e-bc9b-4ccf-8853-1ef19e4dd6ef"), Direccion = "AV DOLORES BETANCOURT COL. CONTLA, TLATLAUQUITEPEC, PUEBLA"});
+            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("741fb5a0-3175-4db6-b46c-daae21d2a3e7"), Nombre = "SEMEFO TEPEXI DE RODRIGUEZ", IdMunicipio = new Guid("c76f5daa-fddd-4abb-a861-df871d4cf4b0"), Direccion = "PANTEON MUNICIPAL CALLE DEFENSORES DEL 6 DE JUNIO SIN NUMERO, TEPEXI DE  RODRIGUEZ" });
+            modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("9de39295-08e0-4c93-b229-37499a6d6ea0"), Nombre = "SEMEFO TLATLAUQUITEPEC", IdMunicipio = new Guid("f1434a0e-bc9b-4ccf-8853-1ef19e4dd6ef"), Direccion = "AV DOLORES BETANCOURT COL. CONTLA, TLATLAUQUITEPEC, PUEBLA" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("e1d63cf7-815d-41c2-99d9-014a9cce294c"), Nombre = "SEMEFO XICOTEPEC DE JUAREZ", IdMunicipio = new Guid("42a91eae-d655-4e1d-ae93-d0f05644c956"), Direccion = "AV. ZARAGOZA SIN NUMERO, XICOTEPEC DE JUAREZ" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("51337de0-0de2-47a9-8904-5ad933b9ae40"), Nombre = "SEMEFO ZACAPOAXTLA", IdMunicipio = new Guid("44531449-928c-44d8-ad72-08a007376f44"), Direccion = "CALLE 2 DE ABRIL NORTE  SIN NUMERO ESUINA FJ. ARRIAGA COL. CENTRO ZACAPOAXTLA, PUEBLA" });
             modelBuilder.Entity<Inmueble>().HasData(new Inmueble { Id = new Guid("23dd0625-7e09-444f-9ca3-161916d41cf0"), Nombre = "SEMEFO ZACATLAN", IdMunicipio = new Guid("e940a9c3-55e2-4ac6-b6df-e45bb398b4f6"), Direccion = "CALLE PORFIRIO DIAZ Y DOLORES PEREZ SIN NUMERO COL. CENTRO  ZACATLAN, PUEBLA" });

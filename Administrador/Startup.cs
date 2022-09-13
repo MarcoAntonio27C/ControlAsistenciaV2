@@ -1,5 +1,6 @@
 using DBContext;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
@@ -26,8 +27,14 @@ namespace Administrador
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ControlAsistenciaDBContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("Dev_Biometricos")));
+                options.UseSqlServer(Configuration.GetConnectionString("Dev_Biometricos")));
             services.AddControllersWithViews();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option => {
+                    option.LoginPath = "/Acceso/Index";
+                    option.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+                });
+
 
         }
 
@@ -48,6 +55,8 @@ namespace Administrador
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

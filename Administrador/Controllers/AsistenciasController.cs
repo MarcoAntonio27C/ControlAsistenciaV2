@@ -22,12 +22,74 @@ namespace Administrador.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Empleado(string idEmpleado)
+        public  IActionResult Inicio()
         {
-            Empleado empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
-            ViewData["empleado"] = empleado;
             return View();
         }
+
+        public async Task<IActionResult> Empleado(string idEmpleado, string mes)
+        {
+            Empleado empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
+            List<TablaAsistencias> tabla = new List<TablaAsistencias>();
+            DateTime fecha = DateTime.Parse(mes);
+            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month)).OrderBy(x => x.FechaHora).ToListAsync();
+            var order = OrdenarAsistencias(asistencias);
+            if (order != null)
+            {
+                foreach (var item in order)
+                {
+                    TablaAsistencias asistencia = new TablaAsistencias();
+                    if (!item.Dia.Year.Equals(1))
+                    {
+                        asistencia.Dia = item.Dia.ToString("M");
+                    }
+                    if (!item.Entrada.Year.Equals(1))
+                    {
+                        asistencia.Entrada = item.Entrada.ToString("t");
+                    }
+                    else
+                    {
+                        asistencia.Entrada = "";
+                    }
+
+                    if (!item.SalidaComida.Year.Equals(1))
+                    {
+                        asistencia.SalidaComida = item.SalidaComida.ToString("t");
+                    }
+                    else
+                    {
+                        asistencia.SalidaComida = "";
+                    }
+
+                    if (!item.RegresoComida.Year.Equals(1))
+                    {
+                        asistencia.RegresoComida = item.RegresoComida.ToString("t");
+                    }
+                    else
+                    {
+                        asistencia.RegresoComida = "";
+                    }
+
+                    if (!item.Salida.Year.Equals(1))
+                    {
+                        asistencia.Salida = item.Salida.ToString("t");
+                    }
+                    else
+                    {
+                        asistencia.Salida = "";
+                    }
+
+                    tabla.Add(asistencia);
+                }
+            }
+
+
+            ViewData["empleado"] = empleado;
+            ViewData["tabla"] = tabla;
+            return View();
+        }
+
+
 
         public List<DateTime> GetDias(List<Asistencia> asistencias)
         {

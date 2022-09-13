@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBContext.Migrations
 {
     [DbContext(typeof(ControlAsistenciaDBContext))]
-    [Migration("20220905054534_inicio")]
+    [Migration("20220913190551_inicio")]
     partial class inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -3980,6 +3980,49 @@ namespace DBContext.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ControlAsistencia_.Models.Roles", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("77a225a3-1266-4b1f-b11c-504969afa856"),
+                            Activo = true,
+                            Nombre = "Root"
+                        },
+                        new
+                        {
+                            Id = new Guid("9a39bcce-b092-4f90-9de7-9e0fb2137034"),
+                            Activo = true,
+                            Nombre = "Administrador"
+                        },
+                        new
+                        {
+                            Id = new Guid("a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7"),
+                            Activo = true,
+                            Nombre = "AllView"
+                        },
+                        new
+                        {
+                            Id = new Guid("592d923a-9d0b-424c-8bc3-0c42ff72495e"),
+                            Activo = true,
+                            Nombre = "UnidadAdministrativa"
+                        });
+                });
+
             modelBuilder.Entity("ControlAsistencia_.Models.UnidadAdministrativa", b =>
                 {
                     b.Property<Guid>("Id")
@@ -4163,6 +4206,70 @@ namespace DBContext.Migrations
                         {
                             Id = new Guid("2f3bdd4f-141f-4b68-8bb1-cc9d02b0a468"),
                             Nombre = "VISITADURIA GENERAL"
+                        });
+                });
+
+            modelBuilder.Entity("ControlAsistencia_.Models.Usuario", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("IdRol")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IdUnidadAdministrativa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuario");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1139861b-5044-4257-b89a-db1b5d4402bf"),
+                            Activo = true,
+                            IdRol = "77a225a3-1266-4b1f-b11c-504969afa856",
+                            IdUnidadAdministrativa = "",
+                            Nombre = "root",
+                            Password = "root"
+                        },
+                        new
+                        {
+                            Id = new Guid("061bc395-9e04-40d9-824c-0c740f63af15"),
+                            Activo = true,
+                            IdRol = "9a39bcce-b092-4f90-9de7-9e0fb2137034",
+                            IdUnidadAdministrativa = "",
+                            Nombre = "oficialiaMayor",
+                            Password = "oficialiaMayor"
+                        },
+                        new
+                        {
+                            Id = new Guid("67bb4459-8401-4b49-8ac8-67d3219fbfc8"),
+                            Activo = true,
+                            IdRol = "592d923a-9d0b-424c-8bc3-0c42ff72495e",
+                            IdUnidadAdministrativa = "0e3aa015-4581-4c88-a8c9-679dd80b0d13",
+                            Nombre = "cgesi",
+                            Password = "cgesi"
+                        },
+                        new
+                        {
+                            Id = new Guid("0524769e-c144-4772-a050-811e7d2b68ce"),
+                            Activo = true,
+                            IdRol = "a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7",
+                            IdUnidadAdministrativa = "",
+                            Nombre = "visitaduria",
+                            Password = "visitaduria"
                         });
                 });
 #pragma warning restore 612, 618

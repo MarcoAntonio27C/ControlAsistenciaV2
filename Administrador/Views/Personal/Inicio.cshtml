@@ -1,6 +1,7 @@
 ﻿@using ControlAsistencia_.Models;
+@using Microsoft.AspNetCore.Identity;
 @{
-    ViewData["Title"] = "Personal";
+    ViewData["Title"] = "Inicio";
     List<Empleado> empleados = (List<Empleado>)ViewData["empleados"];
     var i = 1;
 }
@@ -23,9 +24,13 @@
                     </div>
                 </form>
             </div>
-            <div class="col-1">
-                <a asp-controller="Personal" asp-action="Agregar" class="btn btn-info ">Agregar</a>
-            </div>
+            @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+            {
+                <div class="col-1">
+                    <a asp-controller="Personal" asp-action="Agregar" class="btn btn-info ">Agregar</a>
+                </div>
+            }
+
         </div>
         <hr />
     </div>
@@ -38,7 +43,11 @@
                     <th scope="col">Nombre Completo</th>
                     <th scope="col">N°Expediente</th>
                     <th scope="col">Detalles</th>
-                    <th scope="col">Editar</th>
+                    @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+                    {
+                        <th scope="col">Editar</th>
+                    }
+
                     <th scope="col">Asistencias</th>
                 </tr>
             </thead>
@@ -48,19 +57,22 @@
                     {
                         var actualizar = "Actualizar/?idEmpleado=" + empleado.Id;
                         var asistencias = "/Asistencias/Empleado/?idEmpleado=" + empleado.Id;
-                        <tr>
-                            <td>@i</td>
-                            <td>@empleado.NombreCompleto</td>
-                            <td>@empleado.NumeroExpediente</td>
-                            <td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>
-                            <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
-                            <td><a class="btn btn-info" href="@asistencias"> <span class="material-icons">calendar_month</span></a></td>
-                        </tr>
-                    i = i + 1;
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@empleado.NombreCompleto</td>
+                                    <td>@empleado.NumeroExpediente</td>
+                                    <td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>
+                                    @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+                                    {
+                                        <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
+                                    }
+                                    <td><a class="btn btn-info" asp-controller="Asistencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now" > <span class="material-icons">calendar_month</span></a></td>
+                                </tr>
+                        i = i + 1;
+                    }
                 }
-                }
-                </tbody>
-            </table>
+            </tbody>
+        </table>
     </div>
 </div>
 

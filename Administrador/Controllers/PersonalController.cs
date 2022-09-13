@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Identity;
 namespace Administrador.Controllers
 {
     public class PersonalController : Controller
@@ -26,11 +26,21 @@ namespace Administrador.Controllers
             return View();
         }
 
-        public async Task<IActionResult> PersonalAsync()
+        public async Task<IActionResult> Inicio()
         {
-            var empleados = await _context.Empleado.ToListAsync();
-            ViewData["empleados"] = empleados;
-            return View();
+            var idUnidadAdministrativa = User.Claims.ElementAt(1).Value;
+            if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
+            {
+                var empleadosUnidad = await _context.Empleado.Where(x => x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa))).ToListAsync();
+                ViewData["empleados"] = empleadosUnidad;
+                return View();
+            }else
+            {
+                var empleados = await _context.Empleado.ToListAsync();
+                ViewData["empleados"] = empleados;
+                return View();
+            }
+
         }
 
         public IActionResult Agregar()
@@ -55,9 +65,20 @@ namespace Administrador.Controllers
 
         public async Task<IActionResult> Buscar(string nombre)
         {
-            var empleados = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre)).ToListAsync();
-            ViewData["empleados"] = empleados;
-            return View("Personal");
+            var idUnidadAdministrativa = User.Claims.ElementAt(1).Value;
+            if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
+            {
+                var empleadosUnidad = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre) && x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa))).ToListAsync();
+                ViewData["empleados"] = empleadosUnidad;
+                return View("Inicio");
+            }
+            else
+            {
+                var empleados = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre)).ToListAsync();
+                ViewData["empleados"] = empleados;
+                return View("Inicio");
+            }
+
         }
 
 

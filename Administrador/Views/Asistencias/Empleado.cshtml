@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Personal";
     Empleado empleado = (Empleado)ViewData["empleado"];
+    List<TablaAsistencias> tabla = (List<TablaAsistencias>)ViewData["tabla"];
     var FechaActual = DateTime.Now.ToString("yyyy-MM-01");
 }
 
@@ -28,12 +29,15 @@
         </div>
 
         <hr />
-        <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-            No hay registros de asistencias.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+        @if (tabla.Count() <= 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                No hay registros de asistencias.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
         <div class="my-5">
             <table id="tabla" class="table table-hover w-90 m-auto">
                 <thead class="text-secondary text-center">
@@ -46,6 +50,16 @@
                     </tr>
                 </thead>
                 <tbody class="text-center">
+                    @foreach(var asistencia in tabla)
+            {
+                        <tr>
+                            <td>@asistencia.Dia</td>
+                            <td>@asistencia.Entrada</td>
+                            <td>@asistencia.SalidaComida</td>
+                            <td>@asistencia.RegresoComida</td>
+                            <td>@asistencia.Salida</td>
+                        </tr>
+            }
                 </tbody>
             </table>
         </div>
@@ -53,4 +67,4 @@
 </div>
 
 
-<script src="~/js/asistencias.js" asp-append-version="true"></script>
+@*<script src="~/js/asistencias.js" asp-append-version="true"></script>*@

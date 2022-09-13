@@ -10,4 +10,3 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Genera
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.CoreCompileInputs.cache
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.exe
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.pdb
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.AssemblyReference.cache

@@ -121,6 +121,19 @@ namespace DBContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Roles",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Activo = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Roles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UnidadAdministrativa",
                 columns: table => new
                 {
@@ -130,6 +143,22 @@ namespace DBContext.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_UnidadAdministrativa", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Usuario",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IdUnidadAdministrativa = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Activo = table.Column<bool>(type: "bit", nullable: false),
+                    IdRol = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Usuario", x => x.Id);
                 });
 
             migrationBuilder.InsertData(
@@ -581,7 +610,7 @@ namespace DBContext.Migrations
                     { new Guid("d2b06cb1-ee70-42e9-a30e-166bd3722b62"), "UNIDAD DE LOCALIZACION DE PERSONAS DESAPARECIDAS" },
                     { new Guid("2668f811-6e88-40da-aca0-d72c28b9dcdc"), "UNIDAD DE INVESTIGACION TEZIUTLAN" },
                     { new Guid("4386903f-f952-4501-992d-e3b2ea24033d"), "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION" },
-                    { new Guid("5866978c-6dd0-4e7b-b5e0-5b045eceb8ee"), "LABORATORIO DE DOCUMENTOS CUESTIONADOS" }
+                    { new Guid("27d7a43b-c96e-468d-9750-a60715a88030"), "LABORATORIO DE TOXICOLOGIA FORENSE" }
                 });
 
             migrationBuilder.InsertData(
@@ -687,10 +716,10 @@ namespace DBContext.Migrations
                 columns: new[] { "Id", "Nombre" },
                 values: new object[,]
                 {
+                    { new Guid("5866978c-6dd0-4e7b-b5e0-5b045eceb8ee"), "LABORATORIO DE DOCUMENTOS CUESTIONADOS" },
                     { new Guid("146dd406-8a71-405d-a0fa-c494c6d8b337"), "LABORATORIO DE GENETICA FORENSE" },
                     { new Guid("f452f0df-14dc-40c1-b647-e43bf2825741"), "LABORATORIO DE LOFOSCOPIA" },
                     { new Guid("d0631b80-ca2d-4303-b64a-c84343f971ae"), "LABORATORIO DE QUIMICA FORENSE" },
-                    { new Guid("27d7a43b-c96e-468d-9750-a60715a88030"), "LABORATORIO DE TOXICOLOGIA FORENSE" },
                     { new Guid("09cdeb9a-a5d4-4b71-8b2a-7a6b4884f100"), "LABORATORIO DE VETERINARIA Y ZOOTECNIA" },
                     { new Guid("4113b83d-d225-4ad9-a2a3-e3a0e863c01c"), "DIRECCION DE AUDITORIA" },
                     { new Guid("b23d7ed2-ee8e-4d96-a39f-38b97b225427"), "MEDICINA FORENSE" },
@@ -765,11 +794,11 @@ namespace DBContext.Migrations
                     { new Guid("5cafef35-d0e7-4501-a90a-1ca4e9d97730"), "PRIVADA UNIVERSIDAD II SAN MARTIN ALCHICHICA, IZUCAR DE MATAMOROS,PUEBLA", new Guid("dc815202-561f-4b8c-b1d6-0bcc345afcb9"), "UNIDAD DE INVESTIGACION CRIMINAL Y UNIDAD DE ATENCION TEMPRANA IZUCAR DE MATAMOROS" },
                     { new Guid("ea5f16aa-ee0e-4709-a84f-160b36ea3d3f"), "PERIFERICO ECOLOGÍCO ARCO SUR NO. 4000, RESERVA TERRITORIAL ATLIXCAYOTL, SAN", new Guid("aca639c6-9031-4648-a649-6dee89ae73ad"), "UNIDAD DE INVESTIGACION CIUDAD JUDICIAL" },
                     { new Guid("cd4cb079-f1e9-4f4a-b804-71197d520419"), "LIBRAMIENTOCHIGNAHUAPAN - ZACATLAN, KM 4.5 BARRIO TOLTEMPAN, CHIGNAHUAPAN, PUE.", new Guid("9f2ad70c-f85a-42a4-a1d1-db23a6339930"), "UNIDAD DE INVESTIGACION CHIGNAHUAPAN" },
-                    { new Guid("f2812202-d4b6-41cd-a0a6-8b490697fc10"), "AV DE LAS HUERTAS 917 CUARTO BARRIO COL. CENTRO, HUEJOTZINGO, PUEBLA, CP.: 74168", new Guid("bd268009-9447-4da5-aebc-2e5b3cea3375"), "UNIDAD DE INVESTIGACION ADSCRITA A JUZGADOS PENALES Y CIVILES" },
                     { new Guid("379ecbc7-ee46-4a2d-bc76-1097dddef05a"), "CALLE RAYON NUMERO 4 COL. CENTRO", new Guid("5a2e489b-ced1-47da-8455-fa692b081959"), "UNIDAD DE INVESTIGACION CHIETLA" },
                     { new Guid("a9e48337-dfd9-498c-bb79-5f355e877e11"), "CALLE REFORMA Y 5 NORTE COLONIA CENTRO, CHIAUTLA DE TAPIA", new Guid("1e6f3b9c-f27a-49da-a02f-6975839978bd"), "UNIDAD DE INVESTIGACION CHIAUTLA DE TAPIA" },
                     { new Guid("f0ef919e-c0ed-4656-abd8-8a3c90877322"), "PROLONGACION DE LA 14 SUR NUMERO 11517 COL. SAN JOSE CHAPULCO", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "UNIDAD DE INVESTIGACION CHAPULCO" },
                     { new Guid("2bd2b7d0-8f13-4837-b295-3fd7b23eb845"), "9 ORIENTE NO.1405COL.CENTRO PUEBLA PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "UNIDAD DE INVESTIGACION CENTRO" },
+                    { new Guid("f2812202-d4b6-41cd-a0a6-8b490697fc10"), "AV DE LAS HUERTAS 917 CUARTO BARRIO COL. CENTRO, HUEJOTZINGO, PUEBLA, CP.: 74168", new Guid("bd268009-9447-4da5-aebc-2e5b3cea3375"), "UNIDAD DE INVESTIGACION ADSCRITA A JUZGADOS PENALES Y CIVILES" },
                     { new Guid("72a04a8c-f5aa-4545-8d68-c3fd8aef314f"), "CALLE CONSTITUCION S/N ENTRE 16 DE SEPTIEMBRE Y DOMINGO ARENAS, PRESIDENCIA MUNICIPAL CALPAN, PUE.", new Guid("3c6dac9c-1012-4ea2-bfc7-0ff6d45258c6"), "UNIDAD DE INVESTIGACION CALPAN" },
                     { new Guid("18b9bf42-e324-4fe9-ab39-9f669f5a6a8c"), "CALLE 5 DE FEBRERO ESQUINA MIGUEL HIDALGO COL LA CRUZ", new Guid("a3a7e42c-b3ae-4d43-9da8-e414fb60a7aa"), "UNIDAD DE INVESTIGACION ATENCINGO" },
                     { new Guid("90f6cba7-b81e-40dc-996f-154efa5f0c5c"), "02 ORIENTE SIN NUMERO, COLONIA CENTRO, ATEMPAN, PUEBLA", new Guid("cd8ef709-7737-4990-aea1-b105ae25f8a5"), "UNIDAD DE INVESTIGACION ATEMPAN" },
@@ -821,7 +850,7 @@ namespace DBContext.Migrations
                     { new Guid("6b3e8002-a241-4e89-899a-06261cb4b913"), "CALLE PRIMERA DE VENUSTIANO CARRANZA Y CALLE PRIMERA MORELOS S/N TEPEYAHUALCO, PUE.", new Guid("349731cc-3810-44c4-b445-71ff01c61caf"), "UNIDAD DE INVESTIGACION TEPEYAHUALCO" },
                     { new Guid("30edd360-e0bc-481b-bcd9-607794feb5d8"), "CALLE LA PRESA SECCIÓN TERCERA, TEHUITZINGO , PUEBLA", new Guid("ffd1e1de-f670-486f-a016-e78ed81fc055"), "UNIDAD DE INVESTIGACION TEHUITZINGO" },
                     { new Guid("b2d703c0-e3ea-42fb-9e3a-0b2632e689f3"), "CALLE ALLENDE NO. 1 COL. CENTRO SAN JOSÉ ACATENO", new Guid("0d8e75ba-ebe8-4eb6-ba8d-c555e67f2a1d"), "UNIDAD DE INVESTIGACION ACATENO" },
-                    { new Guid("0c94b4f7-d134-4ac6-85dc-bbf58625c489"), "AV. REFORMA 2704 5° PISO COL. AMOR", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "INMUEBLE CANACINTRA" },
+                    { new Guid("efd124dd-6502-4f6e-81a6-4d71392854ab"), "BOULEVARD EMILIANO ZAPATA SIN NUMERO, INTERIOR DEL PANTEON MUNICIPAL, CHIGNAHUAPAN,PUEBLA", new Guid("9f2ad70c-f85a-42a4-a1d1-db23a6339930"), "SEMEFO CHIGNAHUAPAN" },
                     { new Guid("602cf0c7-99b2-4d87-a9f6-bef2760365ef"), "EMILIANO ZAPATA KM2.5,COL LOMAS DE SAN MIGUEL,PUEBLA,PUE. CP.: 72573", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "UNIDAD DE IDENTIFICACION VEHICULAR" },
                     { new Guid("3061f5f9-731e-4f66-b566-7c64bbdf64e4"), "VÍA ATLIXCAYOTL NO. 1101, EDIFICIO SUR PLANTA BAJA , CONCEPCION LAS LAJAS , PUEBLA,PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "CENTRO INTEGRAL DE SERVICIOS ANGELOPOLIS" },
                     { new Guid("0afcf63c-414f-4d18-b072-55a21c7232de"), "CALLE COMPLUTENSE ESQUINA CALLE DE LA TURBINA S/N COL. UNIVERSIDADES II, TEHUACAN ,PUE. CP.: 75723", new Guid("bcbf3127-960f-44c7-a38d-8f49f766c44c"), "CENTRO DE JUSTICIA PARA LAS MUJERES TEHUACAN" },
@@ -871,22 +900,22 @@ namespace DBContext.Migrations
                     { new Guid("741fb5a0-3175-4db6-b46c-daae21d2a3e7"), "PANTEON MUNICIPAL CALLE DEFENSORES DEL 6 DE JUNIO SIN NUMERO, TEPEXI DE  RODRIGUEZ", new Guid("c76f5daa-fddd-4abb-a861-df871d4cf4b0"), "SEMEFO TEPEXI DE RODRIGUEZ" },
                     { new Guid("7ba2052e-3cb6-4ace-aa80-6c427d64dc9f"), "INTERIOR DEL PANTEON MUNICIPAL, CALLE 17 ORIENTE Y AVENIDA COLON SIN NUMERO, BARRIO EL  SANTUARIO", new Guid("d4ac176e-55a9-45e4-9053-10b44f883bd6"), "SEMEFO TEPEACA" },
                     { new Guid("c86f4562-6b68-44aa-b970-243e14b0a194"), "CALLE 4 ORIENTE SIN NUMERO BARRIO DE GUADALUPE", new Guid("eff52198-0e70-4e53-b4dc-5fda6382aadf"), "SEMEFO LIBRES" },
-                    { new Guid("efd124dd-6502-4f6e-81a6-4d71392854ab"), "BOULEVARD EMILIANO ZAPATA SIN NUMERO, INTERIOR DEL PANTEON MUNICIPAL, CHIGNAHUAPAN,PUEBLA", new Guid("9f2ad70c-f85a-42a4-a1d1-db23a6339930"), "SEMEFO CHIGNAHUAPAN" },
-                    { new Guid("0fafd963-361c-4b92-b795-4219f7940a2d"), "13 SUR 1910 BARRIO DE SANTIAGO PUEBLA PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "JUSTICIA CIUDADANA" },
+                    { new Guid("e7f14c97-e7c3-467b-ac30-5f8310d4148e"), "PROLONGACION 11 SUR 11906, COL. GUADALUPE HIDQLGO", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "SEMEFO 11 SUR" },
                     { new Guid("1dd4a281-0759-40cc-8cb8-739f6dc3a772"), "DIAGONAL CUAUHTÉMOC NO.3101 COL. VALLE DORADO PUEBLA,PUE. CP.: 72070", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "INSTITUTO DE FORMACION PROFESIONAL" },
+                    { new Guid("0c94b4f7-d134-4ac6-85dc-bbf58625c489"), "AV. REFORMA 2704 5° PISO COL. AMOR", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "INMUEBLE CANACINTRA" },
                     { new Guid("23ed8c1d-864d-42df-9083-23eea1af7d1e"), "PRIV. 5 B SUR NO. 3706, COL. GABRIEL PASTOR, PUEBLA, PUE CP. 72420", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "INDIGENAS PERIODISTAS LGBTTQ" },
                     { new Guid("81a3d40c-a1a2-4eed-ada6-143b31b8f30e"), "3ER RETORNO OSA MENOR NO.3, RESERVA TERRITORIAL ATLIXCAYOTL ,SAN ANDRÉS", new Guid("aca639c6-9031-4648-a649-6dee89ae73ad"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE SECUESTRO Y EXTORSION" },
                     { new Guid("44386bd7-2492-4d93-a78e-a1816ebfaf2e"), "CALLE 10 ORIENTE NO.414,COL CENTRO PUEBLA,PUE. CP.: 72530", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS DE VIOLENCIA DE GENERO CONTRA LAS MUJERES (CPJ)" },
                     { new Guid("9e0a8a45-f81f-4e35-beab-153ae7e53f40"), "CALLE 6 NORTE NO.1003, COL. CENTRO,PUEBLA PUE. CP.: 72000", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS DE VIOLENCIA DE GENERO CONTRA LAS MUJERES (BOCHAS)" },
-                    { new Guid("e7f14c97-e7c3-467b-ac30-5f8310d4148e"), "PROLONGACION 11 SUR 11906, COL. GUADALUPE HIDQLGO", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "SEMEFO 11 SUR" },
+                    { new Guid("0fafd963-361c-4b92-b795-4219f7940a2d"), "13 SUR 1910 BARRIO DE SANTIAGO PUEBLA PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "JUSTICIA CIUDADANA" },
                     { new Guid("2e915059-5071-4525-b1a3-d76e913b8998"), "TERCER RETORNO OSA MAYOR NO. 3, RESERVA TERRITORIAL ATLIXCAYOTL SAN ANDRES", new Guid("aca639c6-9031-4648-a649-6dee89ae73ad"), "COORDINACION GENERAL DE ANALISIS DE INFORMACION" },
                     { new Guid("e8321188-3639-47fa-b6e0-d8e265dc2e5b"), "CALLE 127 PONIENTE Y CALLE 11 SUR , COL.EX-HACIENDA CASTILLOTLA, PUEBLA,PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS DE ALTA INCIDENCIA" },
                     { new Guid("931ecd8f-d618-49ae-b4c2-29174eb2e59c"), "CARRETERA FEDERAL PUEBLA - TEHUACÁN KILOMETRO 114, MANANTIALES, TEHUACÁN,PUE. CP.: 75855", new Guid("bcbf3127-960f-44c7-a38d-8f49f766c44c"), "CENTRO INTEGRAL SERVICIOS TEHUACAN" },
                     { new Guid("45906a3d-9e8f-48ff-85ce-11ea79d4edb8"), "CAMINO A CUAYANTLA NO. 1611, SAN BERNARDINO TLAXCALANCINGO, PUEBLA", new Guid("aca639c6-9031-4648-a649-6dee89ae73ad"), "COMPLEJO DE SEGURIDAD PUBLICA SAN ANDRES CHOLULA" },
                     { new Guid("cd0a1b05-ed27-4d61-b225-be46cd2529d6"), "PERIFERICO ECOLÓGICO KILÓMETRO 3.5 ANTIGUO CAMINO A SAN FRANCISCO OCOTLÁN, CUAUTLANCINGO PUEBLA", new Guid("66e2e131-1cc7-414d-a4eb-2795e11adc79"), "COMPLEJO METROPOLITANO SEGURIDAD PUBLICA (C5)" },
+                    { new Guid("2b46cfb0-cbe7-43ec-82f6-4639da38e6ad"), "REVOLUCIÓN NO. 6202, COL. EL LEÓN ATLIXCO PUE, CP.: 74360", new Guid("3e834424-91f8-4a08-9cf2-933c1a28b373"), "CENTRO INTEGRAL SERVICIOS ATLIXCO" },
                     { new Guid("3e2fb426-20af-48b2-81e7-3458afad62c1"), "DIAGONAL DEFENSORES DE LA REPÚBLICA ESQ.10 PONIENTE COL.AMOR PUEBLA,PUE. CP.: 72140", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "COORDINACION GENERAL DE MECANISMOS ALTERNATIVOS DE SOLUCION DE CONTROVERSIAS EN MATERIA PENAL" },
-                    { new Guid("742b64df-f5af-45aa-93d9-e1c8035fdad6"), "MANZANA NÚMERO 5 CIUDAD MODELO", new Guid("27172024-5222-4c81-9f58-d2010f067f2c"), "CENTRO INTEGRAL SERVICIOS SAN JOSE CHIAPA" },
-                    { new Guid("72d093d9-c710-407b-8d64-0eb9b8d52083"), "CAMINO AL BATÁN COL.LOMAS DE SAN MIGUEL PUEBLA,PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "DEPOSITO DE VEHICULOS OCRA - SAN MIGUEL 2" }
+                    { new Guid("742b64df-f5af-45aa-93d9-e1c8035fdad6"), "MANZANA NÚMERO 5 CIUDAD MODELO", new Guid("27172024-5222-4c81-9f58-d2010f067f2c"), "CENTRO INTEGRAL SERVICIOS SAN JOSE CHIAPA" }
                 });
 
             migrationBuilder.InsertData(
@@ -894,7 +923,7 @@ namespace DBContext.Migrations
                 columns: new[] { "Id", "Direccion", "IdMunicipio", "Nombre" },
                 values: new object[,]
                 {
-                    { new Guid("2b46cfb0-cbe7-43ec-82f6-4639da38e6ad"), "REVOLUCIÓN NO. 6202, COL. EL LEÓN ATLIXCO PUE, CP.: 74360", new Guid("3e834424-91f8-4a08-9cf2-933c1a28b373"), "CENTRO INTEGRAL SERVICIOS ATLIXCO" },
+                    { new Guid("72d093d9-c710-407b-8d64-0eb9b8d52083"), "CAMINO AL BATÁN COL.LOMAS DE SAN MIGUEL PUEBLA,PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "DEPOSITO DE VEHICULOS OCRA - SAN MIGUEL 2" },
                     { new Guid("1f6bc9d7-36ba-472f-9c8e-0c3282fee714"), "BOULEVARD HEROES 5 DE MAYO ESQUINA CON 31 ORIENTE COL.LADRILLERA DE BENITEZ CP.: 72530", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "EDIFICIO CENTRAL 04" },
                     { new Guid("0bca398f-a923-4b1f-bfea-c75b0fe4a285"), "KM 2.5 CARRETERA AL BATAN , EDIFICIO ADJUNTO AL CERESO DE SAN MIGUEL PUEBLA,PUE", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "EJECUCION DE SENTENCIAS" },
                     { new Guid("9c8d1d27-c114-4cc5-9928-07efffab3272"), "12 NORTE. NO.1806,COL. BARRIO DEL ALTO , PUEBLA PUE. CP.: 72146", new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "FISCALIA DE ASUNTOS INTERNOS, ORGANO INTERNO DE CONTROL Y VISITADURIA" },
@@ -908,11 +937,11 @@ namespace DBContext.Migrations
                 columns: new[] { "Id", "Nombre" },
                 values: new object[,]
                 {
-                    { new Guid("ffd1e1de-f670-486f-a016-e78ed81fc055"), "TEHUITZINGO" },
-                    { new Guid("a53d0778-b9b0-40da-bf1f-ba7453b5f655"), "TEPANCO DE LOPEZ" },
-                    { new Guid("2cd2b213-bf6e-4518-bd69-aa5ee56aa419"), "SAN GABRIEL CHILAC" },
                     { new Guid("bcbf3127-960f-44c7-a38d-8f49f766c44c"), "TEHUACAN" },
+                    { new Guid("ffd1e1de-f670-486f-a016-e78ed81fc055"), "TEHUITZINGO" },
+                    { new Guid("2cd2b213-bf6e-4518-bd69-aa5ee56aa419"), "SAN GABRIEL CHILAC" },
                     { new Guid("99af18a2-a030-4080-ab55-0fcb63659217"), "TEPATLAXCO DE HIDALGO" },
+                    { new Guid("a53d0778-b9b0-40da-bf1f-ba7453b5f655"), "TEPANCO DE LOPEZ" },
                     { new Guid("c7d4c93f-1e48-41a5-83a9-8cb883cef9de"), "TECAMACHALCO" },
                     { new Guid("27172024-5222-4c81-9f58-d2010f067f2c"), "SAN JOSE CHIAPA" },
                     { new Guid("d67741af-e356-458b-94ef-4f48bd7c5aa8"), "SANTIAGO MIAHUATLAN" },
@@ -941,7 +970,7 @@ namespace DBContext.Migrations
                     { new Guid("349731cc-3810-44c4-b445-71ff01c61caf"), "TEPEYAHUALCO" },
                     { new Guid("1242ec1e-21fe-4df0-a3b9-19a802b81495"), "TLAPANALA" },
                     { new Guid("7a56fc4a-2356-417c-88e8-cdcb5e00123d"), "PUEBLA" },
-                    { new Guid("66e2e131-1cc7-414d-a4eb-2795e11adc79"), "CUAUTLANCINGO" },
+                    { new Guid("559fc027-355b-4bad-9d08-1db4bc51e80c"), "HUAUCHINANGO" },
                     { new Guid("4169b1d9-9250-431b-ad0e-e376dedbbe5d"), "PALMAR DE BRAVO" }
                 });
 
@@ -956,8 +985,8 @@ namespace DBContext.Migrations
                     { new Guid("0e40384a-9817-4f2f-b142-7476b8c8e8f9"), "ACATLAN DE OSORIO" },
                     { new Guid("738bc1a9-6e14-42b5-812f-04026164c3c2"), "ACATZINGO" },
                     { new Guid("863e7a7d-99e6-473c-824c-e58e005dedd9"), "AHUAZOTEPEC" },
-                    { new Guid("24f40687-4afb-42e9-ae74-55fd8126a2d5"), "AJALPAN" },
                     { new Guid("f5e623d2-026d-4c91-bebc-579010cb7677"), "ALTEPEXI" },
+                    { new Guid("1a3d8733-aebb-4cf4-8732-cefaaf066d9f"), "AMOZOC" },
                     { new Guid("cd8ef709-7737-4990-aea1-b105ae25f8a5"), "ATEMPAN" },
                     { new Guid("a3a7e42c-b3ae-4d43-9da8-e414fb60a7aa"), "ATENCINGO" },
                     { new Guid("3e834424-91f8-4a08-9cf2-933c1a28b373"), "ATLIXCO" },
@@ -965,23 +994,34 @@ namespace DBContext.Migrations
                     { new Guid("ac27c79a-e0de-43ba-9a99-2f15de5edb65"), "CHALCHICOMULA DE SESMA" },
                     { new Guid("1e6f3b9c-f27a-49da-a02f-6975839978bd"), "CHIAUTLA DE TAPIA" },
                     { new Guid("5a2e489b-ced1-47da-8455-fa692b081959"), "CHIETLA" },
-                    { new Guid("1a3d8733-aebb-4cf4-8732-cefaaf066d9f"), "AMOZOC" },
+                    { new Guid("24f40687-4afb-42e9-ae74-55fd8126a2d5"), "AJALPAN" },
                     { new Guid("cc19c5f3-be8e-43e3-8c86-fe33c1818d12"), "CORONANGO" },
-                    { new Guid("8f75b923-3632-4e2f-b4ed-7515e6186c47"), "ORIENTAL" },
-                    { new Guid("9f2ad70c-f85a-42a4-a1d1-db23a6339930"), "CHIGNAHUAPAN" },
                     { new Guid("fd568848-1d55-4fc3-aee4-8e5ea8d9a2c4"), "OCOYUCAN" },
                     { new Guid("e3aac610-9d71-4750-a408-c2ba1de06a5f"), "METLALTOYUCA" },
                     { new Guid("89ff867f-af7d-48c5-abef-413675cf30f5"), "LOS REYES DE JUAREZ" },
-                    { new Guid("ecfb68ce-9d3f-4272-b670-b63f7f4a54fb"), "JUAN C. BONILLA" },
-                    { new Guid("dc815202-561f-4b8c-b1d6-0bcc345afcb9"), "IZUCAR DE MATAMOROS" },
                     { new Guid("eff52198-0e70-4e53-b4dc-5fda6382aadf"), "LIBRES" },
+                    { new Guid("ecfb68ce-9d3f-4272-b670-b63f7f4a54fb"), "JUAN C. BONILLA" },
+                    { new Guid("8f75b923-3632-4e2f-b4ed-7515e6186c47"), "ORIENTAL" },
+                    { new Guid("dc815202-561f-4b8c-b1d6-0bcc345afcb9"), "IZUCAR DE MATAMOROS" },
                     { new Guid("bd268009-9447-4da5-aebc-2e5b3cea3375"), "HUEJOTZINGO" },
                     { new Guid("df498a1f-3792-452b-ad70-ff1def221d29"), "HUEHUETLA" },
-                    { new Guid("559fc027-355b-4bad-9d08-1db4bc51e80c"), "HUAUCHINANGO" },
                     { new Guid("3e191fda-da34-44ca-b4bb-250221113af2"), "GUADALUPE VICTORIA" },
                     { new Guid("dc626225-2e6c-4938-94f2-f1dc0d7c097d"), "ESPERANZA" },
                     { new Guid("9e176192-4277-4848-a41b-9d2836d7dd71"), "CUETZALAN DEL PROGRESO" },
-                    { new Guid("812f1523-8500-4fbc-9290-2b511da5ee46"), "HUEYTAMALCO" }
+                    { new Guid("66e2e131-1cc7-414d-a4eb-2795e11adc79"), "CUAUTLANCINGO" },
+                    { new Guid("812f1523-8500-4fbc-9290-2b511da5ee46"), "HUEYTAMALCO" },
+                    { new Guid("9f2ad70c-f85a-42a4-a1d1-db23a6339930"), "CHIGNAHUAPAN" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Roles",
+                columns: new[] { "Id", "Activo", "Nombre" },
+                values: new object[,]
+                {
+                    { new Guid("592d923a-9d0b-424c-8bc3-0c42ff72495e"), true, "UnidadAdministrativa" },
+                    { new Guid("a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7"), true, "AllView" },
+                    { new Guid("77a225a3-1266-4b1f-b11c-504969afa856"), true, "Root" },
+                    { new Guid("9a39bcce-b092-4f90-9de7-9e0fb2137034"), true, "Administrador" }
                 });
 
             migrationBuilder.InsertData(
@@ -989,16 +1029,12 @@ namespace DBContext.Migrations
                 columns: new[] { "Id", "Nombre" },
                 values: new object[,]
                 {
-                    { new Guid("84fc32d2-e3be-44bb-a657-58b1f8bf19bc"), "FISCALIA ESPECIALIZADA EN DERECHOS HUMANOS" },
-                    { new Guid("2fdd51f1-25b4-4f59-9c84-cc4bdabc1129"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE SECUESTRO Y EXTORSION" },
                     { new Guid("b3c79508-8fd1-4c74-94e3-661f2b0f6a4e"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS DE ALTA INCIDENCIA" },
                     { new Guid("a94e3201-d601-4b23-831f-bd278c968fcc"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS DE VIOLENCIA DE GENERO CONTRA LAS MUJERES" },
                     { new Guid("d5e00aa7-f1ca-4438-8230-c77356cd3180"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS ELECTORALES" },
                     { new Guid("887a45dc-c627-4118-8fc5-0c08cbd9ded9"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE LOS DELITOS DE OPERACIONES CON RECURSOS DE PROCEDENCIA ILICITA FISCALES Y RELACIONADOS" },
-                    { new Guid("0432ca29-4cd7-41cc-a53e-a6c24d47a3a2"), "FISCALIA ESPECIALIZADA EN INVESTIGACION Y PERSECUCION DE LOS DELITOS DE DESAPARICION FORZADA DE PERSONAS Y DESAPARICION COMETIDA POR PARTICULARES" },
-                    { new Guid("f1880a2f-6d03-46e6-b80c-8e2b5f9be0f6"), "UNIDAD DE TRANSPARENCIA" },
-                    { new Guid("dddedd77-b472-4782-9b59-5034449d5769"), "INSTITUTO DE CIENCIAS FORENSES" },
-                    { new Guid("78453d3e-6561-4ad9-9027-e00a4888b2e4"), "INSTITUTO DE FORMACION PROFESIONAL" }
+                    { new Guid("2fdd51f1-25b4-4f59-9c84-cc4bdabc1129"), "FISCALIA ESPECIALIZADA EN INVESTIGACION DE SECUESTRO Y EXTORSION" },
+                    { new Guid("0432ca29-4cd7-41cc-a53e-a6c24d47a3a2"), "FISCALIA ESPECIALIZADA EN INVESTIGACION Y PERSECUCION DE LOS DELITOS DE DESAPARICION FORZADA DE PERSONAS Y DESAPARICION COMETIDA POR PARTICULARES" }
                 });
 
             migrationBuilder.InsertData(
@@ -1006,30 +1042,45 @@ namespace DBContext.Migrations
                 columns: new[] { "Id", "Nombre" },
                 values: new object[,]
                 {
+                    { new Guid("603c5f94-d51a-4870-832f-905832e7d316"), "FISCALIA GENERAL DEL ESTADO" },
+                    { new Guid("dddedd77-b472-4782-9b59-5034449d5769"), "INSTITUTO DE CIENCIAS FORENSES" },
                     { new Guid("ecefee5a-aa12-4b58-acd7-d25d9a04781a"), "OFICIALIA MAYOR" },
                     { new Guid("5df421a3-da6a-45df-a09b-8f3df5afb7c1"), "OFICINA DEL FISCAL GENERAL" },
                     { new Guid("a0e0508e-f3df-4d10-a1c9-0a7c8020e264"), "ORGANO INTERNO DE CONTROL" },
-                    { new Guid("bcc0d506-1853-4229-8e26-cac7a61d75a9"), "FISCALIA ESPECIALIZADA DE COMBATE A LA CORRUPCION" },
-                    { new Guid("603c5f94-d51a-4870-832f-905832e7d316"), "FISCALIA GENERAL DEL ESTADO" },
-                    { new Guid("997134f0-1449-4e50-a9ff-7f1b4576e0c6"), "FISCALIA ESPECIALIZADA DE ASUNTOS INTERNOS" },
-                    { new Guid("6482d123-1e00-41e4-bfa3-d18bf73f05ad"), "AGENCIA ESTATAL DE INVESTIGACION" },
-                    { new Guid("70f0cdd3-24f8-4b7c-8a52-b66745ca8072"), "FISCALIA DE INVESTIGACION METROPOLITANA" },
+                    { new Guid("f1880a2f-6d03-46e6-b80c-8e2b5f9be0f6"), "UNIDAD DE TRANSPARENCIA" },
                     { new Guid("9a281a7a-8df2-406a-ab7e-4e0ea9130562"), "UNIDAD ESPECIALIZADA EN MATERIA DE EXTINCION DE DOMINIO" },
+                    { new Guid("84fc32d2-e3be-44bb-a657-58b1f8bf19bc"), "FISCALIA ESPECIALIZADA EN DERECHOS HUMANOS" },
+                    { new Guid("2f3bdd4f-141f-4b68-8bb1-cc9d02b0a468"), "VISITADURIA GENERAL" },
+                    { new Guid("78453d3e-6561-4ad9-9027-e00a4888b2e4"), "INSTITUTO DE FORMACION PROFESIONAL" },
+                    { new Guid("bcc0d506-1853-4229-8e26-cac7a61d75a9"), "FISCALIA ESPECIALIZADA DE COMBATE A LA CORRUPCION" },
+                    { new Guid("6482d123-1e00-41e4-bfa3-d18bf73f05ad"), "AGENCIA ESTATAL DE INVESTIGACION" },
+                    { new Guid("8011d409-1dcb-464b-ba14-18b70305ac5f"), "FISCALIA DE INVESTIGACION REGIONAL" },
                     { new Guid("901cc26b-0dd7-472a-ad59-aca590690d15"), "COORDINACION GENERAL DE ANALISIS DE INFORMACION" },
                     { new Guid("b1b63424-b460-4ddc-951f-27e85ee09144"), "COORDINACION GENERAL DE ASUNTOS JURIDICOS" },
                     { new Guid("df6f2571-3cf2-4f22-918b-b354986a8cbd"), "COORDINACION GENERAL DE COLABORACION INTERINSTITUCIONAL" },
                     { new Guid("c255b613-a724-47dd-a762-261123565595"), "COORDINACION GENERAL DE DESARROLLO INSTITUCIONAL" },
                     { new Guid("0e3aa015-4581-4c88-a8c9-679dd80b0d13"), "COORDINACION GENERAL DE ESTADISTICA Y SISTEMAS DE INFORMACION" },
-                    { new Guid("8011d409-1dcb-464b-ba14-18b70305ac5f"), "FISCALIA DE INVESTIGACION REGIONAL" },
+                    { new Guid("997134f0-1449-4e50-a9ff-7f1b4576e0c6"), "FISCALIA ESPECIALIZADA DE ASUNTOS INTERNOS" },
+                    { new Guid("97f215d4-d5a6-4dea-b4f2-46133a305c5c"), "COORDINACION GENERAL DE INVESTIGACION" },
                     { new Guid("699b5f80-ef84-452a-a15e-6ab46c7c1c6e"), "COORDINACION GENERAL DE GESTION DOCUMENTAL INSTITUCIONAL" },
-                    { new Guid("263332d2-bdf0-4b62-9504-85c030ba710d"), "COORDINACION GENERAL DE LITIGACION" },
                     { new Guid("e74898ef-601c-407a-bf69-4be98c0fbe01"), "COORDINACION GENERAL DE MECANISMOS ALTERNATIVOS DE SOLUCION DE CONTROVERSIAS EN MATERIA PENAL" },
                     { new Guid("17610375-ea95-4654-a6f8-197ad8235b5c"), "COORDINACION GENERAL DE SERVICIOS A LA COMUNIDAD" },
                     { new Guid("8784e258-77d3-455b-ade0-32dd25923973"), "DIRECCION GENERAL DE COMUNICACION ESTRATEGICA Y VINCULACION SOCIAL" },
                     { new Guid("62a9307e-8b40-40f9-8c91-33d02582d7c3"), "DIRECCION GENERAL DE PLANEACION INSTITUCIONAL" },
                     { new Guid("80507965-9116-4871-94e7-9c049ef307ea"), "DIRECCION GENERAL DE SEGURIDAD INSTITUCIONAL" },
-                    { new Guid("97f215d4-d5a6-4dea-b4f2-46133a305c5c"), "COORDINACION GENERAL DE INVESTIGACION" },
-                    { new Guid("2f3bdd4f-141f-4b68-8bb1-cc9d02b0a468"), "VISITADURIA GENERAL" }
+                    { new Guid("70f0cdd3-24f8-4b7c-8a52-b66745ca8072"), "FISCALIA DE INVESTIGACION METROPOLITANA" },
+                    { new Guid("263332d2-bdf0-4b62-9504-85c030ba710d"), "COORDINACION GENERAL DE LITIGACION" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Usuario",
+                columns: new[] { "Id", "Activo", "IdRol", "IdUnidadAdministrativa", "Nombre", "Password" },
+                values: new object[,]
+                {
+                    { new Guid("67bb4459-8401-4b49-8ac8-67d3219fbfc8"), true, "592d923a-9d0b-424c-8bc3-0c42ff72495e", "0e3aa015-4581-4c88-a8c9-679dd80b0d13", "cgesi", "cgesi" },
+                    { new Guid("1139861b-5044-4257-b89a-db1b5d4402bf"), true, "77a225a3-1266-4b1f-b11c-504969afa856", "", "root", "root" },
+                    { new Guid("061bc395-9e04-40d9-824c-0c740f63af15"), true, "9a39bcce-b092-4f90-9de7-9e0fb2137034", "", "oficialiaMayor", "oficialiaMayor" },
+                    { new Guid("0524769e-c144-4772-a050-811e7d2b68ce"), true, "a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7", "", "visitaduria", "visitaduria" }
                 });
         }
 
@@ -1060,7 +1111,13 @@ namespace DBContext.Migrations
                 name: "Municipio");
 
             migrationBuilder.DropTable(
+                name: "Roles");
+
+            migrationBuilder.DropTable(
                 name: "UnidadAdministrativa");
+
+            migrationBuilder.DropTable(
+                name: "Usuario");
         }
     }
 }

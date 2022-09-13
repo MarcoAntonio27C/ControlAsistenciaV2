@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,10 +26,20 @@
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Personal" asp-action="Personal" >Personal</a>
+                        <a class="nav-link" asp-controller="Personal" asp-action="Inicio">Personal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Asistencias">Asistencias</a>
+                        <a class="nav-link" asp-controller="Asistencias" asp-action="Inicio">Asistencias</a>
+                    </li>
+                    @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Usuarios" asp-action="Inicio">Usuarios</a>
+                        </li>
+                    }
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Acceso" asp-action="Salir">Salir</a>
                     </li>
                 </ul>
             </div>
