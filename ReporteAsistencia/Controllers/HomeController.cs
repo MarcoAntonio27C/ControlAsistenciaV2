@@ -271,7 +271,7 @@ namespace ReporteAsistencia.Controllers
             
             List<TablaAsistencias> tabla = new List<TablaAsistencias>();
             DateTime fecha = DateTime.Parse(mes);
-            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month)).OrderBy(x => x.FechaHora).ToListAsync();
+            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month) && x.FechaHora.Year.Equals(fecha.Year)).OrderBy(x => x.FechaHora).ToListAsync();
             var order = OrdenarAsistencias(asistencias);
             if (order != null)
             {

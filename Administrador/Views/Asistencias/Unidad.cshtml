@@ -1,24 +1,23 @@
 ﻿@using ControlAsistencia_.Models;
 @{
     ViewData["Title"] = "Personal";
-    Empleado empleado = (Empleado)ViewData["empleado"];
-    List<TablaAsistencias> tabla = (List<TablaAsistencias>)ViewData["tabla"];
+    List<TablaAsistenciasUnidad> tabla = (List<TablaAsistenciasUnidad>)ViewData["tabla"];
     var FechaActual = ViewData["fecha"];
 }
 
 <link rel="stylesheet" href="~/css/personal.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div>
-    <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias de @empleado.NombreCompleto</h5>
+    <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias del dia @FechaActual</h5>
 
     <div class="mt-5 px-4 py-4 border bg-light rounded">
-        <div>
+        @*<div>
             <form method="post">
                 <div class="row">
                     <div class="col-4">
                         <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
                         <label>Seleccionar Mes:</label>
-                        <input class="form-control"  type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required  />
+                        <input class="form-control" type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required />
                     </div>
                     <div class="col-3 text-center">
                         <label class="text-white">.</label>
@@ -26,7 +25,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div>*@
 
         <hr />
         @if (tabla.Count() <= 0)
@@ -42,7 +41,7 @@
             <table id="tabla" class="table table-hover w-90 m-auto">
                 <thead class="text-secondary text-center">
                     <tr>
-                        <th scope="col">Dia</th>
+                        <th scope="col">Nombre</th>
                         <th scope="col">Entrada</th>
                         <th scope="col">Salida Comida</th>
                         <th scope="col">Entrada Comida</th>
@@ -50,16 +49,16 @@
                     </tr>
                 </thead>
                 <tbody class="text-center">
-                    @foreach(var asistencia in tabla)
-            {
+                    @foreach (var asistencia in tabla)
+                    {
                         <tr>
-                            <td>@asistencia.Dia</td>
+                            <td>@asistencia.NombreEmpleado</td>
                             <td>@asistencia.Entrada</td>
                             <td>@asistencia.SalidaComida</td>
                             <td>@asistencia.RegresoComida</td>
                             <td>@asistencia.Salida</td>
                         </tr>
-            }
+                    }
                 </tbody>
             </table>
         </div>
@@ -68,3 +67,5 @@
 
 
 @*<script src="~/js/asistencias.js" asp-append-version="true"></script>*@
+
+

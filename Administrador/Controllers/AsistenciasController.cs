@@ -22,8 +22,70 @@ namespace Administrador.Controllers
             _context = context;
         }
 
-        public  IActionResult Inicio()
+        public IActionResult Inicio()
         {
+            return View();
+        }
+
+        public async Task<IActionResult> Unidad(string idUnidadAdministrativa, string fecha)
+        {
+            var empleadosUnidad = await _context.Empleado.Where(x => x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa)) && x.Activo.Equals(true)).ToListAsync();
+            List<TablaAsistenciasUnidad> tabla = new List<TablaAsistenciasUnidad>();
+            DateTime date = DateTime.Parse(fecha);
+            foreach( var empleado in empleadosUnidad)
+            {
+                var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(empleado.Id) && x.FechaHora.Year.Equals(date.Year) && x.FechaHora.Month.Equals(date.Month) && x.FechaHora.Day.Equals(date.Day)).ToListAsync();
+                var order = OrdenarAsistencias(asistencias);
+                if (order != null)
+                {
+                    foreach (var item in order)
+                    {
+                        TablaAsistenciasUnidad asistencia = new TablaAsistenciasUnidad();
+
+                        asistencia.NombreEmpleado = empleado.NombreCompleto;
+                        if (!item.Entrada.Year.Equals(1))
+                        {
+                            asistencia.Entrada = item.Entrada.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.Entrada = "";
+                        }
+
+                        if (!item.SalidaComida.Year.Equals(1))
+                        {
+                            asistencia.SalidaComida = item.SalidaComida.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.SalidaComida = "";
+                        }
+
+                        if (!item.RegresoComida.Year.Equals(1))
+                        {
+                            asistencia.RegresoComida = item.RegresoComida.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.RegresoComida = "";
+                        }
+
+                        if (!item.Salida.Year.Equals(1))
+                        {
+                            asistencia.Salida = item.Salida.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.Salida = "";
+                        }
+
+                        tabla.Add(asistencia);
+                    }
+                }
+            }
+
+            ViewData["fecha"] = date.ToString("yyyy-MM-01");
+            ViewData["tabla"] = tabla;
             return View();
         }
 
@@ -32,7 +94,7 @@ namespace Administrador.Controllers
             Empleado empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
             List<TablaAsistencias> tabla = new List<TablaAsistencias>();
             DateTime fecha = DateTime.Parse(mes);
-            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month)).OrderBy(x => x.FechaHora).ToListAsync();
+            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month) && x.FechaHora.Year.Equals(fecha.Year)).OrderBy(x => x.FechaHora).ToListAsync();
             var order = OrdenarAsistencias(asistencias);
             if (order != null)
             {
@@ -83,16 +145,11 @@ namespace Administrador.Controllers
                 }
             }
 
-
-
-
             ViewData["empleado"] = empleado;
-            ViewData["fecha"] = fecha;
+            ViewData["fecha"] = fecha.ToString("yyyy-MM-01");
             ViewData["tabla"] = tabla;
             return View();
         }
-
-
 
         public List<DateTime> GetDias(List<Asistencia> asistencias)
         {
@@ -113,7 +170,6 @@ namespace Administrador.Controllers
             }
             return Dias;
         }
-
         public List<DateTime> GetEntradas(List<Asistencia> asistencias)
         {
             List<DateTime> Entradas = new List<DateTime>();
@@ -270,6 +326,64 @@ namespace Administrador.Controllers
             return null;
         }
 
+        public async Task<List<TablaAsistenciasUnidad>> AsistenciasPorUnidad(Guid IdUnidadAdministradora, DateTime fecha)
+        {
+            var empleadosUnidad = await _context.Empleado.Where(x => x.IdUnidadAdministrativa.Equals(IdUnidadAdministradora) && x.Activo.Equals(true)).ToListAsync();
+            List<TablaAsistenciasUnidad> tabla = new List<TablaAsistenciasUnidad>();
+            foreach (var empleado in empleadosUnidad)
+            {
+                var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(empleado.Id) && x.FechaHora.Year.Equals(fecha.Year) && x.FechaHora.Month.Equals(fecha.Month) && x.FechaHora.Day.Equals(fecha.Day)).ToListAsync();
+                var order = OrdenarAsistencias(asistencias);
+                if (order != null)
+                {
+                    foreach (var item in order)
+                    {
+                        TablaAsistenciasUnidad asistencia = new TablaAsistenciasUnidad();
+
+                        asistencia.NombreEmpleado = empleado.NombreCompleto;
+                        if (!item.Entrada.Year.Equals(1))
+                        {
+                            asistencia.Entrada = item.Entrada.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.Entrada = "";
+                        }
+
+                        if (!item.SalidaComida.Year.Equals(1))
+                        {
+                            asistencia.SalidaComida = item.SalidaComida.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.SalidaComida = "";
+                        }
+
+                        if (!item.RegresoComida.Year.Equals(1))
+                        {
+                            asistencia.RegresoComida = item.RegresoComida.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.RegresoComida = "";
+                        }
+
+                        if (!item.Salida.Year.Equals(1))
+                        {
+                            asistencia.Salida = item.Salida.ToString("t");
+                        }
+                        else
+                        {
+                            asistencia.Salida = "";
+                        }
+
+                        tabla.Add(asistencia);
+                    }
+                }
+            }
+
+            return tabla;
+        }
         [HttpGet]
         [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<TablaAsistencias>>> GetAsistencias(string idEmpleado, string mes)
