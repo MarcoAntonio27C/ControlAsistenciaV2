@@ -20,7 +20,7 @@
                 <div class="card-body">
                     @if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
                     {
-                    <h5 class="card-title border rounded "><a class="nav-link" asp-controller="Asistencias" asp-action="Unidad" asp-route-idUnidadAdministrativa="@User.Claims.ElementAt(1).Value" asp-route-fechaa="@DateTime.Now">Asistencias</a></h5>
+                    <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace" asp-controller="Asistencias" asp-action="Unidad" asp-route-idUnidadAdministrativa="@User.Claims.ElementAt(1).Value" asp-route-fecha="@DateTime.Now">Asistencias</a></h5>
 
                     }
                     else

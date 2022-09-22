@@ -63,22 +63,12 @@ namespace Administrador.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Buscar(string nombre)
+        public async Task<IActionResult> BuscarPorUnidad(string nombre)
         {
             var idUnidadAdministrativa = User.Claims.ElementAt(1).Value;
-            if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
-            {
-                var empleadosUnidad = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre) && x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa))).ToListAsync();
-                ViewData["empleados"] = empleadosUnidad;
-                return View("Inicio");
-            }
-            else
-            {
-                var empleados = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre)).ToListAsync();
-                ViewData["empleados"] = empleados;
-                return View("Inicio");
-            }
-
+            var empleadosUnidad = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre) && x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa))).ToListAsync();
+            ViewData["empleados"] = empleadosUnidad;
+            return View("Inicio");
         }
 
 
