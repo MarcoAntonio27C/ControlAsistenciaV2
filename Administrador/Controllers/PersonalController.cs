@@ -71,6 +71,12 @@ namespace Administrador.Controllers
             return View("Inicio");
         }
 
+        public async Task<IActionResult> BuscarGeneral(string nombre)
+        {
+            var empleadosUnidad = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre)).ToListAsync();
+            ViewData["empleados"] = empleadosUnidad;
+            return View("Inicio");
+        }
 
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {

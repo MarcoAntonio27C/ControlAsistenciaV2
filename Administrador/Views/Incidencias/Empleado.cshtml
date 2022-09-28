@@ -1,0 +1,86 @@
+﻿@using ControlAsistencia_.Models;
+@{
+    ViewData["Title"] = "Personal";
+    Empleado empleado = (Empleado)ViewData["empleado"];
+    List<Incidencia> tabla = (List<Incidencia>)ViewData["tabla"];
+    var FechaActual = ViewData["fecha"];
+}
+
+<link rel="stylesheet" href="~/css/personal.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div>
+    <h5 id="titulo" class="text-center py-3 rounded mt-4">Incidencias de @empleado.NombreCompleto</h5>
+
+    <div class="mt-5 px-4 py-4 border bg-light rounded">
+        <div>
+            <form method="post">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
+                        <label>Seleccionar Mes:</label>
+                        <input class="form-control" type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required />
+                    </div>
+                    <div class="col-3 text-center">
+                        <label class="text-white">.</label>
+                        <button id="Buscar" type="submit" asp-controller="Incidencias" asp-action="Empleado" class="form-control btn btn-info">Consultar Incidencias</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <hr />
+        @if (tabla.Count() <= 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                No hay registros de Incidencias de este mes.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        <div class="">
+            <form method="post" class="mb-3">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="hidden" name="idEmpleado" value="@empleado.Id" />
+                        <label>Dia:</label>
+                        <input class="form-control" type="date" min="2022-01-01" name="dia" id="dia" required />
+                    </div>
+                    <div class="col-4">
+                        <label>Tipo:</label>
+                        <select class="form-control" id="tipo" name="tipo">
+                            <option value="Incapacidad">Incapacidad</option>
+                            <option value="Permiso">Permiso</option>
+                            <option value="vacaciones">Vacaciones</option>
+                        </select>
+                    </div>
+                    <div class="col-4 d-flex align-items-end">
+                        <button type="submit" class="btn btn-info" asp-controller="Incidencias" asp-action="Agregar">Agregar Incidencia</button>
+                    </div>
+                </div>
+            </form>
+
+            <table id="tabla" class="table table-hover w-90 m-auto">
+                <thead class="text-secondary ">
+                    <tr>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Tipo</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @foreach (var asistencia in tabla)
+                    {
+                        <tr>
+                            <td>@asistencia.FechaHora.ToString("D")</td>
+                            <td>@asistencia.Tipo</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@*<script src="~/js/asistencias.js" asp-append-version="true"></script>*@

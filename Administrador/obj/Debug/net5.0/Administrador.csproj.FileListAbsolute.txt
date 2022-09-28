@@ -274,3 +274,4 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Usuarios\Inicio.cshtml.g.cs
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Asistencias\Inicio.cshtml.g.cs
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Asistencias\Unidad.cshtml.g.cs
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Administrador\obj\Debug\net5.0\Razor\Views\Incidencias\Empleado.cshtml.g.cs

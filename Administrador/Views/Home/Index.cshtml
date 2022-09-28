@@ -5,31 +5,34 @@
 <link rel="stylesheet" href="~/css/index.css" />
 <div class="mt-5 pt-5">
     <div class="row mt-5">
-        <div class="col-2"></div>
+        <div class="col-3"></div>
         <div class="col">
             <div class="card mb-3 text-center ">
                 <img class="card-img-top w-50 mx-auto mt-3" src="~/img/empleado.png" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace"  asp-controller="Personal" asp-action="Inicio">Personal</a></h5>
+                    <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace" asp-controller="Personal" asp-action="Inicio">Personal</a></h5>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card mb-3 text-center ">
-                <img class="card-img-top w-50 mx-auto mt-3" src="~/img/reloj.png" alt="Card image cap">
-                <div class="card-body">
-                    @if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
-                    {
-                    <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace" asp-controller="Asistencias" asp-action="Unidad" asp-route-idUnidadAdministrativa="@User.Claims.ElementAt(1).Value" asp-route-fecha="@DateTime.Now">Asistencias</a></h5>
+        @if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
+        {
+            <div class="col">
+                <div class="card mb-3 text-center ">
+                    <img class="card-img-top w-50 mx-auto mt-3" src="~/img/reloj.png" alt="Card image cap">
+                    <div class="card-body">
+                        @if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
+                        {
+                            <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace" asp-controller="Asistencias" asp-action="Unidad" asp-route-idUnidadAdministrativa="@User.Claims.ElementAt(1).Value" asp-route-fecha="@DateTime.Now">Asistencias</a></h5>
 
-                    }
-                    else
-                    {
-                        <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace" asp-controller="Asistencias" asp-action="Inicio">Asistencias</a></h5>
-                    }
+                        }
+                        else
+                        {
+                            <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace" asp-controller="Asistencias" asp-action="Inicio">Asistencias</a></h5>
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-2"></div>
+        }
+        <div class="col-3"></div>
     </div>
 </div>

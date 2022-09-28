@@ -23,6 +23,7 @@ namespace DBContext
         public DbSet<UnidadAdministrativa> UnidadAdministrativa { get; set; }
         public DbSet<CentroTrabajo> CentroTrabajo { get; set; }
         public DbSet<Contratacion> Contratacion { get; set; }
+        public DbSet<Incidencia> Incidencia { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -77,6 +78,11 @@ namespace DBContext
             });
 
             modelBuilder.Entity<Contratacion>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<Incidencia>(entity =>
             {
                 entity.HasKey(e => e.Id);
             });

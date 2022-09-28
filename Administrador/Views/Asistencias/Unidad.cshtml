@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="~/css/personal.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div>
-    <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias del dia @FechaActual</h5>
+  @*  <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias del dia @FechaActual</h5>*@
 
     <div class="mt-5 px-4 py-4 border bg-light rounded">
         @*<div>
@@ -31,7 +31,7 @@
         @if (tabla.Count() <= 0)
         {
             <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-                No hay registros de asistencias.
+                No hay registros de asistencias del dia de hoy.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

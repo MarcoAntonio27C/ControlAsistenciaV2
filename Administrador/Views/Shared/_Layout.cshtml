@@ -32,9 +32,10 @@
                         @if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
                         {
                             <a class="nav-link" asp-controller="Asistencias" asp-action="Unidad" asp-route-idUnidadAdministrativa="@User.Claims.ElementAt(1).Value" asp-route-fechaa="@DateTime.Now">Asistencias</a>
-                        }else{
-                            <a class="nav-link" asp-controller="Asistencias" asp-action="Inicio" >Asistencias</a>
                         }
+                        @*else{
+                            <a class="nav-link" asp-controller="Asistencias" asp-action="Inicio" >Asistencias</a>
+                        }*@
 
                     </li>
                     @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856"))
