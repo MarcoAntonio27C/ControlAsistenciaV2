@@ -58,3 +58,18 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBCont
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\ref\DBContext.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.pdb
+F:\Fiscalia\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.deps.json
+F:\Fiscalia\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.dll
+F:\Fiscalia\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\DBContext.pdb
+F:\Fiscalia\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.dll
+F:\Fiscalia\ControlAsistenciaV2\DBContext\bin\Debug\net5.0\ControlAsistencia_.pdb
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.AssemblyReference.cache
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.GeneratedMSBuildEditorConfig.editorconfig
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfoInputs.cache
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.AssemblyInfo.cs
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CoreCompileInputs.cache
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.csproj.CopyComplete
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.dll
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\refint\DBContext.dll
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\DBContext.pdb
+F:\Fiscalia\ControlAsistenciaV2\DBContext\obj\Debug\net5.0\ref\DBContext.dll

@@ -32,3 +32,20 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\ob
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ref\ReportePDF.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.pdb
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.AssemblyReference.cache
+F:\Fiscalia\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ReportePDF.deps.json
+F:\Fiscalia\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ReportePDF.dll
+F:\Fiscalia\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ReportePDF.pdb
+F:\Fiscalia\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ControlAsistencia_.dll
+F:\Fiscalia\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ControlAsistencia_.pdb
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.AssemblyReference.cache
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.Properties.Resources.resources
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.GenerateResource.cache
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.GeneratedMSBuildEditorConfig.editorconfig
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.AssemblyInfoInputs.cache
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.AssemblyInfo.cs
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.CoreCompileInputs.cache
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.CopyComplete
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.dll
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\refint\ReportePDF.dll
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.pdb
+F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ref\ReportePDF.dll

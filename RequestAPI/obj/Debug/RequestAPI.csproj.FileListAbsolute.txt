@@ -38,3 +38,17 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Reques
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.CopyComplete
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.pdb
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\RequestAPI.dll.config
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\RequestAPI.dll
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\RequestAPI.pdb
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\ControlAsistencia_.dll
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\Newtonsoft.Json.dll
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\RestSharp.dll
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\ControlAsistencia_.pdb
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\Newtonsoft.Json.xml
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\bin\Debug\RestSharp.xml
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.AssemblyReference.cache
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.CoreCompileInputs.cache
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.csproj.CopyComplete
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.dll
+F:\Fiscalia\ControlAsistenciaV2\RequestAPI\obj\Debug\RequestAPI.pdb

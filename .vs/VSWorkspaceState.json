@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Administrador"
   ],
-  "SelectedNode": "\\ControlAsistenciaV2.sln",
+  "SelectedNode": "\\Administrador\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

@@ -60,3 +60,31 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Genera
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.exe.manifest
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.application
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.CopyComplete
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\GenerarAsistencia.exe.config
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\GenerarAsistencia.exe.manifest
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\GenerarAsistencia.application
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\GenerarAsistencia.exe
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\GenerarAsistencia.pdb
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\ControlAsistencia_.dll
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\Newtonsoft.Json.dll
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\RequestAPI.dll
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\RestSharp.dll
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\ControlAsistencia_.pdb
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\RequestAPI.pdb
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\RequestAPI.dll.config
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\Newtonsoft.Json.xml
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\bin\Debug\RestSharp.xml
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.AssemblyReference.cache
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.SuggestedBindingRedirects.cache
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.Asistencia.resources
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.AsistenciaCorrecta.resources
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.CaptureForm.resources
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.Inicio.resources
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.Properties.Resources.resources
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.GenerateResource.cache
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.CoreCompileInputs.cache
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.exe.manifest
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.application
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.csproj.CopyComplete
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.exe
+F:\Fiscalia\ControlAsistenciaV2\GenerarAsistencia\obj\Debug\GenerarAsistencia.pdb

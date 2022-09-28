@@ -332,7 +332,7 @@ namespace ReporteAsistencia.Controllers
 
             var empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
             var Datos_Generales = await DatosGeneralesAsync(empleado);
-            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
+            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Year.Equals(date.Year) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
            
            
             var entradas = GetEntradas(asistencias);
