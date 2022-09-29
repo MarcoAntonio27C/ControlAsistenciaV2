@@ -333,14 +333,14 @@ namespace ReporteAsistencia.Controllers
             var empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
             var Datos_Generales = await DatosGeneralesAsync(empleado);
             var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Year.Equals(date.Year) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
-           
+            var incidencias = await _context.Incidencia.Where(x => x.IdEmpleado.Equals(empleado.Id) && x.FechaHora.Year.Equals(date.Year) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
            
             var entradas = GetEntradas(asistencias);
             var salidas = GetSalidas(asistencias);
 
             CrearReporte reporte = new CrearReporte();
             string filepath = System.IO.Path.GetTempFileName().Replace(".tmp", ".pdf");
-            return reporte.Crear(Datos_Generales,entradas, salidas, filepath);
+            return reporte.Crear(Datos_Generales,entradas, salidas,incidencias ,filepath);
         }
 
     }

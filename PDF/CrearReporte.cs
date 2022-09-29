@@ -15,7 +15,7 @@ namespace ReportePDF
 {
     public class CrearReporte
     {
-         public FileStreamResult Crear(DatosEmpleado datos ,List<DateTime> entradas, List<DateTime> salidas, string path)
+         public FileStreamResult Crear(DatosEmpleado datos ,List<DateTime> entradas, List<DateTime> salidas,List<Incidencia> incidencias, string path)
         {
             Document doc = new Document(PageSize.LETTER);
             MemoryStream workStream = new MemoryStream();
@@ -228,6 +228,7 @@ namespace ReportePDF
                     mes.ElementAt(x).numeroDia = "" + numeroDia;
                     mes.ElementAt(x).asistenciaEntrada = "\nEntrada";
                     mes.ElementAt(x).asistenciaSalida = "\n\nSalida";
+
                     numeroDia++;
                     positionInicio = x;
                     break;
@@ -283,6 +284,24 @@ namespace ReportePDF
 
                 }
                 diaAsistenciaSalida = "";
+            }
+
+            //Agregamos las Incidencias al Calendario
+
+            string diaIncidencia = "";
+            for (int i = 0; i < 42; i++)
+            {
+                if (incidencias.Count > 0)
+                {
+                    diaIncidencia = "" + incidencias.ElementAt(0).FechaHora.Day;
+                    if (mes.ElementAt(i).numeroDia.Equals(diaIncidencia))
+                    {
+                        mes.ElementAt(i).asistenciaEntrada = "\n\n" + incidencias.ElementAt(0).Tipo+"\n\n";
+                        mes.ElementAt(i).asistenciaSalida = "";
+                        incidencias.RemoveAt(0);
+                    }
+                }
+                diaIncidencia = "";
             }
 
 

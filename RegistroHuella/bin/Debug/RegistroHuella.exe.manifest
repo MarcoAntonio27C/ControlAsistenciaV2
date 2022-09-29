@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlAsistencia_.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlAsistencia_.dll" size="16896">
       <assemblyIdentity name="ControlAsistencia_" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TrWHoY0pkNZI3FpDy3jf34GJu39+o/qCIU7lN/iTUXw=</dsig:DigestValue>
+        <dsig:DigestValue>a6GtegWC17TCk/ei/tNT1m+W1CaUzsYN4iS2M52E1gc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -122,7 +122,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t//JQZhcIyN94bnl/wpb4rZKfmcosksZiT43ks0VYLA=</dsig:DigestValue>
+        <dsig:DigestValue>2MXBokTFo/KRNEebEMdewXJKZrPruTUDCjttAemPs9A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -134,7 +134,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Poy5d7qv+wT3+EXl1XletIduO8l+YyDvmGw+PSD56Fo=</dsig:DigestValue>
+        <dsig:DigestValue>bniFbec+QqOaNYP+V+Jn1emTJQoksZn9yxSVEuoTTQ8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

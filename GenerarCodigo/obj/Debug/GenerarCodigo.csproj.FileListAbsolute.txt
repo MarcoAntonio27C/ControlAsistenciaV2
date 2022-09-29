@@ -10,7 +10,6 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Genera
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.CoreCompileInputs.cache
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.exe
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.pdb
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.AssemblyReference.cache
 F:\Fiscalia\ControlAsistenciaV2\GenerarCodigo\bin\Debug\GenerarCodigo.exe.config
 F:\Fiscalia\ControlAsistenciaV2\GenerarCodigo\bin\Debug\GenerarCodigo.exe
 F:\Fiscalia\ControlAsistenciaV2\GenerarCodigo\bin\Debug\GenerarCodigo.pdb
@@ -19,3 +18,4 @@ F:\Fiscalia\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.Sug
 F:\Fiscalia\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.CoreCompileInputs.cache
 F:\Fiscalia\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.exe
 F:\Fiscalia\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\GenerarCodigo\obj\Debug\GenerarCodigo.csproj.AssemblyReference.cache

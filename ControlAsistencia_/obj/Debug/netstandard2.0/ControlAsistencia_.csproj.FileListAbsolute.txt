@@ -36,7 +36,6 @@ C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\Contro
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.CoreCompileInputs.cache
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.dll
 C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.pdb
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ControlAsistencia_\obj\Debug\netstandard2.0\ControlAsistencia_.csproj.AssemblyReference.cache
 F:\Fiscalia\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.deps.json
 F:\Fiscalia\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.dll
 F:\Fiscalia\ControlAsistenciaV2\ControlAsistencia_\bin\Debug\netstandard2.0\ControlAsistencia_.pdb
