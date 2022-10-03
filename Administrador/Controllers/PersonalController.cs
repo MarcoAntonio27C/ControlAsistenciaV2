@@ -90,7 +90,7 @@ namespace Administrador.Controllers
             empleado.IdMunicipio = Guid.Parse(form["municipio"]);
             empleado.IdInmueble = Guid.Parse(form["inmueble"]);
             empleado.IdCargo = Guid.Parse(form["cargo"]);
-            empleado.IdCargoHomologado = Guid.Parse(form["cargoHomologado"]);
+            //empleado.IdCargoHomologado = Guid.Parse(form["cargoHomologado"]);
             empleado.IdCentroTrabajo = Guid.Parse(form["centroTrabajo"]);
             empleado.IdUnidadAdministrativa = Guid.Parse(form["unidadAdministrativa"]);
             empleado.IdContratacion = Guid.Parse(form["contratacion"]);
@@ -132,7 +132,7 @@ namespace Administrador.Controllers
             empleado.IdMunicipio = Guid.Parse(valdata.Municipio);
             empleado.IdInmueble = Guid.Parse(valdata.Inmueble);
             empleado.IdCargo = Guid.Parse(valdata.Cargo);
-            empleado.IdCargoHomologado = Guid.Parse(valdata.CargoHomologado);
+            //empleado.IdCargoHomologado = Guid.Parse(valdata.CargoHomologado);
             empleado.IdCentroTrabajo = Guid.Parse(valdata.CentroTrabajo);
             empleado.IdUnidadAdministrativa = Guid.Parse(valdata.UnidadAdministrativa);
             empleado.IdContratacion = Guid.Parse(valdata.Contratacion);
@@ -193,7 +193,7 @@ namespace Administrador.Controllers
             var municipio = await _context.Municipio.Where(x => x.Id.Equals(empleado.IdMunicipio)).FirstAsync();
             var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
             var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
-            var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
+            //var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
             var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
             var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
             var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
@@ -210,7 +210,7 @@ namespace Administrador.Controllers
             datos.Direccion = inmueble.Direccion;
             datos.Cargo = cargo.Nombre;
             datos.CentroTrabajo = centroTrabajo.Nombre;
-            datos.CargoHomologado = cargoHomologado.Nombre;
+            //datos.CargoHomologado = cargoHomologado.Nombre;
             datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
             datos.Contratacion = contratacion.Nombre;
             return datos;
@@ -248,13 +248,13 @@ namespace Administrador.Controllers
             return cargo;
         }
 
-        [HttpGet]
-        [Produces("application/json")]
-        public async Task<ActionResult<IEnumerable<CargoHomologado>>> GetCargoHomologado()
-        {
-            var cargoHomologado = await _context.CargoHomologado.OrderBy(n => n.Nombre).ToListAsync();
-            return cargoHomologado;
-        }
+        //[HttpGet]
+        //[Produces("application/json")]
+        //public async Task<ActionResult<IEnumerable<CargoHomologado>>> GetCargoHomologado()
+        //{
+        //    var cargoHomologado = await _context.CargoHomologado.OrderBy(n => n.Nombre).ToListAsync();
+        //    return cargoHomologado;
+        //}
 
         [HttpGet]
         [Produces("application/json")]

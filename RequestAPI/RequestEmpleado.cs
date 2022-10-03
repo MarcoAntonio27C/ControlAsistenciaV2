@@ -62,7 +62,7 @@ namespace RequestAPI
                     idMunicipio = $"{empleado.IdMunicipio}",
                     idInmueble = $"{empleado.IdInmueble}",
                     idCargo = $"{empleado.IdCargo}",
-                    idCargoHomologado = $"{empleado.IdCargoHomologado}",
+                    //idCargoHomologado = $"{empleado.IdCargoHomologado}",
                     idCentroTrabajo = $"{empleado.IdCentroTrabajo}",
                     idUnidadAdministrativa = $"{empleado.IdUnidadAdministrativa}",
                     idContratacion = $"{empleado.IdContratacion}"

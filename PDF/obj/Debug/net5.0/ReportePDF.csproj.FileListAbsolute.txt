@@ -48,3 +48,4 @@ F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.dll
 F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\refint\ReportePDF.dll
 F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.pdb
 F:\Fiscalia\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ref\ReportePDF.dll
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ReportePDF.csproj.AssemblyReference.cache
