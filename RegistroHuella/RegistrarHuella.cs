@@ -29,6 +29,7 @@ namespace RegistroHuella
             NombreCompleto.Enabled = false;
             FechaIngreso.Enabled = false;
             Registrar.Enabled = false;
+            Curp.Enabled = false;
         }
 
 
@@ -58,6 +59,7 @@ namespace RegistroHuella
                                 NombreCompleto.Text = empleado.NombreCompleto;
                                 FechaIngreso.Text = empleado.FechaIngreso;
                                 capturarHuell.Enabled = true;
+                                Curp.Enabled = true;
                                 found = true;
                                 break;
                             }
@@ -91,8 +93,9 @@ namespace RegistroHuella
         {
             byte[] streamHuella = Template.Bytes;
             string huella = Convert.ToBase64String(streamHuella);
+            string curp = Curp.Text.ToUpper();
 
-            var res = requestEmpleado.UpdateEmpleado(tmpEmpleado, huella);
+            var res = requestEmpleado.UpdateEmpleado(tmpEmpleado,curp ,huella);
 
             if (!res.Equals(null))
             {
@@ -105,6 +108,8 @@ namespace RegistroHuella
                     FechaIngreso.Text = "";
                     capturarHuell.Enabled = false;
                     Registrar.Enabled = false;
+                    Curp.Enabled = false;
+                    Curp.Text = "";
                 }
                 else
                 {
@@ -145,6 +150,11 @@ namespace RegistroHuella
         }
 
         private void Curp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

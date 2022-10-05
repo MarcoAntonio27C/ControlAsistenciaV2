@@ -3,12 +3,13 @@
     ViewData["Title"] = "Personal";
     List<TablaAsistenciasUnidad> tabla = (List<TablaAsistenciasUnidad>)ViewData["tabla"];
     var FechaActual = ViewData["fecha"];
+
 }
 
 <link rel="stylesheet" href="~/css/personal.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div>
-  @*  <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias del dia @FechaActual</h5>*@
+    <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias del dia @FechaActual.ToString()</h5>
 
     <div class="mt-5 px-4 py-4 border bg-light rounded">
         @*<div>

@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>q43UlAEFXMnntbZQp/mhWInL6dVFl9c7QHLWgqQG+PA=</dsig:DigestValue>
+        <dsig:DigestValue>4tjHlSXbiJ/nGBjFSLPh4xxdQ1b3kdCGcLZEEyXEhzw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RequestAPI.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RequestAPI.dll" size="14336">
       <assemblyIdentity name="RequestAPI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dpnS4zu73sBnN/SH7Tm0jyAzszL99EnlQjus1rOAGvQ=</dsig:DigestValue>
+        <dsig:DigestValue>cAWIa+hNbTzPELT6CtZCToJFyayzQPVYVY4fuldjOEg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

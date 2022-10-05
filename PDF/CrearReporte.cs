@@ -221,7 +221,7 @@ namespace ReportePDF
             int positionInicio = 0;
             int numeroDia = 1;
 
-            for (int x = 0; x < 6; x++)
+            for (int x = 0; x < 7; x++)
             {
                 if (mes.ElementAt(x).nombreDia.Equals(primerDiaMes))
                 {

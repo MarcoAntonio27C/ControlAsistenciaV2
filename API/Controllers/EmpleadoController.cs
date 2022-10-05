@@ -91,6 +91,7 @@ namespace API.Controllers
         [HttpPost("Actualizar")]
         public async Task<IActionResult> PutEmpleado(Empleado Empleado)
         {
+            Empleado.Activo = true;
             _context.Entry(Empleado).State = EntityState.Modified;
 
             try

@@ -33,9 +33,9 @@ namespace ReporteAsistencia.Controllers
             return View();
         }
 
-        public async Task<IActionResult> BuscarNumeroExpediente(string numeroExpediente)
+        public async Task<IActionResult> BuscarCurp(string curp)
         {
-            var empleado = await _context.Empleado.Where(x => x.NumeroExpediente.Equals(numeroExpediente)).ToListAsync();
+            var empleado = await _context.Empleado.Where(x => x.Curp.Equals(curp)).ToListAsync();
         
             if (empleado.Count > 0)
             {
@@ -68,7 +68,6 @@ namespace ReporteAsistencia.Controllers
             datos.Direccion = inmueble.Direccion;
             datos.Cargo = cargo.Nombre;
             datos.CentroTrabajo = centroTrabajo.Nombre;
-            //datos.CargoHomologado = cargoHomologado.Nombre;
             datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
             datos.Contratacion = contratacion.Nombre;
             return datos;

@@ -10,8 +10,8 @@ namespace RequestAPI
 {
     public class RequestInmueble
     {
-        //string API =  "https://localhost:44396/api/";
-        string API = "http://10.24.1.29/PeopleSearch/Api/";
+        string API =  "https://localhost:44396/api/";
+        //string API = "http://10.24.1.29/PeopleSearch/Api/";
         public IRestResponse Inmuebles()
         {
             try

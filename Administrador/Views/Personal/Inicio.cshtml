@@ -1,9 +1,12 @@
 ﻿@using ControlAsistencia_.Models;
 @using Microsoft.AspNetCore.Identity;
+@using System.Security.Claims;
 @{
     ViewData["Title"] = "Inicio";
     List<Empleado> empleados = (List<Empleado>)ViewData["empleados"];
+    var rol = User.Claims.ElementAt(2).Value.ToUpper();
     var i = 1;
+
 }
 
 <link rel="stylesheet" href="~/css/personal.css" />
@@ -13,31 +16,32 @@
     <div>
         <div class="row py-4">
             <div class="col-10">
-                @if (User.IsInRole("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
+
+                @if (rol.Equals("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
                 {
-                    <form asp-controller="Personal" asp-action="BuscarPorUnidad" method="post">
-                        <div class="row">
-                            <div class="col-10">
-                                <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
-                            </div>
-                            <div class="col">
-                                <button type="submit" class="btn btn-info my-auto">Buscar</button>
-                            </div>
+                <form asp-controller="Personal" asp-action="BuscarPorUnidad" method="post">
+                    <div class="row">
+                        <div class="col-10">
+                            <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
                         </div>
-                    </form>
+                        <div class="col">
+                            <button type="submit" class="btn btn-info my-auto">Buscar</button>
+                        </div>
+                    </div>
+                </form>
                 }
-                else
+                else 
                 {
-                    <form asp-controller="Personal" asp-action="BuscarGeneral" method="post">
-                        <div class="row">
-                            <div class="col-9">
-                                <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
+                        <form asp-controller="Personal" asp-action="BuscarGeneral" method="post">
+                            <div class="row">
+                                <div class="col-9">
+                                    <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-info my-auto px-5">Buscar</button>
+                                </div>
                             </div>
-                            <div class="col">
-                                <button type="submit" class="btn btn-info my-auto px-5">Buscar</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
                 }
             </div>
 
@@ -74,19 +78,19 @@
                     {
                         var actualizar = "Actualizar/?idEmpleado=" + empleado.Id;
                         var asistencias = "/Asistencias/Empleado/?idEmpleado=" + empleado.Id;
-                                <tr>
-                                    <td>@i</td>
-                                    <td>@empleado.NombreCompleto</td>
-                                    <td>@empleado.NumeroExpediente</td>
-                                    <td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>
-                                    @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
-                                    {
-                                        <td><a class="btn btn-info" asp-controller="Incidencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now" ><span class="material-icons text-white">event_note</span></a></td>
-                                        <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
-                                    }
-                                    <td><a class="btn btn-info" asp-controller="Asistencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"> <span class="material-icons">calendar_month</span></a></td>
+                        <tr>
+                            <td>@i</td>
+                            <td>@empleado.NombreCompleto</td>
+                            <td>@empleado.NumeroExpediente</td>
+                            <td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>
+                            @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+                            {
+                                <td><a class="btn btn-info" asp-controller="Incidencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"><span class="material-icons text-white">event_note</span></a></td>
+                                <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
+                            }
+                            <td><a class="btn btn-info" asp-controller="Asistencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"> <span class="material-icons">calendar_month</span></a></td>
 
-                                </tr>
+                        </tr>
                         i = i + 1;
                     }
                 }

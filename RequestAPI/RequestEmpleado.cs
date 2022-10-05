@@ -10,8 +10,8 @@ namespace RequestAPI
 {
     public class RequestEmpleado
     {
-        //string API = "https://localhost:44396/api/";
-        string API = "http://10.24.1.29/PeopleSearch/Api/";
+        string API = "https://localhost:44396/api/";
+        //string API = "http://10.24.1.29/PeopleSearch/Api/";
 
 
         public IRestResponse EmpleadosPorInmueble(string idInmueble)
@@ -43,8 +43,9 @@ namespace RequestAPI
             }
         }
 
-        public IRestResponse UpdateEmpleado(Empleado empleado, string huella)
+        public IRestResponse UpdateEmpleado(Empleado empleado,string curp ,string huella)
         {
+            var activo = true;
             try
             {
                 var client = new RestClient(API + "Empleado/Actualizar");
@@ -54,6 +55,7 @@ namespace RequestAPI
                 {
                     id= $"{empleado.Id}",
                     nombreCompleto = $"{empleado.NombreCompleto}",
+                    curp = $"{curp}",
                     numeroExpediente = $"{empleado.NumeroExpediente}",
                     fechaIngreso = $"{empleado.FechaIngreso}",
                     ur = $"{empleado.UR}",
@@ -62,7 +64,6 @@ namespace RequestAPI
                     idMunicipio = $"{empleado.IdMunicipio}",
                     idInmueble = $"{empleado.IdInmueble}",
                     idCargo = $"{empleado.IdCargo}",
-                    //idCargoHomologado = $"{empleado.IdCargoHomologado}",
                     idCentroTrabajo = $"{empleado.IdCentroTrabajo}",
                     idUnidadAdministrativa = $"{empleado.IdUnidadAdministrativa}",
                     idContratacion = $"{empleado.IdContratacion}"

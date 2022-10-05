@@ -74,60 +74,62 @@ namespace GenerarAsistencia
 
                     if (!res.Equals(null) && res.IsSuccessful.Equals(true))
                     {
-
                         var empleados = JsonConvert.DeserializeObject<List<Empleado>>(res.Content);
 
                         bool found = false;
                         foreach (var empleado in empleados)
                         {
-                            byte[] huella = Convert.FromBase64String(Convert.ToBase64String(empleado.Huella));
-                            stream = new MemoryStream(huella);
-                            template = new DPFP.Template(stream);
-                            verificator.Verify(features, template, ref result);
-                            UpdateStatus(result.FARAchieved);
-
-                            if (result.Verified)
+                            if (empleado.Huella != null)
                             {
-                                ControlAsistencia_.Models.Asistencia asistencia = new ControlAsistencia_.Models.Asistencia();
-                                asistencia.Id = Guid.NewGuid();
-                                asistencia.IdEmpleado = empleado.Id;
-                                asistencia.Tipo = tipoEntrada();
-                                asistencia.FechaHora = DateTime.Now;
-                                found = true;
+                                byte[] huella = Convert.FromBase64String(Convert.ToBase64String(empleado.Huella));
+                                stream = new MemoryStream(huella);
+                                template = new DPFP.Template(stream);
+                                verificator.Verify(features, template, ref result);
+                                UpdateStatus(result.FARAchieved);
 
-                                if (!tipoEntrada().Equals(""))
+                                if (result.Verified)
                                 {
-                                    var peticion = requestAsistencia.AddAsistencia(asistencia);
+                                    ControlAsistencia_.Models.Asistencia asistencia = new ControlAsistencia_.Models.Asistencia();
+                                    asistencia.Id = Guid.NewGuid();
+                                    asistencia.IdEmpleado = empleado.Id;
+                                    asistencia.Tipo = tipoEntrada();
+                                    asistencia.FechaHora = DateTime.Now;
+                                    found = true;
 
-                                    if (!peticion.Equals(null))
+                                    if (!tipoEntrada().Equals(""))
                                     {
-                                        if (!peticion.IsSuccessful.Equals(false))
-                                        {
-                                            
-                                            correcta.SetLabel(empleado.NombreCompleto + "\nSe registro tu asistencia correctamente a las  \n" + DateTime.Now.ToString("T"));
-                                            correcta.TopMost = true;
-                                            correcta.Show();
+                                        var peticion = requestAsistencia.AddAsistencia(asistencia);
 
-                                            //MessageBox.Show(empleado.NombreCompleto  + " se Registro su Asistencia Correctamente");
-                                            //Picture.Image = global::GenerarAsistencia.Properties.Resources.fondoBlanco;
-                                            break;
+                                        if (!peticion.Equals(null))
+                                        {
+                                            if (!peticion.IsSuccessful.Equals(false))
+                                            {
+
+                                                correcta.SetLabel(empleado.NombreCompleto + "\nSe registro tu asistencia correctamente a las  \n" + DateTime.Now.ToString("T"));
+                                                correcta.TopMost = true;
+                                                correcta.Show();
+
+                                                //MessageBox.Show(empleado.NombreCompleto  + " se Registro su Asistencia Correctamente");
+                                                //Picture.Image = global::GenerarAsistencia.Properties.Resources.fondoBlanco;
+                                                break;
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Error al intentar guardar su asistencia, intentelo nuevamente");
+                                                break;
+                                            }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Error al intentar guardar su asistencia, intentelo nuevamente");
+                                            MessageBox.Show("Error al intentar conectarse con el servicio de Biometricos");
                                             break;
                                         }
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Error al intentar conectarse con el servicio de Biometricos");
+                                        MessageBox.Show("Seleccione el Tipo de Asistencia");
                                         break;
                                     }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Seleccione el Tipo de Asistencia");
-                                    break;
                                 }
                             }
 

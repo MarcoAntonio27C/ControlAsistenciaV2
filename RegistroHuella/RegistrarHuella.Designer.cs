@@ -43,6 +43,8 @@ namespace RegistroHuella
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label_inmueble = new System.Windows.Forms.Label();
+            this.Curp = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.capturarHuell)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,7 +97,7 @@ namespace RegistroHuella
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 292);
+            this.label4.Location = new System.Drawing.Point(31, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 8;
@@ -103,14 +105,14 @@ namespace RegistroHuella
             // 
             // FechaIngreso
             // 
-            this.FechaIngreso.Location = new System.Drawing.Point(33, 309);
+            this.FechaIngreso.Location = new System.Drawing.Point(33, 300);
             this.FechaIngreso.Name = "FechaIngreso";
             this.FechaIngreso.Size = new System.Drawing.Size(341, 20);
             this.FechaIngreso.TabIndex = 9;
             // 
             // Registrar
             // 
-            this.Registrar.Location = new System.Drawing.Point(124, 492);
+            this.Registrar.Location = new System.Drawing.Point(126, 535);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(158, 46);
             this.Registrar.TabIndex = 10;
@@ -123,7 +125,7 @@ namespace RegistroHuella
             this.capturarHuell.Cursor = System.Windows.Forms.Cursors.Hand;
             this.capturarHuell.Enabled = false;
             this.capturarHuell.Image = global::RegistroHuella.Properties.Resources.baseline_fingerprint_black_48dp;
-            this.capturarHuell.Location = new System.Drawing.Point(154, 361);
+            this.capturarHuell.Location = new System.Drawing.Point(156, 404);
             this.capturarHuell.Name = "capturarHuell";
             this.capturarHuell.Size = new System.Drawing.Size(94, 105);
             this.capturarHuell.TabIndex = 11;
@@ -167,12 +169,32 @@ namespace RegistroHuella
             this.label_inmueble.TabIndex = 34;
             this.label_inmueble.Text = "label5";
             // 
+            // Curp
+            // 
+            this.Curp.Location = new System.Drawing.Point(33, 357);
+            this.Curp.Name = "Curp";
+            this.Curp.Size = new System.Drawing.Size(341, 20);
+            this.Curp.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 337);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 17);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "CURP";
+            this.label3.UseCompatibleTextRendering = true;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // RegistrarHuella
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(419, 616);
+            this.Controls.Add(this.Curp);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label_inmueble);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
@@ -214,5 +236,7 @@ namespace RegistroHuella
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label_inmueble;
+        private System.Windows.Forms.TextBox Curp;
+        private System.Windows.Forms.Label label3;
     }
 }
