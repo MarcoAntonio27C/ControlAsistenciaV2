@@ -54,5 +54,15 @@ namespace Administrador.Controllers
             return RedirectToAction("Empleado", "Incidencias", new {/* routeValues, for example: */ idEmpleado = idEmpleado,mes = dia });
 
         }
+
+
+        public async Task<ActionResult> Delete(string idIncidencia)
+        {
+            Incidencia incidencia = await _context.Incidencia.FindAsync(Guid.Parse(idIncidencia));
+            _context.Incidencia.Remove(incidencia);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Empleado", "Incidencias", new {/* routeValues, for example: */ idEmpleado = incidencia.IdEmpleado, mes = DateTime.Now.ToString("d") });
+            //return Content(idIncidencia);
+        }
     }
 }

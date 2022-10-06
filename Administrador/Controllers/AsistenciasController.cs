@@ -84,7 +84,8 @@ namespace Administrador.Controllers
                 }
             }
 
-            ViewData["fecha"] = date.ToString("yyyy-MM-01");
+            //ViewData["fecha"] = date.ToString("yyyy-MM-01");
+            ViewData["fecha"] = date;
             ViewData["tabla"] = tabla;
             return View();
         }

@@ -12,23 +12,63 @@
     <h5 id="titulo" class="text-center py-3 rounded mt-4">Incidencias de @empleado.NombreCompleto</h5>
 
     <div class="mt-5 px-4 py-4 border bg-light rounded">
-        <div>
-            <form method="post">
-                <div class="row">
-                    <div class="col-4">
-                        <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
-                        <label>Seleccionar Mes:</label>
-                        <input class="form-control" type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required />
-                    </div>
-                    <div class="col-3 text-center">
-                        <label class="text-white">.</label>
-                        <button id="Buscar" type="submit" asp-controller="Incidencias" asp-action="Empleado" class="form-control btn btn-info">Consultar Incidencias</button>
-                    </div>
+
+        <div class="mx-auto">
+            <ul class="nav nav-tabs small " role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">Consultar Incidencias</a></li>
+                @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+                {
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab2" role="tab">Agregar Incidencia</a></li>
+                }
+            </ul>
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="tab1" role="tabpanel">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-4">
+                                <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
+                                <label>Seleccionar Mes:</label>
+                                <input class="form-control" type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required />
+                            </div>
+                            <div class="col-3 text-center">
+                                <label class="text-white">.</label>
+                                <button id="Buscar" type="submit" asp-controller="Incidencias" asp-action="Empleado" class="form-control btn btn-info">Consultar Incidencias</button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
-            </form>
+                <div class="tab-pane" id="tab2" role="tabpanel">
+                    <div class=" mb-3">
+                        @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+                        {
+                            <form method="post" class="">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <input type="hidden" name="idEmpleado" value="@empleado.Id" />
+                                        <label>Dia:</label>
+                                        <input class="form-control" type="date" min="2022-01-01" name="dia" id="dia" required />
+                                    </div>
+                                    <div class="col-4">
+                                        <label>Tipo:</label>
+                                        <select class="form-control" id="tipo" name="tipo">
+                                            <option value="Incapacidad">Incapacidad</option>
+                                            <option value="Permiso">Permiso</option>
+                                            <option value="vacaciones">Vacaciones</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4 d-flex align-items-end">
+                                        <button type="submit" class="btn btn-info" asp-controller="Incidencias" asp-action="Agregar">Agregar Incidencia</button>
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+
+                </div>
+            </div>
         </div>
 
-        <hr />
         @if (tabla.Count() <= 0)
         {
             <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
@@ -39,42 +79,25 @@
             </div>
         }
         <div class="">
-            <form method="post" class="mb-3">
-                <div class="row">
-                    <div class="col-4">
-                        <input type="hidden" name="idEmpleado" value="@empleado.Id" />
-                        <label>Dia:</label>
-                        <input class="form-control" type="date" min="2022-01-01" name="dia" id="dia" required />
-                    </div>
-                    <div class="col-4">
-                        <label>Tipo:</label>
-                        <select class="form-control" id="tipo" name="tipo">
-                            <option value="Incapacidad">Incapacidad</option>
-                            <option value="Permiso">Permiso</option>
-                            <option value="vacaciones">Vacaciones</option>
-                        </select>
-                    </div>
-                    <div class="col-4 d-flex align-items-end">
-                        <button type="submit" class="btn btn-info" asp-controller="Incidencias" asp-action="Agregar">Agregar Incidencia</button>
-                    </div>
-                </div>
-            </form>
-
             <table id="tabla" class="table table-hover w-90 m-auto">
                 <thead class="text-secondary ">
                     <tr>
                         <th scope="col">Dia</th>
                         <th scope="col">Tipo</th>
+                        @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+                        {
+                            <th scope="col">Eliminar</th>
+                        }
                     </tr>
                 </thead>
                 <tbody class="">
-                    @foreach (var asistencia in tabla)
+                    @foreach (var incidencia in tabla)
                     {
-                        <tr>
-                            <td>@asistencia.FechaHora.ToString("D")</td>
-                            <td>@asistencia.Tipo</td>
-
-                        </tr>
+                    <tr>
+                        <td>@incidencia.FechaHora.ToString("D")</td>
+                        <td>@incidencia.Tipo</td>
+                        <td><a class="btn btn-info" asp-controller="Incidencias" asp-action="Delete" asp-route-idIncidencia="@incidencia.Id"><span class="material-icons text-white">delete</span></a></td>
+                    </tr>
                     }
                 </tbody>
             </table>

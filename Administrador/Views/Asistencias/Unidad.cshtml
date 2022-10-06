@@ -2,31 +2,32 @@
 @{
     ViewData["Title"] = "Personal";
     List<TablaAsistenciasUnidad> tabla = (List<TablaAsistenciasUnidad>)ViewData["tabla"];
-    var FechaActual = ViewData["fecha"];
+    DateTime FechaActual = (DateTime)ViewData["fecha"];
+    var date = FechaActual.Year.ToString() + "-" + FechaActual.Month.ToString() + "-" + FechaActual.Day.ToString();
 
 }
 
 <link rel="stylesheet" href="~/css/personal.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div>
-    <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias del dia @FechaActual.ToString()</h5>
+    <h5 id="titulo" class="text-center py-3 rounded mt-4">Asistencias del dia @FechaActual.ToString("D")</h5>
 
     <div class="mt-5 px-4 py-4 border bg-light rounded">
-        @*<div>
+        <div>
             <form method="post">
                 <div class="row">
                     <div class="col-4">
-                        <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
+                        <input type="hidden" name="idUnidadAdministrativa" id="idUnidadAdministrativa" value="@User.Claims.ElementAt(1).Value" />
                         <label>Seleccionar Mes:</label>
-                        <input class="form-control" type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required />
+                        <input class="form-control" type="date" min="2022-01-01" value="@date" name="fecha" id="fecha" required />
                     </div>
                     <div class="col-3 text-center">
                         <label class="text-white">.</label>
-                        <button id="Buscar" type="submit" asp-controller="Asistencias" asp-action="Empleado" class="form-control btn btn-info">Consultar Asistencias</button>
+                        <button id="Buscar" type="submit" asp-controller="Asistencias" asp-action="Unidad" class="form-control btn btn-info">Consultar Asistencias</button>
                     </div>
                 </div>
             </form>
-        </div>*@
+        </div>
 
         <hr />
         @if (tabla.Count() <= 0)

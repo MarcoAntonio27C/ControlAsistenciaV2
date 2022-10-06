@@ -63,9 +63,14 @@
                     <th scope="col">N°Expediente</th>
                     <th scope="col">Detalles</th>
 
-                    @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+                    @if (!rol.Equals("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
                     {
                         <th scope="col">Incidencias</th>
+                    }
+
+
+                    @if (rol.Equals("77A225A3-1266-4B1F-B11C-504969AFA856") || rol.Equals("9A39BCCE-B092-4F90-9DE7-9E0FB2137034"))
+                    {
                         <th scope="col">Editar</th>
                     }
 
@@ -78,19 +83,23 @@
                     {
                         var actualizar = "Actualizar/?idEmpleado=" + empleado.Id;
                         var asistencias = "/Asistencias/Empleado/?idEmpleado=" + empleado.Id;
-                        <tr>
-                            <td>@i</td>
-                            <td>@empleado.NombreCompleto</td>
-                            <td>@empleado.NumeroExpediente</td>
-                            <td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>
-                            @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
-                            {
-                                <td><a class="btn btn-info" asp-controller="Incidencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"><span class="material-icons text-white">event_note</span></a></td>
-                                <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
-                            }
-                            <td><a class="btn btn-info" asp-controller="Asistencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"> <span class="material-icons">calendar_month</span></a></td>
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@empleado.NombreCompleto</td>
+                                    <td>@empleado.NumeroExpediente</td>
+                                    <td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>
+                                    @if (!rol.Equals("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
+                                    {
+                                        <td><a class="btn btn-info" asp-controller="Incidencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"><span class="material-icons text-white">event_note</span></a></td>
+                                    }
 
-                        </tr>
+                                    @if (rol.Equals("77A225A3-1266-4B1F-B11C-504969AFA856") || rol.Equals("9A39BCCE-B092-4F90-9DE7-9E0FB2137034"))
+                                    {
+                                        <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
+                                    }
+                                    <td><a class="btn btn-info" asp-controller="Asistencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"> <span class="material-icons">calendar_month</span></a></td>
+
+                                </tr>
                         i = i + 1;
                     }
                 }
