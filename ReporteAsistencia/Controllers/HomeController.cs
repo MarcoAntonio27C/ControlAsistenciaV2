@@ -194,10 +194,30 @@ namespace ReporteAsistencia.Controllers
             }
             return Salidas;
         }
-        public List<AsistenciaOrdenada> OrdenarAsistencias(List<Asistencia> asistencias)
+        public List<AsistenciaOrdenada> OrdenarAsistencias(List<Asistencia> asistencias, List<Incidencia> incidencias)
         {
             List<AsistenciaOrdenada> Order = new List<AsistenciaOrdenada>();
-            var dias = GetDias(asistencias);
+            List<Asistencia> temporal = new List<Asistencia>();
+
+            foreach(var asistencia in asistencias)
+            {
+                Asistencia tmp = new Asistencia();
+                tmp.FechaHora = asistencia.FechaHora;
+                tmp.Tipo = asistencia.Tipo;
+                temporal.Add(tmp);
+            }
+
+            foreach (var asistencia in incidencias)
+            {
+                Asistencia tmp = new Asistencia();
+                tmp.FechaHora = asistencia.FechaHora;
+                tmp.Tipo = asistencia.Tipo;
+                temporal.Add(tmp);
+            }
+
+            var tmpDias = temporal.OrderBy(x => x.FechaHora).ToList();
+
+            var dias = GetDias(tmpDias);
             var entradas = GetEntradas(asistencias);
             var salidasComida = GetSalidasComida(asistencias);
             var regresoComidas = GetRegresosComida(asistencias);
@@ -270,17 +290,20 @@ namespace ReporteAsistencia.Controllers
             DateTime fecha = DateTime.Parse(mes);
             var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month) && x.FechaHora.Year.Equals(fecha.Year)).OrderBy(x => x.FechaHora).ToListAsync();
             var incidencias = await _context.Incidencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month) && x.FechaHora.Year.Equals(fecha.Year)).OrderBy(x => x.FechaHora).ToListAsync();
-            
-            var order = OrdenarAsistencias(asistencias);
+            var tmpIncidencias = incidencias;
+
+            var order = OrdenarAsistencias(asistencias,incidencias);
             if (order != null)
             {
                 foreach (var item in order)
                 {
                     TablaAsistencias asistencia = new TablaAsistencias();
+
                     if (!item.Dia.Year.Equals(1))
                     {
                         asistencia.Dia = item.Dia.ToString("M");
                     }
+
                     if (!item.Entrada.Year.Equals(1))
                     {
                         asistencia.Entrada = item.Entrada.ToString("t");
@@ -317,13 +340,27 @@ namespace ReporteAsistencia.Controllers
                         asistencia.Salida = "";
                     }
 
+                    if (tmpIncidencias.Count > 0)
+                    {
+                        if (item.Dia.Day.Equals(tmpIncidencias.First().FechaHora.Day))
+                        {
+                            asistencia.Entrada = tmpIncidencias.First().Tipo;
+                            asistencia.SalidaComida = tmpIncidencias.First().Tipo;
+                            asistencia.RegresoComida = tmpIncidencias.First().Tipo;
+                            asistencia.Salida = tmpIncidencias.First().Tipo;
+                            tmpIncidencias.RemoveAt(0);
+                        }
+                    }
+
                     tabla.Add(asistencia);
                 }
+
+
 
                 return tabla;
             }
 
-
+           
             
 
             return null;

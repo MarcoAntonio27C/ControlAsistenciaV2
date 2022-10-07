@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asistencia FGE</title>
+    <title>Mis Asistencias - FGE</title>
      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>*@
@@ -11,14 +11,27 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Asistencia FGE</a>
+        <nav class="navbar-expand-sm navbar-toggleable-sm bg-light pt-3 pb-3">
+            <div class=" container-fluid row pt-2 pb-2 text-center"  >
+                <div class="col"><img src="~/img/Logotipo_institucional_500.png" style="width:180px" /></div>
+                <div class="col"><a class="text-decoration-none" asp-controller="Home" asp-action="Index"><h1 class="text-secondary">Control de Asistencias</h1></a></div>
+                <div class="col"><img style="width:50px" src="~/img/escudoPuebla4.png" /></div>
+            </div>
+            <!--<div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <img src="~/img/LogoFiscalia.png" />
+                    </div>
+                    <div class="col text-center text-secondary"><h1>ASISTENCIAS</h1></div>
+                    <div class="col"></div>
+                </div>-->
+               
+                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Asistencia FGE</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+                </button>*@
+            <!--</div>-->
         </nav>
     </header>
     <div class="container">
@@ -27,10 +40,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-        </div>
-    </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

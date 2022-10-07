@@ -9,6 +9,7 @@ namespace ControlAsistencia_.Models
         public Guid Id { get; set; }
         public string NombreCompleto { get; set; }
         public string NumeroExpediente { get; set; }
+        public string Curp { get; set; }
         public string FechaIngreso { get; set; }
         public string UR { get; set; }
         public string Horario { get; set; }

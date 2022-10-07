@@ -6,14 +6,14 @@
 
 <link rel="stylesheet" href="~/css/index.css" />
 <div>
-    <div class="row my-auto">
-        <div class="col-4"></div>
-        <div class="col-4 ">
+    <div class="row  mt-5">
+        <div class="col-3"></div>
+        <div class="col-6 ">
             <div class="text-center">
-                <img src="~/img/LogoFiscalia.png" alt="Alternate Text" />
+                @*<img src="~/img/LogoFiscalia.png" alt="Alternate Text" />*@
             </div>
-            <form asp-controller="Home" asp-action="BuscarCurp" method="post" class="border-light border rounded mt-3 pt-5 pb-5 px-3 bg-white">
-                <h5 class="text-center text-secondary mb-5">Reporte Asistencias</h5>
+            <form asp-controller="Home" asp-action="BuscarCurp" method="post" class="rounded mt-3 pt-5 pb-5 px-3 bg-light" style="border: solid 5px #D2D2D2 " >
+                <h4 class="text-center text-secondary mb-5">Reporte Asistencias</h4>
                 <div class="form-group">
                     <label class="text-secondary">Ingrese su Curp</label>
                     <input class="form-control" id="curp" type="text" name="curp" value="" required />
@@ -32,11 +32,11 @@
                 }
 
                 <div class="text-center">
-                    <button type="submit" class="consultar">Consultar</button>
+                    <button type="submit" class="consultar pl-5 pr-5 py-3">Consultar</button>
                 </div>
             </form>
         </div>
-        <div class="col-4"></div>
+        <div class="col-3"></div>
     </div>
 </div>
 

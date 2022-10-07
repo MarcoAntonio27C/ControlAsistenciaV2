@@ -82,6 +82,7 @@ namespace Administrador.Controllers
         {
             Empleado empleado = new Empleado();
             empleado.NombreCompleto = form["nombreCompleto"];
+            empleado.Curp = form["curp"];
             empleado.NumeroExpediente = form["numeroExpediente"];
             empleado.FechaIngreso = form["fechaIngreso"];
             empleado.UR = form["ur"];
@@ -128,6 +129,7 @@ namespace Administrador.Controllers
             empleado.NumeroExpediente = valdata.NumeroExpediente;
             empleado.FechaIngreso = valdata.FechaIngreso;
             empleado.UR = valdata.UR;
+            empleado.Curp = valdata.Curp;
             empleado.Horario = valdata.Horario;
             empleado.IdMunicipio = Guid.Parse(valdata.Municipio);
             empleado.IdInmueble = Guid.Parse(valdata.Inmueble);

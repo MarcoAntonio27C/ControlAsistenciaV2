@@ -23,6 +23,12 @@ namespace ReportePDF
             PdfWriter writer = PdfWriter.GetInstance(doc, workStream);
             writer.CloseStream = false;
             string NombreEmpleado = datos.NombreCompleto;
+            DateTime mesReporte = DateTime.Now;
+
+            if (entradas.Count > 0) mesReporte = entradas.ElementAt(0);
+            if (salidas.Count > 0) mesReporte = salidas.ElementAt(0);
+            if (incidencias.Count > 0) mesReporte = incidencias.ElementAt(0).FechaHora;
+
             doc.AddTitle("");
             doc.AddCreator("");
 
@@ -73,7 +79,7 @@ namespace ReportePDF
             cellNombre.BorderWidthBottom = 1;
             cellNombre.BorderWidth = 0;
             tablaDatos.AddCell(cellNombre);
-            PdfPCell cellMes = new PdfPCell(new Phrase("Mes: " + entradas.ElementAt(0).ToString("Y"), _span));
+            PdfPCell cellMes = new PdfPCell(new Phrase("Mes: " + mesReporte.ToString("Y"), _span));
             cellMes.Colspan = 2;
             cellMes.Padding = 5;
             cellMes.BorderWidthBottom = 1;
@@ -189,7 +195,7 @@ namespace ReportePDF
             tablaCalendario.AddCell(columSabado);
 
             //Obtenemos el primer dia del mes y numero de Dias
-            DateTime date1 = entradas.ElementAt(0);
+            DateTime date1 = mesReporte;
             DateTime date2 = new DateTime(date1.Year, date1.Month, 1);
             string primerDiaMes = new DateTime(date2.Year, date2.Month, 1).DayOfWeek.ToString();
             int numeroDias = date2.AddMonths(1).AddDays(-1).Day;
