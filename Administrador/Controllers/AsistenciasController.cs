@@ -96,6 +96,7 @@ namespace Administrador.Controllers
             List<TablaAsistencias> tabla = new List<TablaAsistencias>();
             DateTime fecha = DateTime.Parse(mes);
             var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month) && x.FechaHora.Year.Equals(fecha.Year)).OrderBy(x => x.FechaHora).ToListAsync();
+
             var order = OrdenarAsistencias(asistencias);
             if (order != null)
             {
@@ -263,6 +264,9 @@ namespace Administrador.Controllers
         public List<AsistenciaOrdenada> OrdenarAsistencias(List<Asistencia> asistencias)
         {
             List<AsistenciaOrdenada> Order = new List<AsistenciaOrdenada>();
+            List<Asistencia> temporal = new List<Asistencia>();
+
+
             var dias = GetDias(asistencias);
             var entradas = GetEntradas(asistencias);
             var salidasComida = GetSalidasComida(asistencias);
@@ -389,7 +393,6 @@ namespace Administrador.Controllers
         [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<TablaAsistencias>>> GetAsistencias(string idEmpleado, string mes)
         {
-
             List<TablaAsistencias> tabla = new List<TablaAsistencias>();
             DateTime fecha = DateTime.Parse(mes);
             var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Month.Equals(fecha.Month) && x.FechaHora.Year.Equals(fecha.Year)).OrderBy(x => x.FechaHora).ToListAsync();

@@ -14,15 +14,22 @@
     <link rel="stylesheet" href="~/css/acceso.css" />
 </head>
 <body>
+    <header>
+        <nav class="navbar-expand-sm navbar-toggleable-sm bg-light pt-3 pb-3">
+            <div class=" container-fluid row pt-2 pb-2 text-center">
+                <div class="col"><img src="~/img/Logotipo_institucional_500.png" style="width:180px" /></div>
+                <div class="col"><a class="text-decoration-none" asp-controller="Home" asp-action="Index"><h1 class="text-secondary">Control de Asistencias</h1></a></div>
+                <div class="col"><img style="width:50px" src="~/img/escudoPuebla4.png" /></div>
+            </div>
+        </nav>
+    </header>
     <div>
+
         <div class="row my-auto">
             <div class="col-4"></div>
             <div class="col-4 ">
-                <div class="text-center mt-5">
-                    <img src="~/img/LogoFiscalia.png" alt="Alternate Text" />
-                </div>
                 <form asp-controller="Acceso" asp-action="Index" method="post" class="border-secondary border rounded mt-5 pt-5 pb-5 px-3 bg-light">
-                    <h5 class="text-center text-secondary mb-5">Control de Asistencias</h5>
+                    <h4 class="text-center text-secondary mb-5">Administrador</h4>
                     <div class="form-group px-5">
                         <div class="row">
                             <label class="text-secondary">Usuario</label>
@@ -34,12 +41,14 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="consultar">Ingresar</button>
+                        <button type="submit" class="consultar px-5 py-3">Ingresar</button>
                     </div>
                 </form>
             </div>
             <div class="col-4"></div>
         </div>
+
+
     </div>
 </body>
 </html>

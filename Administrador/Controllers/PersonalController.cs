@@ -91,13 +91,12 @@ namespace Administrador.Controllers
             empleado.IdMunicipio = Guid.Parse(form["municipio"]);
             empleado.IdInmueble = Guid.Parse(form["inmueble"]);
             empleado.IdCargo = Guid.Parse(form["cargo"]);
-            //empleado.IdCargoHomologado = Guid.Parse(form["cargoHomologado"]);
             empleado.IdCentroTrabajo = Guid.Parse(form["centroTrabajo"]);
             empleado.IdUnidadAdministrativa = Guid.Parse(form["unidadAdministrativa"]);
             empleado.IdContratacion = Guid.Parse(form["contratacion"]);
             _context.Empleado.Add(empleado);
 
-            var exist = await isExisteAsync(form["numeroExpediente"]);
+            var exist = await isExisteAsync(form["curp"]);
 
             if (exist)
             {
@@ -140,16 +139,21 @@ namespace Administrador.Controllers
             empleado.IdContratacion = Guid.Parse(valdata.Contratacion);
             _context.Entry(empleado).State = EntityState.Modified;
 
-            if (await _context.SaveChangesAsync() != 0)
+            var empleados = await _context.Empleado.Where(x => x.Curp.Equals(valdata.Curp) && !x.Id.Equals(empleado.Id)).CountAsync();
+
+            if(empleados == 0)
             {
-                return Ok("Ok");
+                if (await _context.SaveChangesAsync() != 0)
+                {
+                    return Ok("Ok");
+                }
             }
             return Ok("Error");
         }
 
-        async Task<bool> isExisteAsync(string numeroExpediente)
+        async Task<bool> isExisteAsync(string curp)
         {
-            var x = await _context.Empleado.Where(e => e.NumeroExpediente.Equals(numeroExpediente)).ToListAsync();
+            var x = await _context.Empleado.Where(e => e.Curp.Equals(curp)).ToListAsync();
 
             if (x.Count > 0)
             {

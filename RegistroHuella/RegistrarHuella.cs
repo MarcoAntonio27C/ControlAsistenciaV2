@@ -41,7 +41,7 @@ namespace RegistroHuella
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        { 
             bool found = false;
             if (!NumeroExpediente.Text.Equals(""))
             {
@@ -53,11 +53,12 @@ namespace RegistroHuella
                     {
                         foreach(var empleado in empleados)
                         {
-                            if (empleado.NumeroExpediente.Equals(NumeroExpediente.Text))
+                            if (empleado.NumeroExpediente.Equals(NumeroExpediente.Text) || empleado.Curp.Equals(NumeroExpediente.Text))
                             {
                                 tmpEmpleado = empleado;
                                 NombreCompleto.Text = empleado.NombreCompleto;
                                 FechaIngreso.Text = empleado.FechaIngreso;
+                                Curp.Text = empleado.Curp;
                                 capturarHuell.Enabled = true;
                                 Curp.Enabled = true;
                                 found = true;

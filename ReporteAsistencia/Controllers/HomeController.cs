@@ -207,7 +207,7 @@ namespace ReporteAsistencia.Controllers
                 temporal.Add(tmp);
             }
 
-            foreach (var asistencia in incidencias)
+            foreach (var asistencia in asistencias)
             {
                 Asistencia tmp = new Asistencia();
                 tmp.FechaHora = asistencia.FechaHora;

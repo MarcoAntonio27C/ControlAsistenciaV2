@@ -9,7 +9,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #ff0000;
 }
 
 .btn-primary {
@@ -73,9 +73,8 @@ body {
 }
 
 
-
 .titulo {
-    color: #A08A23;
+    color: #D59A32;
     font-size: 35px;
 }
 
@@ -88,4 +87,9 @@ body {
 
 #logo_inicio {
     width: 120px;
+}
+
+
+nav {
+    border-bottom: 8px solid #E6A533;
 }

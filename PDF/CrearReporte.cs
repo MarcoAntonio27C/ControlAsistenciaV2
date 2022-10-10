@@ -124,6 +124,13 @@ namespace ReportePDF
             cellInmueble.BorderWidthBottom = 1;
             cellInmueble.Padding = 5;
             tablaDatos.AddCell(cellInmueble);
+
+            PdfPCell cellObservaciones = new PdfPCell(new Phrase("Observaciones: ", _span));
+            cellObservaciones.Colspan = 10;
+            cellObservaciones.BorderWidth = 0;
+            cellObservaciones.BorderWidthBottom = 1;
+            cellObservaciones.Padding = 5;
+            tablaDatos.AddCell(cellObservaciones);
             //PdfPCell cellTelefono = new PdfPCell(new Phrase("Teléfono:", _span));
             //cellTelefono.Colspan = 3;
             //cellTelefono.Padding = 5;
@@ -342,7 +349,7 @@ namespace ReportePDF
             doc.Add(tablaCalendario);
 
             doc.Add(Chunk.NEWLINE);
-            doc.Add(Chunk.NEWLINE);
+            //doc.Add(Chunk.NEWLINE);
 
             PdfPTable tablafirma = new PdfPTable(10);
             tablafirma.WidthPercentage = 100;

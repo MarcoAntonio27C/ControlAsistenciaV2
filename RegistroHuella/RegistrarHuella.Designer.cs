@@ -74,9 +74,9 @@ namespace RegistroHuella
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(35, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 13);
+            this.label2.Size = new System.Drawing.Size(149, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Numero de Expediente";
+            this.label2.Text = "Numero de Expediente o Curp";
             // 
             // label1
             // 

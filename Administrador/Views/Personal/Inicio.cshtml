@@ -16,32 +16,31 @@
     <div>
         <div class="row py-4">
             <div class="col-10">
-
                 @if (rol.Equals("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
                 {
-                <form asp-controller="Personal" asp-action="BuscarPorUnidad" method="post">
-                    <div class="row">
-                        <div class="col-10">
-                            <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
-                        </div>
-                        <div class="col">
-                            <button type="submit" class="btn btn-info my-auto">Buscar</button>
-                        </div>
-                    </div>
-                </form>
-                }
-                else 
-                {
-                        <form asp-controller="Personal" asp-action="BuscarGeneral" method="post">
-                            <div class="row">
-                                <div class="col-9">
-                                    <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
-                                </div>
-                                <div class="col">
-                                    <button type="submit" class="btn btn-info my-auto px-5">Buscar</button>
-                                </div>
+                    <form asp-controller="Personal" asp-action="BuscarPorUnidad" method="post">
+                        <div class="row">
+                            <div class="col-10">
+                                <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
                             </div>
-                        </form>
+                            <div class="col">
+                                <button type="submit" class="btn btn-info my-auto">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                }
+                else
+                {
+                    <form asp-controller="Personal" asp-action="BuscarGeneral" method="post">
+                        <div class="row">
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-info my-auto px-5">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
                 }
             </div>
 
