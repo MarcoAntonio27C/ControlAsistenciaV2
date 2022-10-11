@@ -40,6 +40,7 @@
                     $(".modal-ok").modal("show");
                 } else if (response == "Error") {
                     $(".modal-error").modal("show");
+                    alert('No se guardarón los datos correctamente');
                 }
             },
         });

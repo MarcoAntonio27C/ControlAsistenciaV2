@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ControlAsistencia_.Models;
+using DBContext;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,79 +12,48 @@ namespace Administrador.Controllers
 {
     public class UsuariosController : Controller
     {
+        private readonly ControlAsistenciaDBContext _context;
         // GET: UsuariosController
-        public ActionResult Inicio()
+
+        public UsuariosController(ControlAsistenciaDBContext context)
         {
+            _context = context;
+        }
+
+        public async Task<ActionResult> InicioAsync()
+        {
+            var usuario = await _context.Usuario.ToListAsync();
+            var roles = await _context.Roles.ToListAsync();
+            var unidades = await _context.UnidadAdministrativa.ToListAsync();
+            ViewData["usuarios"] = usuario;
+            ViewData["roles"] = roles;
+            ViewData["unidades"] = unidades;
             return View();
         }
 
-        // GET: UsuariosController/Details/5
-        public ActionResult Details(int id)
+        [HttpGet]
+        public async Task<ActionResult> Agregar()
         {
+            var unidades = await _context.UnidadAdministrativa.ToListAsync();
+            ViewData["unidades"] = unidades;
             return View();
         }
 
-        // GET: UsuariosController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: UsuariosController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Agregar(IFormCollection form)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            Usuario usuario = new Usuario();
+            usuario.Id = new Guid();
+            usuario.Administrador = form["administrador"];
+            usuario.NombreUsuario = form["nombreUsuario"];
+            usuario.Password = "ControlFGE2022**";
+            usuario.IdRol = form["rol"];
+            usuario.IdUnidadAdministrativa = form["unidadAdministrativa"];
+
+            _context.Add(usuario);
+            await _context.SaveChangesAsync();
+            return View("Agregar");
         }
 
-        // GET: UsuariosController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: UsuariosController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: UsuariosController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: UsuariosController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

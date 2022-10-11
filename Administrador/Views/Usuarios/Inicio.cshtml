@@ -1,8 +1,119 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using ControlAsistencia_.Models;
+@using Microsoft.AspNetCore.Identity;
+@using System.Security.Claims;
 @{
+    ViewData["Title"] = "Inicio";
+    var usuarios = (List<Usuario>)ViewData["usuarios"];
+    var roles = (List<Roles>)ViewData["roles"];
+    var UnidadAdministrativa = (List<UnidadAdministrativa>)ViewData["unidades"];
+    var rol = User.Claims.ElementAt(2).Value.ToUpper();
+    var i = 1;
 }
+<link rel="stylesheet" href="~/css/personal.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div>
+    <h5 id="titulo" class="text-center py-3 rounded mt-4">Empleados</h5>
+    <div>
+        <div class="row py-4">
+            <div class="col-10">
+                @if (rol.Equals("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
+                {
+                    <form asp-controller="Personal" asp-action="BuscarPorUnidad" method="post">
+                        <div class="row">
+                            <div class="col-10">
+                                <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-info my-auto">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                }
+                else
+                {
+                    <form asp-controller="Personal" asp-action="BuscarGeneral" method="post">
+                        <div class="row">
+                            <div class="col-9">
+                                <input class="form-control" type="text" name="nombre" value="" placeholder="Nombre" />
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-info my-auto px-5">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                }
+            </div>
+
+            @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
+            {
+                <div class="col-1">
+                    <a asp-controller="Usuarios" asp-action="Agregar" class="btn btn-info px-5">Agregar</a>
+                </div>
+            }
+        </div>
+        <hr />
+    </div>
+    <div>
+        <table class="table text-secondary text-center bg-light">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Administrador</th>
+                    <th scope="col">Nombre Usuario</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Unidad Administrativa</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var usuario in usuarios)
+                    {
+                        //var actualizar = "Actualizar/?idEmpleado=" + empleado.Id;
+                        //var asistencias = "/Asistencias/Empleado/?idEmpleado=" + empleado.Id;
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@usuario.Administrador</td>
+                                    <td>@usuario.NombreUsuario</td>
+                                    @foreach (var _rol in roles)
+                                    {
+                                        if (_rol.Id.Equals(Guid.Parse(usuario.IdRol)))
+                                        {
+                                            <td>@_rol.Nombre</td>
+                                            break;
+                                        }
+                                    }
+
+                                    @foreach (var unidad in UnidadAdministrativa)
+                                    {
+                                        if (!usuario.IdUnidadAdministrativa.ToString().Equals(""))
+                                        {
+                                            if (unidad.Id.Equals(Guid.Parse(usuario.IdUnidadAdministrativa)))
+                                            {
+                                                <td>@unidad.Nombre</td>
+                                                break;
+                                            }
+                                        }
+                                    }
 
 
-<h5>Usuario</h5>
+                                    @*<td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>*@
+                                    @*@if (!rol.Equals("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
+        {
+            <td><a class="btn btn-info" asp-controller="Incidencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"><span class="material-icons text-white">event_note</span></a></td>
+        }
+
+        @if (rol.Equals("77A225A3-1266-4B1F-B11C-504969AFA856") || rol.Equals("9A39BCCE-B092-4F90-9DE7-9E0FB2137034"))
+        {
+            <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
+        }
+        <td><a class="btn btn-info" asp-controller="Asistencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"> <span class="material-icons">calendar_month</span></a></td>*@
+
+                                </tr>
+                        i = i + 1;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

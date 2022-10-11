@@ -4298,13 +4298,16 @@ namespace DBContext.Migrations
                     b.Property<bool>("Activo")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Administrador")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("IdRol")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdUnidadAdministrativa")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nombre")
+                    b.Property<string>("NombreUsuario")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
@@ -4321,7 +4324,7 @@ namespace DBContext.Migrations
                             Activo = true,
                             IdRol = "77a225a3-1266-4b1f-b11c-504969afa856",
                             IdUnidadAdministrativa = "",
-                            Nombre = "root",
+                            NombreUsuario = "root",
                             Password = "root"
                         },
                         new
@@ -4330,7 +4333,7 @@ namespace DBContext.Migrations
                             Activo = true,
                             IdRol = "9a39bcce-b092-4f90-9de7-9e0fb2137034",
                             IdUnidadAdministrativa = "",
-                            Nombre = "oficialiaMayor",
+                            NombreUsuario = "oficialiaMayor",
                             Password = "oficialiaMayor"
                         },
                         new
@@ -4339,7 +4342,7 @@ namespace DBContext.Migrations
                             Activo = true,
                             IdRol = "592d923a-9d0b-424c-8bc3-0c42ff72495e",
                             IdUnidadAdministrativa = "0e3aa015-4581-4c88-a8c9-679dd80b0d13",
-                            Nombre = "cgesi",
+                            NombreUsuario = "cgesi",
                             Password = "cgesi"
                         },
                         new
@@ -4348,7 +4351,7 @@ namespace DBContext.Migrations
                             Activo = true,
                             IdRol = "a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7",
                             IdUnidadAdministrativa = "",
-                            Nombre = "visitaduria",
+                            NombreUsuario = "visitaduria",
                             Password = "visitaduria"
                         });
                 });

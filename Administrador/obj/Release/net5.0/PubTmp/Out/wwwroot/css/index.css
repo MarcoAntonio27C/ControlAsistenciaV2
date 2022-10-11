@@ -1,7 +1,7 @@
 ﻿
 
 .enlace {
-    background-color: #A08A23;
+    background-color: #E6A533;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -9,3 +9,12 @@
 
 
 
+.footer {
+    position: absolute;
+    /*bottom: 0!important;*/
+    /*margin-bottom: 0;*/
+    margin-top: 400px !important;
+    width: 100%;
+    white-space: nowrap;
+    /* line-height: 60px; Vertically center the text there */
+}

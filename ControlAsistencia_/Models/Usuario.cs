@@ -7,7 +7,8 @@ namespace ControlAsistencia_.Models
     public class Usuario
     {
         public Guid Id { get; set; }
-        public string Nombre { get; set; }
+        public string Administrador { get; set; }
+        public string NombreUsuario { get; set; }
         public string Password { get; set; }
         public string IdUnidadAdministrativa { get; set; }
         public bool Activo { get; set; }

@@ -3,7 +3,10 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\css\site.css
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\img\background-large.png
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\img\escudoPuebla4.png
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\img\Logo500_White.png
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\img\LogoFiscalia.png
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\img\Logotipo_institucional_500.png
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\js\asistencias.js
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\js\index.js
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\ReporteAsistencia\obj\Release\net5.0\PubTmp\Out\wwwroot\js\site.js

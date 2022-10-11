@@ -28,13 +28,13 @@ namespace Administrador.Controllers
         [HttpPost]
         public async Task<IActionResult> IndexAsync(string usuario, string password)
         {
-            var _usuario = await _context.Usuario.Where(x => x.Nombre.Equals(usuario) && x.Password.Equals(password) && x.Activo.Equals(true)).FirstOrDefaultAsync();
+            var _usuario = await _context.Usuario.Where(x => x.NombreUsuario.Equals(usuario) && x.Password.Equals(password) && x.Activo.Equals(true)).FirstOrDefaultAsync();
             if(_usuario != null)
             {
                 var claims = new List<Claim>
                 {
                     
-                    new Claim(ClaimTypes.Name, _usuario.Nombre),
+                    new Claim(ClaimTypes.Name, _usuario.NombreUsuario),
                     new Claim(ClaimTypes.Surname, _usuario.IdUnidadAdministrativa),
                     new Claim(ClaimTypes.Role, _usuario.IdRol)
                 };

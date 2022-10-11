@@ -94,10 +94,10 @@ namespace DBContext
             modelBuilder.Entity<Roles>().HasData(new Roles { Id = new Guid("592d923a-9d0b-424c-8bc3-0c42ff72495e"), Nombre = "UnidadAdministrativa", Activo=true });
             
             // Usuarios
-            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("1139861b-5044-4257-b89a-db1b5d4402bf"), Nombre = "root", Password="root",IdUnidadAdministrativa= "", Activo=true, IdRol= "77a225a3-1266-4b1f-b11c-504969afa856" });
-            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("061bc395-9e04-40d9-824c-0c740f63af15"), Nombre = "oficialiaMayor", Password= "oficialiaMayor", IdUnidadAdministrativa= "", Activo=true, IdRol= "9a39bcce-b092-4f90-9de7-9e0fb2137034" });
-            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("67bb4459-8401-4b49-8ac8-67d3219fbfc8"), Nombre = "cgesi", Password="cgesi",IdUnidadAdministrativa= "0e3aa015-4581-4c88-a8c9-679dd80b0d13", Activo=true, IdRol= "592d923a-9d0b-424c-8bc3-0c42ff72495e" });
-            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("0524769e-c144-4772-a050-811e7d2b68ce"), Nombre = "visitaduria", Password="visitaduria",IdUnidadAdministrativa= "", Activo=true, IdRol= "a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7" });
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("1139861b-5044-4257-b89a-db1b5d4402bf"), NombreUsuario = "root", Password="root",IdUnidadAdministrativa= "", Activo=true, IdRol= "77a225a3-1266-4b1f-b11c-504969afa856" });
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("061bc395-9e04-40d9-824c-0c740f63af15"), NombreUsuario = "oficialiaMayor", Password= "oficialiaMayor", IdUnidadAdministrativa= "", Activo=true, IdRol= "9a39bcce-b092-4f90-9de7-9e0fb2137034" });
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("67bb4459-8401-4b49-8ac8-67d3219fbfc8"), NombreUsuario = "cgesi", Password="cgesi",IdUnidadAdministrativa= "0e3aa015-4581-4c88-a8c9-679dd80b0d13", Activo=true, IdRol= "592d923a-9d0b-424c-8bc3-0c42ff72495e" });
+            modelBuilder.Entity<Usuario>().HasData(new Usuario { Id = new Guid("0524769e-c144-4772-a050-811e7d2b68ce"), NombreUsuario = "visitaduria", Password="visitaduria",IdUnidadAdministrativa= "", Activo=true, IdRol= "a7c2766f-c09e-41a1-b6e4-35aeed3ad8e7" });
 
             //Catalogo Municipios - Nuevos
 
