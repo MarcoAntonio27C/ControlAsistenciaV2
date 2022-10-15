@@ -1,0 +1,17 @@
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\PDF.deps.json
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\PDF.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ref\PDF.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\PDF.pdb
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.csproj.AssemblyReference.cache
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.Properties.Resources.resources
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.csproj.GenerateResource.cache
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.AssemblyInfoInputs.cache
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.AssemblyInfo.cs
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.csproj.CoreCompileInputs.cache
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\ref\PDF.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.pdb
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ControlAsistencia_.dll
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\bin\Debug\net5.0\ControlAsistencia_.pdb
+C:\Users\Marco Antonio C\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\PDF\obj\Debug\net5.0\PDF.csproj.CopyComplete

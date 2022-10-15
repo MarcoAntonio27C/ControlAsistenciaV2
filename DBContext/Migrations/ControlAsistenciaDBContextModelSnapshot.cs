@@ -28,6 +28,9 @@ namespace DBContext.Migrations
                     b.Property<DateTime>("FechaHora")
                         .HasColumnType("datetime2");
 
+                    b.Property<TimeSpan>("Hora")
+                        .HasColumnType("time");
+
                     b.Property<Guid>("IdEmpleado")
                         .HasColumnType("uniqueidentifier");
 

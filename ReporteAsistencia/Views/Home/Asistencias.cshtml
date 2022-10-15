@@ -1,0 +1,91 @@
+﻿@using ControlAsistencia_.Models;
+@{ 
+    Empleado empleado = (Empleado)ViewData["empleado"];
+    //var FechaActual = DateTime.Now.ToString("yyyy-MM-01");
+    var FechaActual = DateTime.Now.ToString("yyyy-MM-01");
+   
+}
+
+<div>
+    <h3 class="text-center text-secondary" >Asistencias</h3>
+    <div class="mt-5 px-4 py-4 border rounded">
+        <div class="row">
+            <div class="col">
+                <label>Nombre</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.Nombre" />
+            </div>
+            <div class="col">
+                <label>Apellido Paterno</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.ApellidoPaterno" />
+            </div>
+            <div class="col">
+                <label>Apellido Materno</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.ApellidoMaterno" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <label>Numero de Expediente</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.NumeroExpediente" />
+            </div>
+            <div class="col">
+                <label>Adscripción</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.Adscripcion" />
+            </div>
+            <div class="col">
+                <label>Fecha Ingreso</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.FechaIngreso" />
+            </div>
+            <div class="col">
+                <label>Cargo</label>
+                <input class="form-control" type="text" readonly name="name" value="@empleado.Cargo" />
+            </div>
+        </div>
+
+        <hr />
+
+        <div>
+            <form  method="post">
+                <div class="row">
+                    <div class="col text-center">
+                        <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
+                        <label>Seleccionar Mes:</label>
+                        <input class="form-control" type="date" min="2020-01-01" name="mes" id="mes" value="@FechaActual" />
+                    </div>
+                    <div class="col text-center">
+                        <label class="text-white">.</label>
+                        <button id="Buscar" type="button" class="form-control btn btn-info">Consultar Asistencias</button>
+                    </div>
+                    <div class="col text-center">
+                        <label class="text-white">.</label>
+                        <button type="submit" class=" form-control btn btn-info align-bottom" asp-controller="Home" asp-action="DescargarPDF" formtarget="_blank">Generar Reporte</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+            No hay registros de asistencias.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="my-5">
+            <table id="tabla" class="table table-hover w-90 m-auto">
+                <thead class="text-secondary text-center">
+                    <tr>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Entrada</th>
+                        <th scope="col">Salida Comida</th>
+                        <th scope="col">Entrada Comida</th>
+                        <th scope="col">Salida</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/js/asistencias.js" asp-append-version="true"></script>

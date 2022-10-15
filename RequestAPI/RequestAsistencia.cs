@@ -24,8 +24,7 @@ namespace RequestAPI
                     id = $"{asistencia.Id}",
                     idEmpleado = $"{asistencia.IdEmpleado}",
                     tipo = $"{asistencia.Tipo}",
-                    fechaHora = $"{asistencia.FechaHora.ToString("yyyy-MM-ddTHH:mm:ss")}"
-
+                    fechaHora = $"{asistencia.FechaHora.ToString("yyyy-MM-ddTHH:mm:ss")}",
                 });
                 var response = client.Execute(request);
                 return response;
