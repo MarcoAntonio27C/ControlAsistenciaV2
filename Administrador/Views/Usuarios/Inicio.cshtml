@@ -44,18 +44,14 @@
                     </form>
                 }
             </div>
-
-            @if (User.IsInRole("77a225a3-1266-4b1f-b11c-504969afa856") || User.IsInRole("9a39bcce-b092-4f90-9de7-9e0fb2137034"))
-            {
                 <div class="col-1">
                     <a asp-controller="Usuarios" asp-action="Agregar" class="btn btn-info px-5">Agregar</a>
                 </div>
-            }
         </div>
         <hr />
     </div>
     <div>
-        <table class="table text-secondary text-center bg-light">
+        <table class="table text-secondary  bg-light">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -63,6 +59,8 @@
                     <th scope="col">Nombre Usuario</th>
                     <th scope="col">Rol</th>
                     <th scope="col">Unidad Administrativa</th>
+                    <th scope="col">Activo</th>
+                    <th scope="col">Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -83,33 +81,32 @@
                                             break;
                                         }
                                     }
+                                    <td>
 
-                                    @foreach (var unidad in UnidadAdministrativa)
-                                    {
-                                        if (!usuario.IdUnidadAdministrativa.ToString().Equals(""))
+
+                                        @foreach (var unidad in UnidadAdministrativa)
                                         {
-                                            if (unidad.Id.Equals(Guid.Parse(usuario.IdUnidadAdministrativa)))
+                                            if (!usuario.IdUnidadAdministrativa.ToString().Equals(""))
                                             {
-                                                <td>@unidad.Nombre</td>
+                                                if (unidad.Id.Equals(Guid.Parse(usuario.IdUnidadAdministrativa)))
+                                                {
+                                                @unidad.Nombre
                                                 break;
                                             }
                                         }
                                     }
-
-
-                                    @*<td><button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-info detalles" id="@empleado.Id"> <span class="material-icons">description</span></button></td>*@
-                                    @*@if (!rol.Equals("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
-        {
-            <td><a class="btn btn-info" asp-controller="Incidencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"><span class="material-icons text-white">event_note</span></a></td>
-        }
-
-        @if (rol.Equals("77A225A3-1266-4B1F-B11C-504969AFA856") || rol.Equals("9A39BCCE-B092-4F90-9DE7-9E0FB2137034"))
-        {
-            <td><a class="btn btn-info" href="@actualizar"> <span class="material-icons">edit_square</span></a></td>
-        }
-        <td><a class="btn btn-info" asp-controller="Asistencias" asp-action="Empleado" asp-route-idEmpleado="@empleado.Id" asp-route-mes="@DateTime.Now"> <span class="material-icons">calendar_month</span></a></td>*@
-
-                                </tr>
+                                        </td>
+                                        <td>
+                                            @if (usuario.Activo.Equals(true)) {
+                                                <label class="text-success">SI</label>
+                                             }
+                                             else
+                                             {
+                                               <label class="text-danger">NO</label>
+                                             }
+                                        </td>
+                                        <td><a class="btn btn-info" asp-controller="Usuarios" asp-action="Delete" asp-route-IdUsuario="@usuario.Id"> <span class="material-icons">delete</span></a></td>
+                                    </tr>
                         i = i + 1;
                     }
                 }

@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ControlAsistencia_\ControlAsistencia_.csproj" />
     <ProjectReference Include="..\DBContext\DBContext.csproj" />
+    <ProjectReference Include="..\PDF\ReportePDF.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

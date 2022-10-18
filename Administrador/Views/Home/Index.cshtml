@@ -14,13 +14,13 @@
                 </div>
             </div>
         </div>
-        @if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
+        @if (User.IsInRole("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
         {
             <div class="col">
                 <div class="card mb-3 text-center bg-light">
                     <img class="card-img-top w-50 mx-auto mt-3" src="~/img/reloj.png" alt="Card image cap">
                     <div class="card-body">
-                        @if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
+                        @if (User.IsInRole("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
                         {
                             <h5 class="card-title border rounded "><a class="btn w-100 btn-light enlace" asp-controller="Asistencias" asp-action="Unidad" asp-route-idUnidadAdministrativa="@User.Claims.ElementAt(1).Value" asp-route-fecha="@DateTime.Now">Asistencias</a></h5>
 

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using ReportePDF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -389,6 +390,50 @@ namespace Administrador.Controllers
 
             return tabla;
         }
+
+        public async Task<DatosEmpleado> DatosGeneralesAsync(Empleado empleado)
+        {
+            DatosEmpleado datos = new DatosEmpleado();
+
+            var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
+            var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
+            //var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
+            var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
+            var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
+            var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
+
+            datos.Id = empleado.Id;
+            datos.NombreCompleto = empleado.NombreCompleto;
+            datos.NumeroExpediente = empleado.NumeroExpediente;
+            datos.FechaIngreso = empleado.FechaIngreso;
+            datos.UR = empleado.UR;
+            datos.Horario = empleado.Horario;
+            datos.Activo = empleado.Activo;
+            datos.Inmueble = inmueble.Nombre;
+            datos.Direccion = inmueble.Direccion;
+            datos.Cargo = cargo.Nombre;
+            datos.CentroTrabajo = centroTrabajo.Nombre;
+            datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
+            datos.Contratacion = contratacion.Nombre;
+            return datos;
+        }
+
+        public async Task<IActionResult>Reporte(string idEmpleado, string mes)
+        {
+            DateTime date = DateTime.Parse(mes);
+            var empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
+            var Datos_Generales = await DatosGeneralesAsync(empleado);
+            var asistencias = await _context.Asistencia.Where(x => x.IdEmpleado.Equals(Guid.Parse(idEmpleado)) && x.FechaHora.Year.Equals(date.Year) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
+            var incidencias = await _context.Incidencia.Where(x => x.IdEmpleado.Equals(empleado.Id) && x.FechaHora.Year.Equals(date.Year) && x.FechaHora.Month.Equals(date.Month)).OrderBy(x => x.FechaHora).ToListAsync();
+
+            var entradas = GetEntradas(asistencias);
+            var salidas = GetSalidas(asistencias);
+
+            CrearReporte reporte = new CrearReporte();
+            string filepath = System.IO.Path.GetTempFileName().Replace(".tmp", ".pdf");
+            return reporte.Crear(Datos_Generales, entradas, salidas, incidencias, filepath);
+        }
+
         [HttpGet]
         [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<TablaAsistencias>>> GetAsistencias(string idEmpleado, string mes)

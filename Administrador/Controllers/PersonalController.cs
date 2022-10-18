@@ -29,7 +29,7 @@ namespace Administrador.Controllers
         public async Task<IActionResult> Inicio()
         {
             var idUnidadAdministrativa = User.Claims.ElementAt(1).Value;
-            if (User.IsInRole("592d923a-9d0b-424c-8bc3-0c42ff72495e"))
+            if (User.IsInRole("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
             {
                 var empleadosUnidad = await _context.Empleado.Where(x => x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa))).ToListAsync();
                 ViewData["empleados"] = empleadosUnidad;

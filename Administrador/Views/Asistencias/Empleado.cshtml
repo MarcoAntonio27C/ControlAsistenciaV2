@@ -18,11 +18,15 @@
                     <div class="col-4">
                         <input type="hidden" name="idEmpleado" id="idEmpleado" value="@empleado.Id" />
                         <label>Seleccionar Mes:</label>
-                        <input class="form-control"  type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required  />
+                        <input class="form-control" type="date" min="2022-01-01" value="@FechaActual" name="mes" id="mes" required />
                     </div>
                     <div class="col-3 text-center">
                         <label class="text-white">.</label>
                         <button id="Buscar" type="submit" asp-controller="Asistencias" asp-action="Empleado" class="form-control btn btn-info">Consultar Asistencias</button>
+                    </div>
+                    <div class="col-3 text-center">
+                        <label class="text-white">.</label>
+                        <button id="Buscar" type="submit" asp-controller="Asistencias" formtarget="_blank" asp-action="Reporte" class="form-control btn btn-info">Reporte</button>
                     </div>
                 </div>
             </form>

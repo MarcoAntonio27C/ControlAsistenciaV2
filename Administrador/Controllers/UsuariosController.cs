@@ -47,12 +47,34 @@ namespace Administrador.Controllers
             usuario.Administrador = form["administrador"];
             usuario.NombreUsuario = form["nombreUsuario"];
             usuario.Password = "ControlFGE2022**";
+            usuario.Activo = true;
             usuario.IdRol = form["rol"];
             usuario.IdUnidadAdministrativa = form["unidadAdministrativa"];
 
             _context.Add(usuario);
             await _context.SaveChangesAsync();
-            return View("Agregar");
+
+            var unidades = await _context.UnidadAdministrativa.ToListAsync();
+            ViewData["unidades"] = unidades;
+            return RedirectToAction("Agregar","Usuarios");
+        }
+
+        public async Task<IActionResult> Delete(string IdUsuario)
+        {
+            var usuario = await _context.Usuario.FindAsync(Guid.Parse(IdUsuario));
+            var usuarios = await _context.Usuario.ToListAsync();
+            var roles = await _context.Roles.ToListAsync();
+            var unidades = await _context.UnidadAdministrativa.ToListAsync();
+
+            usuario.Activo = false;
+            _context.Entry(usuario).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            ViewData["usuarios"] = usuarios;
+            ViewData["roles"] = roles;
+            ViewData["unidades"] = unidades;
+
+            return View("Inicio");
         }
 
     }

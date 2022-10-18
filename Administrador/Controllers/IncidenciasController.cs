@@ -38,20 +38,30 @@ namespace Administrador.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AgregarAsync(string idEmpleado, string dia, string tipo)
+        public async Task<ActionResult> AgregarAsync(string idEmpleado, string primerDia,string ultimoDia, string tipo)
         {
             Empleado empleado = await _context.Empleado.FindAsync(Guid.Parse(idEmpleado));
-            DateTime fecha = DateTime.Parse(dia);
-            Incidencia incidencia = new Incidencia();
-            incidencia.Id = Guid.NewGuid();
-            incidencia.IdEmpleado = Guid.Parse(idEmpleado);
-            incidencia.Tipo = tipo;
-            incidencia.FechaHora = DateTime.Parse(dia);
 
-            _context.Incidencia.Add(incidencia);
+            DateTime _primerDia = DateTime.Parse(primerDia);
+            DateTime _ultimoDia = DateTime.Parse(ultimoDia);
+
+            DateTime tmp = _primerDia;
+
+            while(tmp <= _ultimoDia)
+            {
+                Incidencia incidencia = new Incidencia();
+                incidencia.Id = Guid.NewGuid();
+                incidencia.IdEmpleado = Guid.Parse(idEmpleado);
+                incidencia.Tipo = tipo;
+                incidencia.FechaHora = tmp;
+                _context.Incidencia.Add(incidencia);
+                tmp = tmp.AddDays(1);
+            }
+
+          
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Empleado", "Incidencias", new {/* routeValues, for example: */ idEmpleado = idEmpleado,mes = dia });
+            return RedirectToAction("Empleado", "Incidencias", new {/* routeValues, for example: */ idEmpleado = idEmpleado,mes = primerDia });
 
         }
 

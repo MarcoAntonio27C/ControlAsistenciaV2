@@ -15,7 +15,7 @@ namespace GenerarAsistencia
         public AsistenciaCorrecta()
         {
             InitializeComponent();
-            this.timer1.Interval = 2400;
+            this.timer1.Interval = 2800;
             this.timer1.Start();
             this.timer1.Tick += (o, e) =>
             {
@@ -30,8 +30,5 @@ namespace GenerarAsistencia
 
 
         }
-
-
-
     }
 }

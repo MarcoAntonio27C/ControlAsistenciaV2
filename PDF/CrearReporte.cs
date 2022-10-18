@@ -62,7 +62,7 @@ namespace ReportePDF
             iTextSharp.text.Font _encabezado = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 11, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
             iTextSharp.text.Font _fecha = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 9, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
             //  Escribimos el encabezamiento en el documento
-            var titulo = new Paragraph("Fiscalía General del Estado \nOficialía Mayor \nDirección de Administración \nSubdireccíon de Servicios Personales \nControl de Asistencia", _encabezado);
+            var titulo = new Paragraph("Fiscalía General del Estado \nOficialía Mayor \nDirección de Administración \nSubdireccíon de Servicios Personales \nControl de Asistencia\n ", _encabezado);
 
             PdfPTable tablaDatos = new PdfPTable(10);
             tablaDatos.WidthPercentage = 100;
@@ -141,7 +141,7 @@ namespace ReportePDF
 
             titulo.Alignment = Element.ALIGN_CENTER;
             doc.Add(titulo);
-            doc.Add(Chunk.NEWLINE);
+            //doc.Add(Chunk.NEWLINE);
             doc.Add(tablaDatos);
             doc.Add(Chunk.NEWLINE);
 
