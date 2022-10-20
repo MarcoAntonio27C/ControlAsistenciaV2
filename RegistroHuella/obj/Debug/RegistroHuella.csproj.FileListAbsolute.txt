@@ -73,11 +73,10 @@ F:\Fiscalia\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.applicat
 F:\Fiscalia\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.csproj.CopyComplete
 F:\Fiscalia\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.exe
 F:\Fiscalia\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.exe
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.exe.config
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.exe.manifest
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.application
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.exe
-C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.pdb
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\ControlAsistencia_.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\DPFPDevNET.dll
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\DPFPEngNET.dll
@@ -104,3 +103,4 @@ C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.csproj.CopyComplete
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.exe
 C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\obj\Debug\RegistroHuella.pdb
+C:\Users\Ast\Source\Repos\MarcoAntonio27C\ControlAsistenciaV2\RegistroHuella\bin\Debug\RegistroHuella.pdb
