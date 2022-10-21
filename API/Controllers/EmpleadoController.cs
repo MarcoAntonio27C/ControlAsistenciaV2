@@ -62,7 +62,7 @@ namespace API.Controllers
             return await _context.Empleado.Where(x => (!x.Huella.Equals(null)) && (x.IdInmueble.Equals(Guid.Parse(idInmueble)))).ToListAsync();
         }
 
-        // POST: api/Empleado
+        // POST: api/EmpleadoCreatedAtAction
         [HttpPost]
         public async Task<ActionResult<Empleado>> AddEmpleado(Empleado Empleado)
         {
