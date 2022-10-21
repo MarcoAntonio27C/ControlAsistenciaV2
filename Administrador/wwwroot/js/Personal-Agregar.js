@@ -26,6 +26,21 @@
 
     $.ajax({
         type: 'GET',
+        url: "GetCategoria",
+        success: function (response) {
+            $.each(response, function (i, categoria) {
+                $("#categoria").append($('<option>', {
+                    value: categoria.id,
+                    text: categoria.nombre
+                }));
+            });
+           // console.log(response);
+        },
+    });
+
+
+    $.ajax({
+        type: 'GET',
         url: "GetMunicipios",
         success: function (response) {
             $.each(response, function (i, municipio) {
@@ -34,7 +49,7 @@
                     text: municipio.nombre
                 }));
             });
-           // console.log(response);
+            // console.log(response);
         },
     });
 

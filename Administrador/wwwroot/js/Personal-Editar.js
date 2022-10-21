@@ -46,6 +46,22 @@
         });
     });
 
+
+    $.ajax({
+        type: 'GET',
+        url: "../GetCategoria",
+        success: function (response) {
+            $.each(response, function (i, categoria) {
+                $("#categoria").append($('<option>', {
+                    value: categoria.id,
+                    text: categoria.nombre
+                }));
+            });
+            // console.log(response);
+        },
+    });
+
+
     $.ajax({
         type: 'GET',
         url: "../GetMunicipios",

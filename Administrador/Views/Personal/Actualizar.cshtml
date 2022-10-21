@@ -14,10 +14,24 @@
         <form id="formularioUpdate" method="post">
             <input type="hidden" name="id" value="@empleado.Id" />
             <div class="row mt-1">
-                <div class="col-4">
+                <div class="col-6">
                     <label>Nombre Completo</label>
                     <input class="form-control" id="nombreCompleto" type="text" name="nombreCompleto" value="@empleado.NombreCompleto" placeholder="Paterno / Materno / Nombre(s)" />
                 </div>
+                <div class="col-2">
+                    <label>Genero</label>
+                    <select class="form-control" id="genero" name="genero">
+                        <option value="@empleado.Genero">@empleado.Genero</option>
+                        <option value="HOMBRE">HOMBRE</option>
+                        <option value="MUJER">MUJER</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>Telefono</label>
+                    <input class="form-control" id="telefono" type="text" name="telefono" value="@empleado.Telefono" placeholder="" />
+                </div>
+            </div>
+            <div class="row mt-1">
                 <div class="col-3">
                     <label>CURP</label>
                     <input class="form-control" type="text" id="curp" name="curp" value="@empleado.Curp" placeholder="" />
@@ -74,6 +88,12 @@
                     <label>Cargo:</label>
                     <select class="form-control" id="cargo" name="cargo">
                         <option value="@empleado.IdCargo">@datosEmpleado.Cargo</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>Categoria:</label>
+                    <select class="form-control" id="categoria" name="categoria">
+                        <option value="@empleado.IdCategoria">@datosEmpleado.Categoria</option>
                     </select>
                 </div>
                 @*<div class="col-4">

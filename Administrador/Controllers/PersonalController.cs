@@ -81,13 +81,17 @@ namespace Administrador.Controllers
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
             Empleado empleado = new Empleado();
-            empleado.NombreCompleto = form["nombreCompleto"];
-            empleado.Curp = form["curp"];
+            empleado.NombreCompleto = form["nombreCompleto"].ToString().ToUpper();
+            empleado.Curp = form["curp"].ToString().ToUpper();
+            empleado.Genero = form["genero"];
+            empleado.Telefono = form["telefono"];
+            empleado.NumeroExpediente = form["numeroExpediente"];
             empleado.NumeroExpediente = form["numeroExpediente"];
             empleado.FechaIngreso = form["fechaIngreso"];
             empleado.UR = form["ur"];
             empleado.Horario = form["horario"];
             empleado.Activo = true;
+            empleado.IdCategoria = Guid.Parse(form["categoria"]);
             empleado.IdMunicipio = Guid.Parse(form["municipio"]);
             empleado.IdInmueble = Guid.Parse(form["inmueble"]);
             empleado.IdCargo = Guid.Parse(form["cargo"]);
@@ -128,6 +132,9 @@ namespace Administrador.Controllers
             empleado.NumeroExpediente = valdata.NumeroExpediente;
             empleado.FechaIngreso = valdata.FechaIngreso;
             empleado.UR = valdata.UR;
+            empleado.IdCategoria = Guid.Parse(valdata.Categoria);
+            empleado.Genero = valdata.Genero;
+            empleado.Telefono = valdata.Telefono;
             empleado.Curp = valdata.Curp;
             empleado.Horario = valdata.Horario;
             empleado.IdMunicipio = Guid.Parse(valdata.Municipio);
@@ -203,6 +210,7 @@ namespace Administrador.Controllers
             var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
             var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
             var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
+            var categoria = await _context.Categoria.Where(x => x.Id.Equals(empleado.IdCategoria)).FirstAsync();
 
             datos.Id = empleado.Id;
             datos.NombreCompleto = empleado.NombreCompleto;
@@ -219,6 +227,7 @@ namespace Administrador.Controllers
             //datos.CargoHomologado = cargoHomologado.Nombre;
             datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
             datos.Contratacion = contratacion.Nombre;
+            datos.Categoria = categoria.Nombre;
             return datos;
         }
 
@@ -268,6 +277,14 @@ namespace Administrador.Controllers
         {
             var contratacion = await _context.Contratacion.OrderBy(n => n.Nombre).ToListAsync();
             return contratacion;
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoria()
+        {
+            var categoria = await _context.Categoria.OrderBy(n => n.Nombre).ToListAsync();
+            return categoria;
         }
 
     }

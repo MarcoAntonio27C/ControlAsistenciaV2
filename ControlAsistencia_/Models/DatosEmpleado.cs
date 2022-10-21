@@ -23,5 +23,8 @@ namespace ControlAsistencia_.Models
         public string CentroTrabajo { get; set; }
         public string UnidadAdministrativa { get; set; }
         public string Contratacion { get; set; }
+        public string Categoria { get; set; }
+        public string Genero { get; set; }
+        public string Telefono { get; set; }
     }
 }

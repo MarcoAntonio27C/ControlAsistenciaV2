@@ -24,6 +24,7 @@ namespace DBContext
         public DbSet<CentroTrabajo> CentroTrabajo { get; set; }
         public DbSet<Contratacion> Contratacion { get; set; }
         public DbSet<Incidencia> Incidencia { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -86,6 +87,64 @@ namespace DBContext
             {
                 entity.HasKey(e => e.Id);
             });
+
+            modelBuilder.Entity<Categoria>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+            });
+
+            // Categoria
+
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("3af153fd-fe52-4fdb-8e8f-494f4df51752"), Nombre = "G0003", Descripcion = "OFICIAL M" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("b072f69c-913e-4f29-b6b8-fec68c0548e0"), Nombre = "G0020", Descripcion = "OFICIAL R" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("938b12b1-0d36-4676-ac48-ecb8ffea54f7"), Nombre = "G0905", Descripcion = "AGENTE DEL MINISTERIO PUBLICO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("3faf5fe9-74d6-4254-938c-860fe5d6ecc6"), Nombre = "G0907", Descripcion = "OFICIAL I" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("cc1a9117-feea-485c-a9d2-7c9887e1bb3f"), Nombre = "G0911", Descripcion = "OFICIAL E" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("fe7271b2-cb0e-46f5-a742-16e3e4fc5926"), Nombre = "G1301", Descripcion = "OFICIAL A" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("b789a7eb-9e69-4105-bbea-be0531ada765"), Nombre = "G1601", Descripcion = "AGENTE MINISTERIAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("b75eeeea-94b0-412b-b290-90bc5f565518"), Nombre = "H3001", Descripcion = "HONORARIOS" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("d538ee39-7911-4722-aad7-67047ef095f6"), Nombre = "M01A1", Descripcion = "FISCAL GENERAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("a4f89176-b60b-4b8a-a292-1ef98b3f288c"), Nombre = "N02A1", Descripcion = "FISCAL ESPECIAL O REGIONAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("c0f55aec-b749-4aa6-85be-a7b206074f89"), Nombre = "N03A1", Descripcion = "OFICIAL MAYOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("d706b04f-41e4-4cd4-9c94-ad9cc0c1f47a"), Nombre = "N03B2", Descripcion = "JEFE DE LA OFICINA DEL FISCAL GENERAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("3089d436-6c78-4178-b2e0-0e04e316c538"), Nombre = "O03A1", Descripcion = "TITULAR DE LA AGENCIA ESTATAL DE INVESTIGACION" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("92d0bb9f-8db1-4b18-8a2b-0841169fad5d"), Nombre = "O03A2", Descripcion = "TITULAR DEL INSTITUTO DE CIENCIAS FORENSES" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("f5ffbd42-3523-4f50-a9ac-88a110872e2d"), Nombre = "O03A3", Descripcion = "TITULAR DEL ORGANO INTERNO DE CONTROL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("64adafa4-9440-473e-8b8f-c9ab1e97035e"), Nombre = "O03A4", Descripcion = "TITULAR DE LA VISITADURIA GENERAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("4159806c-af91-4b2d-ada6-b0274036431e"), Nombre = "O03A5", Descripcion = "TITULAR DEL INSTITUTO DE FORMACION PROFESIONAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("868361a4-d6b8-4b49-8cc2-b1ad373a43ea"), Nombre = "O04A1", Descripcion = "COORDINADOR GENERAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("15e40268-c5ec-4b11-acae-cf743fb4e6c2"), Nombre = "O04C3", Descripcion = "DIRECTOR DE AREA" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("c37f714f-d746-4bd3-9a65-4727a129209f"), Nombre = "P004A5", Descripcion = "COORDINADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("0eb6dc3e-500a-450e-a799-9a560723dc0b"), Nombre = "P04A5", Descripcion = "COORDINADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("f4cfe54d-60aa-4853-96c3-002fa5380098"), Nombre = "P06A1", Descripcion = "TITULAR DE UNIDAD" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("baf11cee-b98d-403f-82fe-3133353c5eaf"), Nombre = "P06B2", Descripcion = "FISCAL " });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("6d1258c0-13bd-4254-9574-94735a902766"), Nombre = "P06C3", Descripcion = "DIRECTOR DE AREA" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("d3d7f48b-3ac9-45b1-8abf-d3b5c1b6f978"), Nombre = "Q09A1", Descripcion = "ASESOR ESPECIAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("f1e3746f-a8ab-4c8d-9596-10b3a3fb6ed3"), Nombre = "Q10D4", Descripcion = "VISITADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("7a2ae1c5-a1ea-4639-a813-5b423642388f"), Nombre = "Q11C3", Descripcion = "ASESOR TECNICO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("3463e60f-7b48-4d37-9656-7cc6a26f098b"), Nombre = "R12C3", Descripcion = "COORDINADOR DE MEDIOS ALTERNATIVOS" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("994a0ed5-4eee-4d10-9459-59c43455b5b0"), Nombre = "R12D4", Descripcion = "SUBDIRECTOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("81070038-3f51-450d-bb21-9b0a7bde8ff5"), Nombre = "R13A1", Descripcion = "AGENTE DEL MINISTERIO PUBLICO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("7c67824a-890a-4749-90de-cfbcccee02f6"), Nombre = "R13A4", Descripcion = "FISCAL INVESTIGADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("672e609a-7c35-4746-b362-eda8862f2198"), Nombre = "R14A1", Descripcion = "COMANDANTE MINISTERIAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("afcc3719-7d77-462d-b811-8fde6ca6ffde"), Nombre = "R16A1", Descripcion = "INSPECTOR GENERAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("88c28bb3-eb4c-4de3-bd94-07f6b7f548d1"), Nombre = "S18B2", Descripcion = "JEFE DE GRUPO MINISTERIAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("60fd3fb1-8546-4446-968c-804c54bd1dc8"), Nombre = "S20A1", Descripcion = "JEFE DE DEPARTAMENTO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("da8a0b96-e23c-464d-b09d-c2f9c55cafb0"), Nombre = "T21C1", Descripcion = "OFICIAL MINISTERIAL" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("6644b65a-7b20-428f-9f4e-054cc8fdef8a"), Nombre = "T21C3", Descripcion = "AGENTE INVESTIGADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("96dc08e2-a9a9-4809-829d-13a42bafcc42"), Nombre = "T22A2", Descripcion = "PERITO JEFE" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("b4c2c672-e8a4-4bd3-b65b-8eae657dc765"), Nombre = "T23A2", Descripcion = "PERITO SUPERIOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("6d9c83c1-20c8-4a49-9a04-bd8d6ba5c1e0"), Nombre = "T23B1", Descripcion = "PERITO ESPECIALIZADO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("5e5504f6-8688-4ff1-b6e1-46ab08d5f21e"), Nombre = "T24A2", Descripcion = "PERITO TECNICO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("cc60dd4d-29b3-442d-9d63-d8356f9aa333"), Nombre = "T25A2", Descripcion = "FACILITADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("ad961859-cc43-4901-a820-81c5f77283b0"), Nombre = "T26A1", Descripcion = "AUXILIAR FACILITADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("a713a84f-5b5a-4a3a-98f7-043d054d507b"), Nombre = "T27A1", Descripcion = "INVITADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("c5ad47f8-a385-4762-8d6c-18dfb69d8fa5"), Nombre = "T28C3", Descripcion = "AUXILIAR DEL MINISTERIO PUBLICO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("1e15c6ca-7cdf-46ee-a390-cf4c2eeeb36e"), Nombre = "T29A1", Descripcion = "OFICIAL DEL MINISTERIO PUBLICO" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("3974fee6-7964-443a-b5a0-5853047b7731"), Nombre = "U30A4", Descripcion = "ANALISTA INVESTIGADOR" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("efb112b6-40e9-470b-9b2b-dade1a3205ea"), Nombre = "U30C3", Descripcion = "ANALISTA" });
+            modelBuilder.Entity<Categoria>().HasData(new Categoria { Id = new Guid("1046ec42-4fe0-47f7-b3dc-29987941ff5d"), Nombre = "V31C4", Descripcion = "AUXILIAR" });
+
 
             //Roles
             modelBuilder.Entity<Roles>().HasData(new Roles { Id = new Guid("77a225a3-1266-4b1f-b11c-504969afa856"), Nombre = "Root", Activo = true });
