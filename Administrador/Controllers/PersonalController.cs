@@ -210,7 +210,17 @@ namespace Administrador.Controllers
             var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
             var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
             var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
-            var categoria = await _context.Categoria.Where(x => x.Id.Equals(empleado.IdCategoria)).FirstAsync();
+
+            if (!empleado.IdCategoria.ToString().Equals("00000000-0000-0000-0000-000000000000"))
+            {
+                var categoria = await _context.Categoria.Where(x => x.Id.Equals(empleado.IdCategoria)).FirstAsync();
+                datos.Categoria = categoria.Nombre;
+            }
+            else
+            {
+                datos.Categoria = "";
+            }
+           
 
             datos.Id = empleado.Id;
             datos.NombreCompleto = empleado.NombreCompleto;
@@ -227,7 +237,7 @@ namespace Administrador.Controllers
             //datos.CargoHomologado = cargoHomologado.Nombre;
             datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
             datos.Contratacion = contratacion.Nombre;
-            datos.Categoria = categoria.Nombre;
+            
             return datos;
         }
 

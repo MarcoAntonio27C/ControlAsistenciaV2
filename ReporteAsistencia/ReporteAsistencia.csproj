@@ -18,5 +18,5 @@
     <ProjectReference Include="..\DBContext\DBContext.csproj" />
     <ProjectReference Include="..\PDF\ReportePDF.csproj" />
   </ItemGroup>
-
+	
 </Project>

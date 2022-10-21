@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Fiscalia\\ControlAsistenciaV2\\API\\API.csproj": {}
+    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\API\\API.csproj": {}
   },
   "projects": {
-    "F:\\Fiscalia\\ControlAsistenciaV2\\API\\API.csproj": {
+    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Fiscalia\\ControlAsistenciaV2\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "F:\\Fiscalia\\ControlAsistenciaV2\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "F:\\Fiscalia\\ControlAsistenciaV2\\API\\obj\\",
+        "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Ast\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Ast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -28,8 +34,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\Fiscalia\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
-                "projectPath": "F:\\Fiscalia\\ControlAsistenciaV2\\DBContext\\DBContext.csproj"
+              "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
+                "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj"
               }
             }
           }
@@ -79,8 +85,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -92,22 +97,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Fiscalia\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
+    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Fiscalia\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+        "projectUniqueName": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
         "projectName": "ControlAsistencia_",
-        "projectPath": "F:\\Fiscalia\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
-        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "F:\\Fiscalia\\ControlAsistenciaV2\\ControlAsistencia_\\obj\\",
+        "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj",
+        "packagesPath": "C:\\Users\\Ast\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Ast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -145,27 +156,32 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Fiscalia\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
+    "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Fiscalia\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
+        "projectUniqueName": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
         "projectName": "DBContext",
-        "projectPath": "F:\\Fiscalia\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
-        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "F:\\Fiscalia\\ControlAsistenciaV2\\DBContext\\obj\\",
+        "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\DBContext.csproj",
+        "packagesPath": "C:\\Users\\Ast\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\DBContext\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Ast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -178,8 +194,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "F:\\Fiscalia\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
-                "projectPath": "F:\\Fiscalia\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj"
+              "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj": {
+                "projectPath": "C:\\Users\\Ast\\Source\\Repos\\MarcoAntonio27C\\ControlAsistenciaV2\\ControlAsistencia_\\ControlAsistencia_.csproj"
               }
             }
           }
@@ -213,8 +229,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -223,7 +238,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }
