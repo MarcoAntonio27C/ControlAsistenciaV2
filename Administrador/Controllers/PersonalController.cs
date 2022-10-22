@@ -80,6 +80,7 @@ namespace Administrador.Controllers
 
         public async Task<IActionResult> GuardarDatosAsync(IFormCollection form)
         {
+            var ur = await _context.UnidadAdministrativa.FindAsync(Guid.Parse(form["unidadAdministrativa"]));
             Empleado empleado = new Empleado();
             empleado.NombreCompleto = form["nombreCompleto"].ToString().ToUpper();
             empleado.Curp = form["curp"].ToString().ToUpper();
@@ -88,7 +89,7 @@ namespace Administrador.Controllers
             empleado.NumeroExpediente = form["numeroExpediente"];
             empleado.NumeroExpediente = form["numeroExpediente"];
             empleado.FechaIngreso = form["fechaIngreso"];
-            empleado.UR = form["ur"];
+            empleado.UR = ur.UR;
             empleado.Horario = form["horario"];
             empleado.Activo = true;
             empleado.IdCategoria = Guid.Parse(form["categoria"]);
@@ -207,7 +208,7 @@ namespace Administrador.Controllers
             var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
             var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
             //var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
-            var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
+            var centroTrabajo = await _context.CentroTrabajo_.Where(x => x.Id.Equals(empleado.IdCentroTrabajo_)).FirstAsync();
             var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
             var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
 
@@ -257,13 +258,22 @@ namespace Administrador.Controllers
             return unidadAdministrativas;
         }
 
+        //[HttpGet]
+        //[Produces("application/json")]
+        //public async Task<ActionResult<IEnumerable<CentroTrabajo>>> GetCentroTrabajo()
+        //{
+        //    var centroTrabajo = await _context.CentroTrabajo.OrderBy(n => n.Nombre).ToListAsync();
+        //    return centroTrabajo;
+        //}
+
         [HttpGet]
         [Produces("application/json")]
-        public async Task<ActionResult<IEnumerable<CentroTrabajo>>> GetCentroTrabajo()
+        public async Task<ActionResult<IEnumerable<CentroTrabajo>>> GetCentroTrabajo(Guid id)
         {
-            var centroTrabajo = await _context.CentroTrabajo.OrderBy(n => n.Nombre).ToListAsync();
+            var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(id)).OrderBy(n => n.Nombre).ToListAsync();
             return centroTrabajo;
         }
+
 
         [HttpGet]
         [Produces("application/json")]

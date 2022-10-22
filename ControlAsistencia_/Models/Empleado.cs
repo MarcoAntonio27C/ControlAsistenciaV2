@@ -22,6 +22,7 @@ namespace ControlAsistencia_.Models
         public Guid IdCargo { get; set; }
         public Guid IdCategoria { get; set; }
         public Guid IdCentroTrabajo { get; set; }
+        public Guid IdCentroTrabajo_ { get; set; }
         public Guid IdUnidadAdministrativa { get; set; }
         public Guid IdContratacion { get; set; }
     }

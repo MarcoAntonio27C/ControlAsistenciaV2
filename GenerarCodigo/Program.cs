@@ -86,7 +86,7 @@ namespace GenerarCodigo
             //generar.GenerarMunicipios(listaMunicipio);
             // generar.GenerarCargos(centroTrabajo);
 
-            generar.GenerarGuid(49);
+            generar.GenerarGuid(709);
         }
     }
 }

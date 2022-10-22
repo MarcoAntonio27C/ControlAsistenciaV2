@@ -111,19 +111,43 @@
         },
     });
 
-    $.ajax({
-        type: 'GET',
-        url: "../GetCentroTrabajo",
-        success: function (response) {
-            $.each(response, function (i, centro) {
-                $("#centroTrabajo").append($('<option>', {
-                    value: centro.id,
-                    text: centro.nombre
-                }));
-            });
-            // console.log(response);
-        },
+
+
+
+    $("#unidadAdministrativa").change(function () {
+        console.log($("#unidadAdministrativa").val());
+        $("#centroTrabajo").empty();
+        $.ajax({
+            type: 'GET',
+            url: "../GetCentroTrabajo",
+            data: {
+                id: $("#unidadAdministrativa").val()
+            },
+            success: function (response) {
+                $.each(response, function (i, centro) {
+                    $("#centroTrabajo").append($('<option>', {
+                        value: centro.id,
+                        text: centro.nombre
+                    }));
+                });
+                // console.log(response);
+            },
+        });
     });
+
+    //$.ajax({
+    //    type: 'GET',
+    //    url: "../GetCentroTrabajo",
+    //    success: function (response) {
+    //        $.each(response, function (i, centro) {
+    //            $("#centroTrabajo").append($('<option>', {
+    //                value: centro.id,
+    //                text: centro.nombre
+    //            }));
+    //        });
+    //        // console.log(response);
+    //    },
+    //});
 
 
     $.ajax({
