@@ -2874,6 +2874,4279 @@ namespace DBContext.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ControlAsistencia_.Models.CentroTrabajo_", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdUnidadAdministrativa")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CentroTrabajo_");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("85b2994a-bc8a-45ac-9b6b-e1ea86183aa5"),
+                            IdUnidadAdministrativa = new Guid("3a719e2b-7777-4694-aceb-157be081f8b3"),
+                            Nombre = "FISCALIA GENERAL DEL ESTADO"
+                        },
+                        new
+                        {
+                            Id = new Guid("582bf0fc-bd08-4535-9be1-dc09fd2f0ddb"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "FISCALIA ESPECIALIZADA EN DERECHOS HUMANOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("9c96f770-c6b4-486f-a5ae-bc6304c15915"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("cd50a05d-b7b0-4929-970e-b827e8ca9806"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("003088d9-97ee-4828-9d62-78747a608cb5"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("147327a8-628d-4fb8-9438-41edb5cf7842"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("13981e94-cc68-4796-8150-fd327c18ac39"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("881bda4c-0094-49e5-9f76-9922bc42eeb4"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("1475752a-c042-4215-90e1-1d62985adacf"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE JUSTICIA PARA ADOLESCENTES"
+                        },
+                        new
+                        {
+                            Id = new Guid("2d0cdda3-586e-46bc-acc9-f5578fa28680"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE INVESTIGACION DE JUSTICIA PARA ADOLESCENTES"
+                        },
+                        new
+                        {
+                            Id = new Guid("5ee8bdea-29e6-4306-8318-ba5ce71968ee"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE LITIGACION DE JUSTICIA PARA ADOLESCENTES"
+                        },
+                        new
+                        {
+                            Id = new Guid("b369ebd5-fe4b-45cf-95bc-1d8903ccd080"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE ASUNTOS INDIGENAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("d123d64b-c460-435e-9dcb-11231d0ada7d"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE ASUNTOS INDIGENAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("d8706cee-4e89-4cf3-9dfc-821f74cc4b75"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE ASESORIA DE DERECHOS DE LOS PUEBLOS Y COMUNIDADES INDIGENAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("9dc1bc6b-adbf-403e-b6ea-7a24bd0e6ffb"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS COMETIDOS CONTRA PERIODISTAS Y DEFENSORES DE DERECHOS HUMANOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("7ebe5a51-a4ad-4b8f-9420-42139cbca1a6"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE DELITOS COMETIDOS CONTRA PERIODISTAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("4bbaa4f7-38d9-4804-ac90-d154d4884c5d"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE DELITOS COMETIDOS CONTRA DEFENSORES DE DERECHOS HUMANOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("ac4f9828-6331-4d96-a927-7311f4d52870"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DEL DELITO DE TORTURA Y OTROS TRATOS CRUELES, INHUMANOS O DEGRADANTES"
+                        },
+                        new
+                        {
+                            Id = new Guid("4cec6187-45d0-4835-8a80-2f426ddca104"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE INVESTIGACION DEL DELITO DE TORTURA Y OTROS TRATOS CRUELES, INHUMANOS O DEGRADANTES"
+                        },
+                        new
+                        {
+                            Id = new Guid("e658f04e-2777-49d3-ad7c-6ff332e113c3"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE LITIGACION DEL DELITO DE TORTURA Y OTROS TRATOS CRUELES, INHUMANOS O DEGRADANTES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6e331c16-2941-4488-a437-02ba919fabf4"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE DERECHOS HUMANOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("e10b3eb9-dcbc-4755-9c67-52a7dc9e313a"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "DEPARTAMENTO DE PROMOCION, SUPERVISION, EVALUACION Y MEJORA EN MATERIA DE DERECHOS HUMANOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("46e6bb9f-0eba-430b-b0d1-0bdc5282ea14"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "DEPARTAMENTO PARA LA ATENCION DE ASUNTOS DE ORGANISMOS PROTECTORES DE DERECHOS HUMANOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("a4be520a-f319-4ac7-a4b9-7893f6dfb2cd"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE DELITOS COMETIDOS CONTRA LA COMUNIDAD LGBTTTIQ"
+                        },
+                        new
+                        {
+                            Id = new Guid("b0dc2b1d-15ef-465a-94d3-9eca926f64f6"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("28b1c75a-2de1-4770-be6f-9f014771190d"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("150dfe97-f245-4b39-9bd7-69751a80f637"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("f1f2bdfb-a6ec-4e0a-9e12-137f73d40efc"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("7b114ec0-8705-420d-b50b-0862de2f0738"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("3ccab718-7165-4edf-a304-93d68870bd6c"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("41daae71-b575-47f2-af75-8507b26adc8f"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("851bde15-5e63-4a97-80d2-4485493ebcb6"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("831deba9-add2-42f2-8c54-785e7af85c02"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("da17f627-f2c6-4c92-8cc5-999ae187b9f4"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("faa128e0-6334-44fb-a3d7-02c8b83e6b35"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("fb6ba384-73f3-489e-b2ad-2186cd1486da"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("2adb4a78-2046-4f71-bf5a-73826e50b14c"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("3bbcfae6-6f2c-41d5-b7f4-e0bc11de9c4f"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("0785936d-e0ff-4a88-9426-a635fb4be3d1"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("5adf957b-47bf-4558-befa-2f432b258f64"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("b1fe6def-133f-443f-a2bf-fdac49f61ef3"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("5bf4c1fd-1d0e-4024-a287-11abbe857c08"),
+                            IdUnidadAdministrativa = new Guid("d052658e-e743-478d-aa94-21f279ddde3d"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("6ed3e8fd-45be-4cbb-942e-d7c219934344"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "FISCALIA DE INVESTIGACION METROPOLITANA"
+                        },
+                        new
+                        {
+                            Id = new Guid("4fdbcb95-a165-48e8-84d9-32693325a335"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("f11e3dc9-8893-447f-8b1c-78b6af2b4057"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("18c0824b-dfa3-48ae-a9a6-24328b86dc57"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("1c28eedb-4f2e-4565-8e46-e21349ee1bce"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("ec8d96cb-ae32-4d84-9321-8899ca2c2ca3"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("a8e3c870-71b3-4b7c-9057-9e51247e9cfb"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("fc1984b9-8bbf-40ca-a10c-eacc723b6ef6"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "FISCALIA DE ZONA NORTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("856225f7-138a-452e-a09f-fe4e0a82002a"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION NORTE A"
+                        },
+                        new
+                        {
+                            Id = new Guid("abdf77ba-166e-4c2c-9d54-7f53ed07c96b"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION AMOZOC"
+                        },
+                        new
+                        {
+                            Id = new Guid("dcd15742-9f33-4075-8bbb-74c967207259"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION TECALI DE HERRERA"
+                        },
+                        new
+                        {
+                            Id = new Guid("bc545139-b3d5-422c-ae6d-5e25b81dccb1"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEPEACA"
+                        },
+                        new
+                        {
+                            Id = new Guid("5dd322a9-de95-419d-b14a-65e90f403450"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION NORTE B"
+                        },
+                        new
+                        {
+                            Id = new Guid("15392ac9-0b3a-4484-8d11-260f9e4e0659"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION SAN PEDRO CHOLULA"
+                        },
+                        new
+                        {
+                            Id = new Guid("99b0c955-0073-4631-a232-fbc8141dfd2d"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION SAN ANDRES CHOLULA"
+                        },
+                        new
+                        {
+                            Id = new Guid("0cdd327b-f469-45f2-8e33-2e8b281be21d"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION SANTA CLARA OCOYUCAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("3acf6593-f133-41d4-9a60-6c25580d1ff9"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION CORONANGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("7ca9f135-d523-4b7a-982a-e57dc0f0e7c2"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "FISCALIA DE ZONA SUR"
+                        },
+                        new
+                        {
+                            Id = new Guid("e994990b-2af9-483b-9dd6-3f8d57b64938"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION SUR A"
+                        },
+                        new
+                        {
+                            Id = new Guid("d9972d34-68f4-47cf-b58e-6689107c4aaf"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION ATLIXCO"
+                        },
+                        new
+                        {
+                            Id = new Guid("5e44670c-7f55-47d3-a770-5f78b29c82f9"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION SAN MARTIN TEXMELUCAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("e1e4dc15-44b5-4f61-897e-b3b0b1c5b6b8"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION JUAN C. BONILLA"
+                        },
+                        new
+                        {
+                            Id = new Guid("d2d630ba-0fae-4a83-8fa3-c2c916504bff"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION HUEJOTZINGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("550b3d9b-6289-4b06-b059-63633d973a2a"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION SUR B"
+                        },
+                        new
+                        {
+                            Id = new Guid("4db56425-03f4-41fc-894f-fbc9bf2b5ca1"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION PUEBLA"
+                        },
+                        new
+                        {
+                            Id = new Guid("8e1d2f7e-76b2-4d0e-819b-274f273ba4c9"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION CUAUTLANCINGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("874c5be6-10f9-4778-92b9-e1199f7399ba"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA EL ORDEN CONSTITUCIONAL Y LA SEGURIDAD DEL ESTADO; CONTRA LA SEGURIDAD PUBLICA; CONTRA LA SEGURIDAD DE LOS MEDIOS DE TRANSPORTE Y DE LAS VIAS DE COMUNICACION Y VIOLACION DE CORRESPONDENCIA; CONTRA LA SEGURIDAD COLECTIVA; CONTRA LA AUTORIDAD Y EL DELITO DE ATAQUES PELIGROSOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("b7b0ac1b-5886-4bc3-a37c-b2fcbd90f457"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE DELITOS CONTRA EL ORDEN CONSTITUCIONAL Y LA SEGURIDAD DEL ESTADO; CONTRA LA SEGURIDAD DE LOS MEDIOS DE TRANSPORTE Y DE LAS VIAS DE COMUNICACION Y VIOLACION DE CORRESPONDENCIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("9f997ed4-13fd-4755-bf32-edfd536d3dd7"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE DELITOS CONTRA LA SEGURIDAD COLECTIVA; CONTRA LA AUTORIDAD Y EL DELITO DE ATAQUES PELIGROSOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("50edebd6-4310-4681-ad1a-69efd7630b8b"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS DE VIOLACION DE SECRETOS; DE RESPONSABILIDAD PROFESIONAL; DE DELITOS DE FALSEDAD, Y DELITOS POR INFRACCIONES A LAS LEYES Y REGLAMENTOS SOBRE INHUMACIONES Y EXHUMACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("12971a06-1cab-4ea3-a309-c7d8e7a14688"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA LA PAZ, LA SEGURIDAD Y LAS GARANTIAS DE LAS PERSONAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("20689dfc-e26e-4a74-be5c-1ff798ff06d9"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA LA VIDA Y LA INTEGRIDAD CORPORAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("79765ca2-a0f8-4861-904f-8d5a97e12925"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = " UNIDAD DE INVESTIGACION Y LITIGACION DE LOS DELITOS DE HOMICIDIOS Y LESIONES DOLOSAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("b112aa0e-6606-4e18-93db-ef2a441c868c"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE LOS DELITOS DE HOMICIDIOS Y LESIONES CULPOSAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("abde283f-4856-4751-aa9c-a759298e81af"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS DE ABUSO DE CONFIANZA, FRAUDE, DESPOJO, DAÑO EN PROPIEDAD AJENA, ROBO DE GANADO, ROBO DE MAQUINARIA E IMPLEMENTOS DIVERSOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("3b9915c4-ab0d-4635-989b-fa67324739e2"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE LOS DELITOS DE ABUSO DE CONFIANZA Y FRAUDE"
+                        },
+                        new
+                        {
+                            Id = new Guid("293156a0-d1be-4e58-872e-4569f23deab7"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE LOS DELITOS DE DESPOJO Y DAÑO EN PROPIEDAD AJENA"
+                        },
+                        new
+                        {
+                            Id = new Guid("9e2a12d8-65c6-4ad3-be25-4d9ab3fe18a2"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE INVESTIGACION Y LITIGACION DE LOS DELITOS DE ROBO DE GANADO, ROBO DE MAQUINARIA E IMPLEMENTOS DIVERSOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("f1c405ae-a5fc-4677-b60b-b8cc8716af2e"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS AMBIENTALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("b93b49e3-315a-411b-aead-8513f3787541"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS INFORMATICOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("f27e8605-d882-4c77-8f91-f5cc318ebb5f"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA LOS ANIMALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("bb7b04b9-7b1f-423e-abb9-a57b8d2115da"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("1587df44-d21d-4c5c-96ba-e13ebd9aec28"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("7475d86c-20db-4455-8427-6eb583b5cd8a"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("def54838-35f2-407b-9159-74e22d59ed13"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("d8c8ab9c-ad99-406f-aeeb-fc5b6a39128c"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("0251e523-282a-4c34-ba2a-ee1f40b23b4b"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("bcb9b4c1-a3e3-434f-8f72-96462ddc004b"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6e3d9860-af41-422c-95c4-936acb81950f"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("d7284323-7608-4320-90d2-3cfe1388f67d"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("66d14843-b05c-4cc8-bd57-cb2cf4d73257"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("2a5d069a-c291-4095-ac1e-10f0e93b42b0"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("b23f6e86-c975-4a95-a97c-3eb3946c722c"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("73d611d5-ec5c-4f49-9192-a801ecc0dcf0"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("846c8966-28d4-4d6f-afb9-26160354974e"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("1be3c6b5-562b-4e36-bc0a-d450b7a4cfa1"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("753d5c13-d741-4986-82b5-4dc70ff267a9"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("56c1c1bc-7c6c-4404-a461-540ef5a00590"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("b5c89e76-ac8e-454f-89a7-616f42496d6b"),
+                            IdUnidadAdministrativa = new Guid("32c97d34-0fd4-46a0-9366-67843e3864ee"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("7cf2922d-6148-44ee-bd8d-ad1939ed0012"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "FISCALIA DE INVESTIGACION REGIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("2360cf26-01f5-4a37-b74e-274ab2edaced"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("e2e32521-3f39-4952-8eed-cd7f10f7b4ec"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("3b84fc7e-dde1-465b-8879-b956d1cd721a"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("8798b047-8347-49b4-bd97-b553e26c1161"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("0cabf426-753c-40d6-8bb4-50def363c614"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("3d782e3e-6594-4b6d-8cd3-96796ec83539"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("9fd81a58-7a6a-4ecc-950c-996015f6dde9"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "FISCALIA DE ZONA NORTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("cb8b409c-563a-45d4-95bf-cb45b34dba15"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION HUAUCHINANGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("6fc3a5b6-ddad-4b8d-b34f-c3610c162e87"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ZACATLAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("154836a0-1a36-4900-97df-6a7012cb1a26"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TETELA DE OCAMPO"
+                        },
+                        new
+                        {
+                            Id = new Guid("a4ca2ca0-1e6a-4b72-a949-ff91bbd8991e"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION XICOTEPEC"
+                        },
+                        new
+                        {
+                            Id = new Guid("e9c93cff-9083-4316-ba12-fc9e7792d650"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION VENUSTIANO CARRANZA"
+                        },
+                        new
+                        {
+                            Id = new Guid("eac585ec-3473-4a17-8457-4c826db9366b"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION METLALTOYUCA"
+                        },
+                        new
+                        {
+                            Id = new Guid("546e0f40-7cc6-40fc-9770-af428fcc7ed8"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TLAOLA"
+                        },
+                        new
+                        {
+                            Id = new Guid("3cb58417-5bea-4980-af4a-20b0994aa535"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION CHIGNAHUAPAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("fc15f816-7111-46ec-b7c0-cbba658b66c2"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION FRANCISCO Z. MENA"
+                        },
+                        new
+                        {
+                            Id = new Guid("c541c6d8-925b-4f1c-acd9-cedcdc2fec86"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION HUEHUETLA"
+                        },
+                        new
+                        {
+                            Id = new Guid("5beaf9c2-1695-480b-a986-b848fc1a8895"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION AHUAZOTEPEC"
+                        },
+                        new
+                        {
+                            Id = new Guid("a7d01cc8-1547-4591-8511-18cdf6ecf87c"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "FISCALIA DE ZONA SUR"
+                        },
+                        new
+                        {
+                            Id = new Guid("3da00444-2924-49a8-b6d7-8c8a16ef0ed4"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION IZUCAR DE MATAMOROS"
+                        },
+                        new
+                        {
+                            Id = new Guid("253b032b-287f-4ffa-a52d-d44b727ca419"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TULCINGO DE VALLE"
+                        },
+                        new
+                        {
+                            Id = new Guid("f4f9d184-5e22-40f4-924f-d3e7c6729158"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION PIAXTLA"
+                        },
+                        new
+                        {
+                            Id = new Guid("e185fa50-7a9f-42d2-8f2a-0d00b86aa453"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ACATLAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("b4ec9405-7eca-4907-b7a1-9fff128996cb"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ATENCINGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("54f58b0a-b575-42c0-b2d8-ec4fa1902ca6"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEPEXCO"
+                        },
+                        new
+                        {
+                            Id = new Guid("3326b325-abf2-4c4a-af95-4f61e0855076"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEPEOJUMA"
+                        },
+                        new
+                        {
+                            Id = new Guid("30e15b12-86a0-4412-ab93-28063d36d789"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION CHIAUTLA DE TAPIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("84fc8af9-e76b-4535-8b12-465a8e809a9c"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEHUITZINGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("1a4495e4-46c8-46e8-91b9-a17a31701bd7"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION CHIETLA"
+                        },
+                        new
+                        {
+                            Id = new Guid("edef7d72-81bb-4196-92fe-ea6743ce8443"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TLAPANALA"
+                        },
+                        new
+                        {
+                            Id = new Guid("cf642569-082d-48b3-91b1-00554d8a215f"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "FISCALIA DE ZONA ORIENTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("c16d01c7-4bba-4c91-ad67-0912ece27d74"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEZIUTLAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("b1a8ad2f-2a99-4306-a9bd-ce5b05750b0d"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION SAN SALVADOR EL SECO"
+                        },
+                        new
+                        {
+                            Id = new Guid("eaeb9509-a4cc-4c55-b755-04485f3f75f9"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION HUEYTAMALCO"
+                        },
+                        new
+                        {
+                            Id = new Guid("dda4bde0-a9ee-4710-ab57-557c7cace482"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TLATLAUQUITEPEC"
+                        },
+                        new
+                        {
+                            Id = new Guid("042433ba-7a20-452b-9ede-e3ff1b73e887"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ESPERANZA"
+                        },
+                        new
+                        {
+                            Id = new Guid("85795294-c608-4c03-9496-2221a8740ad9"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ZARAGOZA"
+                        },
+                        new
+                        {
+                            Id = new Guid("c6f65e13-f5f2-4390-ba0d-1cc9e83cd523"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEPEYAHUALCO"
+                        },
+                        new
+                        {
+                            Id = new Guid("c01b7d73-0c30-403e-8c2d-53c14574f3ef"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ACATENO"
+                        },
+                        new
+                        {
+                            Id = new Guid("b616dddf-5ed9-467d-abcb-9245094819fd"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ZACAPOAXTLA"
+                        },
+                        new
+                        {
+                            Id = new Guid("ea2d0fd3-7127-44ac-b136-6138eaff7f8d"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ATEMPAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("01832029-c692-4efd-9cac-4ac4a2c2e6f3"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION LIBRES"
+                        },
+                        new
+                        {
+                            Id = new Guid("2c5938a2-a307-47e0-a12d-05b86dd88cf3"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ORIENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("bba0943e-248f-42f9-8988-13d62757784a"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION CUETZALAN DEL PROGRESO"
+                        },
+                        new
+                        {
+                            Id = new Guid("736c954f-e286-4ac0-88c8-e74bb288152b"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION GUADALUPE VICTORIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("595bca3c-7564-4385-8bae-c25c0d8ce66b"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "FISCALIA DE ZONA PONIENTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("70d4c14f-aace-4abd-9838-eb677d5cd32e"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEHUACAN "
+                        },
+                        new
+                        {
+                            Id = new Guid("c97f8014-de4b-4f6d-9483-48342be912d4"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION SAN GABRIEL CHILAC"
+                        },
+                        new
+                        {
+                            Id = new Guid("31a53fff-4189-4bc9-9ccd-aae51106bbcc"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION CIUDAD SERDAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("3a3f314b-9fb4-41f7-880f-0f47c264a315"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION PALMAR DE BRAVO"
+                        },
+                        new
+                        {
+                            Id = new Guid("9e5dc788-50f8-4638-89cb-9cd62d096771"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEPANCO DE LOPEZ"
+                        },
+                        new
+                        {
+                            Id = new Guid("a65b66b3-48ed-4905-b3bd-1f10348def09"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ARCO ALTEPEXI"
+                        },
+                        new
+                        {
+                            Id = new Guid("4f5c6c18-d6fa-4ae9-9a42-da7c02417a8d"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TECAMACHALCO"
+                        },
+                        new
+                        {
+                            Id = new Guid("92e8df02-961c-47ee-b40e-19d67919a2b3"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION AJALPAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("90835afd-38ba-4c40-a7d1-693df5124852"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ZOQUITLAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("a4252309-31d4-4d98-846d-422d8d5ac127"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TLACOTEPEC DE BENITO JUAREZ"
+                        },
+                        new
+                        {
+                            Id = new Guid("7abc967d-16f2-4196-924b-482b0e00caea"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION SANTIAGO MIAHUATLAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("46f2af4f-83b4-4643-b9f7-12561a0e8313"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEPEXI DE RODRIGUEZ"
+                        },
+                        new
+                        {
+                            Id = new Guid("80e3f5f5-d887-4cb8-ba1e-8816115f6596"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TEPATLAXCO DE HIDALGO "
+                        },
+                        new
+                        {
+                            Id = new Guid("887bd3a8-641b-45ff-9f78-5a22857c3386"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TLAHUAPAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("e549c823-96f1-45f3-9d21-44c142446387"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION LOS REYES DE JUAREZ"
+                        },
+                        new
+                        {
+                            Id = new Guid("7c0a85d0-7466-4474-b792-e39643f8be51"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION SAN JOSE CHIAPA"
+                        },
+                        new
+                        {
+                            Id = new Guid("de1ddff3-5e71-4945-99ca-90d49dcbfe62"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION CALPAN"
+                        },
+                        new
+                        {
+                            Id = new Guid("37c0fc0e-c090-47c9-82ee-4262366508b1"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION TLALTENANGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("86d04792-af61-4140-87cd-7ddb7bb65db2"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ACATZINGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("16b9513c-69cb-4d0c-b92a-8ba7ece1829d"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE INVESTIGACION ACAJETE"
+                        },
+                        new
+                        {
+                            Id = new Guid("f9cf19d8-96c0-46e7-8128-2d05c417b6e1"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA EL ORDEN CONSTITUCIONAL Y LA SEGURIDAD DEL ESTADO; CONTRA LA SEGURIDAD PUBLICA; CONTRA LA SEGURIDAD DE LOS MEDIOS DE TRANSPORTE Y DE LAS VIAS DE COMUNICACION Y VIOLACION DE CORRESPONDENCIA; CONTRA LA SEGURIDAD COLECTIVA; CONTRA LA AUTORIDAD Y EL DELITO DE ATAQUES PELIGROSOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("2ec7af8f-c9cc-4d2d-bfb6-1317137a8195"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS DE VIOLACION DE SECRETOS; DE RESPONSABILIDAD PROFESIONAL; DE DELITOS DE FALSEDAD, Y DELITOS POR INFRACCIONES A LAS LEYES Y REGLAMENTOS SOBRE INHUMACIONES Y EXHUMACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("2147a9e5-c494-4b37-a2c5-18df12360563"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA LA PAZ, LA SEGURIDAD Y LAS GARANTIAS DE LAS PERSONAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("16c5c59d-3d4e-4f91-893e-5af2f8103d03"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA LA VIDA Y LA INTEGRIDAD CORPORAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("665cde74-aa3f-4973-bb54-df4254a858bd"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS DE ABUSO DE CONFIANZA, FRAUDE, DESPOJO, DAÑO EN PROPIEDAD AJENA, ROBO DE GANADO, ROBO DE MAQUINARIA E IMPLEMENTOS DIVERSOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("5a77d6dd-db41-4dd2-b806-0bb04ba2b431"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS AMBIENTALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("ab123422-5920-49d2-b8c4-12debf44ffb5"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS INFORMATICOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("e2d04eee-bd8e-472b-8bdb-3addc97fe1c6"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE DELITOS CONTRA LOS ANIMALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("44983249-012f-4366-9587-4e050d530f50"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("2a3a6150-8796-426c-a883-dad3e2b9aa6d"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("993435b7-0eb1-4638-bd31-ef7e1ca4bd01"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("261a026b-8bf2-4c92-9f09-a5e307efb604"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("79095ea9-833d-4de6-af50-36edba56b0fa"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("0b9d27c6-db68-4855-935a-5827faef4a25"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("cd2ec578-f1bf-46f0-b86e-2e78e43084d0"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("43a84df0-d017-4d78-840e-85afcf6a8959"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("2c78607e-ce5e-4613-8c2b-5d4e77704fee"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("11b066cb-38d9-4c6e-9a51-a98bf381354d"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("ea1ba10c-36c7-465d-ba74-c4f853a5d773"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("481156b0-bce8-49a7-99aa-6b2331162ea3"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("beace637-67c3-43b5-b820-1dac1e239db1"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("d6eba0a2-a5c1-487e-b1ea-dd1cd30eb2e4"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("fe2ce94b-799a-427e-b083-2d26602a1fd8"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("b77a3dac-bde2-468d-9706-799ae9972b42"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("bcefa237-5f2d-4367-af00-274192dab570"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("b1512e29-1eb5-49e1-9313-16e4b98707cd"),
+                            IdUnidadAdministrativa = new Guid("32d4cca4-63fb-460d-8c7a-62a652346378"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("56b93471-bc62-4fc0-bfe0-85f686f9c0a0"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "FISCALIA ESPECIALIZADA EN INVESTIGACION DE LOS DELITOS DE DESAPARICION FORZADA DE PERSONAS Y DESAPARICION COMETIDA POR PARTICULARES"
+                        },
+                        new
+                        {
+                            Id = new Guid("ea5537ae-c882-4bb8-b2b8-0c686c7faedc"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("634f649e-a7b3-4b75-b4d1-13de7b5912cd"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("2740e663-686a-43bd-a8d6-9194bb9645a3"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("9cb26fa7-8c90-4869-95f5-f136607f593c"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("90aeac44-1f05-4ef3-ad7c-afbc34022cec"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("55f42236-719f-47bd-9f43-aaf6ea631258"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("4a8ac6c1-1191-464c-9260-1944f90ce663"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "UNIDAD DE INVESTIGACION DE DELITOS RELACIONADOS CON PERSONAS DESAPARECIDAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("9cf11d3c-f08a-41f2-8318-6c52f9d1b6c9"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "UNIDAD PARA LA BUSQUEDA DE MUJERES Y NIÑAS DESAPARECIDAS Y DELITOS RELACIONADOS A TRAVES DE LA APLICACION DEL PROTOCOLO ALBA Y LA COORDINACION CON LA ALERTA AMBER"
+                        },
+                        new
+                        {
+                            Id = new Guid("102af595-b970-467d-b1cb-b9b55c7155d1"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "UNIDAD DE LOCALIZACION DE PERSONAS DESAPARECIDAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("b152a2ea-3306-4a9a-a83a-bbe5c50d6125"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("759c6ab0-e4ea-47f3-8d56-1c3cfa4388cf"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("4d187c69-fd98-4231-98e1-9789c15acb0b"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("3f2bc69b-c20a-46d0-bec3-453c30e7a6c2"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("b6f1efe5-3138-4796-8408-130702b1c27d"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("ded17ebb-5fce-40cd-a38e-3206d794047c"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("f6d69e13-8b37-4d2e-898c-c7141d907e36"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("b7212c96-7c31-463a-9725-4a1c5ae9626e"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("66c8132a-1a86-4640-85e5-f249d9e7c661"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6d599e58-1a59-4190-b1d1-c468c0f4ef8d"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("83abccdf-cff5-4c05-a773-9d28771cfe49"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("ab7fd26f-d783-4d31-b95b-0dcd9b02176a"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("10462f2c-ccd1-4926-a1a1-fcfc81ac187d"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("273f02f4-43d4-4d53-aec7-f2dfc629025e"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("52c7f84e-4495-4362-b1ee-011788d6d54f"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("69945304-3bb5-43a3-be7f-02283f5109a2"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("1a26b1e0-fb1c-474c-b617-80e7cfb79e30"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("8c2cd533-4563-47c2-a349-a93a7941ab62"),
+                            IdUnidadAdministrativa = new Guid("00fe8231-6879-4189-b706-e3abdf62d4b7"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("1c6c78b4-99d7-455f-9e0c-2ee17b64cb80"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "FISCALIA ESPECIALIZADA EN INVESTIGACION DE SECUESTRO Y EXTORSION"
+                        },
+                        new
+                        {
+                            Id = new Guid("9a1eb480-8c69-47ae-90d1-6dceaa2c09dc"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("b6fb13fe-bdcd-4964-8791-d963673e826c"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("4fcee2b7-886e-45e0-8db2-bd293bb06d0b"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("c8a4bcf4-b720-4f4d-b82c-ca5c4a3fba38"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("41fbf991-9775-4911-bbf9-9f6b53ad89bd"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("42d1dfeb-2ce5-4748-acf4-7cc20ca024d2"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("36ad4a61-4589-4be1-bc70-503b9d6e95c6"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE SECUESTRO"
+                        },
+                        new
+                        {
+                            Id = new Guid("fb9a09b7-e4f0-4ddb-ac1f-ebcfdf279909"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE EXTORSION"
+                        },
+                        new
+                        {
+                            Id = new Guid("5e23c58a-1022-4ee2-8510-a407f1e1389e"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION EN PRIVACION ILEGAL DE LA LIBERTAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("1ecc8172-adb0-4ec1-bb8f-bf8e0b68e2b6"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("25dc07b3-5229-4387-826f-02a55f0db10a"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("062af7e3-e128-4dbc-815e-a09139b53e29"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("92a68f2b-d298-4647-8876-d941b6a20329"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("d8e9af9b-1cd6-448d-8fde-000025679b30"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("70914f29-582b-4644-8999-40f1454c0ed9"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("953882fb-bc96-46ad-9e28-b4d8ddc25093"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("316be48a-6896-47be-82aa-6451191c7ab4"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6511406c-5b63-4d80-806a-90e92c89a0e8"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("92b48f9c-9574-494f-a6dd-5c0f3a41a7a8"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("cb335910-059a-4193-a67e-aa30f9475f27"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("c07bd4c1-a039-4dff-a54c-759a47d7faeb"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("28a6b35f-10b9-4449-9411-3a611738109b"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("91546122-303f-41d7-8e01-11137f08a7d8"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("ab47f972-7e4a-4b20-803f-e3c91fce8058"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("684ee5ac-0a07-4253-a4af-2932f029cd75"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("a08e7380-47f8-4b67-aa53-f556f2dbfc33"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("bc871666-7650-4fba-a7a1-e4800fbf2a15"),
+                            IdUnidadAdministrativa = new Guid("e1a28eb5-19d7-4aa6-a340-d6366c46118c"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("dbbaa579-e75d-4462-a01a-e75601746266"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "FISCALIA ESPECIALIZADA DE COMBATE A LA CORRUPCION"
+                        },
+                        new
+                        {
+                            Id = new Guid("0c945019-ea4f-4b9b-a149-ec27c3a28227"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("890fa743-cc59-4a05-a9bf-d0ab237dd7d3"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("9d94484e-9821-4c79-88ba-a475d3af54e2"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("71fdcf61-3da7-48df-97d1-6dbc78b56de3"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("ee0cf31c-42fd-457b-8047-5e978b0833c9"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("e4d278c4-dba6-48fa-a0a5-616fd136142e"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("bf50b01d-91a2-4921-bc4f-43cbd6a7228e"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE INVESTIGACION DE HECHOS DE CORRUPCION EN EL AMBITO ESTATAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("95473876-500d-4d82-a5f9-8d534b2ca3bc"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("5df945f8-2665-4fd7-af85-3b0e19209486"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("28e6400e-fc68-4d51-b840-5655fd8bf326"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE INVESTIGACION DE HECHOS DE CORRUPCION EN EL AMBITO MUNICIPAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("ceb457d9-68c9-4bc6-9533-c161a0d1338b"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("25e5fc64-de9f-4eab-9731-cd97de5bbec1"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("bf505a72-6729-4942-abf4-2d91b836ab11"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("601afe28-be7c-4747-87d4-c8fd02cdc23e"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("a0c125c7-606f-4362-8b50-c7998ff36b9b"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("7290279f-a65d-4c38-8e52-185f502691b2"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("e5d4e93b-2fa2-48d0-af13-51338418eaa3"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("5c17e492-3ab4-4d7f-a63e-4edd9f3b467d"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("61f0509f-8fbf-49ae-b1cb-ceb3ec6df35d"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("e3717c18-cc21-4df2-92b0-7d21551996af"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("91448d3a-f268-485d-b4d2-2460b89b6013"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("d9221a0a-76e8-4d21-82c3-8679df6af674"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("fdc25778-2cfb-4d58-acd9-a0326f3a9c09"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("e2a0e57b-e5d6-45f2-a683-7202deb7d17a"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("bf654e28-4520-414a-b337-11049855a025"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("f649b4ef-46b5-42ed-8279-ea4eb4f0245b"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("f84cf944-69d8-4cd9-9959-ad6ba4909d9a"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("efd98743-db8e-4fec-89de-38ced0f8c040"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("6fe438c9-13db-4478-999d-a41ecdda905a"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("898e9718-9d6d-4afa-a66e-d3a6e739b5a0"),
+                            IdUnidadAdministrativa = new Guid("da78b3f2-8cb2-4c60-ae7a-c390a99febfe"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("fa694a92-6963-4894-ac30-707c4180b51e"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS ELECTORALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("2f3d9e74-8f60-43da-9267-be0ae8b73463"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("90ad194e-6190-4ad6-a15c-6c0a05f4a148"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("d94579cc-5374-4e68-81f9-09a7eca09047"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("7042c884-ef07-40d0-941e-f8bd80a0e44a"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("cbff89a2-2783-4b75-ab5b-2cab629a34cf"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("d3c04c6e-5a92-469e-8087-04cfb04cb671"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("3696678d-9ce9-4326-b064-6a4761812638"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE DELITOS ELECTORALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("8218ec0f-1da7-472e-8201-9fda04aa8734"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "UNIDAD METROPOLITANA DE INVESTIGACION Y LITIGACION DE DELITOS ELECTORALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("b32c1540-3d6d-4792-a5ec-c96e99d59b07"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "UNIDAD REGIONAL DE INVESTIGACION Y LITIGACION DE DELITOS ELECTORALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("26335241-a345-4e81-8134-623a81fc461b"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "DIRECCION DE CAPACITACION Y POLITICA CRIMINAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("deedfc08-86e2-435e-a061-226aecbaccee"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "DEPARTAMENTO DE CAPACITACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("087a832d-4d39-4c6e-a9d0-ac7c39da49e8"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "DEPARTAMENTO DE POLITICA CRIMINAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("34c7712f-d545-4c85-aaf3-8a6fa8363ece"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "DEPARTAMENTO DE VINCULACION Y DIFUSION"
+                        },
+                        new
+                        {
+                            Id = new Guid("72dd5511-c566-47e7-8d11-c9f027a0aad8"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("0aef9fd4-f4ec-4c04-a5d4-855645203887"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("bbc45085-e562-4035-8958-9e38c8f8b867"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("5822f65c-e7d8-43aa-ba88-95d2281ffc85"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("d7d10e47-bf4b-4f98-baa2-603ef35e4b10"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("ff489600-6bd3-45c9-b7c7-ed24c6e56b8a"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("70d60f13-e339-48e1-8242-7bd7464e1082"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("315970d1-9410-48f7-9b3b-d6cc1873f732"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("137b1ee6-e045-44cc-83a5-ba6393ad5a29"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("8ae87f56-71ce-4379-b7a4-8c98db618eb2"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("5983a5e1-e0a2-440f-a643-dff96c797c30"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("07f84046-f0e5-463d-8f0a-d83480d027ac"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6970b04d-fab1-48f0-86f0-2f9b4432b188"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("174437c2-c509-4250-ae18-249ec9429029"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("ae10f52f-fddf-4de2-8880-aca38efd5d86"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("7933b170-3f94-4b44-b866-bfea61c54529"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("b48194b2-c8b6-4a46-9beb-85053e85f6b6"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("60f3a759-c0af-4b56-b29e-ff199fc8be9a"),
+                            IdUnidadAdministrativa = new Guid("96559f1b-3880-4339-9c73-fed0ec116105"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("b771a820-be4f-4a7d-90fd-b03bab9b29a1"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "FISCALIA ESPECIALIZADA EN INVESTIGACION DE  DELITOS DE ALTA INCIDENCIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("d2077ac5-a4c3-41d4-9b40-3b5b01f3ae53"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("fb6aee6f-f5db-45fd-8d57-4f48151e1844"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("5367b1b0-1339-4e70-8596-2acbcc814e05"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("c01be423-ee7e-4fd0-a607-90b9b2aa7b45"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("cb1e354c-c716-4e41-a918-9af6fb9c4564"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("e261ce41-00bf-4720-a24a-1392f29092be"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("1e7df553-a95b-4d69-9f7e-893d6f05a2d0"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE ROBO DE VEHICULOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("20199b73-27a3-4c83-9bc6-95e5da79789f"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD ESPECIALIZADA DE INVESTIGACION DE ROBO DE VEHICULOS CON MERCANCIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("01d51836-4b29-4663-8e5e-811942a9a1c5"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE ROBO A COMERCIO"
+                        },
+                        new
+                        {
+                            Id = new Guid("ee9fef11-76b5-47fd-b053-3297d5a83c74"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE ROBO A CASA HABITACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("24828ef3-3e5d-4abb-af21-750d359599f5"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE ROBO A TRANSEUNTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("5f7f2913-c9e0-4960-8bff-22d98f948f04"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE NARCOMENUDEO"
+                        },
+                        new
+                        {
+                            Id = new Guid("c3914eb9-b608-4423-8854-f35717d92c13"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("b27675ba-793d-4dba-9b92-1c38eeb19560"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("7ecc8142-e7ce-4f67-aa1e-7a21939c92b9"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("1fa8ff3c-c836-4d3d-8fcc-ca9ef2936910"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("3fffc20c-ff2e-4351-97a2-751baf9d29d6"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("77ab49f6-55b7-4841-ad73-91ba2ed1fb00"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("4ea60e61-c16c-4ee8-9b16-27ab0d665f5e"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("36959612-7d9a-475e-9046-5dc6962db7cd"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6a2472bb-45be-4c24-ac21-977e0f82344b"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("33fc12c9-3fbd-47c1-8a51-1507fec127a4"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("32911e15-6b7e-45d0-a86c-2287959bb4d3"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("12bd2458-ba96-41cc-ac17-9b5aa1f39c89"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("ae684992-18ab-4c18-8f5c-26a3bb29938d"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("d4de244f-b7c4-43e2-bdb4-cb2a09453b58"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("8ff2fc39-9494-4282-bba5-6040e83e0e9e"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("934c79f7-65e5-46c2-be5b-f5280b0173a8"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("857ab8c9-9c19-4cf3-8cdd-d5c8b328cb83"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("b25f6568-cfe3-4a85-99a0-3ea36ae26b91"),
+                            IdUnidadAdministrativa = new Guid("dfafd2a3-a200-4f1e-aebd-f791bd14d879"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("16d442b4-cc83-405b-9df7-908dd6caf04b"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "FISCALIA ESPECIALIZADA EN INVESTIGACION DE DELITOS DE VIOLENCIA DE GENERO CONTRA LAS MUJERES"
+                        },
+                        new
+                        {
+                            Id = new Guid("4278f1d1-6fd0-4801-a8cc-03605dbc3054"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("dba08345-5d51-4724-b6eb-fd029dc7171e"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("d91ddfdd-e16f-40b1-9d37-24c5b32aa07a"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("d6ecb657-86c7-4c9a-8d75-f3db1fa2b815"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("2e75eb43-d204-490a-9fa4-0cb18364ad25"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("ca38773d-b5d6-4e62-a842-5996d9cd6dc8"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("51495dcc-5742-46c4-88ca-8c6547a333ff"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "DIRECCION GENERAL DE LOS CENTROS DE JUSTICIA PARA LAS MUJERES"
+                        },
+                        new
+                        {
+                            Id = new Guid("1316f41f-b6d7-4e8d-a727-7a9939bfb12f"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "DIRECCION OPERATIVA DE LOS CENTROS DE JUSTICIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("6ed5edd8-9fec-4d9c-a8dd-c94eb368b7a4"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "DIRECCIONES DE LOS CENTROS DE JUSTICIA PARA LAS MUJERES"
+                        },
+                        new
+                        {
+                            Id = new Guid("4be8c1f3-d328-4821-babd-af6deba7fdd5"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE FEMINICIDIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("33173980-bfe6-4052-a442-e2f324ec62a0"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("1b22a489-ecd0-4f4f-9216-7dfa486e5f2a"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("da5c62b8-6c23-4183-a5c0-552aded3210a"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE DELITOS SEXUALES Y CIBERACOSO"
+                        },
+                        new
+                        {
+                            Id = new Guid("733130fe-e107-4080-8011-82d400ddcd96"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("4083fffe-7fb7-4893-ad69-c66104474740"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("b2036267-985d-4a35-8d46-61c28ec17871"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE DELITOS CONTRA LA FAMILIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("36d88c58-2c46-4b8c-9910-9457feda7b1b"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("e0e97218-e27f-4fcd-b8fe-5c81e81b6eb4"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("2ee55a6e-914a-4dc3-89a4-c01faf8cae07"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE DELITOS DE ABANDONO DE PERSONAS E INCUMPLIMIENTO DE OBLIGACION ALIMENTARIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("ba9122ba-557a-4c6e-a97e-e8278a5334ec"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("722074ca-0086-4263-bd16-4a38b49be712"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("4457667e-4c74-4485-bf0e-39f54684e66a"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE TRATA DE PERSONAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("4309c166-cb7c-4c46-9352-8b9c7607ae9b"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("4ddeedc0-9890-4b70-ac6b-e459902f3e33"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("272f2fa4-4672-4dd0-993b-4d7e849c0b4f"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("5a1d459f-e595-423a-858f-e650943c865a"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("67166999-54d7-47c2-997b-e160e82cd701"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("afb4d564-277e-4dca-81cb-79c61ce91aa7"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("43242451-0852-4fee-92a0-9dfbae4b1a02"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("36214d11-34ec-4c02-8975-7e8c1814f2df"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("f99167b0-2f61-4991-91b2-4cfa90158093"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("5312a641-3742-4fc3-85ed-4b211f0408a3"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("b6096fdc-570f-4bf1-9b2c-790b6df04604"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("25e315ed-5c62-4d0c-bb6c-449d423b7ac6"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("92391612-b5fb-4682-b8eb-176cb842c402"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("95d9f5fd-fa91-4025-89cd-8a1072b2059b"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("8647a772-043d-4268-a036-a4b7ec637ec6"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("8b64eea9-b6b7-430a-8c95-234aa89b0171"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("f9618dc5-fe1c-4e76-addb-4b28bcb19030"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("e1f2bf38-0196-488b-a8b5-616c6b9a3a89"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("56da09c8-28ea-4bf0-b5c6-d1288ad367e1"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("8ad7a599-c5a3-45fe-bb62-d6728f649f48"),
+                            IdUnidadAdministrativa = new Guid("31a77f82-63e0-44c5-afea-337d6d8af47d"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("8ae6516d-5dc0-404a-ae8d-0004bd531b29"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "FISCALIA ESPECIALIZADA DE ASUNTOS INTERNOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("0a23f065-cb0a-4f7b-80a1-10a69f9cb55d"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("6acbd963-caee-48b8-bb63-dcc4f03b6a01"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6305e25f-76d8-47cb-b869-023d889632ff"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("22cff969-708c-4648-97f1-2598a8612131"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("bffd53a2-fd48-4230-994e-1a2a12796a14"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("4169ab17-534a-4468-808f-eb380ca08096"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("7c878dc7-df75-4e90-b5bf-74d1ea1085fb"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE DELITOS COMETIDOS POR SERVIDORES PUBLICOS DE LA FISCALIA GENERAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("5a89bf17-426c-4f29-8128-9bb91aac23e5"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("a0898fa3-c8de-41cc-9e15-b8a1ae482bd2"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "UNIDAD DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("f120ee14-0a31-4720-91c5-8543a60553d1"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("b403314b-3995-4869-9446-ee7576f64685"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("e130dc30-a338-4be6-8fc7-cf8b36f44094"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("942da6c9-ca73-482d-8c3e-a8cc4288eb67"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("b80d1ad5-bfb0-4fd2-9f13-32c4b0b08148"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("e581834c-b41f-4c51-be1c-90f42d87994a"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("089cec5c-3e83-43d6-b660-06eced8447a9"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("fbee379b-3d36-4cec-8594-defdbb8da949"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("be18ea5f-ddb3-4616-b5c0-cc5eef1a5082"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("e642edec-66d6-460a-822e-fc8abe430726"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("3915a5aa-7eac-4f62-a6aa-16350cc9a441"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("5b96f2ce-180d-45a9-b026-3ccc782aad27"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("ee03d804-763e-499f-95f5-6648ab4f2b74"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("496be7ae-471c-4cf1-b078-cb1d544e617e"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("06039b5f-14ca-4843-aa40-f7943c72ff7b"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("820a7334-0036-4bfc-ad38-3468ec7af8c7"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("7c51612d-33e2-4761-a5f7-249ab916dd83"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("229f994b-d09b-43f9-9337-282e38f09c38"),
+                            IdUnidadAdministrativa = new Guid("61e8ffa1-6e7a-4855-a5ba-437c8ea6a815"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("7681f238-421c-4ba6-a917-0a99bd9ee059"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "FISCALIA ESPECIALIZADA EN INVESTIGACION DE LOS DELITOS DE OPERACIONES CON RECURSOS DE PROCEDENCIA ILICITA, FISCALES Y RELACIONADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("e3e2d2d2-4112-4f15-9254-8eccdd1ea5a8"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "COORDINACION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("2671ea2f-a524-4989-9099-ff591ebdaaa4"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES INICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("af00481c-2d63-46ac-9ad3-66d08e9ddb67"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE APOYO A INVESTIGACIONES COMPLEMENTARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("641857fc-e180-49ca-bb10-a92e13ef7d63"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "COORDINACION DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("cb7c3b3c-20bf-4f63-927f-952426270149"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE APOYO A LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("9b078856-6719-49ee-8ccd-77c349236869"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE APOYO A LA PARTICIPACION MINISTERIAL EN EJECUCION DE SANCIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("5306d802-bc47-444f-8bb1-d4a6211ff099"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DEL DELITO DE OPERACIONES CON RECURSOS DE PROCEDENCIA ILICITA"
+                        },
+                        new
+                        {
+                            Id = new Guid("239c3fd6-c078-452c-b1e5-d8d6b9ffbcc1"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD DE INVESTIGACION DEL DELITO DE OPERACIONES CON RECURSOS DE PROCEDENCIA ILICITA"
+                        },
+                        new
+                        {
+                            Id = new Guid("158c376a-de50-4ff4-a212-485331b91700"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD DE LITIGACION DEL DELITO DE OPERACIONES CON RECURSOS DE PROCEDENCIA ILICITA"
+                        },
+                        new
+                        {
+                            Id = new Guid("774e73b6-aa5d-413b-8cd9-0296da90283e"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN INVESTIGACION DE DELITOS FISCALES Y RELACIONADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("f66a7cf5-25b8-4051-937b-dee83cf3a846"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD DE INVESTIGACION DE DELITOS FISCALES Y RELACIONADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("cd9fd6e5-cc6a-4292-8ac1-6d474be29901"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD DE LITIGACION DE DELITOS FISCALES Y RELACIONADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("51a6464f-4058-4ecf-a93d-7bc258f78aeb"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("3f51ec76-bf43-4e35-812c-960338b473d8"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("43b5b764-033a-499f-a1c5-daa49537b3d4"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("33063bb6-5d7b-428e-86c3-7fae51a9a7ce"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("39531e2a-a660-40f3-9fec-f0afa738b1e2"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("1daab570-6daf-4cdb-b7d9-5f871f98749c"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("e7754d90-81c9-44f2-b981-f6c7d0e9a0ca"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE OPERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("9fb6ec3a-4b90-4b0d-ac2b-a7d38ac754d8"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("a2952b83-fd5a-4348-8715-87f159a61d63"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("1507f112-dfbf-483a-9a9a-fe7c108e8db8"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "UNIDAD DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("def6ee8a-624a-4a6d-bea8-36b39db894c0"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE INTERVENCION "
+                        },
+                        new
+                        {
+                            Id = new Guid("dd697c1d-5c39-4be8-a024-88401d38337c"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "AREA DE PERITACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("e5743b0a-c030-4632-9eeb-5a749723a9dd"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "DEPARTAMENTO DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("38f9cb68-2912-47e2-a6de-f22898605b5e"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("4ab907c8-0fca-4a29-a3a7-429cb79ca04e"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "OFICINA DE ENLACE DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("140d5501-9670-4197-9196-3f316e3bb7ec"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "OFICINA DE ENLACE DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("4974f929-4d0f-4817-8764-73081fd045b7"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO ADMINISTRATIVO Y BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("a1d7f898-7831-473b-bd8f-de120b3882c0"),
+                            IdUnidadAdministrativa = new Guid("2c9b14d2-8868-49ac-a503-584f44b7a6a1"),
+                            Nombre = "OFICINA DE ENLACE DE APOYO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("76bc6135-6231-460f-a813-61bb1343dd04"),
+                            IdUnidadAdministrativa = new Guid("98b8fe5f-ba52-45cc-a416-cd509356cef1"),
+                            Nombre = "OFICINA DEL FISCAL GENERAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("f514d604-b259-415e-b72f-3dce65bf4778"),
+                            IdUnidadAdministrativa = new Guid("98b8fe5f-ba52-45cc-a416-cd509356cef1"),
+                            Nombre = "DIRECCION DE APOYO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("5e872497-c03f-429c-9999-9ca544b08cdf"),
+                            IdUnidadAdministrativa = new Guid("98b8fe5f-ba52-45cc-a416-cd509356cef1"),
+                            Nombre = "SUBDIRECCION DE CONTROL Y SEGUIMIENTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("3f95e51c-71e4-482f-9e90-b42fd45e6c33"),
+                            IdUnidadAdministrativa = new Guid("98b8fe5f-ba52-45cc-a416-cd509356cef1"),
+                            Nombre = "DEPARTAMENTO DE REGISTRO"
+                        },
+                        new
+                        {
+                            Id = new Guid("aee03769-700b-4fd9-98bc-6ce8fc2b87a9"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "OFICIALIA MAYOR"
+                        },
+                        new
+                        {
+                            Id = new Guid("5aa3794b-a14e-44c1-9672-89c352f0e288"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DIRECCION DE DESARROLLO FINANCIERO Y PRESUPUESTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("cb1809b8-7c7b-4b17-8ce3-7c646d508950"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE CONTABILIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("ae165a01-9a30-44dc-b335-c3972bcaea13"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE REGISTRO CONTABLE"
+                        },
+                        new
+                        {
+                            Id = new Guid("91c3c09d-49ff-42b8-8863-2daf34a491e2"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE CONTROL Y CONCILIACION PRESUPUESTAL CONTABLE"
+                        },
+                        new
+                        {
+                            Id = new Guid("b66075c1-c826-4128-a9a9-259527ae76cc"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE FONDOS Y POLITICA PRESUPUESTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("0f12a116-667a-45d4-a190-8c29068ff667"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE ANALISIS NORMATIVO Y PRESUPUESTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("fd89128e-bd9e-4097-a67b-ada1265cb4fa"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE CONTROL PRESUPUESTAL DE REMUNERACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("e97a8c91-0a1c-49d9-81dc-60c5b420b2e1"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE FONDOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("5b44e9ed-7e7d-40bc-af55-f394af7e80de"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE TESORERIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("d59ee9f1-d938-4636-a50f-32febecf9085"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE REGISTRO DE INGRESOS Y EGRESOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("4a6e6457-2a8d-4a9b-b2e8-df9e224d59a3"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE ARCHIVO CONTABLE"
+                        },
+                        new
+                        {
+                            Id = new Guid("bcf67c4e-c2db-4e53-a88a-6d5c08dcc65e"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE GLOSA DE GASTO CORRIENTE E INVERSION"
+                        },
+                        new
+                        {
+                            Id = new Guid("b190d03e-c9f0-4956-bbde-f852738456e9"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE GLOSA Y FONDOS DE LEY DE EGRESOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("65fbb0d5-c973-4fc6-8a9e-7307c785e780"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE GLOSA DE OTROS FONDOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("3798cb8e-e14c-4b6e-8d29-670fcb7c5ed4"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE CONTROL INTERNO Y FISCALIZACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("51a1d438-181b-4536-8056-29855d185ae6"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE CONTROL Y ABASTECIMIENTO DE COMBUSTIBLE"
+                        },
+                        new
+                        {
+                            Id = new Guid("d7f82fe8-b860-4622-8f21-3c9a2dfa3705"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DIRECCION DE ADMINISTRACION "
+                        },
+                        new
+                        {
+                            Id = new Guid("731e9bb1-c13c-4315-83ba-68057652c064"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE SERVICIOS PERSONALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("9b4eee4f-f40d-4de5-8b0c-f58117bb5398"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE MOVIMIENTOS Y PERCEPCIONES EXTRAORDINARIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("22179e95-3f58-46ba-bd6d-239ad3a169d6"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE NOMINA"
+                        },
+                        new
+                        {
+                            Id = new Guid("89e3a5a1-4b1e-48cd-ac2c-761e38616633"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE INCIDENCIAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("257c0774-3bb5-44e4-aa22-2ca7d97ed952"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE EXPEDIENTES DE PERSONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("ad8b95bc-5088-49ac-be86-6cebd5e13e18"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE RECURSOS MATERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("d0765c3b-dc55-4db6-968b-6a1f019778fc"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE ADQUISICIONES Y ADJUDICACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("4f79dfe2-9efb-4d84-80f8-e8fd7367a84a"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE ALMACEN GENERAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("01652885-1b56-478e-a572-ee49b365de1a"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DIRECCION DE ORGANIZACION Y DESARROLLO ADMINISTRATIVO"
+                        },
+                        new
+                        {
+                            Id = new Guid("22157bd4-24bd-4356-9859-aa3f38aeadcf"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE ORGANIZACION Y SEGUIMIENTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("a335c259-86bb-403c-9d34-1bc5e50c6a2b"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE ORGANIZACION DE LA ESTRUCTURA ORGANICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("5fa8a1be-f78d-4b1c-ac86-97d0738d4156"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE MANUALES ADMINISTRATIVOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("187c452f-e2bf-4024-bb86-322330e40f97"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE DESARROLLO ADMINISTRATIVO"
+                        },
+                        new
+                        {
+                            Id = new Guid("29409d0f-9981-486a-a6ff-33a5aa001450"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DIRECCION DE OPERACION Y LOGISTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("ad5e2c6a-fff2-4f56-bf5e-34f6f0fd05df"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE CONTROL VEHICULAR Y GESTION ADMINISTRATIVA DE ARMAMENTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("c521172d-6832-418d-9f54-9c8ce8b0a277"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE CONTROL VEHICULAR"
+                        },
+                        new
+                        {
+                            Id = new Guid("185f2095-38c4-4f9f-9535-d767ba8732f3"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE MANTENIMIENTO DE VEHICULOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("51034f51-7d23-4101-8f2e-25c792040712"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE SINIESTROS"
+                        },
+                        new
+                        {
+                            Id = new Guid("aee685be-934c-4176-ac3c-f5324549e8c9"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE GESTION ADMINISTRATIVA DE ARMAMENTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("f2ff806c-6451-45d3-b2bc-a548da70b93e"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE SUMINISTROS"
+                        },
+                        new
+                        {
+                            Id = new Guid("c4f538c2-68f4-4608-9fd6-9084388afaa7"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE INVENTARIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("cf44031b-c86a-4676-ab5a-10b33de73076"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE PROVEEDURIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("7d46bff0-5b3d-4981-97ff-78c5d6cc4b14"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "SUBDIRECCION DE PROYECTOS DE INVERSION Y OBRA"
+                        },
+                        new
+                        {
+                            Id = new Guid("7519c162-8fb3-40c3-a1fa-06c652ab8d28"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE EXPEDIENTES DE INVERSION Y BANCO DE PROYECTOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("d9356d1c-8ff5-41e0-83ad-6a58d7e28c67"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE DISEÑO E IMAGEN INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("cb022902-b71c-4d8b-a21f-0ae4e521eb0b"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE SERVICIOS GENERALES METROPOLITANOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("8ee8c7a1-91f7-4357-83c3-f9342a4b4549"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE SERVICIOS GENERALES REGIONALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("7157dd06-5cf7-464e-ae6c-48b002a8cacf"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE CONTROL DE INMUEBLES"
+                        },
+                        new
+                        {
+                            Id = new Guid("5136a2f7-7aff-40a6-8f92-bd47a1fb2b01"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DIRECCION DE BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("de6ab55d-e405-4d08-be3a-66d7d7d38c24"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE INGRESO Y REGISTRO DE BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("d5e71e93-6989-464a-8671-7b0126185587"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE CUSTODIA Y PRESERVACION DE BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("178e67c1-6359-4f1e-9e1b-9507c1ba2e7b"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE EGRESO DE BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("26c2f6e3-5669-469f-a740-26fecc948df3"),
+                            IdUnidadAdministrativa = new Guid("1c52fb81-0802-49f1-ad79-f53a05fc65fa"),
+                            Nombre = "DEPARTAMENTO DE PROCEDIMIENTOS PARA EL DESTINO FINAL DE BIENES ASEGURADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("d7943dc0-6c93-451e-a291-ba5413962a2f"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "AGENCIA ESTATAL DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("fb314419-bcdf-4dd0-977d-238a14f50c84"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DIRECCION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("c393c965-10ec-4063-8ed2-c09e87929d0f"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA DE INVESTIGACION METROPOLITANA"
+                        },
+                        new
+                        {
+                            Id = new Guid("4a2172dd-a7b0-4a15-b688-af6702c2674c"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA DE INVESTIGACION REGIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("d8039849-8722-4d6d-b442-9413e337a126"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DEPARTAMENTO DE INFORMACION VEHICULAR"
+                        },
+                        new
+                        {
+                            Id = new Guid("6490ea9a-f9e1-41d0-842e-1f7768358d30"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DEPARTAMENTO DE RADIOCOMUNICACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("e0d24586-2d9d-483e-bce8-3d6c5a3d5f9f"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DIRECCION DE INTERVENCION INMEDIATA"
+                        },
+                        new
+                        {
+                            Id = new Guid("458c1729-c9a1-46ba-a080-112abbd3e72e"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA TACTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("36f37949-e718-4196-aa15-f0ed23526dae"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "UNIDAD DE COLABORACION EN INSTALACIONES DE SEGURIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("4ab38e6e-6b2b-4618-88e6-f0fbca0e5034"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "SUBDIRECCION DE APOYO TECNICO EN INSTALACIONES DE SEGURIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("9899c227-234a-464f-8bc3-0b04a86dbbc9"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "SUBDIRECCION DE CONTROL Y SEGUIMIENTO EN INSTALACIONES DE SEGURIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("7f0cc84a-9c20-4906-9143-988eed94825d"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "SUBDIRECCION DE SEGURIDAD TECNICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("642e77f7-668d-46fe-a67a-e39191ba5b0f"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DIRECCION DE OPERACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("48d8fa39-269c-490a-b134-6b25a3e71735"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA DE OPERACION METROPOLITANA"
+                        },
+                        new
+                        {
+                            Id = new Guid("387f588c-4712-4e69-85e1-179c3b2d5487"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA DE OPERACION REGIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("285cb430-41fd-4d76-a01f-f8de30a9612e"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DIRECCION DE COLABORACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("7703882a-d906-4324-a9b4-4d3523acacfc"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA DE COLABORACION METROPOLITANA"
+                        },
+                        new
+                        {
+                            Id = new Guid("a08c2485-7409-4249-bb82-e4aba0991777"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA DE COLABORACION REGIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("57693c9b-3137-4357-9a36-0c453bd42ddb"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DIRECCION DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("411d14cb-6e80-4e56-8c24-9cd7d4717046"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA METROPOLITANA DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("03c38893-c21b-455c-b93f-70e571d5a1e0"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA REGIONAL DE ATENCION A MANDAMIENTOS MINISTERIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("63bd7ee8-fa5f-4d3a-810b-cd4bf460b600"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DIRECCION DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("485a537c-a7f4-4b57-b904-fef3bae4cff2"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA METROPOLITANA DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("451fb74f-8a55-4295-bb92-512bd8f2c4f0"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "INSPECTORIA REGIONAL DE ATENCION A MANDAMIENTOS JUDICIALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("0e30daec-96ae-4116-82b8-d2b2df7030be"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DIRECCION DE APOYO Y LOGISTICA ADMINISTRATIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("9a2142bd-05c2-45fe-afb5-3b70b1214f38"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DEPARTAMENTO DE APOYO LOGISTICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("f0b6f709-3788-4fe1-8100-d8301e772835"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DEPARTAMENTO DE APOYO ADMINISTRATIVO"
+                        },
+                        new
+                        {
+                            Id = new Guid("a5257de8-559b-4987-bf0c-edbe1fa1b5da"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "BANCO DE ARMAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("d915114f-dc52-4c3b-bcd8-08c5b111e339"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DEPARTAMENTO JURIDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("2a8390d4-1997-4cec-a594-08b17ef7bd15"),
+                            IdUnidadAdministrativa = new Guid("4b0240b3-98e7-4f86-881b-10f760c32f71"),
+                            Nombre = "DEPARTAMENTO MEDICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("0a090054-439c-4ed1-9949-d4eefae3ab39"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "INSTITUTO DE CIENCIAS FORENSES"
+                        },
+                        new
+                        {
+                            Id = new Guid("0f89c51a-7917-4b43-97fd-618bc9abb34b"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DIRECCION DE CRIMINALISTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("7cc5a43d-7d3c-4a39-86c9-ce281d0236f4"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "SUBDIRECCION DE CRIMINALISTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("ceea3aa5-21b1-4925-af00-48bcdc93cfe9"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DEPARTAMENTO DE CRIMINALISTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("c359af24-57f8-47e4-9cdb-429ab1b946cb"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "ANTROPOLOGIA SOCIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("a5700f64-4a35-436c-bd6d-890e4b9d1859"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "CRIMINALISTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("ccca7728-a620-447f-be16-479965106cf6"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "CRIMINOLOGIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("3d17af49-644d-4f66-9743-15d49c6862a0"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "FOTOGRAFIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("1bdce436-6d9f-4d59-83b7-d5332d8e8042"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "MEDICINA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("41648324-b90c-4973-91fa-d903f549924c"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PSICOLOGIA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("e640d0fc-88e4-4ff5-aee1-76506c5979aa"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "TRABAJO SOCIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("fb7cad93-a3d7-485f-8fd7-2b172861abdd"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "VICTIMOLOGIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("e98515e9-9c61-4b25-87e1-97b3e3d09056"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "UNIDAD DE TRASLADO Y RECUPERACION DE CADAVERES"
+                        },
+                        new
+                        {
+                            Id = new Guid("c8a46770-47d4-417d-91a4-5a0e126bc4db"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DIRECCION DE CALIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("fe788cb6-c68b-4341-83cb-cc65ab649c04"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE SEGURIDAD OCUPACIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("df798d47-a13a-42ad-a245-1a056882f3d8"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE CONTROL DE INDICIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("1b32337b-671d-4231-89f7-58e4a284c446"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DIRECCION DE LABORATORIOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("423396b2-ddbc-42b1-9289-d97e418764b6"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE ANALISIS DE EVIDENCIA DIGITAL Y MULTIMEDIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("d646a86b-646c-454c-a22b-fd1336d8e9f9"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE BALISTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("529c9a33-58e7-4dfc-8e78-b7a07080ee31"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DIBUJO FISONOMICO Y DESCRIPTIVO"
+                        },
+                        new
+                        {
+                            Id = new Guid("2ebc527b-6cb8-4933-89f2-232bcca2abbb"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE DOCUMENTOS CUESTIONADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("c73e9acb-a5b7-4d79-be34-1401bba33f9c"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE GENETICA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("c46c10c1-c62b-4b48-ad33-ba692e17881f"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE LOFOSCOPIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("130e246b-9ca0-4e95-94e0-e93cdd4f47fe"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE VETERINARIA Y ZOOTECNIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("92e92f61-4431-42eb-9a5d-d4c4ac99a6ea"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE QUIMICA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("8495b896-85b7-4515-9cfb-e7c30079f647"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "LABORATORIO DE TOXICOLOGIA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("01a8c8be-1315-44d5-ad93-49e846213943"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DIRECCION DE APOYO TECNICO OPERATIVO"
+                        },
+                        new
+                        {
+                            Id = new Guid("d24b5bd1-cfda-412f-9bb8-94f7738f57db"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "SUBDIRECCION DEL DEPARTAMENTO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("6761479e-5ea5-43c3-a2ee-f51e5db87b67"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DEPARTAMENTO TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("1c5bdf97-9a52-42a5-bac9-9a3b55561ace"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN AVALUO"
+                        },
+                        new
+                        {
+                            Id = new Guid("f735ecc9-2ac8-4413-9a87-0b1bf5dac717"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN CONTABILIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("8d6ce56e-38fd-44b7-9542-c838d86cbde0"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN CONSTRUCCION"
+                        },
+                        new
+                        {
+                            Id = new Guid("1ce4f57a-a3c7-4c51-8e4f-19b4fe5cca2f"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN FISICA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("c1053f5c-69ac-4f01-bff2-e550db83ba9c"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN INGENIERIA CIVIL"
+                        },
+                        new
+                        {
+                            Id = new Guid("485f07be-831e-4f9d-8136-69c570f7f87e"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN MECANICA E IDENTIFICACION VEHICULAR"
+                        },
+                        new
+                        {
+                            Id = new Guid("0d06be57-760a-47e5-b729-0bb69a532b3a"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "FOTOGRAFIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("2d21f4bd-049f-4ec7-ae10-045a206e59b5"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN VIALIDAD TERRESTRE"
+                        },
+                        new
+                        {
+                            Id = new Guid("887efa51-ed06-4940-9647-2bdb4dfa5711"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "PERSONAL PERICIAL EN CONSTANCIAS DE NO ANTECEDENTES PENALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("dfd639d2-0abe-48f7-9523-db2d7febc1d8"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DIRECCION DEL SERVICIO MEDICO FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("be589542-136c-4e4b-a225-3da97ddc625c"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "SUBDIRECCION DE MEDICINA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("de55a9d6-6242-4497-92e6-e2bc5e8dc5fe"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE MEDICINA LEGAL Y FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("56d68778-5141-4214-b393-667eff1fc675"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE TECNICO NECROPSISTA"
+                        },
+                        new
+                        {
+                            Id = new Guid("de1cd128-d005-424f-a10a-f79ef80524c4"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE MEDICO PATOLOGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("ff3ee2dd-eca5-43a1-a59d-15bf929a370a"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE TECNICO RADIOLOGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("3b127d92-9f76-4f29-bc02-bff704bdb7e3"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE TECNICO HISTOTECNOLOGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("1801b194-4fa2-4f4a-983c-ebb56d847fd2"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE ENTOMOLOGIA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("90396668-c89f-44d9-aa91-7e35edbb9ae9"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE ANTROPOLOGIA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("1e11807e-4b31-46f8-b7fc-5e01d4732af3"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE CRIMINOLOGIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("555ae648-9020-4f67-a406-b378e03503ae"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "SUBDIRECCION DE IDENTIFICACION HUMANA"
+                        },
+                        new
+                        {
+                            Id = new Guid("58efefea-7f5f-4a43-99fc-a15486c668ee"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE ESTOMATOLOGIA FORENSE"
+                        },
+                        new
+                        {
+                            Id = new Guid("5d188474-faaa-45be-acb8-111373a4831d"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE LOFOSCOPIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("a90f7fc9-b63d-4d0f-9a90-6046a7e4ccda"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE PSICOLOGIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("c420a4c0-3cdd-4670-849a-6d0001604977"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "AREA DE TRABAJO SOCIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("cd6e5b37-3c8b-4cbb-bb3d-b6a45e968cfe"),
+                            IdUnidadAdministrativa = new Guid("b467dc5a-5fb0-4399-9740-5877f10ce814"),
+                            Nombre = "DIRECCION DE APOYO Y LOGISTICA ADMINISTRATIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("d7c3b455-0cc9-4906-a681-956da987c6b2"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "ORGANO INTERNO DE CONTROL"
+                        },
+                        new
+                        {
+                            Id = new Guid("60d8b3c4-89a3-4e74-a665-546e136fab3a"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "DIRECCION DE RESPONSABILIDADES"
+                        },
+                        new
+                        {
+                            Id = new Guid("88f97365-9652-4902-85de-cb295262765a"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "UNIDAD DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("a6aab0b2-ce3f-4f72-8ce0-e3aa3824ab54"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "UNIDAD DE SUSTANCIACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("eb5ecdf7-6ece-4246-83c0-38862f49e854"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "UNIDAD RESOLUTORA"
+                        },
+                        new
+                        {
+                            Id = new Guid("c6773ae8-a330-4309-9c6e-1bf0116a33fe"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "UNIDAD DE SITUACION PATRIMONIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("7c52bf99-ff79-4547-b225-a99aed258cef"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "DIRECCION DE AUDITORIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("bf5f60f5-5a44-4245-911d-e40ba4752376"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "UNIDAD DE AUDITORIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("909992c0-2ce3-4434-9e12-74ea300f927c"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "UNIDAD DE SUPERVISION Y EVALUACION ADMINISTRATIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("806f359d-0509-4ab0-907f-61d16236486a"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "SUBDIRECCION DE CONTROL DE GESTION"
+                        },
+                        new
+                        {
+                            Id = new Guid("52421a5a-f5b7-4602-ba9c-9f445217d928"),
+                            IdUnidadAdministrativa = new Guid("199240cf-7e2a-4f72-99f9-90a3d9e93ec1"),
+                            Nombre = "DIRECCION DE APOYO Y LOGISTICA ADMINISTRATIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("663d4f59-a296-435e-9b90-86acab1a265b"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "VISITADURIA GENERAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("471bfcc6-c1c3-4365-b5d6-f293d084b0b7"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "DIRECCION DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("b632d028-3ed1-43c6-b37b-ddf70e0e21c5"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "UNIDAD DE RECEPCION DE QUEJAS"
+                        },
+                        new
+                        {
+                            Id = new Guid("256d5daf-e10e-49c9-abe4-e11a5983ccad"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "UNIDAD DE INTEGRACION Y RESOLUCION"
+                        },
+                        new
+                        {
+                            Id = new Guid("6b2d5783-18af-405f-9c94-995f5e1fd2eb"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "DIRECCION DE SUPERVISION TECNICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("adba6671-cfca-4b50-9ca2-9c0e181aea94"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "UNIDAD DE SUPERVISION"
+                        },
+                        new
+                        {
+                            Id = new Guid("0bf14821-ed62-44aa-b260-96ce666972e0"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "UNIDAD DE SEGUIMIENTO, EVALUACION Y RESULTADOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("6dc09add-85e6-41b1-962d-7a034428b0c0"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "DIRECCION DE APOYO Y LOGISTICA ADMINISTRATIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("464d64ae-d240-4990-82e7-063a18d6a365"),
+                            IdUnidadAdministrativa = new Guid("4f0f5406-572d-409c-8cf2-4add53fceb78"),
+                            Nombre = "UNIDAD DE APOYO ADMINISTRATIVO"
+                        },
+                        new
+                        {
+                            Id = new Guid("38334f56-47e6-40f9-85a0-c87eb1bab131"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "INSTITUTO DE FORMACION PROFESIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("8893ba25-c3b5-4237-a7d3-26e86b5a129f"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "DIRECCION DE PROFESIONALIZACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("a6648787-06a0-404a-935b-dad5771546c1"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "SUBDIRECCION DE PROFESIONALIZACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("e63bd5e0-3bd9-4d06-a218-bd5f97cd1d06"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "SUBDIRECCION ACADEMICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("35edfe18-b476-47ad-ac76-44f43c2cc451"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "DIRECCION DEL SERVICIO PROFESIONAL DE CARRERA"
+                        },
+                        new
+                        {
+                            Id = new Guid("d003ebdc-3efb-439c-a42e-39a0a5ecf0fe"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "SUBDIRECCION DE RECLUTAMIENTO Y SELECCION"
+                        },
+                        new
+                        {
+                            Id = new Guid("98b8887b-d47e-4012-bfa6-793155b27809"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "SUBDIRECCION DE SEGUIMIENTO AL SERVICIO PROFESIONAL DE CARRERA"
+                        },
+                        new
+                        {
+                            Id = new Guid("539e947a-a7bc-4a23-aae2-47da75cd4f55"),
+                            IdUnidadAdministrativa = new Guid("bbe7a98c-7420-43da-8a4a-e80d331f4517"),
+                            Nombre = "DIRECCION DE APOYO Y LOGISTICA ADMINISTRATIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("36605e64-4ab9-4dd4-93f7-3e1dec74a5fc"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "COORDINACION GENERAL DE MECANISMOS ALTERNATIVOS DE SOLUCION DE CONTROVERSIAS EN MATERIA PENAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("5266d24c-272f-4631-b77a-c30283f860ad"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA ESPECIALIZADA DE JUSTICIA PARA ADOLESCENTES"
+                        },
+                        new
+                        {
+                            Id = new Guid("3f8ee6ec-dd8b-4397-b6f3-646d0dec2b4a"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA ESPECIALIZADA EN DELITOS DE VIOLENCIA DE GENERO CONTRA LAS MUJERES"
+                        },
+                        new
+                        {
+                            Id = new Guid("4bc515bd-5b5b-4f46-b1e5-3c09580ee90e"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA METROPOLITANA ZONA NORTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("d2a3f7c3-b15a-4684-9f03-012e05155563"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA METROPOLITANA ZONA SUR"
+                        },
+                        new
+                        {
+                            Id = new Guid("fac888cf-253e-43c4-8cb6-fd2d69150858"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA DE LA REGION SUR"
+                        },
+                        new
+                        {
+                            Id = new Guid("2f26f413-297c-4864-9a20-6b4eb83035a4"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA DE LA REGION PONIENTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("f188f825-b23d-449b-a6bf-d62b272a4a80"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA DE LA REGION NORTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("0c9d14d6-77b2-4185-98fe-31cc3159de75"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA DE LA REGION ORIENTE"
+                        },
+                        new
+                        {
+                            Id = new Guid("2b2f0468-41f6-451e-8d47-f8a9cd13e676"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA DE CONTROL JURIDICO Y SEGUIMIENTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("bd156eae-67e5-40d0-9a7b-d5552f21dedb"),
+                            IdUnidadAdministrativa = new Guid("c76d8cbc-34a8-47ad-a75a-7342eb11974f"),
+                            Nombre = "AREA DE ESTADISTICA Y BASE DE DATOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("da3c08c2-547e-4999-afca-f0b9f7bfe228"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "COORDINACION GENERAL DE ANALISIS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("ad45d9fb-4912-49fa-a0f3-53f9782eddf1"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "DIRECCION DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("02b36d91-b843-4933-b791-eb99274e9530"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE CAPTURA Y REGISTRO"
+                        },
+                        new
+                        {
+                            Id = new Guid("03c73ccf-cf18-4f57-9461-d2267a5f71aa"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE EXPLOTACION DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("22778c5d-faf5-4839-a166-08473ba420ba"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE COORDINACION INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("12c546bd-09fa-497f-bb0c-9de6493c0ec1"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "DIRECCION DE TECNOLOGIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("6ecedb5b-5ccc-4f2d-a2c9-577cddd6cadc"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE FORENSIA DIGITAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("8e9f5624-ae5b-4a37-84e8-b76dd12d05b5"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE INTEGRACION DE INFORMACION Y VINCULACION DE DATOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("ca0edda2-bf76-40ae-8c32-34d988238056"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "DIRECCION DE APOYO A LA INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("23b14725-6e66-4519-8fb9-1ca497c6ef2c"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE ANALISIS CRIMINAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("0a72c374-5ea2-46fa-be6d-d00d6b30e694"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE POLITICA CRIMINAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("f6710148-0475-4110-bb93-da575ec982f9"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE COORDINACION DE ANALISIS DE ZONA METROPOLITANA"
+                        },
+                        new
+                        {
+                            Id = new Guid("c072c511-2878-464d-abd5-c9d584709cba"),
+                            IdUnidadAdministrativa = new Guid("dbfcacdf-82c3-49cd-b035-f992aa39a4e0"),
+                            Nombre = "AREA DE COORDINACION DE ANALISIS REGIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("541537e8-7a79-4a29-9c9a-3f0317718103"),
+                            IdUnidadAdministrativa = new Guid("30ebd546-ab4e-4cb6-8d0e-9623d50a7869"),
+                            Nombre = "COORDINACION GENERAL DE COLABORACION INTERINSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("77be5323-7d42-482f-a706-5ffa10b78d09"),
+                            IdUnidadAdministrativa = new Guid("30ebd546-ab4e-4cb6-8d0e-9623d50a7869"),
+                            Nombre = "DIRECCION DE COLABORACION EN PROCURACION DE JUSTICIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("c39ac319-83d7-449f-b845-efee5dea8e0d"),
+                            IdUnidadAdministrativa = new Guid("30ebd546-ab4e-4cb6-8d0e-9623d50a7869"),
+                            Nombre = "SUBDIRECCION DE RECEPCION, REGISTRO, TRAMITE Y DESAHOGO DE COLABORACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("d5731137-665b-48d8-8dd0-8c7c5ee74f39"),
+                            IdUnidadAdministrativa = new Guid("30ebd546-ab4e-4cb6-8d0e-9623d50a7869"),
+                            Nombre = "SUBDIRECCION DE TRAMITACION DE SOLICITUDES DE COLABORACIONES EN MATERIA DE PROCURACION DE JUSTICIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("af2e7d61-1b41-4c56-81fa-5d99ae02917d"),
+                            IdUnidadAdministrativa = new Guid("30ebd546-ab4e-4cb6-8d0e-9623d50a7869"),
+                            Nombre = "DIRECCION DE VINCULACION INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("cfa205e9-640e-408b-a4be-294baf7e2fab"),
+                            IdUnidadAdministrativa = new Guid("30ebd546-ab4e-4cb6-8d0e-9623d50a7869"),
+                            Nombre = "SUBDIRECCION DE ENLACE CON INSTANCIAS GUBERNAMENTALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("fb1a0693-1fa7-4f0a-b676-c41d3ea24891"),
+                            IdUnidadAdministrativa = new Guid("30ebd546-ab4e-4cb6-8d0e-9623d50a7869"),
+                            Nombre = "SUBDIRECCION DE VINCULACION CON ORGANIZACIONES CIVILES"
+                        },
+                        new
+                        {
+                            Id = new Guid("33547996-d8b2-4445-b2c7-f1d78a227401"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "COORDINACION GENERAL DE ESTADISTICA Y SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("f8e36e6b-7db1-4752-8578-46f8d58651c0"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DIRECCION DE SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("1973e588-672a-443c-b2ab-430eb8561012"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "SUBDIRECCION DE SISTEMAS DE INFORMACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("fe92bb50-575d-45b3-ac8c-77b70887eab8"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DEPARTAMENTO DE DESARROLLO DE APLICACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("b8368adb-df4c-4714-bdf4-13a2d449be93"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DEPARTAMENTO DE BASE DE DATOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("5e1aa8f1-8a3b-4766-a2f4-fabd40eee820"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DIRECCION DE INFRAESTRUCTURA TECNOLOGICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("f915c578-fcd9-46be-9d78-9c45bda42983"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "SUBDIRECCION DE REDES"
+                        },
+                        new
+                        {
+                            Id = new Guid("6eef31e3-a0d8-4237-b947-01d321e3025e"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DEPARTAMENTO DE SOPORTE TECNICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("c5e0029e-19eb-48c8-a688-61e7300fea1c"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DEPARTAMENTO DE TELECOMUNICACIONES"
+                        },
+                        new
+                        {
+                            Id = new Guid("1e9cdf03-c6a6-402c-84e9-bd572c60868e"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DIRECCION DE INFORMACION Y ANALISIS ESTADISTICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("d2435955-fe29-479c-bba5-3465e8720c39"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DEPARTAMENTO DE INFORMACION ESTADISTICA"
+                        },
+                        new
+                        {
+                            Id = new Guid("9c9babed-dd87-4d33-8f03-3bd6b42ca942"),
+                            IdUnidadAdministrativa = new Guid("e7d58ae0-9a84-4cc6-889e-9a7fd9b078b4"),
+                            Nombre = "DEPARTAMENTO DE ANALISIS DE DATOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("17cfcb2e-1f2b-40c4-bf42-c4eb43642ae5"),
+                            IdUnidadAdministrativa = new Guid("6a8e78c6-a792-46b3-8a09-ef0d5eeccbae"),
+                            Nombre = "COORDINACION GENERAL DE GESTION DOCUMENTAL INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("8aab64eb-f926-4169-b115-e58ae8b75896"),
+                            IdUnidadAdministrativa = new Guid("6a8e78c6-a792-46b3-8a09-ef0d5eeccbae"),
+                            Nombre = "DIRECCION DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("179d4c38-2e27-4cea-a0c8-59847fd24eb4"),
+                            IdUnidadAdministrativa = new Guid("6a8e78c6-a792-46b3-8a09-ef0d5eeccbae"),
+                            Nombre = "SUBDIRECCION DE RECEPCION Y DESPACHO DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("67848674-7e9f-49bd-996a-a7718863126b"),
+                            IdUnidadAdministrativa = new Guid("6a8e78c6-a792-46b3-8a09-ef0d5eeccbae"),
+                            Nombre = "SUBDIRECCION DE CONTROL Y SEGUIMIENTO DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("6d9df8d8-210d-443c-9860-97d9a5b35b63"),
+                            IdUnidadAdministrativa = new Guid("6a8e78c6-a792-46b3-8a09-ef0d5eeccbae"),
+                            Nombre = "UNIDAD COORDINADORA DE ARCHIVOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("f966f997-44f0-4988-94ad-7158642dabcc"),
+                            IdUnidadAdministrativa = new Guid("6a8e78c6-a792-46b3-8a09-ef0d5eeccbae"),
+                            Nombre = "DEPARTAMENTO DE ORGANIZACION Y CONSERVACION DE ARCHIVOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("89d63e06-afaf-4221-aca7-7ebe7b9089e7"),
+                            IdUnidadAdministrativa = new Guid("6a8e78c6-a792-46b3-8a09-ef0d5eeccbae"),
+                            Nombre = "DEPARTAMENTO DE SUPERVISION Y CONTROL DOCUMENTAL ARCHIVISTICO INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("66b656bc-3e63-4627-92ee-c500f8f56829"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "COORDINACION GENERAL DE ASUNTOS JURIDICOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("c3f1103d-a354-4242-99fa-173391c9b856"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "DIRECCION CONSULTIVA Y DE NORMATIVIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("847e3afc-ede6-41ea-9d82-95f92cd27efa"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "AREA CONSULTIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("d094a8fe-513a-4ffb-a24d-e17e90b143e5"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "AREA NORMATIVA"
+                        },
+                        new
+                        {
+                            Id = new Guid("1cad5150-99f7-4797-a4bc-a988de8aedcf"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "DIRECCION DE LO CONTENCIOSO"
+                        },
+                        new
+                        {
+                            Id = new Guid("db3cfcee-09e9-4f32-9f84-367f1a47b7ac"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "AREA DE LO CONTENCIOSO"
+                        },
+                        new
+                        {
+                            Id = new Guid("50c23648-78d0-43f4-b176-2296e0d7e238"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "DIRECCION DE PROCEDIMIENTOS CONSTITUCIONALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("d1d312c4-8ab1-4af8-8e30-973a914dcf60"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "AREA DE AMPARO"
+                        },
+                        new
+                        {
+                            Id = new Guid("0051aad2-9d06-45ac-8bef-70b3a4cb3edd"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "AREA DE OTROS PROCEDIMIENTOS CONSTITUCIONALES"
+                        },
+                        new
+                        {
+                            Id = new Guid("3f0be297-0d8c-444b-b3f4-a0eec5feee76"),
+                            IdUnidadAdministrativa = new Guid("9bfcf217-97d8-469f-9652-d6741fce84a1"),
+                            Nombre = "DEPARTAMENTO DE GESTION DOCUMENTAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("6ea5b9a5-4211-4f76-8532-c82b98aef577"),
+                            IdUnidadAdministrativa = new Guid("766edba0-def6-4c84-98ed-ee5329c8a055"),
+                            Nombre = "COORDINACION GENERAL DE SERVICIOS A LA COMUNIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("98b564ac-7e6c-4f3c-954b-f6dea0bc4c0e"),
+                            IdUnidadAdministrativa = new Guid("766edba0-def6-4c84-98ed-ee5329c8a055"),
+                            Nombre = "DIRECCION DE ATENCION CIUDADANA"
+                        },
+                        new
+                        {
+                            Id = new Guid("20eb1ddf-ad15-4945-8154-07247a52f753"),
+                            IdUnidadAdministrativa = new Guid("766edba0-def6-4c84-98ed-ee5329c8a055"),
+                            Nombre = "SUBDIRECCION DE ASESORIA"
+                        },
+                        new
+                        {
+                            Id = new Guid("2f9a0ac2-f38b-4c09-bfef-339ee8c62cd4"),
+                            IdUnidadAdministrativa = new Guid("766edba0-def6-4c84-98ed-ee5329c8a055"),
+                            Nombre = "DIRECCION DE SERVICIOS A LA COMUNIDAD"
+                        },
+                        new
+                        {
+                            Id = new Guid("862f2fb6-2f2d-46c3-a82b-e8fafe2d8509"),
+                            IdUnidadAdministrativa = new Guid("766edba0-def6-4c84-98ed-ee5329c8a055"),
+                            Nombre = "SUBDIRECCION DE CONSTANCIAS DE NO ANTECEDENTES PENALES Y DE NO COMISION DE DELITOS POR ARMA DE FUEGO"
+                        },
+                        new
+                        {
+                            Id = new Guid("21d81f01-32dc-4a73-95ee-41f82b094ac0"),
+                            IdUnidadAdministrativa = new Guid("766edba0-def6-4c84-98ed-ee5329c8a055"),
+                            Nombre = "SUBDIRECCION DE IDENTIFICACION Y TRAMITES VEHICULARES"
+                        },
+                        new
+                        {
+                            Id = new Guid("76bdeaa9-b335-4994-b500-22b1a3110e59"),
+                            IdUnidadAdministrativa = new Guid("0d9102d0-d3c8-4e18-a13d-21fdedb7d9d6"),
+                            Nombre = "COORDINACION GENERAL DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("43c6ee34-e13f-4584-b1e4-1cd8ea06d84b"),
+                            IdUnidadAdministrativa = new Guid("0d9102d0-d3c8-4e18-a13d-21fdedb7d9d6"),
+                            Nombre = "DIRECCION METROPOLITANA DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("6dfe02df-2387-417d-afcf-f87c8fa2435d"),
+                            IdUnidadAdministrativa = new Guid("0d9102d0-d3c8-4e18-a13d-21fdedb7d9d6"),
+                            Nombre = "DIRECCION REGIONAL DE INVESTIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("9526c7b3-2b0c-412b-bf8e-a923e680e9c5"),
+                            IdUnidadAdministrativa = new Guid("6f3bc61c-6e7e-42b0-b89e-00b919d5a096"),
+                            Nombre = "COORDINACION GENERAL DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("ca6e5cdf-5557-4c5d-8a25-281876ec99b2"),
+                            IdUnidadAdministrativa = new Guid("6f3bc61c-6e7e-42b0-b89e-00b919d5a096"),
+                            Nombre = "DIRECCION METROPOLITANA DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("3429362a-434a-42b4-9e69-9ef4f7286886"),
+                            IdUnidadAdministrativa = new Guid("6f3bc61c-6e7e-42b0-b89e-00b919d5a096"),
+                            Nombre = "DIRECCION REGIONAL DE LITIGACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("32acefc6-548f-4e26-bc4e-2de0c8c23d09"),
+                            IdUnidadAdministrativa = new Guid("f9e1ead4-61d4-473e-a73a-a8389fc13e33"),
+                            Nombre = "COORDINACION GENERAL DE DESARROLLO INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("c2ba032d-a587-4d87-ad08-6403e6fca0d7"),
+                            IdUnidadAdministrativa = new Guid("f9e1ead4-61d4-473e-a73a-a8389fc13e33"),
+                            Nombre = "DIRECCION DE DESARROLLO"
+                        },
+                        new
+                        {
+                            Id = new Guid("b4b3095a-3eb3-4714-b829-ad6de31d6b09"),
+                            IdUnidadAdministrativa = new Guid("f9e1ead4-61d4-473e-a73a-a8389fc13e33"),
+                            Nombre = "DIRECCION DE SEGUIMIENTO, EVALUACION Y MEJORA INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("e198636f-b018-410f-b608-1cf1e7ae24f7"),
+                            IdUnidadAdministrativa = new Guid("58da64f2-2cb3-4912-b378-4b6b53e29a37"),
+                            Nombre = "DIRECCION GENERAL DE SEGURIDAD INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("5df1afba-a8ad-4d0e-b568-6e928af2330a"),
+                            IdUnidadAdministrativa = new Guid("58da64f2-2cb3-4912-b378-4b6b53e29a37"),
+                            Nombre = "DIRECCION DE SEGURIDAD A SERVIDORES PUBLICOS, INSTALACIONES Y EVENTOS"
+                        },
+                        new
+                        {
+                            Id = new Guid("b5ee01a9-6434-4341-8b74-0cd57b9c1b46"),
+                            IdUnidadAdministrativa = new Guid("58da64f2-2cb3-4912-b378-4b6b53e29a37"),
+                            Nombre = "DIRECCION DE APOYO TECNICO Y LOGISTICO"
+                        },
+                        new
+                        {
+                            Id = new Guid("0f689aef-e415-445d-a593-85195934c9fd"),
+                            IdUnidadAdministrativa = new Guid("4619dc4c-d498-4726-81a7-78d4d624d790"),
+                            Nombre = "DIRECCION GENERAL DE PLANEACION INSTITUCIONAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("be5aecb2-faa8-4087-885e-c38edd12b6ea"),
+                            IdUnidadAdministrativa = new Guid("4619dc4c-d498-4726-81a7-78d4d624d790"),
+                            Nombre = "DIRECCION DE PLANEACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("7455db23-6017-4379-8728-8f8037da13f4"),
+                            IdUnidadAdministrativa = new Guid("4619dc4c-d498-4726-81a7-78d4d624d790"),
+                            Nombre = "DIRECCION DE EVALUACION"
+                        },
+                        new
+                        {
+                            Id = new Guid("bb79d3e1-7207-40f3-85e0-4a917f5329ba"),
+                            IdUnidadAdministrativa = new Guid("039c76d3-4ca7-4c63-aa74-cbc7e001553d"),
+                            Nombre = "DIRECCION GENERAL DE COMUNICACION ESTRATEGICA Y VINCULACION SOCIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("c16c5d60-4818-4a23-a71e-577003c3672f"),
+                            IdUnidadAdministrativa = new Guid("039c76d3-4ca7-4c63-aa74-cbc7e001553d"),
+                            Nombre = "DIRECCION DE COMUNICACION SOCIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("55fe1a44-fbbc-431d-8738-0351dee4744b"),
+                            IdUnidadAdministrativa = new Guid("039c76d3-4ca7-4c63-aa74-cbc7e001553d"),
+                            Nombre = "DEPARTAMENTO DE MONITOREO Y ANALISIS"
+                        },
+                        new
+                        {
+                            Id = new Guid("bb44b328-7213-4670-ba45-ea1a60a1ec06"),
+                            IdUnidadAdministrativa = new Guid("039c76d3-4ca7-4c63-aa74-cbc7e001553d"),
+                            Nombre = "DEPARTAMENTO DE RELACIONES PUBLICAS Y VINCULACION SOCIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("6d7d3c72-f6b2-44ea-a674-e22a84ffc7f3"),
+                            IdUnidadAdministrativa = new Guid("039c76d3-4ca7-4c63-aa74-cbc7e001553d"),
+                            Nombre = "DEPARTAMENTO DE AGENDA DIGITAL E IMAGEN"
+                        },
+                        new
+                        {
+                            Id = new Guid("4c1ca1f9-01fd-4da4-bc66-7d5b7b6bead9"),
+                            IdUnidadAdministrativa = new Guid("039c76d3-4ca7-4c63-aa74-cbc7e001553d"),
+                            Nombre = "DEPARTAMENTO DE PRODUCCION"
+                        },
+                        new
+                        {
+                            Id = new Guid("aa92220b-9ffd-4cf6-a1ea-0ec46d8d0647"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "UNIDAD ESPECIALIZADA EN MATERIA DE EXTINCION DE DOMINIO"
+                        },
+                        new
+                        {
+                            Id = new Guid("f438a549-ab9a-488e-bdb3-9af840ebe6fd"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "DIRECCION DE PREPARACION DE LA ACCION DE EXTINCION DE DOMINIO"
+                        },
+                        new
+                        {
+                            Id = new Guid("47711c39-2bf5-43b3-9ee0-56fad2b4368a"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "AREA ESPECIALIZADA DE INVESTIGACION EN MATERIA DE EXTINCION DE DOMINIO"
+                        },
+                        new
+                        {
+                            Id = new Guid("0e88c301-eb14-4071-8a99-3c703ba2141f"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "DIRECCION DE INTERVENCION EN EL PROCESO DE EXTINCION DE DOMINIO"
+                        },
+                        new
+                        {
+                            Id = new Guid("fa533053-8aed-49ea-a4f0-45af95d4c760"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "AREA DE LITIGACION EN EL JUICIO DE EXTINCION DE DOMINIO"
+                        },
+                        new
+                        {
+                            Id = new Guid("9949c4a4-d529-4237-a2b7-e88c90b1b2cd"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "AREA DE ANALISIS Y CONTEXTO"
+                        },
+                        new
+                        {
+                            Id = new Guid("9236a245-7e65-4dfd-bf6e-e531fdae2f14"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "AREA DE APOYO PERICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("015ea347-eca4-41ca-8fd9-bde04a328182"),
+                            IdUnidadAdministrativa = new Guid("53f19eac-b8f3-4486-8be4-4ef56fcb5084"),
+                            Nombre = "AREA DE APOYO POLICIAL"
+                        },
+                        new
+                        {
+                            Id = new Guid("50f3aeba-c885-4bff-8188-0c3a31116513"),
+                            IdUnidadAdministrativa = new Guid("2c1dcd2b-da26-414b-9a97-652f0d2809a4"),
+                            Nombre = "UNIDAD DE TRANSPARENCIA"
+                        });
+                });
+
             modelBuilder.Entity("ControlAsistencia_.Models.Contratacion", b =>
                 {
                     b.Property<Guid>("Id")
@@ -2936,6 +7209,9 @@ namespace DBContext.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdCentroTrabajo")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdCentroTrabajo_")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdContratacion")

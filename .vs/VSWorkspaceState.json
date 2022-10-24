@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Administrador"
+    "\\Administrador",
+    "\\Administrador\\Views",
+    "\\Administrador\\Views\\Personal",
+    "\\Administrador\\wwwroot",
+    "\\Administrador\\wwwroot\\js",
+    "\\ControlAsistencia_",
+    "\\ControlAsistencia_\\Models",
+    "\\ReporteAsistencia",
+    "\\ReporteAsistencia\\Controllers"
   ],
   "SelectedNode": "\\ControlAsistenciaV2.sln",
   "PreviewInSolutionExplorer": false
