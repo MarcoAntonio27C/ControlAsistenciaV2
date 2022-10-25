@@ -68,17 +68,23 @@ namespace ReportePDF
             tablaDatos.WidthPercentage = 100;
 
             PdfPCell cellExpediente = new PdfPCell(new Phrase("Expediente: " + datos.NumeroExpediente, _span));
-            cellExpediente.Colspan = 3;
+            cellExpediente.Colspan = 2;
             cellExpediente.Padding = 5;
             cellExpediente.BorderWidth = 0;
             cellExpediente.BorderWidthBottom = 1;
             tablaDatos.AddCell(cellExpediente);
             PdfPCell cellNombre = new PdfPCell(new Phrase("Nombre: " + NombreEmpleado, _span));
-            cellNombre.Colspan = 5;
+            cellNombre.Colspan = 4;
             cellNombre.Padding = 5;
             cellNombre.BorderWidthBottom = 1;
             cellNombre.BorderWidth = 0;
             tablaDatos.AddCell(cellNombre);
+            PdfPCell cellGenero = new PdfPCell(new Phrase("Genero: " + datos.Genero, _span));
+            cellGenero.Colspan = 2;
+            cellGenero.Padding = 5;
+            cellGenero.BorderWidthBottom = 1;
+            cellGenero.BorderWidth = 0;
+            tablaDatos.AddCell(cellGenero);
             PdfPCell cellMes = new PdfPCell(new Phrase("Mes: " + mesReporte.ToString("Y"), _span));
             cellMes.Colspan = 2;
             cellMes.Padding = 5;
@@ -92,7 +98,7 @@ namespace ReportePDF
             cellUR.BorderWidthBottom = 1;
             cellUR.Padding = 6;
             tablaDatos.AddCell(cellUR);
-            PdfPCell cellCategoria = new PdfPCell(new Phrase("Cargo: "+datos.Cargo, _span));
+            PdfPCell cellCategoria = new PdfPCell(new Phrase("Categoria/Cargo: "+datos.Categoria+"/"+datos.Cargo, _span));
             cellCategoria.Colspan = 6;
             cellCategoria.Padding = 5;
             cellCategoria.BorderWidthBottom = 1;
@@ -124,19 +130,19 @@ namespace ReportePDF
             cellInmueble.BorderWidthBottom = 1;
             cellInmueble.Padding = 5;
             tablaDatos.AddCell(cellInmueble);
-
+            //*****************************************************************************
             PdfPCell cellObservaciones = new PdfPCell(new Phrase("Observaciones: ", _span));
-            cellObservaciones.Colspan = 10;
+            cellObservaciones.Colspan = 8;
             cellObservaciones.BorderWidth = 0;
             cellObservaciones.BorderWidthBottom = 1;
             cellObservaciones.Padding = 5;
             tablaDatos.AddCell(cellObservaciones);
-            //PdfPCell cellTelefono = new PdfPCell(new Phrase("Teléfono:", _span));
-            //cellTelefono.Colspan = 3;
-            //cellTelefono.Padding = 5;
-            //cellTelefono.BorderWidth = 0;
-            //cellTelefono.BorderWidthBottom = 1;
-            //tablaDatos.AddCell(cellTelefono);
+            PdfPCell cellTelefono = new PdfPCell(new Phrase("Teléfono: "+datos.Telefono, _span));
+            cellTelefono.Colspan = 2;
+            cellTelefono.Padding = 5;
+            cellTelefono.BorderWidth = 0;
+            cellTelefono.BorderWidthBottom = 1;
+            tablaDatos.AddCell(cellTelefono);
 
 
             titulo.Alignment = Element.ALIGN_CENTER;
@@ -405,16 +411,18 @@ namespace ReportePDF
             List<string> palabras = new List<string>();
             string salida = "";
 
-            palabras = cadena.ToLower().Split(' ').ToList();
-
-            foreach(var palabra in palabras)
+            if (cadena.Length > 0)
             {
-                char[] letras = palabra.ToCharArray();
-                letras[0] = char.ToUpper(letras[0]);
+                palabras = cadena.ToLower().Split(' ').ToList();
 
-                salida = salida + " " + new string(letras);
+                foreach (var palabra in palabras)
+                {
+                    char[] letras = palabra.ToCharArray();
+                    letras[0] = char.ToUpper(letras[0]);
+
+                    salida = salida + " " + new string(letras);
+                }
             }
-
             return salida;
         }
     }

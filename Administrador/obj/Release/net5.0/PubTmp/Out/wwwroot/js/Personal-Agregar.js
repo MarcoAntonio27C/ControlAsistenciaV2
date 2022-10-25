@@ -1,29 +1,5 @@
 ﻿$(document).ready(function () {
 
-
-    //$.ajax({
-    //    type: 'GET',
-    //    url: "/Personal/Empleados",
-    //    dataType: "json",
-    //    //data: { idEmpleado: idEmpleado, mes: mes },
-    //    success: function (response) {
-    //        console.log(response);
-
-    //        if (response != undefined) {
-    //            if (response.length > 0) {
-    //                var index = 0;
-    //                for (var i = 0; i < response.length; i++) {
-    //                    //var enlace = "Detalles/?idEmpleado=" + response[i]["id"];
-    //                    index = i + 1;
-    //                    $(".table>tbody").append("<tr><td>" + index + "</td><td>" + response[i]["nombreCompleto"] + "</td><td>" + response[i]["nombreInmueble"] + "</td><td>" + response[i]["numeroExpediente"] + "</td><td>" + "<button data-toggle='modal' data-target='#staticBackdrop'  type='button' id='" +response[i]["id"]+"' class='btn btn-info detalles'><span class='material-icons'>visibility</span></button>" + "</td></tr>");
-    //                }
-    //            }
-    //        }
-    //    },
-    //});
-
-
-
     $.ajax({
         type: 'GET',
         url: "GetCategoria",
@@ -31,7 +7,7 @@
             $.each(response, function (i, categoria) {
                 $("#categoria").append($('<option>', {
                     value: categoria.id,
-                    text: categoria.nombre
+                    text: categoria.nombre + "-" + categoria.descripcion
                 }));
             });
            // console.log(response);
@@ -88,19 +64,41 @@
         },
     });
 
-    $.ajax({
-        type: 'GET',
-        url: "GetCentroTrabajo",
-        success: function (response) {
+
+    $("#unidadAdministrativa").change(function () {
+        console.log($("#unidadAdministrativa").val());
+        $("#centroTrabajo").empty();
+        $.ajax({
+            type: 'GET',
+            url: "GetCentroTrabajo",
+            data: {
+                id: $("#unidadAdministrativa").val()
+            },
+            success: function (response) {
             $.each(response, function (i, centro) {
                 $("#centroTrabajo").append($('<option>', {
                     value: centro.id,
                     text: centro.nombre
                 }));
             });
-            // console.log(response);
-        },
+                // console.log(response);
+            },
+        });
     });
+
+    //$.ajax({
+    //    type: 'GET',
+    //    url: "GetCentroTrabajo",
+    //    success: function (response) {
+    //        $.each(response, function (i, centro) {
+    //            $("#centroTrabajo").append($('<option>', {
+    //                value: centro.id,
+    //                text: centro.nombre
+    //            }));
+    //        });
+    //        // console.log(response);
+    //    },
+    //});
 
 
     $.ajax({
@@ -117,19 +115,6 @@
         },
     });
 
-    $.ajax({
-        type: 'GET',
-        url: "GetCargoHomologado",
-        success: function (response) {
-            $.each(response, function (i, cargoHomologado) {
-                $("#cargoHomologado").append($('<option>', {
-                    value: cargoHomologado.id,
-                    text: cargoHomologado.nombre
-                }));
-            });
-            // console.log(response);
-        },
-    });
 
     $.ajax({
         type: 'GET',

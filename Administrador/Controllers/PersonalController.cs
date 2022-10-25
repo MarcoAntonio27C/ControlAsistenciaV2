@@ -96,7 +96,7 @@ namespace Administrador.Controllers
             empleado.IdMunicipio = Guid.Parse(form["municipio"]);
             empleado.IdInmueble = Guid.Parse(form["inmueble"]);
             empleado.IdCargo = Guid.Parse(form["cargo"]);
-            empleado.IdCentroTrabajo = Guid.Parse(form["centroTrabajo"]);
+            empleado.IdCentroTrabajo_ = Guid.Parse(form["centroTrabajo"]);
             empleado.IdUnidadAdministrativa = Guid.Parse(form["unidadAdministrativa"]);
             empleado.IdContratacion = Guid.Parse(form["contratacion"]);
             _context.Empleado.Add(empleado);
@@ -106,7 +106,7 @@ namespace Administrador.Controllers
             if (exist)
             {
                 ViewData["error"] = true;
-                ViewData["mensaje"] = "Ya existe un registro con el mismo numero de Expediente, verifique la información";
+                ViewData["mensaje"] = "Ya existe un registro con el mismo CURP, verifique la información";
                 return View("Agregar");
             }
 
@@ -141,8 +141,7 @@ namespace Administrador.Controllers
             empleado.IdMunicipio = Guid.Parse(valdata.Municipio);
             empleado.IdInmueble = Guid.Parse(valdata.Inmueble);
             empleado.IdCargo = Guid.Parse(valdata.Cargo);
-            //empleado.IdCargoHomologado = Guid.Parse(valdata.CargoHomologado);
-            empleado.IdCentroTrabajo = Guid.Parse(valdata.CentroTrabajo);
+            empleado.IdCentroTrabajo_ = Guid.Parse(valdata.CentroTrabajo);
             empleado.IdUnidadAdministrativa = Guid.Parse(valdata.UnidadAdministrativa);
             empleado.IdContratacion = Guid.Parse(valdata.Contratacion);
             _context.Entry(empleado).State = EntityState.Modified;
@@ -204,11 +203,13 @@ namespace Administrador.Controllers
             empleado = await _context.Empleado.Where(x => x.Id.Equals(Guid.Parse(idEmpleado))).FirstAsync();
             DatosEmpleado datos = new DatosEmpleado();
 
+            datos.Categoria = "";
+            datos.CentroTrabajo = "";
+
             var municipio = await _context.Municipio.Where(x => x.Id.Equals(empleado.IdMunicipio)).FirstAsync();
             var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
             var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
-            //var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
-            var centroTrabajo = await _context.CentroTrabajo_.Where(x => x.Id.Equals(empleado.IdCentroTrabajo_)).FirstAsync();
+            //var centroTrabajo = await _context.CentroTrabajo_.Where(x => x.Id.Equals(empleado.IdCentroTrabajo_)).FirstAsync();
             var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
             var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
 
@@ -217,11 +218,13 @@ namespace Administrador.Controllers
                 var categoria = await _context.Categoria.Where(x => x.Id.Equals(empleado.IdCategoria)).FirstAsync();
                 datos.Categoria = categoria.Nombre;
             }
-            else
+
+            if (!empleado.IdCentroTrabajo_.ToString().Equals("00000000-0000-0000-0000-000000000000"))
             {
-                datos.Categoria = "";
+                var centroTrabajo = await _context.CentroTrabajo_.Where(x => x.Id.Equals(empleado.IdCentroTrabajo_)).FirstAsync();
+                datos.CentroTrabajo =centroTrabajo.Nombre;
             }
-           
+
 
             datos.Id = empleado.Id;
             datos.NombreCompleto = empleado.NombreCompleto;
@@ -234,10 +237,10 @@ namespace Administrador.Controllers
             datos.Inmueble = inmueble.Nombre;
             datos.Direccion = inmueble.Direccion;
             datos.Cargo = cargo.Nombre;
-            datos.CentroTrabajo = centroTrabajo.Nombre;
-            //datos.CargoHomologado = cargoHomologado.Nombre;
             datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
             datos.Contratacion = contratacion.Nombre;
+            datos.Genero = empleado.Genero;
+            datos.Telefono = empleado.Telefono;
             
             return datos;
         }
@@ -268,9 +271,9 @@ namespace Administrador.Controllers
 
         [HttpGet]
         [Produces("application/json")]
-        public async Task<ActionResult<IEnumerable<CentroTrabajo>>> GetCentroTrabajo(Guid id)
+        public async Task<ActionResult<IEnumerable<CentroTrabajo_>>> GetCentroTrabajo(Guid id)
         {
-            var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(id)).OrderBy(n => n.Nombre).ToListAsync();
+            var centroTrabajo = await _context.CentroTrabajo_.Where(x => x.IdUnidadAdministrativa.Equals(id)).OrderBy(n => n.Nombre).ToListAsync();
             return centroTrabajo;
         }
 

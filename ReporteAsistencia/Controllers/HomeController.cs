@@ -49,14 +49,27 @@ namespace ReporteAsistencia.Controllers
         public async Task<DatosEmpleado> DatosGeneralesAsync(Empleado empleado)
         {
             DatosEmpleado datos = new DatosEmpleado();
+            datos.Categoria = "";
+            datos.CentroTrabajo = "";
 
             var inmueble = await _context.Inmueble.Where(x => x.Id.Equals(empleado.IdInmueble)).FirstAsync();
             var cargo = await _context.Cargo.Where(x => x.Id.Equals(empleado.IdCargo)).FirstAsync();
             //var cargoHomologado = await _context.CargoHomologado.Where(x => x.Id.Equals(empleado.IdCargoHomologado)).FirstAsync();
-            var centroTrabajo = await _context.CentroTrabajo.Where(x => x.Id.Equals(empleado.IdCentroTrabajo)).FirstAsync();
             var unidadAdministrativa = await _context.UnidadAdministrativa.Where(x => x.Id.Equals(empleado.IdUnidadAdministrativa)).FirstAsync();
             var contratacion = await _context.Contratacion.Where(x => x.Id.Equals(empleado.IdContratacion)).FirstAsync();
-            
+
+            if (!empleado.IdCategoria.ToString().Equals("00000000-0000-0000-0000-000000000000"))
+            {
+                var categoria = await _context.Categoria.Where(x => x.Id.Equals(empleado.IdCategoria)).FirstAsync();
+                datos.Categoria = categoria.Nombre;
+            }
+
+            if (!empleado.IdCentroTrabajo_.ToString().Equals("00000000-0000-0000-0000-000000000000"))
+            {
+                var centroTrabajo = await _context.CentroTrabajo_.Where(x => x.Id.Equals(empleado.IdCentroTrabajo_)).FirstAsync();
+                datos.CentroTrabajo = centroTrabajo.Nombre;
+            }
+
             datos.Id = empleado.Id;
             datos.NombreCompleto = empleado.NombreCompleto;
             datos.NumeroExpediente = empleado.NumeroExpediente;
@@ -67,9 +80,10 @@ namespace ReporteAsistencia.Controllers
             datos.Inmueble = inmueble.Nombre;
             datos.Direccion = inmueble.Direccion;
             datos.Cargo = cargo.Nombre;
-            datos.CentroTrabajo = centroTrabajo.Nombre;
             datos.UnidadAdministrativa = unidadAdministrativa.Nombre;
             datos.Contratacion = contratacion.Nombre;
+            datos.Genero= empleado.Genero;
+            datos.Telefono= empleado.Telefono;
             return datos;
         }
 
@@ -354,8 +368,6 @@ namespace ReporteAsistencia.Controllers
 
                     tabla.Add(asistencia);
                 }
-
-
 
                 return tabla;
             }

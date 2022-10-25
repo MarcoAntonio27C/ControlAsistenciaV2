@@ -18,5 +18,7 @@
     <ProjectReference Include="..\DBContext\DBContext.csproj" />
     <ProjectReference Include="..\PDF\ReportePDF.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 	
 </Project>
