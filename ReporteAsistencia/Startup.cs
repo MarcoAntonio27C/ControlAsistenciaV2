@@ -26,7 +26,7 @@ namespace ReporteAsistencia
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ControlAsistenciaDBContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("Dev_Biometricos")));
+                    options.UseSqlServer(Configuration.GetConnectionString("Biometricos")));
             services.AddControllersWithViews();
         }
 

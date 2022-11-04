@@ -11,8 +11,10 @@ namespace RequestAPI
     public class RequestEmpleado
     {
         //string API = "https://localhost:44396/api/";
-        string API = "http://10.24.1.29/PeopleSearch/Api/";
+        //string API = "http://10.24.1.29/PeopleSearch/Api/";
 
+        //PRODUCCION
+        string API = "http://10.24.1.45/RH-Fiscalia/Api/";
 
         public IRestResponse EmpleadosPorInmueble(string idInmueble)
         {

@@ -35,7 +35,7 @@ namespace ReporteAsistencia.Controllers
 
         public async Task<IActionResult> BuscarCurp(string curp)
         {
-            var empleado = await _context.Empleado.Where(x => x.Curp.Equals(curp)).ToListAsync();
+            var empleado = await _context.Empleado.Where(x => x.Curp.Equals(curp) && x.Activo.Equals(true)).ToListAsync();
         
             if (empleado.Count > 0)
             {

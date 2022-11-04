@@ -31,7 +31,7 @@ namespace Administrador.Controllers
             var idUnidadAdministrativa = User.Claims.ElementAt(1).Value;
             if (User.IsInRole("592D923A-9D0B-424C-8BC3-0C42FF72495E"))
             {
-                var empleadosUnidad = await _context.Empleado.Where(x => x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa))).ToListAsync();
+                var empleadosUnidad = await _context.Empleado.Where(x => x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa)) && x.Activo.Equals(true)).ToListAsync();
                 ViewData["empleados"] = empleadosUnidad;
                 return View();
             }else
@@ -66,7 +66,7 @@ namespace Administrador.Controllers
         public async Task<IActionResult> BuscarPorUnidad(string nombre)
         {
             var idUnidadAdministrativa = User.Claims.ElementAt(1).Value;
-            var empleadosUnidad = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre) && x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa))).ToListAsync();
+            var empleadosUnidad = await _context.Empleado.Where(x => x.NombreCompleto.Contains(nombre) && x.IdUnidadAdministrativa.Equals(Guid.Parse(idUnidadAdministrativa)) && x.Activo.Equals(true)).ToListAsync();
             ViewData["empleados"] = empleadosUnidad;
             return View("Inicio");
         }
